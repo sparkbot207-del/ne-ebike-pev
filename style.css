@@ -402,6 +402,18 @@ body {
     color: var(--gray);
 }
 
+a.resource-link {
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+}
+
+a.resource-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--secondary);
+}
+
 /* CTA Section */
 .cta-section {
     background: var(--gradient);
