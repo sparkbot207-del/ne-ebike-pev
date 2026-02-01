@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="NE E-Bike and PEV Community"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>East Bay Bike Path</name>
+    <desc>Rhode Island's most popular paved trail with beautiful Narragansett Bay views. Perfect for a day trip from Providence.</desc>
+    <author>
+      <name>NE E-Bike and PEV Community</name>
+      <link href="https://sparkbot207-del.github.io/ne-ebike-pev/">
+        <text>NE E-Bike and PEV</text>
+      </link>
+    </author>
+    <time>2026-02-01T16:27:47.898345</time>
+  </metadata>
+  <wpt lat="41.8159" lon="-71.3897">
+    <name>East Bay Bike Path - Trailhead</name>
+    <desc>Start point for East Bay Bike Path</desc>
+    <sym>Trailhead</sym>
+  </wpt>
+  <wpt lat="41.706" lon="-71.3489">
+    <name>East Bay Bike Path - Center</name>
+    <desc>Rhode Island's most popular paved trail with beautiful Narragansett Bay views. Perfect for a day trip from Providence.</desc>
+    <sym>Trail</sym>
+  </wpt>
+</gpx>

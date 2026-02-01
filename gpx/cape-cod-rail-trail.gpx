@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="NE E-Bike and PEV Community"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Cape Cod Rail Trail</name>
+    <desc>Paved path with gentle hills and beach access to Cape Cod National Seashore. Bike rentals available along the trail. Pet friendly!</desc>
+    <author>
+      <name>NE E-Bike and PEV Community</name>
+      <link href="https://sparkbot207-del.github.io/ne-ebike-pev/">
+        <text>NE E-Bike and PEV</text>
+      </link>
+    </author>
+    <time>2026-02-01T16:27:47.896529</time>
+  </metadata>
+  <wpt lat="41.6777" lon="-70.1562">
+    <name>Cape Cod Rail Trail - Trailhead</name>
+    <desc>Start point for Cape Cod Rail Trail</desc>
+    <sym>Trailhead</sym>
+  </wpt>
+  <wpt lat="41.7563" lon="-70.0611">
+    <name>Cape Cod Rail Trail - Center</name>
+    <desc>Paved path with gentle hills and beach access to Cape Cod National Seashore. Bike rentals available along the trail. Pet friendly!</desc>
+    <sym>Trail</sym>
+  </wpt>
+</gpx>

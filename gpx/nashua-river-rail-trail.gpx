@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="NE E-Bike and PEV Community"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Nashua River Rail Trail</name>
+    <desc>Cross-border trail connecting Massachusetts and New Hampshire. Great for longer rides.</desc>
+    <author>
+      <name>NE E-Bike and PEV Community</name>
+      <link href="https://sparkbot207-del.github.io/ne-ebike-pev/">
+        <text>NE E-Bike and PEV</text>
+      </link>
+    </author>
+    <time>2026-02-01T16:27:47.897133</time>
+  </metadata>
+  <wpt lat="42.5562" lon="-71.5856">
+    <name>Nashua River Rail Trail - Trailhead</name>
+    <desc>Start point for Nashua River Rail Trail</desc>
+    <sym>Trailhead</sym>
+  </wpt>
+  <wpt lat="42.5612" lon="-71.5836">
+    <name>Nashua River Rail Trail - Center</name>
+    <desc>Cross-border trail connecting Massachusetts and New Hampshire. Great for longer rides.</desc>
+    <sym>Trail</sym>
+  </wpt>
+</gpx>

@@ -418,14 +418,24 @@
                     <input type="checkbox" id="toggle-charging">
                     ⚡ Charging Stations <span class="charging-count" id="charging-count">0</span>
                 </label>
-                <label class="map-toggle" id="j1772-toggle" style="display:none;">
-                    <input type="checkbox" id="toggle-j1772" checked>
-                    🔌 J1772
-                </label>
-                <label class="map-toggle" id="nema-toggle" style="display:none;">
-                    <input type="checkbox" id="toggle-nema" checked>
-                    🔋 NEMA
-                </label>
+            </div>
+            
+            <!-- Search Box (shown when charging enabled) -->
+            <div id="search-container" style="display:none; margin-bottom: 1rem;">
+                <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                    <input type="text" id="charging-search" placeholder="🔍 Search charging stations by city or name..." 
+                           style="padding: 0.6rem 1rem; border-radius: 25px; border: 1px solid rgba(255,255,255,0.2); 
+                                  background: rgba(255,255,255,0.1); color: white; width: 300px; font-size: 0.9rem;">
+                    <button id="search-btn" style="padding: 0.6rem 1.2rem; border-radius: 25px; border: none; 
+                                                    background: var(--primary); color: white; cursor: pointer; font-weight: 600;">
+                        Search
+                    </button>
+                    <button id="clear-search" style="padding: 0.6rem 1rem; border-radius: 25px; border: 1px solid rgba(255,255,255,0.2); 
+                                                      background: transparent; color: rgba(255,255,255,0.8); cursor: pointer; display: none;">
+                        Clear
+                    </button>
+                </div>
+                <p id="search-results" style="text-align: center; color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 0.5rem;"></p>
             </div>
             
             <div id="trail-map" style="position: relative;">
@@ -802,27 +812,27 @@
             RI: createTrailIcon('#1abc9c')
         };
         
-        // Extended trail data with navigation and website info
+        // Extended trail data with navigation, website, and GPX info
         const trails = [
-            { name: "Island Line Trail", state: "VT", lat: 44.4759, lng: -73.2121, distance: "14 miles", desc: "Lake Champlain views, causeway over water", topPick: true, trailheadLat: 44.4801, trailheadLng: -73.2210, website: "https://localmotion.org/island-line-trail/" },
-            { name: "Montpelier & Wells River Rail Trail", state: "VT", lat: 44.2628, lng: -72.2339, distance: "19 miles", desc: "Forest scenery, Lake Groton swimming", trailheadLat: 44.3252, trailheadLng: -72.2234, website: "https://fpr.vermont.gov/montpelier-and-wells-river-rail-trail" },
-            { name: "Northern Rail Trail", state: "NH", lat: 43.4326, lng: -71.8657, distance: "59.3 miles", desc: "Longest in NH, Top 100 US Trail", topPick: true, trailheadLat: 43.6424, trailheadLng: -72.2526, website: "https://www.northernrailtrail.org/" },
-            { name: "Presidential Rail Trail", state: "NH", lat: 44.3876, lng: -71.1851, distance: "18 miles", desc: "White Mountains views, beaver ponds", trailheadLat: 44.3902, trailheadLng: -71.1925, website: "https://www.nhstateparks.org/visit/recreational-rail-trails/presidential-recreational-rail-trail" },
-            { name: "Cotton Valley Trail", state: "NH", lat: 43.6106, lng: -71.2437, distance: "12 miles", desc: "Lakes Region, 5-star rated", trailheadLat: 43.6054, trailheadLng: -71.2139, website: "https://www.nhstateparks.org/visit/recreational-rail-trails/cotton-valley-rail-trail" },
-            { name: "Eastern Trail", state: "ME", lat: 43.5510, lng: -70.3559, distance: "22 miles", desc: "Wildlife refuge, blueberry barrens", topPick: true, trailheadLat: 43.6501, trailheadLng: -70.2457, website: "https://www.easterntrail.org/" },
-            { name: "Kennebec River Rail Trail", state: "ME", lat: 44.3106, lng: -69.7795, distance: "6.5 miles", desc: "Paved riverside, beginner friendly", trailheadLat: 44.3135, trailheadLng: -69.7746, website: "https://www.krrt.org/" },
-            { name: "Eastern Promenade Trail", state: "ME", lat: 43.6680, lng: -70.2420, distance: "2+ miles", desc: "Portland, ocean views", trailheadLat: 43.6680, trailheadLng: -70.2420, website: "https://trails.org/our-trails/eastern-promenade-trail/" },
-            { name: "Cape Cod Rail Trail", state: "MA", lat: 41.7563, lng: -70.0611, distance: "22 miles", desc: "Beach access, pet friendly", topPick: true, trailheadLat: 41.6777, trailheadLng: -70.1562, website: "https://www.mass.gov/locations/cape-cod-rail-trail" },
-            { name: "Shining Sea Bikeway", state: "MA", lat: 41.5516, lng: -70.6162, distance: "11 miles", desc: "Coastal Falmouth, Buzzards Bay", trailheadLat: 41.5853, trailheadLng: -70.5489, website: "https://www.mass.gov/locations/shining-sea-bikeway" },
-            { name: "Ashuwillticook Rail Trail", state: "MA", lat: 42.5551, lng: -73.1568, distance: "12.7 miles", desc: "Berkshires, Mount Greylock views", trailheadLat: 42.6230, trailheadLng: -73.1167, website: "https://www.mass.gov/locations/ashuwillticook-rail-trail" },
-            { name: "Nashua River Rail Trail", state: "MA", lat: 42.5612, lng: -71.5836, distance: "12.5 miles", desc: "Cross-state to NH", trailheadLat: 42.5562, trailheadLng: -71.5856, website: "https://www.mass.gov/locations/nashua-river-rail-trail" },
-            { name: "Air Line State Park Trail", state: "CT", lat: 41.7004, lng: -72.2273, distance: "50 miles", desc: "Historic Ghost Train route, viaducts", topPick: true, trailheadLat: 41.5715, trailheadLng: -72.5098, website: "https://portal.ct.gov/DEEP/State-Parks/Parks/Air-Line-State-Park-Trail" },
-            { name: "Farmington Canal Heritage Trail", state: "CT", lat: 41.4925, lng: -72.8990, distance: "80+ miles", desc: "Historic canal route", trailheadLat: 41.3082, trailheadLng: -72.9268, website: "https://www.farmingtoncanal.org/" },
-            { name: "East Bay Bike Path", state: "RI", lat: 41.7060, lng: -71.3489, distance: "14.5 miles", desc: "Narragansett Bay views", topPick: true, trailheadLat: 41.8159, trailheadLng: -71.3897, website: "https://riparks.ri.gov/locations/east-bay-bike-path" },
-            { name: "Blackstone River Bikeway", state: "RI", lat: 41.8604, lng: -71.4128, distance: "18+ miles", desc: "Historic industrial heritage", trailheadLat: 41.8604, trailheadLng: -71.4128, website: "https://www.blackstoneheritagecorridor.org/explore/bikeway/" }
+            { name: "Island Line Trail", state: "VT", lat: 44.4759, lng: -73.2121, distance: "14 miles", desc: "Lake Champlain views, causeway over water", topPick: true, trailheadLat: 44.4801, trailheadLng: -73.2210, website: "https://localmotion.org/island-line-trail/", gpx: "gpx/island-line-trail.gpx" },
+            { name: "Montpelier & Wells River Rail Trail", state: "VT", lat: 44.2628, lng: -72.2339, distance: "19 miles", desc: "Forest scenery, Lake Groton swimming", trailheadLat: 44.3252, trailheadLng: -72.2234, website: "https://fpr.vermont.gov/montpelier-and-wells-river-rail-trail", gpx: "gpx/montpelier-wells-river-trail.gpx" },
+            { name: "Northern Rail Trail", state: "NH", lat: 43.4326, lng: -71.8657, distance: "59.3 miles", desc: "Longest in NH, Top 100 US Trail", topPick: true, trailheadLat: 43.6424, trailheadLng: -72.2526, website: "https://www.northernrailtrail.org/", gpx: "gpx/northern-rail-trail.gpx" },
+            { name: "Presidential Rail Trail", state: "NH", lat: 44.3876, lng: -71.1851, distance: "18 miles", desc: "White Mountains views, beaver ponds", trailheadLat: 44.3902, trailheadLng: -71.1925, website: "https://www.nhstateparks.org/visit/recreational-rail-trails/presidential-recreational-rail-trail", gpx: "gpx/presidential-rail-trail.gpx" },
+            { name: "Cotton Valley Trail", state: "NH", lat: 43.6106, lng: -71.2437, distance: "12 miles", desc: "Lakes Region, 5-star rated", trailheadLat: 43.6054, trailheadLng: -71.2139, website: "https://www.nhstateparks.org/visit/recreational-rail-trails/cotton-valley-rail-trail", gpx: "gpx/cotton-valley-trail.gpx" },
+            { name: "Eastern Trail", state: "ME", lat: 43.5510, lng: -70.3559, distance: "22 miles", desc: "Wildlife refuge, blueberry barrens", topPick: true, trailheadLat: 43.6501, trailheadLng: -70.2457, website: "https://www.easterntrail.org/", gpx: "gpx/eastern-trail.gpx" },
+            { name: "Kennebec River Rail Trail", state: "ME", lat: 44.3106, lng: -69.7795, distance: "6.5 miles", desc: "Paved riverside, beginner friendly", trailheadLat: 44.3135, trailheadLng: -69.7746, website: "https://www.krrt.org/", gpx: "gpx/kennebec-river-rail-trail.gpx" },
+            { name: "Eastern Promenade Trail", state: "ME", lat: 43.6680, lng: -70.2420, distance: "2+ miles", desc: "Portland, ocean views", trailheadLat: 43.6680, trailheadLng: -70.2420, website: "https://trails.org/our-trails/eastern-promenade-trail/", gpx: "gpx/eastern-promenade-trail.gpx" },
+            { name: "Cape Cod Rail Trail", state: "MA", lat: 41.7563, lng: -70.0611, distance: "22 miles", desc: "Beach access, pet friendly", topPick: true, trailheadLat: 41.6777, trailheadLng: -70.1562, website: "https://www.mass.gov/locations/cape-cod-rail-trail", gpx: "gpx/cape-cod-rail-trail.gpx" },
+            { name: "Shining Sea Bikeway", state: "MA", lat: 41.5516, lng: -70.6162, distance: "11 miles", desc: "Coastal Falmouth, Buzzards Bay", trailheadLat: 41.5853, trailheadLng: -70.5489, website: "https://www.mass.gov/locations/shining-sea-bikeway", gpx: "gpx/shining-sea-bikeway.gpx" },
+            { name: "Ashuwillticook Rail Trail", state: "MA", lat: 42.5551, lng: -73.1568, distance: "12.7 miles", desc: "Berkshires, Mount Greylock views", trailheadLat: 42.6230, trailheadLng: -73.1167, website: "https://www.mass.gov/locations/ashuwillticook-rail-trail", gpx: "gpx/ashuwillticook-rail-trail.gpx" },
+            { name: "Nashua River Rail Trail", state: "MA", lat: 42.5612, lng: -71.5836, distance: "12.5 miles", desc: "Cross-state to NH", trailheadLat: 42.5562, trailheadLng: -71.5856, website: "https://www.mass.gov/locations/nashua-river-rail-trail", gpx: "gpx/nashua-river-rail-trail.gpx" },
+            { name: "Air Line State Park Trail", state: "CT", lat: 41.7004, lng: -72.2273, distance: "50 miles", desc: "Historic Ghost Train route, viaducts", topPick: true, trailheadLat: 41.5715, trailheadLng: -72.5098, website: "https://portal.ct.gov/DEEP/State-Parks/Parks/Air-Line-State-Park-Trail", gpx: "gpx/air-line-state-park-trail.gpx" },
+            { name: "Farmington Canal Heritage Trail", state: "CT", lat: 41.4925, lng: -72.8990, distance: "80+ miles", desc: "Historic canal route", trailheadLat: 41.3082, trailheadLng: -72.9268, website: "https://www.farmingtoncanal.org/", gpx: "gpx/farmington-canal-heritage-trail.gpx" },
+            { name: "East Bay Bike Path", state: "RI", lat: 41.7060, lng: -71.3489, distance: "14.5 miles", desc: "Narragansett Bay views", topPick: true, trailheadLat: 41.8159, trailheadLng: -71.3897, website: "https://riparks.ri.gov/locations/east-bay-bike-path", gpx: "gpx/east-bay-bike-path.gpx" },
+            { name: "Blackstone River Bikeway", state: "RI", lat: 41.8604, lng: -71.4128, distance: "18+ miles", desc: "Historic industrial heritage", trailheadLat: 41.8604, trailheadLng: -71.4128, website: "https://www.blackstoneheritagecorridor.org/explore/bikeway/", gpx: "gpx/blackstone-river-bikeway.gpx" }
         ];
         
-        // Create trail popup with navigation buttons
+        // Create trail popup with navigation, website, and GPX buttons
         function createTrailPopup(trail) {
             const navUrl = `https://www.google.com/maps/dir/?api=1&destination=${trail.trailheadLat},${trail.trailheadLng}`;
             
@@ -830,7 +840,11 @@
                 <a href="${navUrl}" target="_blank" class="popup-btn popup-btn-nav">📍 Navigate</a>`;
             
             if (trail.website) {
-                buttons += `<a href="${trail.website}" target="_blank" class="popup-btn popup-btn-web">🌐 Website</a>`;
+                buttons += `<a href="${trail.website}" target="_blank" class="popup-btn popup-btn-web">🌐 Info</a>`;
+            }
+            
+            if (trail.gpx) {
+                buttons += `<a href="${trail.gpx}" download class="popup-btn popup-btn-gpx">📥 GPX</a>`;
             }
             
             buttons += `</div>`;
@@ -934,17 +948,82 @@
                 }
                 map.addLayer(chargingLayer);
                 this.parentElement.classList.add('active');
-                // Show filter toggles
-                document.getElementById('j1772-toggle').style.display = 'flex';
-                document.getElementById('nema-toggle').style.display = 'flex';
+                // Show search box
+                document.getElementById('search-container').style.display = 'block';
             } else {
                 map.removeLayer(chargingLayer);
                 this.parentElement.classList.remove('active');
-                // Hide filter toggles
-                document.getElementById('j1772-toggle').style.display = 'none';
-                document.getElementById('nema-toggle').style.display = 'none';
+                // Hide search box
+                document.getElementById('search-container').style.display = 'none';
+                clearSearch();
             }
         });
+        
+        // Search functionality
+        let searchMarkers = L.layerGroup();
+        
+        function searchCharging() {
+            const query = document.getElementById('charging-search').value.toLowerCase().trim();
+            if (!query || !chargingLoaded) return;
+            
+            // Clear previous search results
+            searchMarkers.clearLayers();
+            map.removeLayer(searchMarkers);
+            
+            // Find matching stations
+            const matches = chargingData.filter(station => {
+                const searchText = `${station.name} ${station.city} ${station.address} ${station.state}`.toLowerCase();
+                return searchText.includes(query);
+            });
+            
+            // Show results count
+            document.getElementById('search-results').textContent = 
+                matches.length > 0 ? `Found ${matches.length} stations matching "${query}"` : `No stations found for "${query}"`;
+            document.getElementById('clear-search').style.display = matches.length > 0 ? 'inline-block' : 'none';
+            
+            if (matches.length === 0) return;
+            
+            // Add markers for matches with highlighted style
+            const bounds = L.latLngBounds();
+            matches.slice(0, 100).forEach(station => {  // Limit to 100 for performance
+                if (!station.lat || !station.lng) return;
+                
+                const highlightIcon = L.divIcon({
+                    className: 'search-result-marker',
+                    html: `<div style="background:#ef4444;width:26px;height:26px;border-radius:50%;border:3px solid white;box-shadow:0 0 10px #ef4444;display:flex;align-items:center;justify-content:center;font-size:12px;animation:pulse 1s infinite;">⚡</div>`,
+                    iconSize: [26, 26],
+                    iconAnchor: [13, 13],
+                    popupAnchor: [0, -13]
+                });
+                
+                const marker = L.marker([station.lat, station.lng], { icon: highlightIcon })
+                    .bindPopup(createChargingPopup(station));
+                searchMarkers.addLayer(marker);
+                bounds.extend([station.lat, station.lng]);
+            });
+            
+            map.addLayer(searchMarkers);
+            
+            // Zoom to results if we have them
+            if (matches.length > 0 && matches.length <= 50) {
+                map.fitBounds(bounds, { padding: [50, 50], maxZoom: 12 });
+            }
+        }
+        
+        function clearSearch() {
+            document.getElementById('charging-search').value = '';
+            document.getElementById('search-results').textContent = '';
+            document.getElementById('clear-search').style.display = 'none';
+            searchMarkers.clearLayers();
+            map.removeLayer(searchMarkers);
+        }
+        
+        // Search event listeners
+        document.getElementById('search-btn').addEventListener('click', searchCharging);
+        document.getElementById('charging-search').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') searchCharging();
+        });
+        document.getElementById('clear-search').addEventListener('click', clearSearch);
         
         // Mobile nav toggle
         const navToggle = document.querySelector('.nav-toggle');
@@ -955,5 +1034,12 @@
             navToggle.classList.toggle('active');
         });
     </script>
+    
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
 </body>
 </html>

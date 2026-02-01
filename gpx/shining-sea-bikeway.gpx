@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="NE E-Bike and PEV Community"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Shining Sea Bikeway</name>
+    <desc>Beautiful coastal ride through Falmouth with Buzzards Bay views. One of the Cape's most scenic paths.</desc>
+    <author>
+      <name>NE E-Bike and PEV Community</name>
+      <link href="https://sparkbot207-del.github.io/ne-ebike-pev/">
+        <text>NE E-Bike and PEV</text>
+      </link>
+    </author>
+    <time>2026-02-01T16:27:47.896866</time>
+  </metadata>
+  <wpt lat="41.5853" lon="-70.5489">
+    <name>Shining Sea Bikeway - Trailhead</name>
+    <desc>Start point for Shining Sea Bikeway</desc>
+    <sym>Trailhead</sym>
+  </wpt>
+  <wpt lat="41.5516" lon="-70.6162">
+    <name>Shining Sea Bikeway - Center</name>
+    <desc>Beautiful coastal ride through Falmouth with Buzzards Bay views. One of the Cape's most scenic paths.</desc>
+    <sym>Trail</sym>
+  </wpt>
+</gpx>

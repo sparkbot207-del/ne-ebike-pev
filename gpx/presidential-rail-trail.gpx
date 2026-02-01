@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="NE E-Bike and PEV Community"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Presidential Rail Trail</name>
+    <desc>Breathtaking White Mountains Presidential Range views. Features beaver ponds, pastures, and key birding spots.</desc>
+    <author>
+      <name>NE E-Bike and PEV Community</name>
+      <link href="https://sparkbot207-del.github.io/ne-ebike-pev/">
+        <text>NE E-Bike and PEV</text>
+      </link>
+    </author>
+    <time>2026-02-01T16:27:47.897359</time>
+  </metadata>
+  <wpt lat="44.3902" lon="-71.1925">
+    <name>Presidential Rail Trail - Trailhead</name>
+    <desc>Start point for Presidential Rail Trail</desc>
+    <sym>Trailhead</sym>
+  </wpt>
+  <wpt lat="44.3876" lon="-71.1851">
+    <name>Presidential Rail Trail - Center</name>
+    <desc>Breathtaking White Mountains Presidential Range views. Features beaver ponds, pastures, and key birding spots.</desc>
+    <sym>Trail</sym>
+  </wpt>
+</gpx>

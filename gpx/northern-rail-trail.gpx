@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="NE E-Bike and PEV Community"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Northern Rail Trail</name>
+    <desc>The longest rail trail in New Hampshire! Named to "100 Top Trails in U.S." Passes farms, orchards, lakes, and covered bridges with possible moose sightings.</desc>
+    <author>
+      <name>NE E-Bike and PEV Community</name>
+      <link href="https://sparkbot207-del.github.io/ne-ebike-pev/">
+        <text>NE E-Bike and PEV</text>
+      </link>
+    </author>
+    <time>2026-02-01T16:27:47.897244</time>
+  </metadata>
+  <wpt lat="43.6424" lon="-72.2526">
+    <name>Northern Rail Trail - Trailhead</name>
+    <desc>Start point for Northern Rail Trail</desc>
+    <sym>Trailhead</sym>
+  </wpt>
+  <wpt lat="43.4326" lon="-71.8657">
+    <name>Northern Rail Trail - Center</name>
+    <desc>The longest rail trail in New Hampshire! Named to "100 Top Trails in U.S." Passes farms, orchards, lakes, and covered bridges with possible moose sightings.</desc>
+    <sym>Trail</sym>
+  </wpt>
+</gpx>

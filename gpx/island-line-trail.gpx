@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="NE E-Bike and PEV Community"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Island Line Trail</name>
+    <desc>Stunning Lake Champlain views with a unique 3-mile causeway extending over the water. Paved and packed gravel surface with Adirondack mountain vistas.</desc>
+    <author>
+      <name>NE E-Bike and PEV Community</name>
+      <link href="https://sparkbot207-del.github.io/ne-ebike-pev/">
+        <text>NE E-Bike and PEV</text>
+      </link>
+    </author>
+    <time>2026-02-01T16:27:47.897905</time>
+  </metadata>
+  <wpt lat="44.4801" lon="-73.221">
+    <name>Island Line Trail - Trailhead</name>
+    <desc>Start point for Island Line Trail</desc>
+    <sym>Trailhead</sym>
+  </wpt>
+  <wpt lat="44.4759" lon="-73.2121">
+    <name>Island Line Trail - Center</name>
+    <desc>Stunning Lake Champlain views with a unique 3-mile causeway extending over the water. Paved and packed gravel surface with Adirondack mountain vistas.</desc>
+    <sym>Trail</sym>
+  </wpt>
+</gpx>

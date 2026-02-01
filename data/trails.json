@@ -14,10 +14,16 @@
       "trailheadName": "South Dennis Trailhead",
       "topPick": true,
       "surface": "Paved",
-      "tags": ["Paved", "Beach Access", "Pet Friendly", "Rentals"],
+      "tags": [
+        "Paved",
+        "Beach Access",
+        "Pet Friendly",
+        "Rentals"
+      ],
       "gpxUrl": "https://www.alltrails.com/explore/map/cape-cod-rail-trail",
       "websiteUrl": "https://www.mass.gov/locations/cape-cod-rail-trail",
-      "trailspottingUrl": "https://www.trailspotting.com/2023/06/cape-cod-rail-trail-ma.html"
+      "trailspottingUrl": "https://www.trailspotting.com/2023/06/cape-cod-rail-trail-ma.html",
+      "gpxFile": "gpx/cape-cod-rail-trail.gpx"
     },
     {
       "id": "shining-sea-bikeway",
@@ -32,10 +38,14 @@
       "trailheadName": "North Falmouth Trailhead",
       "topPick": false,
       "surface": "Paved",
-      "tags": ["Coastal", "Scenic"],
+      "tags": [
+        "Coastal",
+        "Scenic"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://www.mass.gov/locations/shining-sea-bikeway",
-      "trailspottingUrl": "https://www.trailspotting.com/2023/06/shining-sea-bikeway-cape-cod-ma.html"
+      "trailspottingUrl": "https://www.trailspotting.com/2023/06/shining-sea-bikeway-cape-cod-ma.html",
+      "gpxFile": "gpx/shining-sea-bikeway.gpx"
     },
     {
       "id": "ashuwillticook-rail-trail",
@@ -45,15 +55,20 @@
       "description": "Berkshires ride with Mount Greylock and Hoosic Mountains views. Parking lots and restrooms available along the route.",
       "lat": 42.5551,
       "lng": -73.1568,
-      "trailheadLat": 42.6230,
+      "trailheadLat": 42.623,
       "trailheadLng": -73.1167,
       "trailheadName": "Adams Visitor Center",
       "topPick": false,
       "surface": "Paved",
-      "tags": ["Mountain Views", "Parking", "Restrooms"],
+      "tags": [
+        "Mountain Views",
+        "Parking",
+        "Restrooms"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://www.mass.gov/locations/ashuwillticook-rail-trail",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/ashuwillticook-rail-trail.gpx"
     },
     {
       "id": "nashua-river-rail-trail",
@@ -68,10 +83,14 @@
       "trailheadName": "Ayer Trailhead",
       "topPick": false,
       "surface": "Paved",
-      "tags": ["Paved", "Cross-State"],
+      "tags": [
+        "Paved",
+        "Cross-State"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://www.mass.gov/locations/nashua-river-rail-trail",
-      "trailspottingUrl": "https://www.trailspotting.com/2023/03/nashua-river-rail-trail-ma-nh.html"
+      "trailspottingUrl": "https://www.trailspotting.com/2023/03/nashua-river-rail-trail-ma-nh.html",
+      "gpxFile": "gpx/nashua-river-rail-trail.gpx"
     },
     {
       "id": "northern-rail-trail",
@@ -86,10 +105,15 @@
       "trailheadName": "Lebanon Trailhead",
       "topPick": true,
       "surface": "Crushed Stone",
-      "tags": ["Top 100 US Trail", "Wildlife", "Covered Bridges"],
+      "tags": [
+        "Top 100 US Trail",
+        "Wildlife",
+        "Covered Bridges"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://www.northernrailtrail.org/",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/northern-rail-trail.gpx"
     },
     {
       "id": "presidential-rail-trail",
@@ -104,10 +128,15 @@
       "trailheadName": "Gorham Trailhead",
       "topPick": false,
       "surface": "Crushed Stone",
-      "tags": ["Mountain Views", "Beaver Ponds", "Birding"],
+      "tags": [
+        "Mountain Views",
+        "Beaver Ponds",
+        "Birding"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://www.nhstateparks.org/visit/recreational-rail-trails/presidential-recreational-rail-trail",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/presidential-rail-trail.gpx"
     },
     {
       "id": "cotton-valley-trail",
@@ -122,10 +151,14 @@
       "trailheadName": "Wolfeboro Trailhead",
       "topPick": false,
       "surface": "Crushed Stone",
-      "tags": ["5-Star Rated", "Lakes Region"],
+      "tags": [
+        "5-Star Rated",
+        "Lakes Region"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://www.nhstateparks.org/visit/recreational-rail-trails/cotton-valley-rail-trail",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/cotton-valley-trail.gpx"
     },
     {
       "id": "eastern-trail",
@@ -133,17 +166,22 @@
       "state": "ME",
       "distance": "22 miles (65 total)",
       "description": "Flat, easy ride on asphalt and crushed stone. Features blueberry barrens, Rachel Carson Wildlife Refuge, Scarborough Marsh, and Bug Light Park.",
-      "lat": 43.5510,
+      "lat": 43.551,
       "lng": -70.3559,
       "trailheadLat": 43.6501,
       "trailheadLng": -70.2457,
       "trailheadName": "Bug Light Park, South Portland",
       "topPick": true,
       "surface": "Paved/Crushed Stone",
-      "tags": ["Paved", "Blueberries", "Wildlife Refuge"],
+      "tags": [
+        "Paved",
+        "Blueberries",
+        "Wildlife Refuge"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://www.easterntrail.org/",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/eastern-trail.gpx"
     },
     {
       "id": "kennebec-river-rail-trail",
@@ -158,10 +196,15 @@
       "trailheadName": "Augusta Waterfront",
       "topPick": false,
       "surface": "Paved",
-      "tags": ["Fully Paved", "Riverside", "Beginner Friendly"],
+      "tags": [
+        "Fully Paved",
+        "Riverside",
+        "Beginner Friendly"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://www.krrt.org/",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/kennebec-river-rail-trail.gpx"
     },
     {
       "id": "eastern-promenade-trail",
@@ -169,17 +212,22 @@
       "state": "ME",
       "distance": "2+ miles",
       "description": "Urban trail with stunning ocean views. Connects to Back Cove Trail for extended riding. Perfect for city exploration.",
-      "lat": 43.6680,
-      "lng": -70.2420,
-      "trailheadLat": 43.6680,
-      "trailheadLng": -70.2420,
+      "lat": 43.668,
+      "lng": -70.242,
+      "trailheadLat": 43.668,
+      "trailheadLng": -70.242,
       "trailheadName": "East End Beach, Portland",
       "topPick": false,
       "surface": "Paved",
-      "tags": ["Urban", "Ocean Views", "Connects Trails"],
+      "tags": [
+        "Urban",
+        "Ocean Views",
+        "Connects Trails"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://trails.org/our-trails/eastern-promenade-trail/",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/eastern-promenade-trail.gpx"
     },
     {
       "id": "island-line-trail",
@@ -190,15 +238,20 @@
       "lat": 44.4759,
       "lng": -73.2121,
       "trailheadLat": 44.4801,
-      "trailheadLng": -73.2210,
+      "trailheadLng": -73.221,
       "trailheadName": "Burlington Waterfront",
       "topPick": true,
       "surface": "Paved/Gravel",
-      "tags": ["Paved + Gravel", "Lake Views", "Scenic"],
+      "tags": [
+        "Paved + Gravel",
+        "Lake Views",
+        "Scenic"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://localmotion.org/island-line-trail/",
       "trailspottingUrl": null,
-      "note": "200ft gap requires seasonal ferry in summer months"
+      "note": "200ft gap requires seasonal ferry in summer months",
+      "gpxFile": "gpx/island-line-trail.gpx"
     },
     {
       "id": "montpelier-wells-river-trail",
@@ -213,10 +266,15 @@
       "trailheadName": "Groton State Forest",
       "topPick": false,
       "surface": "Dirt/Cinder",
-      "tags": ["Dirt/Cinder", "Swimming", "Forest"],
+      "tags": [
+        "Dirt/Cinder",
+        "Swimming",
+        "Forest"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://fpr.vermont.gov/montpelier-and-wells-river-rail-trail",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/montpelier-wells-river-trail.gpx"
     },
     {
       "id": "air-line-state-park-trail",
@@ -231,10 +289,15 @@
       "trailheadName": "Portland Trailhead",
       "topPick": true,
       "surface": "Gravel",
-      "tags": ["Award Winner", "Viaducts", "Historic"],
+      "tags": [
+        "Award Winner",
+        "Viaducts",
+        "Historic"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://portal.ct.gov/DEEP/State-Parks/Parks/Air-Line-State-Park-Trail",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/air-line-state-park-trail.gpx"
     },
     {
       "id": "farmington-canal-heritage-trail",
@@ -243,16 +306,20 @@
       "distance": "80+ miles total",
       "description": "Popular paved path following a historic canal route. Eventually will connect to Massachusetts trails.",
       "lat": 41.4925,
-      "lng": -72.8990,
+      "lng": -72.899,
       "trailheadLat": 41.3082,
       "trailheadLng": -72.9268,
       "trailheadName": "New Haven Trailhead",
       "topPick": false,
       "surface": "Paved",
-      "tags": ["Paved", "Canal History"],
+      "tags": [
+        "Paved",
+        "Canal History"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://www.farmingtoncanal.org/",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/farmington-canal-heritage-trail.gpx"
     },
     {
       "id": "east-bay-bike-path",
@@ -260,17 +327,22 @@
       "state": "RI",
       "distance": "14.5 miles",
       "description": "Rhode Island's most popular paved trail with beautiful Narragansett Bay views. Perfect for a day trip from Providence.",
-      "lat": 41.7060,
+      "lat": 41.706,
       "lng": -71.3489,
       "trailheadLat": 41.8159,
       "trailheadLng": -71.3897,
       "trailheadName": "India Point Park, Providence",
       "topPick": true,
       "surface": "Paved",
-      "tags": ["Paved", "Bay Views", "Most Popular"],
+      "tags": [
+        "Paved",
+        "Bay Views",
+        "Most Popular"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://riparks.ri.gov/locations/east-bay-bike-path",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/east-bay-bike-path.gpx"
     },
     {
       "id": "blackstone-river-bikeway",
@@ -285,20 +357,18 @@
       "trailheadName": "Lonsdale Trailhead",
       "topPick": false,
       "surface": "Paved",
-      "tags": ["Historic", "Riverside"],
+      "tags": [
+        "Historic",
+        "Riverside"
+      ],
       "gpxUrl": null,
       "websiteUrl": "https://www.blackstoneheritagecorridor.org/explore/bikeway/",
-      "trailspottingUrl": null
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/blackstone-river-bikeway.gpx"
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-02-01",
-    "source": "NE E-Bike and PEV Community",
-    "gpxSources": [
-      "https://www.trailspotting.com/p/trailspotting-rail-trails.html",
-      "https://bikenewengland.com/",
-      "https://www.alltrails.com/",
-      "State park websites"
-    ]
+    "lastUpdated": "2026-02-01T16:27:47.898711",
+    "gpxGenerated": true
   }
 }
