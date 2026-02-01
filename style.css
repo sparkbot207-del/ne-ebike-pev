@@ -713,21 +713,25 @@ a.resource-link:hover {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .nav-links {
+        display: flex;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(15, 23, 42, 0.98);
+        background: rgba(15, 23, 42, 0.99);
         backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         padding: 20px;
-        gap: 25px;
+        gap: 20px;
         transform: translateX(100%);
         opacity: 0;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         pointer-events: none;
+        z-index: 1000;
+        overflow: visible;
     }
 
     .nav-links.active {
@@ -737,7 +741,10 @@ a.resource-link:hover {
     }
 
     .nav-links a {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 
     .nav-toggle {
