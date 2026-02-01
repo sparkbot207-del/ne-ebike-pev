@@ -1,10 +1,10 @@
-# New England E-Bike & PEV Community Website ⚡
+# New England E-Bike and PEV Community Website ⚡
 
 A simple, mobile-friendly website for the New England Electric Bike and Personal Electric Vehicle community.
 
 ## About
 
-This site serves as a landing page for the NE E-Bike & PEV community - a regional group of electric bicycle and personal electric vehicle enthusiasts across the six New England states.
+This site serves as a landing page for the NE E-Bike and PEV community - a regional group of electric bicycle and personal electric vehicle enthusiasts across the six New England states.
 
 ## Features
 
