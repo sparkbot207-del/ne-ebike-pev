@@ -277,7 +277,7 @@ body {
 
 /* Sections - All Dark Theme */
 .section {
-    padding: 120px 0;
+    padding: 60px 0;
     background: var(--darker);
     color: white;
     position: relative;
@@ -289,10 +289,10 @@ body {
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: white;
     letter-spacing: -0.02em;
 }
@@ -300,9 +300,9 @@ body {
 .section-subtitle {
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1.2rem;
+    font-size: 1rem;
     max-width: 600px;
-    margin: 0 auto 60px;
+    margin: 0 auto 30px;
 }
 
 /* About Grid */
@@ -384,15 +384,15 @@ body {
 .community-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 40px;
     align-items: center;
 }
 
 .community-text .lead {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 35px;
-    line-height: 1.8;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .feature-list {
@@ -400,8 +400,8 @@ body {
 }
 
 .feature-list li {
-    padding: 18px 0;
-    font-size: 1.15rem;
+    padding: 10px 0;
+    font-size: 0.95rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s;
     cursor: default;
@@ -416,13 +416,13 @@ body {
 .community-stats {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 15px;
 }
 
 .stat {
     background: var(--gradient);
-    padding: 40px 30px;
-    border-radius: 20px;
+    padding: 20px 15px;
+    border-radius: 12px;
     text-align: center;
     color: white;
     position: relative;
@@ -452,14 +452,14 @@ body {
 
 .stat-number {
     display: block;
-    font-size: 3.5rem;
+    font-size: 2rem;
     font-weight: 800;
     position: relative;
     z-index: 1;
 }
 
 .stat-label {
-    font-size: 1rem;
+    font-size: 0.85rem;
     opacity: 0.9;
     font-weight: 500;
     position: relative;
@@ -469,15 +469,15 @@ body {
 /* Events Grid */
 .events-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
 .event-card {
     background: rgba(255, 255, 255, 0.05);
-    padding: 35px;
-    border-radius: 20px;
+    padding: 20px;
+    border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     position: relative;
     transition: all 0.4s;
@@ -518,20 +518,22 @@ body {
 }
 
 .event-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
     font-weight: 700;
 }
 
 .event-date {
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     opacity: 0.9;
+    font-size: 0.9rem;
 }
 
 .event-card p:last-child {
     opacity: 0.85;
-    line-height: 1.6;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
 
 .events-cta {
@@ -547,19 +549,19 @@ body {
 /* Resources Grid */
 .resources-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
 .resource-card {
     background: rgba(255, 255, 255, 0.05);
-    padding: 35px;
-    border-radius: 16px;
-    border-left: 5px solid var(--primary);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
     transition: all 0.3s;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-left: 5px solid var(--primary);
+    border-left: 4px solid var(--primary);
 }
 
 .resource-card:hover {
@@ -570,15 +572,16 @@ body {
 }
 
 .resource-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
     color: white;
     font-weight: 700;
 }
 
 .resource-card p {
     color: rgba(255, 255, 255, 0.7);
-    line-height: 1.7;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
 
 a.resource-link {
@@ -620,16 +623,16 @@ a.resource-link:hover {
 }
 
 .cta-section h2 {
-    font-size: 3rem;
-    margin-bottom: 25px;
+    font-size: 2rem;
+    margin-bottom: 15px;
     font-weight: 800;
 }
 
 .cta-section p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     opacity: 0.9;
     max-width: 600px;
-    margin: 0 auto 35px;
+    margin: 0 auto 20px;
 }
 
 .cta-section .btn-primary {
@@ -775,20 +778,33 @@ a.resource-link:hover {
     }
 
     .stat {
-        padding: 25px 15px;
+        padding: 15px 10px;
     }
 
     .stat-number {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .section {
-        padding: 80px 0;
+        padding: 40px 0;
     }
 
     .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 15px;
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .event-card, .resource-card {
+        padding: 15px;
+    }
+    
+    .events-grid, .resources-grid {
+        gap: 10px;
     }
 
     .footer-content {
