@@ -176,9 +176,39 @@ body {
     align-items: center;
     justify-content: center;
     padding: 100px 20px;
-    background: linear-gradient(135deg, var(--darkest) 0%, var(--darker) 100%);
+    background: var(--darkest);
     position: relative;
     overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    filter: saturate(1.2);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.8) 0%, rgba(15, 23, 42, 0.7) 100%);
+}
+
+.hero-mascot {
+    width: 280px;
+    max-width: 90%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    animation: float 6s ease-in-out infinite;
 }
 
 .hero-content {
@@ -244,19 +274,9 @@ body {
     animation: fadeInUp 1s ease-out 0.4s backwards;
 }
 
-.hero-visual {
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 15rem;
-    opacity: 0.1;
-    animation: float 6s ease-in-out infinite;
-}
-
 @keyframes float {
-    0%, 100% { transform: translateY(-50%) rotate(-5deg); }
-    50% { transform: translateY(-55%) rotate(5deg); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
 /* Animated electric lines */
