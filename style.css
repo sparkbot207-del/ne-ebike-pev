@@ -73,12 +73,9 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 15px 0;
+    padding: 12px 0;
     transition: all 0.3s ease;
-}
-
-.nav.scrolled {
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(15, 23, 42, 0.98);
     backdrop-filter: blur(20px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -94,14 +91,14 @@ body {
 }
 
 .nav-logo {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 800;
     background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-decoration: none;
-    text-shadow: 0 0 30px var(--primary-glow);
+    white-space: nowrap;
 }
 
 .nav-links {
