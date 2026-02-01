@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routes & Trails - New England E-Bike and PEV</title>
+    <meta name="description" content="Best e-bike friendly trails and routes across New England. Interactive map of rail trails in Vermont, Maine, New Hampshire, Massachusetts, Connecticut, and Rhode Island.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        /* Routes page specific styles */
+        #trail-map {
+            height: 500px;
+            width: 100%;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .map-section {
+            padding: 2rem 0;
+        }
+        
+        .map-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .legend-dot.vt { background: #2ecc71; }
+        .legend-dot.me { background: #e74c3c; }
+        .legend-dot.nh { background: #9b59b6; }
+        .legend-dot.ma { background: #3498db; }
+        .legend-dot.ct { background: #f39c12; }
+        .legend-dot.ri { background: #1abc9c; }
+        
+        .trails-section {
+            padding: 3rem 0;
+        }
+        
+        .state-group {
+            margin-bottom: 3rem;
+        }
+        
+        .state-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--accent);
+        }
+        
+        .trail-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .trail-card {
+            background: var(--card-bg, #1a1a2e);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .trail-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        
+        .trail-card.top-pick {
+            border-color: var(--accent);
+            position: relative;
+        }
+        
+        .trail-card.top-pick::before {
+            content: "⭐ TOP PICK";
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--accent);
+            color: #000;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .trail-card h3 {
+            color: #fff;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+        
+        .trail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .trail-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .trail-card p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+        
+        .trail-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .trail-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .resources-section {
+            padding: 3rem 0;
+            background: rgba(255,255,255,0.02);
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .resource-link {
+            display: block;
+            background: var(--card-bg, #1a1a2e);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .resource-link:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .resource-link h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .resource-link p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Leaflet popup styling */
+        .leaflet-popup-content-wrapper {
+            background: #1a1a2e;
+            color: #fff;
+            border-radius: 8px;
+        }
+        
+        .leaflet-popup-tip {
+            background: #1a1a2e;
+        }
+        
+        .leaflet-popup-content h3 {
+            margin: 0 0 0.5rem 0;
+            color: #fff;
+        }
+        
+        .leaflet-popup-content p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .popup-distance {
+            color: var(--accent) !important;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            #trail-map {
+                height: 350px;
+            }
+            
+            .trail-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">⚡ New England E-Bike and PEV</a>
+            <div class="nav-links">
+                <a href="index.html#community">Community</a>
+                <a href="laws.html">Laws</a>
+                <a href="routes.html" class="active">Routes</a>
+                <a href="index.html#resources">Resources</a>
+                <a href="https://www.facebook.com/groups/573295111141320/" target="_blank" class="nav-cta">Join Us</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>🗺️ Routes & Trails</h1>
+            <p>Explore the best e-bike friendly trails across New England</p>
+        </div>
+    </header>
+
+    <!-- Interactive Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Interactive Trail Map</h2>
+            <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Click markers for trail details</p>
+            <div id="trail-map"></div>
+            <div class="map-legend">
+                <div class="legend-item"><span class="legend-dot vt"></span> Vermont</div>
+                <div class="legend-item"><span class="legend-dot nh"></span> New Hampshire</div>
+                <div class="legend-item"><span class="legend-dot me"></span> Maine</div>
+                <div class="legend-item"><span class="legend-dot ma"></span> Massachusetts</div>
+                <div class="legend-item"><span class="legend-dot ct"></span> Connecticut</div>
+                <div class="legend-item"><span class="legend-dot ri"></span> Rhode Island</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trails by State -->
+    <section class="trails-section">
+        <div class="container">
+            
+            <!-- Vermont -->
+            <div class="state-group" id="vermont">
+                <h2 class="state-title">🏔️ Vermont</h2>
+                <div class="trail-cards">
+                    <div class="trail-card top-pick">
+                        <h3>Island Line Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 Burlington → South Hero</span>
+                            <span>📏 14 miles</span>
+                        </div>
+                        <p>Stunning Lake Champlain views with a unique 3-mile causeway extending over the water. Paved and packed gravel surface with Adirondack mountain vistas.</p>
+                        <p>⚠️ Note: 200ft gap requires seasonal ferry in summer months.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🛤️ Paved + Gravel</span>
+                            <span class="trail-tag">🌅 Lake Views</span>
+                            <span class="trail-tag">📸 Scenic</span>
+                        </div>
+                    </div>
+                    <div class="trail-card">
+                        <h3>Montpelier & Wells River Rail Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 Groton → Marshfield</span>
+                            <span>📏 19 miles</span>
+                        </div>
+                        <p>Scenic dirt and cinder trail through untamed Vermont landscape. Lake Groton offers a refreshing swimming spot halfway through.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🛤️ Dirt/Cinder</span>
+                            <span class="trail-tag">🏊 Swimming</span>
+                            <span class="trail-tag">🌲 Forest</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Hampshire -->
+            <div class="state-group" id="new-hampshire">
+                <h2 class="state-title">⛰️ New Hampshire</h2>
+                <div class="trail-cards">
+                    <div class="trail-card top-pick">
+                        <h3>Northern Rail Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 Lebanon → Boscawen</span>
+                            <span>📏 59.3 miles</span>
+                        </div>
+                        <p>The longest rail trail in New Hampshire! Named to "100 Top Trails in U.S." Passes farms, orchards, lakes, and covered bridges with possible moose sightings.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🏆 Top 100 US Trail</span>
+                            <span class="trail-tag">🦌 Wildlife</span>
+                            <span class="trail-tag">🌉 Covered Bridges</span>
+                        </div>
+                    </div>
+                    <div class="trail-card">
+                        <h3>Presidential Rail Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 Gorham → Whitefield</span>
+                            <span>📏 18 miles</span>
+                        </div>
+                        <p>Breathtaking White Mountains Presidential Range views. Features beaver ponds, pastures, and key birding spots.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🏔️ Mountain Views</span>
+                            <span class="trail-tag">🦫 Beaver Ponds</span>
+                            <span class="trail-tag">🐦 Birding</span>
+                        </div>
+                    </div>
+                    <div class="trail-card">
+                        <h3>Cotton Valley Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 Lakes Region</span>
+                            <span>📏 12 miles each way</span>
+                        </div>
+                        <p>5-star rated trail through New Hampshire's beautiful Lakes Region. Great for out-and-back rides.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">⭐ 5-Star Rated</span>
+                            <span class="trail-tag">🏖️ Lakes Region</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maine -->
+            <div class="state-group" id="maine">
+                <h2 class="state-title">🦞 Maine</h2>
+                <div class="trail-cards">
+                    <div class="trail-card top-pick">
+                        <h3>Eastern Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 South Portland → Kennebunk</span>
+                            <span>📏 22 miles (65 total)</span>
+                        </div>
+                        <p>Flat, easy ride on asphalt and crushed stone. Features blueberry barrens, Rachel Carson Wildlife Refuge, Scarborough Marsh, and Bug Light Park.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🛤️ Paved</span>
+                            <span class="trail-tag">🫐 Blueberries</span>
+                            <span class="trail-tag">🦅 Wildlife Refuge</span>
+                        </div>
+                    </div>
+                    <div class="trail-card">
+                        <h3>Kennebec River Rail Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 Augusta → Gardiner</span>
+                            <span>📏 6.5 miles</span>
+                        </div>
+                        <p>Fully paved, flat riverside ride with four convenient access points. Great for beginners or casual rides.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🛤️ Fully Paved</span>
+                            <span class="trail-tag">🌊 Riverside</span>
+                            <span class="trail-tag">👶 Beginner Friendly</span>
+                        </div>
+                    </div>
+                    <div class="trail-card">
+                        <h3>Eastern Promenade Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 Portland</span>
+                            <span>📏 2+ miles</span>
+                        </div>
+                        <p>Urban trail with stunning ocean views. Connects to Back Cove Trail for extended riding. Perfect for city exploration.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🏙️ Urban</span>
+                            <span class="trail-tag">🌊 Ocean Views</span>
+                            <span class="trail-tag">🔗 Connects Trails</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Massachusetts -->
+            <div class="state-group" id="massachusetts">
+                <h2 class="state-title">🏖️ Massachusetts</h2>
+                <div class="trail-cards">
+                    <div class="trail-card top-pick">
+                        <h3>Cape Cod Rail Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 South Dennis → South Wellfleet</span>
+                            <span>📏 22 miles</span>
+                        </div>
+                        <p>Paved path with gentle hills and beach access to Cape Cod National Seashore. Bike rentals available along the trail. Pet friendly!</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🛤️ Paved</span>
+                            <span class="trail-tag">🏖️ Beach Access</span>
+                            <span class="trail-tag">🐕 Pet Friendly</span>
+                            <span class="trail-tag">🚲 Rentals</span>
+                        </div>
+                    </div>
+                    <div class="trail-card">
+                        <h3>Shining Sea Bikeway</h3>
+                        <div class="trail-meta">
+                            <span>📍 Falmouth</span>
+                            <span>📏 11 miles</span>
+                        </div>
+                        <p>Beautiful coastal ride through Falmouth with Buzzards Bay views. One of the Cape's most scenic paths.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🌊 Coastal</span>
+                            <span class="trail-tag">📸 Scenic</span>
+                        </div>
+                    </div>
+                    <div class="trail-card">
+                        <h3>Ashuwillticook Rail Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 Cheshire → Adams</span>
+                            <span>📏 12.7 miles</span>
+                        </div>
+                        <p>Berkshires ride with Mount Greylock and Hoosic Mountains views. Parking lots and restrooms available along the route.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🏔️ Mountain Views</span>
+                            <span class="trail-tag">🅿️ Parking</span>
+                            <span class="trail-tag">🚻 Restrooms</span>
+                        </div>
+                    </div>
+                    <div class="trail-card">
+                        <h3>Nashua River Rail Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 Ayer → Nashua NH</span>
+                            <span>📏 12.5 miles</span>
+                        </div>
+                        <p>Cross-border trail connecting Massachusetts and New Hampshire. Great for longer rides.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🛤️ Paved</span>
+                            <span class="trail-tag">🗺️ Cross-State</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connecticut -->
+            <div class="state-group" id="connecticut">
+                <h2 class="state-title">🏛️ Connecticut</h2>
+                <div class="trail-cards">
+                    <div class="trail-card top-pick">
+                        <h3>Air Line State Park Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 Portland → Thompson</span>
+                            <span>📏 50 miles</span>
+                        </div>
+                        <p>Historic "Ghost Train" route! Flat gravel trail over viaducts and bridges, through wetlands, farmlands, and forest preserves. Yankee Editors' Pick for "Best Rail Trail."</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🏆 Award Winner</span>
+                            <span class="trail-tag">🌉 Viaducts</span>
+                            <span class="trail-tag">📜 Historic</span>
+                        </div>
+                    </div>
+                    <div class="trail-card">
+                        <h3>Farmington Canal Heritage Trail</h3>
+                        <div class="trail-meta">
+                            <span>📍 New Haven → Northampton MA</span>
+                            <span>📏 80+ miles total</span>
+                        </div>
+                        <p>Popular paved path following a historic canal route. Eventually will connect to Massachusetts trails.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🛤️ Paved</span>
+                            <span class="trail-tag">📜 Canal History</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rhode Island -->
+            <div class="state-group" id="rhode-island">
+                <h2 class="state-title">🐚 Rhode Island</h2>
+                <div class="trail-cards">
+                    <div class="trail-card top-pick">
+                        <h3>East Bay Bike Path</h3>
+                        <div class="trail-meta">
+                            <span>📍 Providence → Bristol</span>
+                            <span>📏 14.5 miles</span>
+                        </div>
+                        <p>Rhode Island's most popular paved trail with beautiful Narragansett Bay views. Perfect for a day trip from Providence.</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">🛤️ Paved</span>
+                            <span class="trail-tag">🌊 Bay Views</span>
+                            <span class="trail-tag">⭐ Most Popular</span>
+                        </div>
+                    </div>
+                    <div class="trail-card">
+                        <h3>Blackstone River Bikeway</h3>
+                        <div class="trail-meta">
+                            <span>📍 Providence area</span>
+                            <span>📏 18+ miles</span>
+                        </div>
+                        <p>Follows the historic Blackstone River through industrial heritage sites. Still expanding!</p>
+                        <div class="trail-tags">
+                            <span class="trail-tag">📜 Historic</span>
+                            <span class="trail-tag">🌊 Riverside</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Trail Resources</h2>
+            <div class="resources-grid">
+                <a href="https://bikenewengland.com/" target="_blank" class="resource-link">
+                    <h3>🚴 Bike New England</h3>
+                    <p>1000+ routes with GPX files, cue sheets, and maps for all New England states.</p>
+                </a>
+                <a href="https://www.trailspotting.com/p/trailspotting-rail-trails.html" target="_blank" class="resource-link">
+                    <h3>🗺️ Trailspotting</h3>
+                    <p>Complete rail trail maps with surface conditions and points of interest.</p>
+                </a>
+                <a href="https://www.railstotrails.org/" target="_blank" class="resource-link">
+                    <h3>🛤️ Rails-to-Trails Conservancy</h3>
+                    <p>Official trail information and advocacy for rail trail conversion.</p>
+                </a>
+                <a href="https://www.greenway.org/" target="_blank" class="resource-link">
+                    <h3>🌿 East Coast Greenway</h3>
+                    <p>3,000-mile trail from Maine to Florida. Many NE trails are part of this network.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <h2>Share Your Favorite Routes!</h2>
+            <p>Know a great trail we missed? Join our community and share your discoveries with fellow riders.</p>
+            <a href="https://www.facebook.com/groups/573295111141320/" target="_blank" class="btn btn-primary btn-large">Join Our Facebook Group</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">⚡ NE E-Bike and PEV</span>
+                    <p>A community for electric mobility enthusiasts in New England</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.facebook.com/groups/573295111141320/" target="_blank">Facebook Group</a>
+                    <a href="index.html">Home</a>
+                    <a href="laws.html">Laws</a>
+                    <a href="routes.html">Routes</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 New England E-Bike and PEV Community. Ride safe! ⚡</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map centered on New England
+        const map = L.map('trail-map').setView([43.0, -71.5], 7);
+        
+        // Add tile layer (using OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        
+        // Custom icons by state
+        function createIcon(color) {
+            return L.divIcon({
+                className: 'custom-marker',
+                html: `<div style="background:${color};width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,0.3);"></div>`,
+                iconSize: [24, 24],
+                iconAnchor: [12, 12],
+                popupAnchor: [0, -12]
+            });
+        }
+        
+        const icons = {
+            VT: createIcon('#2ecc71'),
+            NH: createIcon('#9b59b6'),
+            ME: createIcon('#e74c3c'),
+            MA: createIcon('#3498db'),
+            CT: createIcon('#f39c12'),
+            RI: createIcon('#1abc9c')
+        };
+        
+        // Trail data
+        const trails = [
+            // Vermont
+            { name: "Island Line Trail", state: "VT", lat: 44.4759, lng: -73.2121, distance: "14 miles", desc: "Lake Champlain views, causeway over water", topPick: true },
+            { name: "Montpelier & Wells River Rail Trail", state: "VT", lat: 44.2628, lng: -72.2339, distance: "19 miles", desc: "Forest scenery, Lake Groton swimming" },
+            
+            // New Hampshire
+            { name: "Northern Rail Trail", state: "NH", lat: 43.4326, lng: -71.8657, distance: "59.3 miles", desc: "Longest in NH, Top 100 US Trail", topPick: true },
+            { name: "Presidential Rail Trail", state: "NH", lat: 44.3876, lng: -71.1851, distance: "18 miles", desc: "White Mountains views, beaver ponds" },
+            { name: "Cotton Valley Trail", state: "NH", lat: 43.6106, lng: -71.2437, distance: "12 miles", desc: "Lakes Region, 5-star rated" },
+            
+            // Maine
+            { name: "Eastern Trail", state: "ME", lat: 43.5510, lng: -70.3559, distance: "22 miles", desc: "Wildlife refuge, blueberry barrens", topPick: true },
+            { name: "Kennebec River Rail Trail", state: "ME", lat: 44.3106, lng: -69.7795, distance: "6.5 miles", desc: "Paved riverside, beginner friendly" },
+            { name: "Eastern Promenade Trail", state: "ME", lat: 43.6680, lng: -70.2420, distance: "2+ miles", desc: "Portland, ocean views" },
+            
+            // Massachusetts
+            { name: "Cape Cod Rail Trail", state: "MA", lat: 41.7563, lng: -70.0611, distance: "22 miles", desc: "Beach access, pet friendly", topPick: true },
+            { name: "Shining Sea Bikeway", state: "MA", lat: 41.5516, lng: -70.6162, distance: "11 miles", desc: "Coastal Falmouth, Buzzards Bay" },
+            { name: "Ashuwillticook Rail Trail", state: "MA", lat: 42.5551, lng: -73.1568, distance: "12.7 miles", desc: "Berkshires, Mount Greylock views" },
+            { name: "Nashua River Rail Trail", state: "MA", lat: 42.5612, lng: -71.5836, distance: "12.5 miles", desc: "Cross-state to NH" },
+            
+            // Connecticut
+            { name: "Air Line State Park Trail", state: "CT", lat: 41.7004, lng: -72.2273, distance: "50 miles", desc: "Historic Ghost Train route, viaducts", topPick: true },
+            { name: "Farmington Canal Heritage Trail", state: "CT", lat: 41.4925, lng: -72.8990, distance: "80+ miles", desc: "Historic canal route" },
+            
+            // Rhode Island
+            { name: "East Bay Bike Path", state: "RI", lat: 41.7060, lng: -71.3489, distance: "14.5 miles", desc: "Narragansett Bay views", topPick: true },
+            { name: "Blackstone River Bikeway", state: "RI", lat: 41.8604, lng: -71.4128, distance: "18+ miles", desc: "Historic industrial heritage" }
+        ];
+        
+        // Add markers to map
+        trails.forEach(trail => {
+            const popup = `
+                <h3>${trail.topPick ? '⭐ ' : ''}${trail.name}</h3>
+                <p class="popup-distance">📏 ${trail.distance}</p>
+                <p>${trail.desc}</p>
+            `;
+            
+            L.marker([trail.lat, trail.lng], { icon: icons[trail.state] })
+                .addTo(map)
+                .bindPopup(popup);
+        });
+        
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
