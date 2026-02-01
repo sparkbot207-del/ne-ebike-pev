@@ -1,82 +1,125 @@
-/* Laws Page Specific Styles */
+/* Laws Page Specific Styles - Stylized */
 
 .page-header {
-    background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 50%, #eff6ff 100%);
-    padding: 140px 20px 60px;
+    background: linear-gradient(135deg, var(--darkest) 0%, var(--darker) 100%);
+    padding: 160px 20px 80px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 70%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
 }
 
 .page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: var(--darker);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
 }
 
 .page-header p {
-    font-size: 1.2rem;
-    color: var(--gray);
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    z-index: 1;
 }
 
 .disclaimer {
-    background: #fef3c7;
-    border-bottom: 2px solid #f59e0b;
-    padding: 15px 0;
+    background: linear-gradient(90deg, #fef3c7, #fde68a);
+    border-bottom: 3px solid #f59e0b;
+    padding: 20px 0;
 }
 
 .disclaimer p {
     text-align: center;
     color: #92400e;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .laws-content {
-    padding: 60px 0;
+    padding: 80px 0;
+    background: var(--light);
 }
 
 .state-section {
     margin-bottom: 50px;
     background: white;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: var(--shadow);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.state-section:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-5px);
 }
 
 .state-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
     border-bottom: 2px solid var(--gray-light);
 }
 
 .state-header h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--darker);
     margin: 0;
+    font-weight: 800;
 }
 
 .state-abbr {
     background: var(--gradient);
     color: white;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 800;
     font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
 .bills-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
 .bill-card {
     background: var(--light);
-    border-radius: 12px;
-    padding: 25px;
-    border-left: 4px solid var(--primary);
+    border-radius: 16px;
+    padding: 30px;
+    border-left: 5px solid var(--primary);
     position: relative;
+    transition: all 0.3s;
+}
+
+.bill-card:hover {
+    border-left-color: var(--secondary);
+    transform: translateX(5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .bill-card.highlight-card {
@@ -86,107 +129,140 @@
 
 .bill-id {
     display: inline-block;
-    background: var(--dark);
+    background: var(--darker);
     color: white;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-family: monospace;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-family: 'Monaco', 'Menlo', monospace;
 }
 
 .bill-status {
     display: inline-block;
-    padding: 4px 12px;
-    border-radius: 4px;
+    padding: 6px 14px;
+    border-radius: 50px;
     font-size: 0.8rem;
-    font-weight: 600;
-    margin-left: 10px;
+    font-weight: 700;
+    margin-left: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .status-passed {
     background: #d1fae5;
     color: #065f46;
+    box-shadow: 0 2px 10px rgba(16, 185, 129, 0.2);
 }
 
 .status-proposed {
     background: #fef3c7;
     color: #92400e;
+    box-shadow: 0 2px 10px rgba(245, 158, 11, 0.2);
 }
 
 .bill-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
     color: var(--darker);
+    font-weight: 700;
 }
 
 .bill-card p {
     color: var(--gray);
-    margin-bottom: 10px;
-    line-height: 1.6;
+    margin-bottom: 12px;
+    line-height: 1.7;
+    font-size: 1.05rem;
 }
 
 .bill-note {
-    background: #fef3c7;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 0.9rem;
+    background: linear-gradient(90deg, #fef3c7, #fde68a);
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 0.95rem;
     color: #92400e;
+    font-weight: 500;
 }
 
 .bill-links {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .bill-links a {
     color: var(--primary);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.95rem;
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
+    transition: all 0.3s;
+    padding: 8px 16px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 8px;
 }
 
 .bill-links a:hover {
-    text-decoration: underline;
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
 }
 
 .bill-links a::before {
     content: '→';
 }
 
+/* Nav active state */
+.nav-links a.active {
+    color: var(--primary) !important;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     .page-header {
-        padding: 120px 20px 40px;
+        padding: 140px 20px 60px;
     }
 
     .page-header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .state-section {
-        padding: 20px;
+        padding: 25px;
+        border-radius: 16px;
     }
 
     .state-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 15px;
+    }
+
+    .state-header h2 {
+        font-size: 1.6rem;
     }
 
     .bill-card {
-        padding: 20px;
+        padding: 25px;
     }
 
     .bill-status {
         display: block;
         margin-left: 0;
-        margin-top: 5px;
+        margin-top: 8px;
+        width: fit-content;
+    }
+
+    .bill-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bill-links a {
+        justify-content: center;
     }
 }
