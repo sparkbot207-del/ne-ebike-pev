@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bike Shops & Services - New England E-Bike and PEV</title>
+    <meta name="description" content="Find e-bike shops, repair services, and dealers across New England. Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <style>
+        .shops-header {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .shops-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .shops-header p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+        }
+        
+        #shop-map {
+            height: 400px;
+            width: 100%;
+            border-radius: 12px;
+            margin: 1rem 0 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .featured-section {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(16, 185, 129, 0.15));
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        
+        .featured-section h2 {
+            color: #f59e0b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .shop-card {
+            background: rgba(0,0,0,0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .shop-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        
+        .shop-card.featured {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+        }
+        
+        .shop-card.featured::before {
+            content: "⭐ FEATURED";
+            display: inline-block;
+            background: #f59e0b;
+            color: #000;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        
+        .shop-card h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .shop-card .shop-location {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .shop-card .shop-services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .shop-card .shop-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .shop-card .shop-contact a {
+            color: #10b981;
+            text-decoration: none;
+        }
+        
+        .shop-card .shop-contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .shop-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .shop-actions a {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .btn-directions {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        .btn-website {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .btn-call {
+            background: #10b981;
+            color: white;
+        }
+        
+        .state-section {
+            margin-bottom: 3rem;
+        }
+        
+        .state-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--accent);
+            color: #fff;
+        }
+        
+        .shops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .submit-section {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .submit-section h2 {
+            color: #10b981;
+            margin-bottom: 0.5rem;
+        }
+        
+        .submit-section p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.5rem;
+        }
+        
+        .submit-section .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: #10b981;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .submit-section .btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+        
+        .no-shops-yet {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255,255,255,0.6);
+            font-style: italic;
+        }
+        
+        /* Search box */
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .search-container input {
+            flex: 1;
+            padding: 0.75rem 1.25rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .search-container button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            border: none;
+            background: #10b981;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        /* Leaflet popup */
+        .leaflet-popup-content-wrapper {
+            background: #1a1a2e;
+            color: #fff;
+            border-radius: 8px;
+        }
+        
+        .leaflet-popup-tip {
+            background: #1a1a2e;
+        }
+        
+        @media (max-width: 768px) {
+            #shop-map {
+                height: 300px;
+            }
+            
+            .shops-grid, .featured-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">⚡ New England E-Bike and PEV</a>
+            <div class="nav-links">
+                <a href="index.html#community">Community</a>
+                <a href="laws.html">Laws</a>
+                <a href="routes.html">Routes</a>
+                <a href="shops.html" class="active">Shops</a>
+                <a href="planner.html">Planner</a>
+                <a href="https://www.facebook.com/groups/573295111141320/" target="_blank" class="nav-cta">Join Us</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="shops-header">
+                <h1>🏪 E-Bike Shops & Services</h1>
+                <p>Find e-bike dealers, repair shops, and services across New England</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            
+            <!-- Search -->
+            <div class="search-container">
+                <input type="text" id="shop-search" placeholder="🔍 Search shops by name or city...">
+                <button onclick="searchShops()">Search</button>
+            </div>
+            
+            <!-- Map -->
+            <div id="shop-map"></div>
+            
+            <!-- Featured Listings -->
+            <section class="featured-section">
+                <h2>⭐ Featured Shops</h2>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">Premium listings from our trusted partners</p>
+                <div class="featured-grid" id="featured-shops">
+                    <div class="no-shops-yet">
+                        Want your shop featured here? <a href="#submit" style="color:#10b981;">Contact us!</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Shops by State -->
+            <section class="state-section" id="connecticut">
+                <h2>🏛️ Connecticut</h2>
+                <div class="shops-grid" id="shops-ct">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+            
+            <section class="state-section" id="maine">
+                <h2>🦞 Maine</h2>
+                <div class="shops-grid" id="shops-me">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+            
+            <section class="state-section" id="massachusetts">
+                <h2>🏖️ Massachusetts</h2>
+                <div class="shops-grid" id="shops-ma">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+            
+            <section class="state-section" id="new-hampshire">
+                <h2>⛰️ New Hampshire</h2>
+                <div class="shops-grid" id="shops-nh">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+            
+            <section class="state-section" id="rhode-island">
+                <h2>🐚 Rhode Island</h2>
+                <div class="shops-grid" id="shops-ri">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+            
+            <section class="state-section" id="vermont">
+                <h2>🏔️ Vermont</h2>
+                <div class="shops-grid" id="shops-vt">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+            
+            <!-- Submit Your Shop -->
+            <section class="submit-section" id="submit">
+                <h2>📋 List Your Shop</h2>
+                <p>Are you an e-bike shop, repair service, or dealer in New England?<br>Get listed in our directory and reach thousands of local riders!</p>
+                <a href="mailto:sparkbot207@gmail.com?subject=Shop Listing Request&body=Shop Name:%0D%0AAddress:%0D%0APhone:%0D%0AWebsite:%0D%0AServices offered:%0D%0A" class="btn">Submit Your Shop →</a>
+                <p style="margin-top: 1rem; font-size: 0.85rem; color: rgba(255,255,255,0.5);">Basic listings are free • Featured listings available</p>
+            </section>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">⚡ New England E-Bike and PEV</span>
+                    <p>A community for electric mobility enthusiasts in New England</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.facebook.com/groups/573295111141320/" target="_blank">Facebook Group</a>
+                    <a href="index.html">Home</a>
+                    <a href="laws.html">Laws</a>
+                    <a href="routes.html">Routes</a>
+                    <a href="shops.html">Shops</a>
+                    <a href="planner.html">Planner</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 New England E-Bike and PEV Community. Ride safe! ⚡</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script>
+        // Shop data - will be loaded from JSON later
+        const shops = [
+            // Connecticut
+            { name: "Pedego Electric Bikes Westport", state: "CT", city: "Westport", address: "500 Post Rd E", phone: "(203) 557-8700", website: "https://pedegowestport.com", lat: 41.1415, lng: -73.3579, services: ["Sales", "Service", "Rentals"], featured: false },
+            { name: "Zane's Cycles", state: "CT", city: "Branford", address: "105 Main St", phone: "(203) 488-3244", website: "https://zanescycles.com", lat: 41.2793, lng: -72.8151, services: ["Sales", "Service", "Parts"], featured: false },
+            
+            // Maine
+            { name: "Gorham Bike & Ski", state: "ME", city: "Portland", address: "693 Congress St", phone: "(207) 773-1700", website: "https://gorhambike.com", lat: 43.6553, lng: -70.2695, services: ["Sales", "Service", "Rentals"], featured: false },
+            { name: "Allspeed Cyclery", state: "ME", city: "Portland", address: "1041 Washington Ave", phone: "(207) 878-8741", website: "https://allspeed.com", lat: 43.6867, lng: -70.2867, services: ["Sales", "Service"], featured: false },
+            
+            // Massachusetts  
+            { name: "Landry's Bicycles", state: "MA", city: "Boston", address: "890 Commonwealth Ave", phone: "(617) 232-0446", website: "https://landrys.com", lat: 42.3505, lng: -71.1312, services: ["Sales", "Service", "Rentals"], featured: false },
+            { name: "Pedego Newton", state: "MA", city: "Newton", address: "746 Beacon St", phone: "(617) 010-1020", website: "https://pedegonewton.com", lat: 42.3297, lng: -71.2397, services: ["Sales", "Service", "Rentals"], featured: false },
+            { name: "Ferris Wheels Bike Shop", state: "MA", city: "Jamaica Plain", address: "66 South St", phone: "(617) 524-2453", website: "https://ferriswheelsbikeshop.com", lat: 42.3097, lng: -71.1151, services: ["Sales", "Service"], featured: false },
+            
+            // New Hampshire
+            { name: "Goodale's Bike Shop", state: "NH", city: "Nashua", address: "29 Factory St", phone: "(603) 882-2111", website: "https://goodalesbikeshop.com", lat: 42.7654, lng: -71.4676, services: ["Sales", "Service", "Parts"], featured: false },
+            { name: "Pedego Portsmouth", state: "NH", city: "Portsmouth", address: "131 Congress St", phone: "(603) 501-0065", website: "https://pedegoportsmouth.com", lat: 43.0768, lng: -70.7626, services: ["Sales", "Rentals", "Tours"], featured: false },
+            
+            // Rhode Island
+            { name: "Providence Bicycle", state: "RI", city: "Providence", address: "725 Branch Ave", phone: "(401) 331-6610", website: "https://providencebicycle.com", lat: 41.8445, lng: -71.4285, services: ["Sales", "Service"], featured: false },
+            { name: "Newport Bicycle", state: "RI", city: "Newport", address: "162 Broadway", phone: "(401) 846-0773", website: "https://newportbicycleri.com", lat: 41.4887, lng: -71.3212, services: ["Sales", "Service", "Rentals"], featured: false },
+            
+            // Vermont
+            { name: "North Star Sports", state: "VT", city: "Burlington", address: "100 Main St", phone: "(802) 863-3832", website: "https://northstarsports.net", lat: 44.4759, lng: -73.2121, services: ["Sales", "Service", "Rentals"], featured: false },
+            { name: "Earl's Cyclery & Fitness", state: "VT", city: "South Burlington", address: "2500 Williston Rd", phone: "(802) 864-9197", website: "https://earlscyclery.com", lat: 44.4632, lng: -73.1712, services: ["Sales", "Service", "Parts"], featured: false }
+        ];
+        
+        // Initialize map
+        const map = L.map('shop-map').setView([43.0, -71.5], 7);
+        
+        // Base layers
+        const streetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        
+        const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '© Esri'
+        });
+        
+        L.control.layers({ "🗺️ Street": streetMap, "🛰️ Satellite": satellite }).addTo(map);
+        
+        // Marker cluster
+        const shopMarkers = L.markerClusterGroup();
+        
+        // Create shop icon
+        function createShopIcon(featured) {
+            const color = featured ? '#f59e0b' : '#10b981';
+            return L.divIcon({
+                className: 'shop-marker',
+                html: `<div style="background:${color};width:28px;height:28px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;font-size:14px;">🏪</div>`,
+                iconSize: [28, 28],
+                iconAnchor: [14, 14],
+                popupAnchor: [0, -14]
+            });
+        }
+        
+        // Create shop card HTML
+        function createShopCard(shop, isFeatured = false) {
+            const servicesHtml = shop.services.map(s => `<span class="service-tag">${s}</span>`).join('');
+            const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${shop.lat},${shop.lng}`;
+            
+            return `
+                <div class="shop-card${isFeatured ? ' featured' : ''}">
+                    <h3>${shop.name}</h3>
+                    <div class="shop-location">📍 ${shop.city}, ${shop.state}</div>
+                    <div class="shop-services">${servicesHtml}</div>
+                    <div class="shop-contact">
+                        <span>📍 ${shop.address}</span>
+                        <span>📞 <a href="tel:${shop.phone}">${shop.phone}</a></span>
+                        ${shop.website ? `<span>🌐 <a href="${shop.website}" target="_blank">Website</a></span>` : ''}
+                    </div>
+                    <div class="shop-actions">
+                        <a href="${directionsUrl}" target="_blank" class="btn-directions">📍 Directions</a>
+                        ${shop.phone ? `<a href="tel:${shop.phone}" class="btn-call">📞 Call</a>` : ''}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Populate shops
+        function populateShops() {
+            const stateContainers = {
+                'CT': document.getElementById('shops-ct'),
+                'ME': document.getElementById('shops-me'),
+                'MA': document.getElementById('shops-ma'),
+                'NH': document.getElementById('shops-nh'),
+                'RI': document.getElementById('shops-ri'),
+                'VT': document.getElementById('shops-vt')
+            };
+            
+            const featuredContainer = document.getElementById('featured-shops');
+            const featuredShops = shops.filter(s => s.featured);
+            
+            if (featuredShops.length > 0) {
+                featuredContainer.innerHTML = featuredShops.map(s => createShopCard(s, true)).join('');
+            }
+            
+            // Group by state
+            Object.keys(stateContainers).forEach(state => {
+                const stateShops = shops.filter(s => s.state === state && !s.featured);
+                const container = stateContainers[state];
+                
+                if (stateShops.length > 0) {
+                    container.innerHTML = stateShops.map(s => createShopCard(s)).join('');
+                } else {
+                    container.innerHTML = '<div class="no-shops-yet">No shops listed yet. <a href="#submit" style="color:#10b981;">Know one? Let us know!</a></div>';
+                }
+            });
+            
+            // Add markers to map
+            shops.forEach(shop => {
+                const marker = L.marker([shop.lat, shop.lng], { icon: createShopIcon(shop.featured) });
+                const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${shop.lat},${shop.lng}`;
+                
+                marker.bindPopup(`
+                    <h3 style="margin:0 0 0.5rem;">${shop.featured ? '⭐ ' : ''}${shop.name}</h3>
+                    <p style="margin:0.25rem 0;">${shop.address}, ${shop.city}</p>
+                    <p style="margin:0.25rem 0;">📞 ${shop.phone}</p>
+                    <div style="margin-top:0.5rem;">
+                        <a href="${directionsUrl}" target="_blank" style="color:#3b82f6;">📍 Directions</a>
+                        ${shop.website ? ` | <a href="${shop.website}" target="_blank" style="color:#10b981;">🌐 Website</a>` : ''}
+                    </div>
+                `);
+                
+                shopMarkers.addLayer(marker);
+            });
+            
+            map.addLayer(shopMarkers);
+        }
+        
+        // Search shops
+        function searchShops() {
+            const query = document.getElementById('shop-search').value.toLowerCase().trim();
+            if (!query) return;
+            
+            const matches = shops.filter(shop => {
+                const searchText = `${shop.name} ${shop.city} ${shop.state} ${shop.services.join(' ')}`.toLowerCase();
+                return searchText.includes(query);
+            });
+            
+            if (matches.length > 0) {
+                const bounds = L.latLngBounds(matches.map(s => [s.lat, s.lng]));
+                map.fitBounds(bounds, { padding: [50, 50], maxZoom: 12 });
+            } else {
+                alert(`No shops found matching "${query}"`);
+            }
+        }
+        
+        // Enter key search
+        document.getElementById('shop-search').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') searchShops();
+        });
+        
+        // Initialize
+        populateShops();
+        
+        // Mobile nav
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
