@@ -571,7 +571,7 @@
         
         // Add tile layer (OpenStreetMap for cycling-friendly rendering)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap | Routing: OSRM (bike)'
+            attribution: '© OpenStreetMap | Routing: <a href="https://openrouteservice.org" target="_blank">OpenRouteService</a>'
         }).addTo(map);
         
         // ============================================
@@ -722,8 +722,96 @@
         };
         
         // ============================================
-        // ROUTING
+        // ROUTING (OpenRouteService)
         // ============================================
+        const ORS_API_KEY = '5b3ce3597851110001cf6248cad345517d794802a1f55f89b7d1adb0';
+        
+        // Custom OpenRouteService Router for Leaflet Routing Machine
+        const OpenRouteServiceRouter = L.Class.extend({
+            options: {
+                serviceUrl: 'https://api.openrouteservice.org/v2/directions/cycling-regular',
+                profile: 'cycling-regular'
+            },
+            
+            initialize: function(apiKey, options) {
+                this._apiKey = apiKey;
+                L.setOptions(this, options);
+            },
+            
+            route: function(waypoints, callback, context, options) {
+                const coords = waypoints.map(wp => [wp.latLng.lng, wp.latLng.lat]);
+                
+                fetch(this.options.serviceUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': this._apiKey,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        coordinates: coords,
+                        instructions: false,
+                        preference: 'recommended'
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        callback.call(context, { status: -1, message: data.error.message });
+                        return;
+                    }
+                    
+                    const route = data.routes[0];
+                    const coordinates = this._decodePolyline(route.geometry);
+                    
+                    callback.call(context, null, [{
+                        name: 'Bike Route',
+                        coordinates: coordinates,
+                        summary: {
+                            totalDistance: route.summary.distance,
+                            totalTime: route.summary.duration
+                        },
+                        inputWaypoints: waypoints,
+                        waypoints: waypoints
+                    }]);
+                })
+                .catch(error => {
+                    console.error('ORS routing error:', error);
+                    callback.call(context, { status: -1, message: error.message });
+                });
+            },
+            
+            // Decode ORS polyline (uses Google polyline encoding)
+            _decodePolyline: function(encoded) {
+                let points = [];
+                let index = 0, lat = 0, lng = 0;
+                
+                while (index < encoded.length) {
+                    let b, shift = 0, result = 0;
+                    do {
+                        b = encoded.charCodeAt(index++) - 63;
+                        result |= (b & 0x1f) << shift;
+                        shift += 5;
+                    } while (b >= 0x20);
+                    let dlat = ((result & 1) ? ~(result >> 1) : (result >> 1));
+                    lat += dlat;
+                    
+                    shift = 0;
+                    result = 0;
+                    do {
+                        b = encoded.charCodeAt(index++) - 63;
+                        result |= (b & 0x1f) << shift;
+                        shift += 5;
+                    } while (b >= 0x20);
+                    let dlng = ((result & 1) ? ~(result >> 1) : (result >> 1));
+                    lng += dlng;
+                    
+                    points.push(L.latLng(lat / 1e5, lng / 1e5));
+                }
+                
+                return points;
+            }
+        });
+        
         function updateRoute() {
             if (waypoints.length < 2) {
                 if (routingControl) {
@@ -744,10 +832,7 @@
             } else {
                 routingControl = L.Routing.control({
                     waypoints: waypointLatLngs,
-                    router: L.Routing.osrmv1({
-                        serviceUrl: 'https://router.project-osrm.org/route/v1',
-                        profile: 'bike'
-                    }),
+                    router: new OpenRouteServiceRouter(ORS_API_KEY),
                     lineOptions: {
                         styles: [
                             { color: '#3b82f6', weight: 6, opacity: 0.8 },
