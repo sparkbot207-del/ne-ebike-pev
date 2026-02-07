@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
     
+    <!-- Google Maps Places API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvXXRss_K3JEWiolayprsU0-9V07Vzwh0&libraries=places&callback=initGooglePlaces" async defer></script>
+    
     <style>
         /* Planner-specific styles */
         .planner-container {
@@ -706,6 +709,43 @@
         .quick-btn:disabled {
             opacity: 0.5;
             cursor: not-allowed;
+        }
+        
+        /* Google Places Autocomplete dark theme */
+        .pac-container {
+            background-color: #1a1a2e;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            margin-top: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .pac-item {
+            padding: 8px 12px;
+            color: rgba(255,255,255,0.9);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+        }
+        
+        .pac-item:first-child {
+            border-top: none;
+        }
+        
+        .pac-item:hover, .pac-item-selected {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .pac-item-query {
+            color: #FFD700;
+            font-weight: 600;
+        }
+        
+        .pac-matched {
+            font-weight: 700;
+        }
+        
+        .pac-icon {
+            filter: invert(1) brightness(0.8);
         }
         
         /* Map container */
@@ -2012,6 +2052,51 @@
         // ============================================
         // LOCATION SEARCH (using Nominatim/OpenStreetMap)
         // ============================================
+        // Google Places Autocomplete
+        let googlePlacesAutocomplete = null;
+        
+        // Initialize Google Places when API loads
+        function initGooglePlaces() {
+            const input = document.getElementById('location-input');
+            
+            // Create autocomplete with bias to New England
+            googlePlacesAutocomplete = new google.maps.places.Autocomplete(input, {
+                types: ['establishment', 'geocode'],
+                componentRestrictions: { country: 'us' },
+                bounds: new google.maps.LatLngBounds(
+                    new google.maps.LatLng(40.5, -73.5), // SW
+                    new google.maps.LatLng(47, -66.9)    // NE
+                ),
+                strictBounds: false
+            });
+            
+            // Handle place selection
+            googlePlacesAutocomplete.addListener('place_changed', function() {
+                const place = googlePlacesAutocomplete.getPlace();
+                
+                if (!place.geometry || !place.geometry.location) {
+                    // User pressed enter without selecting - do manual search
+                    searchLocation();
+                    return;
+                }
+                
+                const lat = place.geometry.location.lat();
+                const lng = place.geometry.location.lng();
+                const name = place.name || place.formatted_address.split(',')[0];
+                
+                addWaypoint(lat, lng, name);
+                document.getElementById('location-input').value = '';
+                document.getElementById('search-results').innerHTML = '';
+                map.setView([lat, lng], 14);
+            });
+            
+            console.log('✅ Google Places Autocomplete initialized');
+        }
+        
+        // Make it global for the callback
+        window.initGooglePlaces = initGooglePlaces;
+        
+        // Fallback search if Google Places doesn't find anything
         async function searchLocation() {
             const input = document.getElementById('location-input');
             const query = input.value.trim();
@@ -2024,7 +2109,7 @@
             showLoading(true);
             
             try {
-                // Try ORS geocoding first (better for POIs/businesses)
+                // Try ORS geocoding as fallback
                 let results = await searchWithORS(query);
                 
                 // If no results, fall back to Nominatim
