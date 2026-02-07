@@ -1166,24 +1166,44 @@
                         return;
                     }
                     
-                    const route = data.routes[0];
-                    const decoded = this._decodePolyline3D(route.geometry);
+                    if (!data.routes || !data.routes[0]) {
+                        callback.call(context, { status: -1, message: 'No route found' });
+                        return;
+                    }
                     
-                    // Calculate elevation gain/loss
+                    const route = data.routes[0];
+                    
+                    if (!route.geometry) {
+                        callback.call(context, { status: -1, message: 'Invalid route data' });
+                        return;
+                    }
+                    
+                    let decoded;
+                    try {
+                        decoded = this._decodePolyline3D(route.geometry);
+                    } catch (e) {
+                        console.error('Polyline decode error:', e);
+                        callback.call(context, { status: -1, message: 'Error decoding route' });
+                        return;
+                    }
+                    
+                    // Calculate elevation gain/loss (with safety checks)
                     let elevationGain = 0;
                     let elevationLoss = 0;
-                    for (let i = 1; i < decoded.elevations.length; i++) {
-                        const diff = decoded.elevations[i] - decoded.elevations[i-1];
-                        if (diff > 0) elevationGain += diff;
-                        else elevationLoss += Math.abs(diff);
+                    if (decoded.elevations && decoded.elevations.length > 1) {
+                        for (let i = 1; i < decoded.elevations.length; i++) {
+                            const diff = decoded.elevations[i] - decoded.elevations[i-1];
+                            if (diff > 0) elevationGain += diff;
+                            else elevationLoss += Math.abs(diff);
+                        }
                     }
                     
                     callback.call(context, null, [{
                         name: 'Bike Route',
-                        coordinates: decoded.coordinates,
+                        coordinates: decoded.coordinates || [],
                         summary: {
-                            totalDistance: route.summary.distance,
-                            totalTime: route.summary.duration,
+                            totalDistance: route.summary?.distance || 0,
+                            totalTime: route.summary?.duration || 0,
                             elevationGain: elevationGain,
                             elevationLoss: elevationLoss
                         },
@@ -1767,12 +1787,38 @@
         }
         
         // ============================================
-        // MAP CLICK HANDLER
+        // MAP CLICK HANDLER (works for both desktop and mobile)
         // ============================================
+        let lastClickTime = 0;
+        
         map.on('click', function(e) {
             if (freehandMode) return;
-            addWaypoint(e.latlng.lat, e.latlng.lng);
+            
+            // Debounce: ignore clicks within 300ms of each other
+            const now = Date.now();
+            if (now - lastClickTime < 300) return;
+            lastClickTime = now;
+            
+            // Add waypoint with visual feedback
+            const lat = e.latlng.lat;
+            const lng = e.latlng.lng;
+            
+            // Brief visual pulse at click location
+            const pulse = L.circleMarker([lat, lng], {
+                radius: 20,
+                color: '#FFD700',
+                fillColor: '#FFD700',
+                fillOpacity: 0.5,
+                weight: 2
+            }).addTo(map);
+            
+            setTimeout(() => map.removeLayer(pulse), 300);
+            
+            addWaypoint(lat, lng);
         });
+        
+        // Disable double-click zoom to prevent conflicts
+        map.doubleClickZoom.disable();
         
         // ============================================
         // FREEHAND DRAWING
@@ -2059,7 +2105,7 @@
             container.innerHTML = '';
             
             if (results.length === 0) {
-                container.innerHTML = '<div class="search-result-item"><span class="result-name">No results found</span><div class="result-address">Try a more specific address or city name</div></div>';
+                container.innerHTML = '<div class="search-result-item"><span class="result-name">No results found</span><div class="result-address">Try an address or city (business names may not work)</div></div>';
                 return;
             }
             
