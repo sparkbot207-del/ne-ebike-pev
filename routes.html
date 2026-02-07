@@ -551,7 +551,25 @@
                 </label>
             </div>
             
-            <!-- Search Box (shown when charging enabled) -->
+            <!-- Trail Search Box -->
+            <div id="trail-search-container" style="margin-bottom: 1rem;">
+                <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                    <input type="text" id="trail-search" placeholder="🔍 Search trails by name or city..." 
+                           style="padding: 0.6rem 1rem; border-radius: 25px; border: 1px solid rgba(16,185,129,0.3); 
+                                  background: rgba(16,185,129,0.1); color: white; width: 300px; font-size: 0.9rem;">
+                    <button id="trail-search-btn" style="padding: 0.6rem 1.2rem; border-radius: 25px; border: none; 
+                                                    background: #10b981; color: white; cursor: pointer; font-weight: 600;">
+                        Search
+                    </button>
+                    <button id="trail-clear-search" style="padding: 0.6rem 1rem; border-radius: 25px; border: 1px solid rgba(255,255,255,0.2); 
+                                                      background: transparent; color: rgba(255,255,255,0.8); cursor: pointer; display: none;">
+                        Clear
+                    </button>
+                </div>
+                <p id="trail-search-results" style="text-align: center; color: rgba(255,255,255,0.8); font-size: 0.85rem; margin-top: 0.5rem;"></p>
+            </div>
+            
+            <!-- Charging Search Box (shown when charging enabled) -->
             <div id="search-container" style="display:none; margin-bottom: 1rem;">
                 <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
                     <input type="text" id="charging-search" placeholder="🔍 Search charging stations by city or name..." 
@@ -1120,6 +1138,72 @@
             if (e.key === 'Enter') searchCharging();
         });
         document.getElementById('clear-search').addEventListener('click', clearSearch);
+        
+        // Trail search functionality
+        let trailSearchMarkers = L.layerGroup();
+        
+        function searchTrails() {
+            const query = document.getElementById('trail-search').value.toLowerCase().trim();
+            if (!query || trailsData.length === 0) return;
+            
+            // Clear previous search results
+            trailSearchMarkers.clearLayers();
+            map.removeLayer(trailSearchMarkers);
+            
+            // Find matching trails
+            const matches = trailsData.filter(trail => {
+                const searchText = `${trail.name} ${trail.cities || ''} ${trail.state} ${trail.description || ''}`.toLowerCase();
+                return searchText.includes(query);
+            });
+            
+            // Show results count
+            document.getElementById('trail-search-results').textContent = 
+                matches.length > 0 ? `Found ${matches.length} trails matching "${query}"` : `No trails found for "${query}"`;
+            document.getElementById('trail-clear-search').style.display = matches.length > 0 ? 'inline-block' : 'none';
+            
+            if (matches.length === 0) return;
+            
+            // Add highlighted markers for matches
+            const bounds = L.latLngBounds();
+            matches.forEach(trail => {
+                if (!trail.lat || !trail.lng) return;
+                
+                const highlightIcon = L.divIcon({
+                    className: 'trail-search-result',
+                    html: `<div style="background:#10b981;width:28px;height:28px;border-radius:50%;border:3px solid white;box-shadow:0 0 12px #10b981;display:flex;align-items:center;justify-content:center;font-size:14px;animation:pulse 1s infinite;">🚴</div>`,
+                    iconSize: [28, 28],
+                    iconAnchor: [14, 14],
+                    popupAnchor: [0, -14]
+                });
+                
+                const marker = L.marker([trail.lat, trail.lng], { icon: highlightIcon })
+                    .bindPopup(createTrailPopup(trail));
+                trailSearchMarkers.addLayer(marker);
+                bounds.extend([trail.lat, trail.lng]);
+            });
+            
+            map.addLayer(trailSearchMarkers);
+            
+            // Zoom to results
+            if (matches.length > 0 && matches.length <= 50) {
+                map.fitBounds(bounds, { padding: [50, 50], maxZoom: 11 });
+            }
+        }
+        
+        function clearTrailSearch() {
+            document.getElementById('trail-search').value = '';
+            document.getElementById('trail-search-results').textContent = '';
+            document.getElementById('trail-clear-search').style.display = 'none';
+            trailSearchMarkers.clearLayers();
+            map.removeLayer(trailSearchMarkers);
+        }
+        
+        // Trail search event listeners
+        document.getElementById('trail-search-btn').addEventListener('click', searchTrails);
+        document.getElementById('trail-search').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') searchTrails();
+        });
+        document.getElementById('trail-clear-search').addEventListener('click', clearTrailSearch);
         
         // Mobile nav toggle
         const navToggle = document.querySelector('.nav-toggle');
