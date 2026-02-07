@@ -2256,45 +2256,49 @@
         }
         
         function useMyLocation() {
+            console.log('Use My Location clicked');
+            
             if (!navigator.geolocation) {
                 alert('Geolocation is not supported by your browser');
                 return;
             }
             
-            // Ensure any existing loading state is cleared first
-            showLoading(false);
+            // Change button text to show it's working
+            const btn = document.getElementById('btn-use-my-location');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '📍 Getting location...';
+            btn.disabled = true;
             
-            // Small delay to ensure UI is ready
-            setTimeout(() => {
-                showLoading(true);
-                
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const lat = position.coords.latitude;
-                        const lng = position.coords.longitude;
-                        addWaypoint(lat, lng, 'My Location');
-                        map.setView([lat, lng], 13);
-                        showLoading(false);
-                    },
-                    (error) => {
-                        showLoading(false);
-                        switch(error.code) {
-                            case error.PERMISSION_DENIED:
-                                alert('Location permission denied. Please allow location access.');
-                                break;
-                            case error.POSITION_UNAVAILABLE:
-                                alert('Location information unavailable.');
-                                break;
-                            case error.TIMEOUT:
-                                alert('Location request timed out.');
-                                break;
-                            default:
-                                alert('An error occurred getting your location.');
-                        }
-                    },
-                    { enableHighAccuracy: true, timeout: 10000 }
-                );
-            }, 100);
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    console.log('Location success:', position.coords);
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+                    addWaypoint(lat, lng, 'My Location');
+                    map.setView([lat, lng], 13);
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                },
+                (error) => {
+                    console.log('Location error:', error);
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    switch(error.code) {
+                        case error.PERMISSION_DENIED:
+                            alert('Location permission denied. Please allow location access.');
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            alert('Location information unavailable.');
+                            break;
+                        case error.TIMEOUT:
+                            alert('Location request timed out.');
+                            break;
+                        default:
+                            alert('An error occurred getting your location.');
+                    }
+                },
+                { enableHighAccuracy: true, timeout: 15000 }
+            );
         }
         
         function makeRoundTrip() {
