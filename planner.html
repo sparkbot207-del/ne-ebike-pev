@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
     
     <!-- Google Maps Places API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvXXRss_K3JEWiolayprsU0-9V07Vzwh0&libraries=places&callback=initGooglePlaces" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvXXRss_K3JEWiolayprsU0-9V07Vzwh0&libraries=places&loading=async&callback=initGooglePlaces" async defer></script>
     
     <style>
         /* Planner-specific styles */
@@ -2326,7 +2326,9 @@
         // BUTTON HANDLERS
         // ============================================
         document.getElementById('btn-export').addEventListener('click', exportGPX);
-        document.getElementById('btn-draw-mode').addEventListener('click', toggleFreehandMode);
+        // btn-draw-mode may not exist if freehand UI is hidden
+        const drawModeBtn = document.getElementById('btn-draw-mode');
+        if (drawModeBtn) drawModeBtn.addEventListener('click', toggleFreehandMode);
         document.getElementById('btn-clear').addEventListener('click', clearRoute);
         document.getElementById('btn-calculate-range').addEventListener('click', calculateRange);
         document.getElementById('btn-find-chargers').addEventListener('click', findChargersAlongRoute);
