@@ -551,6 +551,64 @@
             color: rgba(255,255,255,0.5);
         }
         
+        /* Charging recommendation */
+        .charging-recommendation {
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-top: 0.75rem;
+        }
+        
+        .charging-recommendation.danger {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+        
+        .charging-recommendation.success {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+        
+        .charging-rec-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .charging-rec-icon {
+            font-size: 1.2rem;
+        }
+        
+        .charging-rec-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .charging-rec-detail {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.4;
+        }
+        
+        .charger-along-route {
+            background: rgba(255,255,255,0.05);
+            padding: 0.5rem;
+            border-radius: 6px;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+        }
+        
+        .charger-along-route .charger-name {
+            font-weight: 600;
+            color: #f59e0b;
+        }
+        
+        .charger-along-route .charger-distance {
+            color: rgba(255,255,255,0.6);
+        }
+        
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             .planner-main {
@@ -695,6 +753,16 @@
                             </div>
                         </div>
                         <div class="range-note" id="range-note"></div>
+                        <div class="charging-recommendation" id="charging-recommendation" style="display:none;">
+                            <div class="charging-rec-header">
+                                <span class="charging-rec-icon">🔌</span>
+                                <span class="charging-rec-title" id="charging-rec-title">Charging Stops Needed</span>
+                            </div>
+                            <div class="charging-rec-detail" id="charging-rec-detail"></div>
+                            <button class="action-btn action-btn-secondary" id="btn-find-chargers" style="width:100%; margin-top:0.5rem; font-size:0.8rem; padding:0.5rem;">
+                                📍 Show Chargers Along Route
+                            </button>
+                        </div>
                     </div>
                 </div>
                 
@@ -1232,16 +1300,137 @@
             
             // Add note about this specific route
             const routeNote = document.getElementById('range-note');
+            const chargingRec = document.getElementById('charging-recommendation');
             const r20 = ranges[20];
+            
             if (r20.percentUsed <= 50) {
                 routeNote.textContent = `✅ This route uses ~${r20.percentUsed}% battery at 20mph`;
+                chargingRec.style.display = 'none';
             } else if (r20.percentUsed <= 80) {
                 routeNote.textContent = `⚠️ This route uses ~${r20.percentUsed}% battery at 20mph`;
+                chargingRec.style.display = 'none';
             } else if (r20.percentUsed <= 100) {
                 routeNote.textContent = `⚠️ This route uses ~${r20.percentUsed}% - consider charging stop`;
+                showChargingRecommendation(r20.percentUsed, batteryWh, distanceMiles, 20);
             } else {
-                routeNote.textContent = `❌ Route exceeds battery - add a charging stop!`;
+                routeNote.textContent = `❌ Route exceeds battery capacity`;
+                showChargingRecommendation(r20.percentUsed, batteryWh, distanceMiles, 20);
             }
+        }
+        
+        function showChargingRecommendation(percentUsed, batteryWh, distanceMiles, speed) {
+            const chargingRec = document.getElementById('charging-recommendation');
+            const recTitle = document.getElementById('charging-rec-title');
+            const recDetail = document.getElementById('charging-rec-detail');
+            
+            chargingRec.style.display = 'block';
+            
+            // Calculate number of charges needed
+            const chargesNeeded = Math.ceil(percentUsed / 80) - 1; // Assume charge to 80%
+            const rangePerCharge = (distanceMiles / percentUsed) * 80;
+            
+            if (percentUsed > 100) {
+                chargingRec.className = 'charging-recommendation danger';
+                recTitle.textContent = `⚠️ ${chargesNeeded} Charging Stop${chargesNeeded > 1 ? 's' : ''} Required`;
+                recDetail.innerHTML = `
+                    At ${speed}mph, you'll need to stop and charge.<br>
+                    <strong>Recommended:</strong> Charge every ~${Math.round(rangePerCharge)} miles.<br>
+                    Enable charging stations layer to find stops along your route.
+                `;
+            } else {
+                chargingRec.className = 'charging-recommendation';
+                recTitle.textContent = `💡 Consider a Quick Charge`;
+                recDetail.innerHTML = `
+                    You'll arrive with ~${100 - percentUsed}% battery.<br>
+                    A mid-route top-up would give you more buffer.
+                `;
+            }
+        }
+        
+        // Find charging stations along the route
+        function findChargersAlongRoute() {
+            if (!currentRoute || !currentRoute.coordinates || !chargingLoaded) {
+                // Enable charging layer if not loaded
+                if (!chargingLoaded) {
+                    document.getElementById('toggle-charging').checked = true;
+                    document.getElementById('toggle-charging').dispatchEvent(new Event('change'));
+                }
+                alert('Loading charging stations... Try again in a moment.');
+                return;
+            }
+            
+            // Search for chargers within X miles of the route
+            const searchRadiusMeters = 1609.34 * 2; // 2 miles
+            const routeCoords = currentRoute.coordinates;
+            const nearbyChargers = [];
+            
+            chargingData.forEach(station => {
+                if (!station.lat || !station.lng) return;
+                
+                // Check if station is near any point on the route
+                for (let i = 0; i < routeCoords.length; i += 10) { // Sample every 10th point for speed
+                    const coord = routeCoords[i];
+                    const distance = getDistanceMeters(coord.lat, coord.lng, station.lat, station.lng);
+                    
+                    if (distance < searchRadiusMeters) {
+                        // Calculate how far along the route this is
+                        const progressPercent = Math.round((i / routeCoords.length) * 100);
+                        nearbyChargers.push({
+                            ...station,
+                            distanceFromRoute: distance,
+                            routeProgress: progressPercent
+                        });
+                        break;
+                    }
+                }
+            });
+            
+            // Sort by route progress
+            nearbyChargers.sort((a, b) => a.routeProgress - b.routeProgress);
+            
+            // Show results
+            if (nearbyChargers.length === 0) {
+                alert('No charging stations found within 2 miles of your route. You may need to adjust your route or plan for a longer detour to charge.');
+                return;
+            }
+            
+            // Create popup with nearby chargers
+            const recDetail = document.getElementById('charging-rec-detail');
+            let html = `<strong>Found ${nearbyChargers.length} charger${nearbyChargers.length > 1 ? 's' : ''} along route:</strong><br>`;
+            
+            nearbyChargers.slice(0, 5).forEach((charger, i) => {
+                html += `
+                    <div class="charger-along-route">
+                        <span class="charger-name">${i + 1}. ${charger.name}</span><br>
+                        <span class="charger-distance">📍 ${charger.city} • ${charger.routeProgress}% along route</span>
+                    </div>
+                `;
+            });
+            
+            if (nearbyChargers.length > 5) {
+                html += `<div style="margin-top:0.5rem;color:rgba(255,255,255,0.6);font-size:0.75rem;">+ ${nearbyChargers.length - 5} more (enable charging layer to see all)</div>`;
+            }
+            
+            recDetail.innerHTML = html;
+            
+            // Enable charging layer and zoom to fit
+            if (!map.hasLayer(chargingLayer)) {
+                document.getElementById('toggle-charging').checked = true;
+                document.getElementById('charging-toggle').classList.add('active');
+                map.addLayer(chargingLayer);
+            }
+        }
+        
+        // Haversine distance calculation
+        function getDistanceMeters(lat1, lng1, lat2, lng2) {
+            const R = 6371000; // Earth radius in meters
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLng = (lng2 - lng1) * Math.PI / 180;
+            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                      Math.sin(dLng/2) * Math.sin(dLng/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c;
         }
         
         // ============================================
@@ -1511,6 +1700,7 @@
         document.getElementById('btn-draw-mode').addEventListener('click', toggleFreehandMode);
         document.getElementById('btn-clear').addEventListener('click', clearRoute);
         document.getElementById('btn-calculate-range').addEventListener('click', calculateRange);
+        document.getElementById('btn-find-chargers').addEventListener('click', findChargersAlongRoute);
         
         // ============================================
         // MOBILE NAV
