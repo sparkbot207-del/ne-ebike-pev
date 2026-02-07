@@ -1008,7 +1008,7 @@
         
         // Add tile layer (OpenStreetMap for cycling-friendly rendering)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap | Routing: <a href="https://openrouteservice.org" target="_blank">OpenRouteService</a>'
+            attribution: '© OpenStreetMap | Routing: OSRM'
         }).addTo(map);
         
         // ============================================
@@ -1322,10 +1322,13 @@
             if (routingControl) {
                 routingControl.setWaypoints(waypointLatLngs);
             } else {
-                // Use OpenRouteService (has elevation data)
+                // Use OSRM (reliable public routing)
                 routingControl = L.Routing.control({
                     waypoints: waypointLatLngs,
-                    router: new OpenRouteServiceRouter(ORS_API_KEY),
+                    router: L.Routing.osrmv1({
+                        serviceUrl: 'https://router.project-osrm.org/route/v1',
+                        profile: 'bike'
+                    }),
                     lineOptions: {
                         styles: [
                             { color: '#3b82f6', weight: 6, opacity: 0.8 },
@@ -1351,13 +1354,7 @@
                 routingControl.on('routingerror', function(e) {
                     console.error('Routing error:', e);
                     showLoading(false);
-                    // Show more helpful error
-                    const msg = e.error?.message || 'Unknown error';
-                    if (msg.includes('No route found') || msg.includes('closer to roads')) {
-                        alert('Could not find a bike route between these points.\n\nTry placing waypoints closer to roads or streets.');
-                    } else {
-                        alert(`Routing error: ${msg}`);
-                    }
+                    alert('Could not find a bike route.\n\nMake sure your waypoints are on or near roads.');
                 });
             }
         }
