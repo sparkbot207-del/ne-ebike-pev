@@ -913,7 +913,15 @@
                 });
                 
                 // Update state title with clickable count
-                const sectionId = stateCode.toLowerCase() === 'nh' ? 'new-hampshire' : stateCode.toLowerCase() === 'ri' ? 'rhode-island' : stateCode.toLowerCase();
+                const sectionIdMap = {
+                    'CT': 'connecticut',
+                    'ME': 'maine', 
+                    'MA': 'massachusetts',
+                    'NH': 'new-hampshire',
+                    'RI': 'rhode-island',
+                    'VT': 'vermont'
+                };
+                const sectionId = sectionIdMap[stateCode];
                 const titleEl = document.querySelector(`#${sectionId} .state-title`);
                 if (titleEl) {
                     const totalInState = trailsData.filter(t => t.state === stateCode).length;
