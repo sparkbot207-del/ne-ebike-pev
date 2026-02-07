@@ -424,6 +424,133 @@
             color: #3b82f6;
         }
         
+        /* Battery Calculator */
+        .battery-section {
+            display: none;
+        }
+        
+        .battery-section.has-route {
+            display: block;
+        }
+        
+        .battery-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .battery-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .battery-input-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .battery-input-group label {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.6);
+            text-transform: uppercase;
+        }
+        
+        .battery-input-group input {
+            padding: 0.5rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05);
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        .battery-input-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .range-results {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-top: 0.75rem;
+        }
+        
+        .range-results h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.85rem;
+            color: #10b981;
+        }
+        
+        .range-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+        
+        .range-item {
+            background: rgba(0,0,0,0.2);
+            padding: 0.5rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .range-speed {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .range-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #10b981;
+        }
+        
+        .range-value.warning {
+            color: #f59e0b;
+        }
+        
+        .range-value.danger {
+            color: #ef4444;
+        }
+        
+        .range-note {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+        
+        .route-elevation {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .elevation-stat {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .elevation-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #10b981;
+        }
+        
+        .elevation-value.climb {
+            color: #ef4444;
+        }
+        
+        .elevation-label {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             .planner-main {
@@ -504,8 +631,70 @@
                             <div class="route-stat-label">Minutes</div>
                         </div>
                     </div>
+                    <div class="route-elevation" id="route-elevation" style="display:none;">
+                        <div class="elevation-stat">
+                            <div class="elevation-value climb" id="elevation-gain">0</div>
+                            <div class="elevation-label">↑ Climb (ft)</div>
+                        </div>
+                        <div class="elevation-stat">
+                            <div class="elevation-value" id="elevation-loss">0</div>
+                            <div class="elevation-label">↓ Descent (ft)</div>
+                        </div>
+                    </div>
                     <div class="waypoints-list" id="waypoints-list">
                         <!-- Waypoints added dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Battery Calculator Section -->
+                <div class="sidebar-section battery-section" id="battery-section">
+                    <h3>🔋 Range Calculator</h3>
+                    <div class="battery-inputs">
+                        <div class="battery-input-group">
+                            <label for="battery-voltage">Voltage (V)</label>
+                            <input type="number" id="battery-voltage" value="52" min="24" max="100" step="1">
+                        </div>
+                        <div class="battery-input-group">
+                            <label for="battery-ah">Amp Hours (Ah)</label>
+                            <input type="number" id="battery-ah" value="20" min="5" max="100" step="1">
+                        </div>
+                        <div class="battery-input-group">
+                            <label for="rider-weight">Rider (lbs)</label>
+                            <input type="number" id="rider-weight" value="180" min="50" max="400" step="5">
+                        </div>
+                        <div class="battery-input-group">
+                            <label for="bike-weight">Bike (lbs)</label>
+                            <input type="number" id="bike-weight" value="70" min="20" max="200" step="5">
+                        </div>
+                        <div class="battery-input-group full-width">
+                            <label for="motor-wattage">Motor Wattage (W)</label>
+                            <input type="number" id="motor-wattage" value="1500" min="250" max="10000" step="100">
+                        </div>
+                    </div>
+                    <button class="action-btn action-btn-secondary" id="btn-calculate-range" style="width:100%;">
+                        🔋 Calculate Range
+                    </button>
+                    <div class="range-results" id="range-results" style="display:none;">
+                        <h4>Estimated Range at Speed:</h4>
+                        <div class="range-grid">
+                            <div class="range-item">
+                                <div class="range-speed">15 mph</div>
+                                <div class="range-value" id="range-15">--</div>
+                            </div>
+                            <div class="range-item">
+                                <div class="range-speed">20 mph</div>
+                                <div class="range-value" id="range-20">--</div>
+                            </div>
+                            <div class="range-item">
+                                <div class="range-speed">25 mph</div>
+                                <div class="range-value" id="range-25">--</div>
+                            </div>
+                            <div class="range-item">
+                                <div class="range-speed">30 mph</div>
+                                <div class="range-value" id="range-30">--</div>
+                            </div>
+                        </div>
+                        <div class="range-note" id="range-note"></div>
                     </div>
                 </div>
                 
@@ -750,7 +939,8 @@
                     body: JSON.stringify({
                         coordinates: coords,
                         instructions: false,
-                        preference: 'recommended'
+                        preference: 'recommended',
+                        elevation: true
                     })
                 })
                 .then(response => response.json())
@@ -761,14 +951,25 @@
                     }
                     
                     const route = data.routes[0];
-                    const coordinates = this._decodePolyline(route.geometry);
+                    const decoded = this._decodePolyline3D(route.geometry);
+                    
+                    // Calculate elevation gain/loss
+                    let elevationGain = 0;
+                    let elevationLoss = 0;
+                    for (let i = 1; i < decoded.elevations.length; i++) {
+                        const diff = decoded.elevations[i] - decoded.elevations[i-1];
+                        if (diff > 0) elevationGain += diff;
+                        else elevationLoss += Math.abs(diff);
+                    }
                     
                     callback.call(context, null, [{
                         name: 'Bike Route',
-                        coordinates: coordinates,
+                        coordinates: decoded.coordinates,
                         summary: {
                             totalDistance: route.summary.distance,
-                            totalTime: route.summary.duration
+                            totalTime: route.summary.duration,
+                            elevationGain: elevationGain,
+                            elevationLoss: elevationLoss
                         },
                         inputWaypoints: waypoints,
                         waypoints: waypoints
@@ -780,12 +981,14 @@
                 });
             },
             
-            // Decode ORS polyline (uses Google polyline encoding)
-            _decodePolyline: function(encoded) {
+            // Decode ORS polyline with elevation (3D)
+            _decodePolyline3D: function(encoded) {
                 let points = [];
-                let index = 0, lat = 0, lng = 0;
+                let elevations = [];
+                let index = 0, lat = 0, lng = 0, ele = 0;
                 
                 while (index < encoded.length) {
+                    // Decode latitude
                     let b, shift = 0, result = 0;
                     do {
                         b = encoded.charCodeAt(index++) - 63;
@@ -795,6 +998,7 @@
                     let dlat = ((result & 1) ? ~(result >> 1) : (result >> 1));
                     lat += dlat;
                     
+                    // Decode longitude
                     shift = 0;
                     result = 0;
                     do {
@@ -805,10 +1009,22 @@
                     let dlng = ((result & 1) ? ~(result >> 1) : (result >> 1));
                     lng += dlng;
                     
+                    // Decode elevation
+                    shift = 0;
+                    result = 0;
+                    do {
+                        b = encoded.charCodeAt(index++) - 63;
+                        result |= (b & 0x1f) << shift;
+                        shift += 5;
+                    } while (b >= 0x20);
+                    let dele = ((result & 1) ? ~(result >> 1) : (result >> 1));
+                    ele += dele;
+                    
                     points.push(L.latLng(lat / 1e5, lng / 1e5));
+                    elevations.push(ele / 100); // Elevation in meters
                 }
                 
-                return points;
+                return { coordinates: points, elevations: elevations };
             }
         });
         
@@ -862,12 +1078,16 @@
         
         function updateRouteInfo() {
             const routeInfo = document.getElementById('route-info');
+            const batterySection = document.getElementById('battery-section');
             const exportBtn = document.getElementById('btn-export');
+            const elevationDiv = document.getElementById('route-elevation');
             
             if (waypoints.length > 0) {
                 routeInfo.classList.add('has-route');
+                batterySection.classList.add('has-route');
             } else {
                 routeInfo.classList.remove('has-route');
+                batterySection.classList.remove('has-route');
             }
             
             // Update stats
@@ -878,10 +1098,23 @@
                 document.getElementById('route-distance').textContent = distanceMiles;
                 document.getElementById('route-time').textContent = timeMinutes;
                 
+                // Update elevation stats if available
+                if (currentRoute.summary.elevationGain !== undefined) {
+                    const gainFeet = Math.round(currentRoute.summary.elevationGain * 3.28084);
+                    const lossFeet = Math.round(currentRoute.summary.elevationLoss * 3.28084);
+                    
+                    document.getElementById('elevation-gain').textContent = gainFeet.toLocaleString();
+                    document.getElementById('elevation-loss').textContent = lossFeet.toLocaleString();
+                    elevationDiv.style.display = 'flex';
+                } else {
+                    elevationDiv.style.display = 'none';
+                }
+                
                 exportBtn.disabled = false;
             } else {
                 document.getElementById('route-distance').textContent = '0';
                 document.getElementById('route-time').textContent = '0';
+                elevationDiv.style.display = 'none';
                 exportBtn.disabled = waypoints.length < 2;
             }
             
@@ -905,6 +1138,110 @@
             
             // Update instructions
             updateInstructions();
+            
+            // Reset range results when route changes
+            document.getElementById('range-results').style.display = 'none';
+        }
+        
+        // ============================================
+        // BATTERY RANGE CALCULATOR
+        // ============================================
+        function calculateRange() {
+            if (!currentRoute) {
+                alert('Please create a route first!');
+                return;
+            }
+            
+            // Get inputs
+            const voltage = parseFloat(document.getElementById('battery-voltage').value) || 52;
+            const ah = parseFloat(document.getElementById('battery-ah').value) || 20;
+            const riderWeight = parseFloat(document.getElementById('rider-weight').value) || 180;
+            const bikeWeight = parseFloat(document.getElementById('bike-weight').value) || 70;
+            const motorWattage = parseFloat(document.getElementById('motor-wattage').value) || 1500;
+            
+            // Battery capacity in Wh
+            const batteryWh = voltage * ah;
+            
+            // Total weight in kg
+            const totalWeightKg = (riderWeight + bikeWeight) * 0.453592;
+            
+            // Route data
+            const distanceMiles = currentRoute.summary.totalDistance / 1609.34;
+            const elevationGainMeters = currentRoute.summary.elevationGain || 0;
+            
+            // Calculate range for different speeds
+            const speeds = [15, 20, 25, 30];
+            const ranges = {};
+            
+            speeds.forEach(speed => {
+                // Base consumption (Wh/mile) varies with speed
+                // Simplified model: faster = more air resistance = more consumption
+                // Base values calibrated for typical e-bikes
+                let baseWhPerMile;
+                switch(speed) {
+                    case 15: baseWhPerMile = 18; break;
+                    case 20: baseWhPerMile = 25; break;
+                    case 25: baseWhPerMile = 35; break;
+                    case 30: baseWhPerMile = 50; break;
+                }
+                
+                // Weight adjustment (heavier = more consumption)
+                // Base assumption: 250 lbs (113 kg) is neutral
+                const weightFactor = totalWeightKg / 113;
+                const adjustedWhPerMile = baseWhPerMile * Math.pow(weightFactor, 0.7);
+                
+                // Elevation energy cost
+                // Energy to climb = mass * g * height * efficiency factor
+                // About 1 Wh per meter of climb per 10kg at ~25% motor efficiency for climbing
+                const climbWhPerMeter = totalWeightKg * 9.81 / (0.25 * 3600); // ~0.011 Wh/m/kg
+                const climbEnergy = elevationGainMeters * climbWhPerMeter * totalWeightKg;
+                
+                // Total energy for this route at this speed
+                const routeEnergy = (adjustedWhPerMile * distanceMiles) + climbEnergy;
+                
+                // How many times can we do this route?
+                const tripMultiplier = batteryWh / routeEnergy;
+                
+                // Estimated total range
+                const estimatedRange = Math.round(distanceMiles * tripMultiplier);
+                
+                ranges[speed] = {
+                    range: estimatedRange,
+                    canComplete: tripMultiplier >= 1.0,
+                    percentUsed: Math.round((routeEnergy / batteryWh) * 100)
+                };
+            });
+            
+            // Display results
+            const resultsDiv = document.getElementById('range-results');
+            resultsDiv.style.display = 'block';
+            
+            speeds.forEach(speed => {
+                const elem = document.getElementById(`range-${speed}`);
+                const data = ranges[speed];
+                
+                elem.textContent = `${data.range} mi`;
+                elem.className = 'range-value';
+                
+                if (data.percentUsed > 100) {
+                    elem.classList.add('danger');
+                } else if (data.percentUsed > 70) {
+                    elem.classList.add('warning');
+                }
+            });
+            
+            // Add note about this specific route
+            const routeNote = document.getElementById('range-note');
+            const r20 = ranges[20];
+            if (r20.percentUsed <= 50) {
+                routeNote.textContent = `✅ This route uses ~${r20.percentUsed}% battery at 20mph`;
+            } else if (r20.percentUsed <= 80) {
+                routeNote.textContent = `⚠️ This route uses ~${r20.percentUsed}% battery at 20mph`;
+            } else if (r20.percentUsed <= 100) {
+                routeNote.textContent = `⚠️ This route uses ~${r20.percentUsed}% - consider charging stop`;
+            } else {
+                routeNote.textContent = `❌ Route exceeds battery - add a charging stop!`;
+            }
         }
         
         // ============================================
@@ -1173,6 +1510,7 @@
         document.getElementById('btn-export').addEventListener('click', exportGPX);
         document.getElementById('btn-draw-mode').addEventListener('click', toggleFreehandMode);
         document.getElementById('btn-clear').addEventListener('click', clearRoute);
+        document.getElementById('btn-calculate-range').addEventListener('click', calculateRange);
         
         // ============================================
         // MOBILE NAV
