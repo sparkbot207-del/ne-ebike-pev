@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Planner - New England E-Bike and PEV</title>
+    <meta name="description" content="Plan your e-bike routes across New England with charging stations and rail trails. Export to GPX for your GPS device.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Leaflet Routing Machine -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    
+    <!-- Leaflet Draw -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
+    
+    <!-- Marker Cluster -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    
+    <style>
+        /* Planner-specific styles */
+        .planner-container {
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - 70px);
+            padding-top: 70px;
+        }
+        
+        .planner-header {
+            background: rgba(0,0,0,0.3);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .planner-header h1 {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .planner-header p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .planner-main {
+            display: flex;
+            flex: 1;
+            position: relative;
+        }
+        
+        /* Sidebar */
+        .planner-sidebar {
+            width: 320px;
+            background: rgba(0,0,0,0.4);
+            border-right: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        
+        .sidebar-section {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .sidebar-section h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: rgba(255,255,255,0.6);
+            margin: 0 0 0.75rem 0;
+        }
+        
+        /* Layer toggles */
+        .layer-toggles {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .layer-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 0.75rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .layer-toggle:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .layer-toggle.active {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+        }
+        
+        .layer-toggle input {
+            display: none;
+        }
+        
+        .layer-toggle .toggle-icon {
+            font-size: 1.2rem;
+        }
+        
+        .layer-toggle .toggle-label {
+            flex: 1;
+            font-size: 0.9rem;
+        }
+        
+        .layer-toggle .toggle-count {
+            font-size: 0.75rem;
+            background: rgba(0,0,0,0.3);
+            padding: 2px 8px;
+            border-radius: 10px;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* Route info */
+        .route-info {
+            display: none;
+        }
+        
+        .route-info.has-route {
+            display: block;
+        }
+        
+        .route-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .route-stat {
+            background: rgba(255,255,255,0.05);
+            padding: 0.75rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .route-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .route-stat-label {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.6);
+            text-transform: uppercase;
+        }
+        
+        /* Waypoints list */
+        .waypoints-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .waypoint-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+        
+        .waypoint-marker {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+        
+        .waypoint-marker.start { background: #10b981; }
+        .waypoint-marker.end { background: #ef4444; }
+        
+        .waypoint-name {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .waypoint-remove {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.4);
+            cursor: pointer;
+            padding: 0.25rem;
+            font-size: 1rem;
+        }
+        
+        .waypoint-remove:hover {
+            color: #ef4444;
+        }
+        
+        /* Action buttons */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .action-btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .action-btn-primary:hover {
+            background: #e6b800;
+        }
+        
+        .action-btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .action-btn-secondary:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .action-btn-danger {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        .action-btn-danger:hover {
+            background: rgba(239, 68, 68, 0.3);
+        }
+        
+        .action-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Map container */
+        .map-container {
+            flex: 1;
+            position: relative;
+        }
+        
+        #planner-map {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Instructions overlay */
+        .map-instructions {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: white;
+            z-index: 1000;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        .map-instructions.hidden {
+            opacity: 0;
+        }
+        
+        /* Mode indicator */
+        .mode-indicator {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .mode-indicator.active {
+            display: block;
+        }
+        
+        /* Leaflet popup customization */
+        .leaflet-popup-content-wrapper {
+            background: #1a1a2e;
+            color: #fff;
+            border-radius: 8px;
+        }
+        
+        .leaflet-popup-tip {
+            background: #1a1a2e;
+        }
+        
+        /* Routing machine styling */
+        .leaflet-routing-container {
+            display: none !important;
+        }
+        
+        /* Trail line styling */
+        .rail-trail-line {
+            stroke: #10b981;
+            stroke-width: 4;
+            stroke-opacity: 0.8;
+        }
+        
+        /* Charging popup */
+        .charging-popup h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+        }
+        
+        .popup-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .popup-btn-add {
+            background: #10b981;
+            color: white;
+        }
+        
+        .popup-btn-add:hover {
+            background: #059669;
+        }
+        
+        .popup-btn-nav {
+            background: #4285f4;
+            color: white;
+        }
+        
+        /* Loading overlay */
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+        
+        .loading-overlay.active {
+            display: flex;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Help panel */
+        .help-panel {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 8px;
+            padding: 0.75rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.5;
+        }
+        
+        .help-panel strong {
+            color: #3b82f6;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .planner-main {
+                flex-direction: column;
+            }
+            
+            .planner-sidebar {
+                width: 100%;
+                max-height: 40vh;
+                order: 2;
+            }
+            
+            .map-container {
+                min-height: 50vh;
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">⚡ New England E-Bike and PEV</a>
+            <div class="nav-links">
+                <a href="index.html#community">Community</a>
+                <a href="laws.html">Laws</a>
+                <a href="routes.html">Routes</a>
+                <a href="planner.html" class="active">Planner</a>
+                <a href="https://www.facebook.com/groups/573295111141320/" target="_blank" class="nav-cta">Join Us</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="planner-container">
+        <div class="planner-header">
+            <h1>🗺️ Route Planner</h1>
+            <p>Plan your ride with bike-friendly directions, rail trails, and charging stations</p>
+        </div>
+        
+        <div class="planner-main">
+            <!-- Sidebar -->
+            <div class="planner-sidebar">
+                <!-- Layers Section -->
+                <div class="sidebar-section">
+                    <h3>Map Layers</h3>
+                    <div class="layer-toggles">
+                        <label class="layer-toggle" id="rail-trails-toggle">
+                            <input type="checkbox" id="toggle-rail-trails">
+                            <span class="toggle-icon">🛤️</span>
+                            <span class="toggle-label">Rail Trails</span>
+                            <span class="toggle-count" id="trail-count">16</span>
+                        </label>
+                        <label class="layer-toggle" id="charging-toggle">
+                            <input type="checkbox" id="toggle-charging">
+                            <span class="toggle-icon">⚡</span>
+                            <span class="toggle-label">Charging Stations</span>
+                            <span class="toggle-count" id="charging-count">0</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Route Info Section -->
+                <div class="sidebar-section route-info" id="route-info">
+                    <h3>Your Route</h3>
+                    <div class="route-stats">
+                        <div class="route-stat">
+                            <div class="route-stat-value" id="route-distance">0</div>
+                            <div class="route-stat-label">Miles</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value" id="route-time">0</div>
+                            <div class="route-stat-label">Minutes</div>
+                        </div>
+                    </div>
+                    <div class="waypoints-list" id="waypoints-list">
+                        <!-- Waypoints added dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Actions Section -->
+                <div class="sidebar-section">
+                    <h3>Actions</h3>
+                    <div class="action-buttons">
+                        <button class="action-btn action-btn-primary" id="btn-export" disabled>
+                            📥 Export GPX
+                        </button>
+                        <button class="action-btn action-btn-secondary" id="btn-draw-mode">
+                            ✏️ Freehand Draw
+                        </button>
+                        <button class="action-btn action-btn-danger" id="btn-clear">
+                            🗑️ Clear Route
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Help Section -->
+                <div class="sidebar-section">
+                    <h3>How to Use</h3>
+                    <div class="help-panel">
+                        <strong>Click the map</strong> to add waypoints.<br>
+                        Routes use <strong>bike-friendly</strong> paths (no highways).<br>
+                        Toggle <strong>Rail Trails</strong> to see trails you can include.<br>
+                        Add <strong>Charging Stations</strong> to your route.<br>
+                        <strong>Export GPX</strong> when you're done!
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="map-container">
+                <div id="planner-map"></div>
+                <div class="map-instructions" id="map-instructions">
+                    Click anywhere to start your route
+                </div>
+                <div class="mode-indicator" id="mode-indicator">
+                    ✏️ Freehand Mode - Draw on map, press ESC to exit
+                </div>
+                <div class="loading-overlay" id="loading">
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+    <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/@tmcw/togeojson@5.8.1/dist/togeojson.umd.js"></script>
+    
+    <script>
+        // ============================================
+        // ROUTE PLANNER - New England E-Bike and PEV
+        // ============================================
+        
+        // Initialize map centered on New England
+        const map = L.map('planner-map').setView([43.0, -71.5], 7);
+        
+        // Add tile layer (OpenStreetMap for cycling-friendly rendering)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap | Routing: OSRM (bike)'
+        }).addTo(map);
+        
+        // ============================================
+        // LAYER GROUPS
+        // ============================================
+        const railTrailsLayer = L.layerGroup();
+        const chargingLayer = L.markerClusterGroup({
+            maxClusterRadius: 50,
+            spiderfyOnMaxZoom: true,
+            showCoverageOnHover: false,
+            zoomToBoundsOnClick: true,
+            disableClusteringAtZoom: 14
+        });
+        const routeLayer = L.layerGroup().addTo(map);
+        const waypointsLayer = L.layerGroup().addTo(map);
+        const freehandLayer = L.featureGroup().addTo(map);
+        
+        // ============================================
+        // STATE
+        // ============================================
+        let waypoints = [];
+        let routingControl = null;
+        let chargingData = [];
+        let chargingLoaded = false;
+        let freehandMode = false;
+        let drawControl = null;
+        let currentRoute = null;
+        
+        // ============================================
+        // RAIL TRAILS DATA & LOADING
+        // ============================================
+        const railTrails = [
+            { name: "Island Line Trail", state: "VT", gpx: "gpx/island-line-trail.gpx", color: "#2ecc71" },
+            { name: "Montpelier & Wells River Trail", state: "VT", gpx: "gpx/montpelier-wells-river-trail.gpx", color: "#2ecc71" },
+            { name: "Northern Rail Trail", state: "NH", gpx: "gpx/northern-rail-trail.gpx", color: "#9b59b6" },
+            { name: "Presidential Rail Trail", state: "NH", gpx: "gpx/presidential-rail-trail.gpx", color: "#9b59b6" },
+            { name: "Cotton Valley Trail", state: "NH", gpx: "gpx/cotton-valley-trail.gpx", color: "#9b59b6" },
+            { name: "Eastern Trail", state: "ME", gpx: "gpx/eastern-trail.gpx", color: "#e74c3c" },
+            { name: "Kennebec River Rail Trail", state: "ME", gpx: "gpx/kennebec-river-rail-trail.gpx", color: "#e74c3c" },
+            { name: "Eastern Promenade Trail", state: "ME", gpx: "gpx/eastern-promenade-trail.gpx", color: "#e74c3c" },
+            { name: "Cape Cod Rail Trail", state: "MA", gpx: "gpx/cape-cod-rail-trail.gpx", color: "#3498db" },
+            { name: "Shining Sea Bikeway", state: "MA", gpx: "gpx/shining-sea-bikeway.gpx", color: "#3498db" },
+            { name: "Ashuwillticook Rail Trail", state: "MA", gpx: "gpx/ashuwillticook-rail-trail.gpx", color: "#3498db" },
+            { name: "Nashua River Rail Trail", state: "MA", gpx: "gpx/nashua-river-rail-trail.gpx", color: "#3498db" },
+            { name: "Air Line State Park Trail", state: "CT", gpx: "gpx/air-line-state-park-trail.gpx", color: "#f39c12" },
+            { name: "Farmington Canal Heritage Trail", state: "CT", gpx: "gpx/farmington-canal-heritage-trail.gpx", color: "#f39c12" },
+            { name: "East Bay Bike Path", state: "RI", gpx: "gpx/east-bay-bike-path.gpx", color: "#1abc9c" },
+            { name: "Blackstone River Bikeway", state: "RI", gpx: "gpx/blackstone-river-bikeway.gpx", color: "#1abc9c" }
+        ];
+        
+        async function loadRailTrails() {
+            for (const trail of railTrails) {
+                try {
+                    const response = await fetch(trail.gpx);
+                    if (!response.ok) continue;
+                    
+                    const gpxText = await response.text();
+                    const parser = new DOMParser();
+                    const gpxDoc = parser.parseFromString(gpxText, 'text/xml');
+                    const geoJson = toGeoJSON.gpx(gpxDoc);
+                    
+                    const layer = L.geoJSON(geoJson, {
+                        style: {
+                            color: trail.color,
+                            weight: 5,
+                            opacity: 0.8
+                        },
+                        onEachFeature: (feature, layer) => {
+                            layer.bindPopup(`
+                                <h3>🛤️ ${trail.name}</h3>
+                                <p>State: ${trail.state}</p>
+                                <div style="margin-top: 0.5rem;">
+                                    <a href="${trail.gpx}" download class="popup-btn popup-btn-nav" style="text-decoration:none;">📥 Download GPX</a>
+                                </div>
+                            `);
+                        }
+                    });
+                    
+                    railTrailsLayer.addLayer(layer);
+                } catch (e) {
+                    console.log(`Could not load trail: ${trail.name}`);
+                }
+            }
+        }
+        
+        // ============================================
+        // CHARGING STATIONS
+        // ============================================
+        function createChargingIcon() {
+            return L.divIcon({
+                className: 'charging-marker',
+                html: `<div style="background:#f59e0b;width:20px;height:20px;border-radius:50%;border:2px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;font-size:10px;">⚡</div>`,
+                iconSize: [20, 20],
+                iconAnchor: [10, 10],
+                popupAnchor: [0, -10]
+            });
+        }
+        
+        async function loadChargingStations() {
+            if (chargingLoaded) return;
+            
+            showLoading(true);
+            
+            try {
+                const response = await fetch('data/charging_stations.json');
+                const data = await response.json();
+                chargingData = data.stations;
+                
+                document.getElementById('charging-count').textContent = chargingData.length.toLocaleString();
+                
+                chargingData.forEach(station => {
+                    if (!station.lat || !station.lng) return;
+                    
+                    const marker = L.marker([station.lat, station.lng], { 
+                        icon: createChargingIcon() 
+                    });
+                    
+                    marker.bindPopup(`
+                        <div class="charging-popup">
+                            <h3>⚡ ${station.name}</h3>
+                            <p style="font-size:0.85rem;color:rgba(255,255,255,0.7);">📍 ${station.address}, ${station.city}</p>
+                            <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <button class="popup-btn popup-btn-add" onclick="addChargingToRoute(${station.lat}, ${station.lng}, '${station.name.replace(/'/g, "\\'")}')">
+                                    ➕ Add to Route
+                                </button>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=${station.lat},${station.lng}" target="_blank" class="popup-btn popup-btn-nav" style="text-decoration:none;">
+                                    📍 Navigate
+                                </a>
+                            </div>
+                        </div>
+                    `);
+                    
+                    chargingLayer.addLayer(marker);
+                });
+                
+                chargingLoaded = true;
+            } catch (e) {
+                console.error('Error loading charging stations:', e);
+            }
+            
+            showLoading(false);
+        }
+        
+        // Add charging station as waypoint
+        window.addChargingToRoute = function(lat, lng, name) {
+            addWaypoint(lat, lng, name);
+            map.closePopup();
+        };
+        
+        // ============================================
+        // ROUTING
+        // ============================================
+        function updateRoute() {
+            if (waypoints.length < 2) {
+                if (routingControl) {
+                    map.removeControl(routingControl);
+                    routingControl = null;
+                }
+                currentRoute = null;
+                updateRouteInfo();
+                return;
+            }
+            
+            showLoading(true);
+            
+            const waypointLatLngs = waypoints.map(wp => L.latLng(wp.lat, wp.lng));
+            
+            if (routingControl) {
+                routingControl.setWaypoints(waypointLatLngs);
+            } else {
+                routingControl = L.Routing.control({
+                    waypoints: waypointLatLngs,
+                    router: L.Routing.osrmv1({
+                        serviceUrl: 'https://router.project-osrm.org/route/v1',
+                        profile: 'bike'
+                    }),
+                    lineOptions: {
+                        styles: [
+                            { color: '#3b82f6', weight: 6, opacity: 0.8 },
+                            { color: '#1d4ed8', weight: 2, opacity: 1 }
+                        ]
+                    },
+                    show: false,
+                    addWaypoints: false,
+                    routeWhileDragging: false,
+                    fitSelectedRoutes: false,
+                    createMarker: () => null // We manage our own markers
+                }).addTo(map);
+                
+                routingControl.on('routesfound', function(e) {
+                    currentRoute = e.routes[0];
+                    updateRouteInfo();
+                    showLoading(false);
+                });
+                
+                routingControl.on('routingerror', function(e) {
+                    console.error('Routing error:', e);
+                    showLoading(false);
+                    alert('Could not calculate route. Try different waypoints.');
+                });
+            }
+        }
+        
+        function updateRouteInfo() {
+            const routeInfo = document.getElementById('route-info');
+            const exportBtn = document.getElementById('btn-export');
+            
+            if (waypoints.length > 0) {
+                routeInfo.classList.add('has-route');
+            } else {
+                routeInfo.classList.remove('has-route');
+            }
+            
+            // Update stats
+            if (currentRoute) {
+                const distanceMiles = (currentRoute.summary.totalDistance / 1609.34).toFixed(1);
+                const timeMinutes = Math.round(currentRoute.summary.totalTime / 60);
+                
+                document.getElementById('route-distance').textContent = distanceMiles;
+                document.getElementById('route-time').textContent = timeMinutes;
+                
+                exportBtn.disabled = false;
+            } else {
+                document.getElementById('route-distance').textContent = '0';
+                document.getElementById('route-time').textContent = '0';
+                exportBtn.disabled = waypoints.length < 2;
+            }
+            
+            // Update waypoints list
+            const list = document.getElementById('waypoints-list');
+            list.innerHTML = '';
+            
+            waypoints.forEach((wp, index) => {
+                const isStart = index === 0;
+                const isEnd = index === waypoints.length - 1 && waypoints.length > 1;
+                
+                const item = document.createElement('div');
+                item.className = 'waypoint-item';
+                item.innerHTML = `
+                    <div class="waypoint-marker ${isStart ? 'start' : isEnd ? 'end' : ''}">${index + 1}</div>
+                    <span class="waypoint-name">${wp.name || `Point ${index + 1}`}</span>
+                    <button class="waypoint-remove" onclick="removeWaypoint(${index})">×</button>
+                `;
+                list.appendChild(item);
+            });
+            
+            // Update instructions
+            updateInstructions();
+        }
+        
+        // ============================================
+        // WAYPOINT MANAGEMENT
+        // ============================================
+        function createWaypointIcon(index, isStart, isEnd) {
+            let color = '#3b82f6';
+            let label = index + 1;
+            
+            if (isStart) {
+                color = '#10b981';
+                label = 'A';
+            } else if (isEnd) {
+                color = '#ef4444';
+                label = 'B';
+            }
+            
+            return L.divIcon({
+                className: 'waypoint-marker-icon',
+                html: `<div style="background:${color};width:30px;height:30px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:white;">${label}</div>`,
+                iconSize: [30, 30],
+                iconAnchor: [15, 15]
+            });
+        }
+        
+        function addWaypoint(lat, lng, name = null) {
+            const wp = { lat, lng, name: name || `Point ${waypoints.length + 1}` };
+            waypoints.push(wp);
+            updateWaypointMarkers();
+            updateRoute();
+        }
+        
+        function removeWaypoint(index) {
+            waypoints.splice(index, 1);
+            updateWaypointMarkers();
+            updateRoute();
+        }
+        
+        window.removeWaypoint = removeWaypoint;
+        
+        function updateWaypointMarkers() {
+            waypointsLayer.clearLayers();
+            
+            waypoints.forEach((wp, index) => {
+                const isStart = index === 0;
+                const isEnd = index === waypoints.length - 1 && waypoints.length > 1;
+                
+                const marker = L.marker([wp.lat, wp.lng], {
+                    icon: createWaypointIcon(index, isStart, isEnd),
+                    draggable: true
+                });
+                
+                marker.on('dragend', function(e) {
+                    const pos = e.target.getLatLng();
+                    waypoints[index].lat = pos.lat;
+                    waypoints[index].lng = pos.lng;
+                    updateRoute();
+                });
+                
+                marker.bindPopup(`<strong>${wp.name}</strong><br><button class="popup-btn popup-btn-add" onclick="removeWaypoint(${index}); map.closePopup();">Remove</button>`);
+                
+                waypointsLayer.addLayer(marker);
+            });
+        }
+        
+        // ============================================
+        // MAP CLICK HANDLER
+        // ============================================
+        map.on('click', function(e) {
+            if (freehandMode) return;
+            addWaypoint(e.latlng.lat, e.latlng.lng);
+        });
+        
+        // ============================================
+        // FREEHAND DRAWING
+        // ============================================
+        drawControl = new L.Draw.Polyline(map, {
+            shapeOptions: {
+                color: '#f59e0b',
+                weight: 4,
+                opacity: 0.8
+            }
+        });
+        
+        function toggleFreehandMode() {
+            freehandMode = !freehandMode;
+            const btn = document.getElementById('btn-draw-mode');
+            const indicator = document.getElementById('mode-indicator');
+            
+            if (freehandMode) {
+                btn.innerHTML = '✅ Exit Draw Mode';
+                btn.classList.remove('action-btn-secondary');
+                btn.classList.add('action-btn-primary');
+                indicator.classList.add('active');
+                drawControl.enable();
+            } else {
+                btn.innerHTML = '✏️ Freehand Draw';
+                btn.classList.add('action-btn-secondary');
+                btn.classList.remove('action-btn-primary');
+                indicator.classList.remove('active');
+                drawControl.disable();
+            }
+        }
+        
+        map.on(L.Draw.Event.CREATED, function(e) {
+            freehandLayer.addLayer(e.layer);
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && freehandMode) {
+                toggleFreehandMode();
+            }
+        });
+        
+        // ============================================
+        // GPX EXPORT
+        // ============================================
+        function exportGPX() {
+            if (waypoints.length < 2 && freehandLayer.getLayers().length === 0) {
+                alert('Add at least 2 waypoints or draw a route first!');
+                return;
+            }
+            
+            let gpx = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="NE E-Bike Route Planner" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>E-Bike Route</name>
+    <time>${new Date().toISOString()}</time>
+  </metadata>
+`;
+            
+            // Add waypoints
+            waypoints.forEach((wp, index) => {
+                gpx += `  <wpt lat="${wp.lat}" lon="${wp.lng}">
+    <name>${wp.name}</name>
+  </wpt>
+`;
+            });
+            
+            // Add route from OSRM if available
+            if (currentRoute && currentRoute.coordinates) {
+                gpx += `  <trk>
+    <name>Bike Route</name>
+    <trkseg>
+`;
+                currentRoute.coordinates.forEach(coord => {
+                    gpx += `      <trkpt lat="${coord.lat}" lon="${coord.lng}"></trkpt>
+`;
+                });
+                gpx += `    </trkseg>
+  </trk>
+`;
+            }
+            
+            // Add freehand drawings
+            freehandLayer.eachLayer(layer => {
+                if (layer.getLatLngs) {
+                    gpx += `  <trk>
+    <name>Freehand Path</name>
+    <trkseg>
+`;
+                    layer.getLatLngs().forEach(coord => {
+                        gpx += `      <trkpt lat="${coord.lat}" lon="${coord.lng}"></trkpt>
+`;
+                    });
+                    gpx += `    </trkseg>
+  </trk>
+`;
+                }
+            });
+            
+            gpx += `</gpx>`;
+            
+            // Download
+            const blob = new Blob([gpx], { type: 'application/gpx+xml' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'ne-ebike-route.gpx';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        // ============================================
+        // CLEAR ROUTE
+        // ============================================
+        function clearRoute() {
+            if (!confirm('Clear all waypoints and drawings?')) return;
+            
+            waypoints = [];
+            currentRoute = null;
+            
+            if (routingControl) {
+                map.removeControl(routingControl);
+                routingControl = null;
+            }
+            
+            waypointsLayer.clearLayers();
+            freehandLayer.clearLayers();
+            routeLayer.clearLayers();
+            
+            updateRouteInfo();
+        }
+        
+        // ============================================
+        // UI HELPERS
+        // ============================================
+        function showLoading(show) {
+            document.getElementById('loading').classList.toggle('active', show);
+        }
+        
+        function updateInstructions() {
+            const instructions = document.getElementById('map-instructions');
+            
+            if (waypoints.length === 0) {
+                instructions.textContent = 'Click anywhere to start your route';
+                instructions.classList.remove('hidden');
+            } else if (waypoints.length === 1) {
+                instructions.textContent = 'Click to add more waypoints';
+                instructions.classList.remove('hidden');
+            } else {
+                instructions.classList.add('hidden');
+            }
+        }
+        
+        // ============================================
+        // LAYER TOGGLE HANDLERS
+        // ============================================
+        document.getElementById('toggle-rail-trails').addEventListener('change', async function() {
+            const toggle = document.getElementById('rail-trails-toggle');
+            
+            if (this.checked) {
+                toggle.classList.add('active');
+                if (railTrailsLayer.getLayers().length === 0) {
+                    showLoading(true);
+                    await loadRailTrails();
+                    showLoading(false);
+                }
+                map.addLayer(railTrailsLayer);
+            } else {
+                toggle.classList.remove('active');
+                map.removeLayer(railTrailsLayer);
+            }
+        });
+        
+        document.getElementById('toggle-charging').addEventListener('change', async function() {
+            const toggle = document.getElementById('charging-toggle');
+            
+            if (this.checked) {
+                toggle.classList.add('active');
+                if (!chargingLoaded) {
+                    await loadChargingStations();
+                }
+                map.addLayer(chargingLayer);
+            } else {
+                toggle.classList.remove('active');
+                map.removeLayer(chargingLayer);
+            }
+        });
+        
+        // ============================================
+        // BUTTON HANDLERS
+        // ============================================
+        document.getElementById('btn-export').addEventListener('click', exportGPX);
+        document.getElementById('btn-draw-mode').addEventListener('click', toggleFreehandMode);
+        document.getElementById('btn-clear').addEventListener('click', clearRoute);
+        
+        // ============================================
+        // MOBILE NAV
+        // ============================================
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+        
+        // ============================================
+        // INIT
+        // ============================================
+        updateInstructions();
+        console.log('🚴 NE E-Bike Route Planner loaded!');
+    </script>
+</body>
+</html>
