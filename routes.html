@@ -220,6 +220,137 @@
             border-bottom: 3px solid var(--accent);
         }
         
+        .trail-count-badge {
+            font-size: 1rem;
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.15);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            margin-left: 0.5rem;
+        }
+        
+        .trail-count-badge:hover {
+            background: rgba(16, 185, 129, 0.3);
+            color: #fff;
+        }
+        
+        /* Trail List Modal */
+        .trail-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 10000;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+        
+        .trail-modal.active {
+            display: block;
+        }
+        
+        .trail-modal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .trail-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .trail-modal-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        
+        .trail-modal-close {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+        
+        .trail-modal-close:hover {
+            color: #fff;
+        }
+        
+        .trail-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        
+        .trail-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .trail-list-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .trail-list-name {
+            font-weight: 600;
+            color: #fff;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .trail-list-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+        
+        .trail-list-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .trail-list-actions a {
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        .trail-list-actions .btn-info {
+            background: #3b82f6;
+        }
+        
+        .trail-list-actions .btn-nav {
+            background: #10b981;
+        }
+        
         .trail-cards {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -546,6 +677,19 @@
         </div>
     </section>
 
+    <!-- Trail List Modal -->
+    <div class="trail-modal" id="trail-modal">
+        <div class="trail-modal-content">
+            <div class="trail-modal-header">
+                <h2 id="modal-title">All Trails</h2>
+                <button class="trail-modal-close" onclick="closeTrailModal()">&times;</button>
+            </div>
+            <div class="trail-list" id="modal-trail-list">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -750,14 +894,68 @@
                     stateInfo.container.appendChild(card);
                 });
                 
-                // Update state title with count
-                const titleEl = document.querySelector(`#${stateCode.toLowerCase() === 'nh' ? 'new-hampshire' : stateCode.toLowerCase() === 'ri' ? 'rhode-island' : stateCode.toLowerCase()} .state-title`);
+                // Update state title with clickable count
+                const sectionId = stateCode.toLowerCase() === 'nh' ? 'new-hampshire' : stateCode.toLowerCase() === 'ri' ? 'rhode-island' : stateCode.toLowerCase();
+                const titleEl = document.querySelector(`#${sectionId} .state-title`);
                 if (titleEl) {
                     const totalInState = trailsData.filter(t => t.state === stateCode).length;
-                    titleEl.innerHTML = `${stateInfo.emoji} ${stateInfo.name} <span style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">(${totalInState} trails)</span>`;
+                    titleEl.innerHTML = `${stateInfo.emoji} ${stateInfo.name} <span class="trail-count-badge" onclick="openTrailModal('${stateCode}', '${stateInfo.name}')">${totalInState} trails →</span>`;
                 }
             });
         }
+        
+        // Modal functions
+        function openTrailModal(stateCode, stateName) {
+            const modal = document.getElementById('trail-modal');
+            const title = document.getElementById('modal-title');
+            const list = document.getElementById('modal-trail-list');
+            
+            // Get all trails for this state
+            const stateTrails = trailsData
+                .filter(t => t.state === stateCode)
+                .sort((a, b) => {
+                    const ratingDiff = (b.rating || 0) - (a.rating || 0);
+                    if (ratingDiff !== 0) return ratingDiff;
+                    return (b.length || 0) - (a.length || 0);
+                });
+            
+            title.textContent = `All ${stateName} Trails (${stateTrails.length})`;
+            
+            // Generate list items
+            list.innerHTML = stateTrails.map(trail => {
+                const ratingStars = trail.rating ? '⭐'.repeat(Math.round(trail.rating)) : '';
+                return `
+                    <div class="trail-list-item">
+                        <span class="trail-list-name">${trail.name}</span>
+                        <span class="trail-list-meta">
+                            <span>📏 ${trail.length} mi</span>
+                            ${ratingStars ? `<span>${ratingStars}</span>` : ''}
+                        </span>
+                        <div class="trail-list-actions">
+                            ${trail.url ? `<a href="${trail.url}" target="_blank" class="btn-info">ℹ️ Info</a>` : ''}
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=${trail.lat},${trail.lng}" target="_blank" class="btn-nav">📍 Go</a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeTrailModal() {
+            document.getElementById('trail-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Close modal on escape key or click outside
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeTrailModal();
+        });
+        
+        document.getElementById('trail-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'trail-modal') closeTrailModal();
+        });
         
         // Load trails on page load
         loadTrails();
