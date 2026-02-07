@@ -399,8 +399,54 @@
                 </div>
             </section>
             
+            <!-- Other Shops -->
+            <section class="other-shops" style="margin-bottom: 3rem;">
+                <h2 style="color: #fff; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(255,255,255,0.2);">🏪 More Shops</h2>
+                
+                <!-- King's Mountain RC -->
+                <div class="shop-card" style="background: rgba(0,0,0,0.3); border-radius: 16px; padding: 2rem; border: 1px solid rgba(255,255,255,0.1);">
+                    <div style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
+                        <div>
+                            <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">🎮 King's Mountain RC & Hobby</h3>
+                            <p style="color: #10b981; font-weight: 600; margin-bottom: 1rem;">RC, Drones, E-Bikes & More</p>
+                            <p style="color: rgba(255,255,255,0.9); line-height: 1.7; margin-bottom: 1rem;">
+                                A family-friendly hobby store offering RC cars, trucks, airplanes, drones, and electric vehicles. 
+                                Parts, repairs, and community events including Tuesday Night Thunder racing!
+                            </p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                <span class="service-badge">🎮 RC Vehicles</span>
+                                <span class="service-badge">🚁 Drones</span>
+                                <span class="service-badge">🚲 E-Bikes</span>
+                                <span class="service-badge">🔧 Parts & Repairs</span>
+                                <span class="service-badge">🏁 Racing Events</span>
+                            </div>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                <a href="https://kingsmountainrcandhobby.com/" target="_blank" class="cta-btn cta-btn-secondary">🌐 Visit Website</a>
+                                <a href="tel:2079899602" class="cta-btn cta-btn-secondary">📞 Call Now</a>
+                            </div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.3); border-radius: 12px; padding: 1.25rem;">
+                            <div style="margin-bottom: 1rem;">
+                                <h4 style="color: #10b981; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem;">📍 Location</h4>
+                                <p style="color: rgba(255,255,255,0.9); margin-bottom: 0.5rem;">Brewer, ME</p>
+                                <a href="https://www.google.com/maps/search/Kings+Mountain+RC+Brewer+ME" target="_blank" style="color: #3b82f6; text-decoration: none; font-size: 0.9rem;">📍 Get Directions →</a>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <h4 style="color: #10b981; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem;">🕐 Special Hours</h4>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem;">Tuesday Night Thunder: 6-9pm</p>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem;">Friday: Open till 9pm</p>
+                            </div>
+                            <div>
+                                <h4 style="color: #10b981; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem;">📞 Contact</h4>
+                                <a href="tel:2079899602" style="color: rgba(255,255,255,0.9); text-decoration: none;">(207) 989-9602</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
             <!-- Map -->
-            <h2 style="text-align: center; margin-bottom: 1rem; color: #fff;">📍 Location</h2>
+            <h2 style="text-align: center; margin-bottom: 1rem; color: #fff;">📍 Shop Locations</h2>
             <div id="shop-map"></div>
             
             <!-- Submit Your Shop -->
@@ -440,8 +486,8 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // Initialize map centered on Portsmouth
-        const map = L.map('shop-map').setView([43.0718, -70.7626], 13);
+        // Initialize map centered on New England
+        const map = L.map('shop-map').setView([43.5, -70.5], 8);
         
         // Base layers
         const streetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -454,29 +500,47 @@
         
         L.control.layers({ "🗺️ Street": streetMap, "🛰️ Satellite": satellite }).addTo(map);
         
-        // Radmoto locations
+        // All shop locations
         const locations = [
+            // Radmoto USA - Portsmouth, NH
             {
                 name: "Radmoto Experience Center",
+                shop: "Radmoto USA",
                 type: "Sales & Showroom",
                 address: "2040 Lafayette Rd, Unit 4, Portsmouth, NH",
                 lat: 43.0547,
-                lng: -70.7851
+                lng: -70.7851,
+                color: "linear-gradient(135deg, #ef4444, #f59e0b)",
+                icon: "🔥"
             },
             {
                 name: "Radmoto Service Center", 
+                shop: "Radmoto USA",
                 type: "Service & Repairs",
                 address: "235 West Rd, Unit 6, Portsmouth, NH",
                 lat: 43.0689,
-                lng: -70.7954
+                lng: -70.7954,
+                color: "linear-gradient(135deg, #ef4444, #f59e0b)",
+                icon: "🔧"
+            },
+            // King's Mountain RC - Brewer, ME
+            {
+                name: "King's Mountain RC & Hobby",
+                shop: "King's Mountain RC",
+                type: "RC, Drones, E-Bikes",
+                address: "Brewer, ME",
+                lat: 44.7964,
+                lng: -68.7614,
+                color: "#10b981",
+                icon: "🎮"
             }
         ];
         
         // Create custom icon
-        function createRadmotoIcon() {
+        function createShopIcon(loc) {
             return L.divIcon({
-                className: 'radmoto-marker',
-                html: `<div style="background:linear-gradient(135deg, #ef4444, #f59e0b);width:32px;height:32px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;font-size:16px;">🔥</div>`,
+                className: 'shop-marker',
+                html: `<div style="background:${loc.color};width:32px;height:32px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;font-size:16px;">${loc.icon}</div>`,
                 iconSize: [32, 32],
                 iconAnchor: [16, 16],
                 popupAnchor: [0, -16]
@@ -486,7 +550,7 @@
         // Add markers
         const bounds = L.latLngBounds();
         locations.forEach(loc => {
-            const marker = L.marker([loc.lat, loc.lng], { icon: createRadmotoIcon() });
+            const marker = L.marker([loc.lat, loc.lng], { icon: createShopIcon(loc) });
             marker.bindPopup(`
                 <h3 style="margin:0 0 0.5rem;color:#fff;">${loc.name}</h3>
                 <p style="margin:0;color:#f59e0b;font-size:0.85rem;">${loc.type}</p>
@@ -497,8 +561,8 @@
             bounds.extend([loc.lat, loc.lng]);
         });
         
-        // Fit map to show both locations
-        map.fitBounds(bounds, { padding: [50, 50], maxZoom: 14 });
+        // Fit map to show all locations
+        map.fitBounds(bounds, { padding: [50, 50], maxZoom: 12 });
         
         // Mobile nav
         const navToggle = document.querySelector('.nav-toggle');
