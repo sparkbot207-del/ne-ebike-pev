@@ -1283,6 +1283,9 @@
                     currentRoute = e.routes[0];
                     updateRouteInfo();
                     showLoading(false);
+                    
+                    // Check for nearby rail trails
+                    checkForNearbyTrails();
                 });
                 
                 routingControl.on('routingerror', function(e) {
@@ -1572,6 +1575,122 @@
             }
         }
         
+        // Check for rail trails near the route
+        async function checkForNearbyTrails() {
+            if (!currentRoute || !currentRoute.coordinates) return;
+            
+            // Make sure rail trails are loaded
+            if (railTrailsLayer.getLayers().length === 0) {
+                await loadRailTrails();
+            }
+            
+            const routeCoords = currentRoute.coordinates;
+            const nearbyTrails = [];
+            const searchRadius = 1609.34; // 1 mile in meters
+            
+            // Sample route points (every 20th point for performance)
+            const samplePoints = [];
+            for (let i = 0; i < routeCoords.length; i += 20) {
+                samplePoints.push(routeCoords[i]);
+            }
+            
+            // Check each trail
+            railTrails.forEach(trail => {
+                railTrailsLayer.eachLayer(layer => {
+                    if (layer.feature && layer.toGeoJSON) {
+                        const geojson = layer.toGeoJSON();
+                        if (geojson.geometry && geojson.geometry.coordinates) {
+                            // Get trail coordinates
+                            let trailCoords = geojson.geometry.coordinates;
+                            if (geojson.geometry.type === 'MultiLineString') {
+                                trailCoords = trailCoords.flat();
+                            }
+                            
+                            // Check if any route point is near this trail
+                            for (const routePoint of samplePoints) {
+                                for (let i = 0; i < trailCoords.length; i += 10) {
+                                    const tc = trailCoords[i];
+                                    if (Array.isArray(tc) && tc.length >= 2) {
+                                        const dist = getDistanceMeters(
+                                            routePoint.lat, routePoint.lng,
+                                            tc[1], tc[0]
+                                        );
+                                        if (dist < searchRadius) {
+                                            if (!nearbyTrails.find(t => t.name === trail.name)) {
+                                                nearbyTrails.push(trail);
+                                            }
+                                            return;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+            
+            // Show notification if trails found
+            if (nearbyTrails.length > 0) {
+                showTrailSuggestion(nearbyTrails);
+            }
+        }
+        
+        function showTrailSuggestion(trails) {
+            // Create or update trail suggestion element
+            let suggestionEl = document.getElementById('trail-suggestion');
+            if (!suggestionEl) {
+                suggestionEl = document.createElement('div');
+                suggestionEl.id = 'trail-suggestion';
+                suggestionEl.style.cssText = `
+                    position: absolute;
+                    top: 60px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: rgba(16, 185, 129, 0.95);
+                    color: white;
+                    padding: 0.75rem 1rem;
+                    border-radius: 8px;
+                    font-size: 0.85rem;
+                    z-index: 1000;
+                    max-width: 90%;
+                    text-align: center;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                `;
+                document.querySelector('.map-container').appendChild(suggestionEl);
+            }
+            
+            const trailNames = trails.map(t => t.name).slice(0, 2).join(', ');
+            const moreText = trails.length > 2 ? ` +${trails.length - 2} more` : '';
+            
+            suggestionEl.innerHTML = `
+                🛤️ <strong>Rail trail nearby!</strong><br>
+                ${trailNames}${moreText}<br>
+                <small>Enable "Rail Trails" layer to see it, then add waypoints along the trail</small>
+                <button onclick="this.parentElement.style.display='none'" style="
+                    position: absolute;
+                    top: 4px;
+                    right: 8px;
+                    background: none;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                    font-size: 1rem;
+                ">×</button>
+            `;
+            suggestionEl.style.display = 'block';
+            
+            // Auto-enable rail trails layer
+            if (!document.getElementById('toggle-rail-trails').checked) {
+                document.getElementById('toggle-rail-trails').checked = true;
+                document.getElementById('toggle-rail-trails').dispatchEvent(new Event('change'));
+            }
+            
+            // Hide after 10 seconds
+            setTimeout(() => {
+                if (suggestionEl) suggestionEl.style.display = 'none';
+            }, 10000);
+        }
+        
         // Haversine distance calculation
         function getDistanceMeters(lat1, lng1, lat2, lng2) {
             const R = 6371000; // Earth radius in meters
@@ -1859,28 +1978,14 @@
             showLoading(true);
             
             try {
-                // Use Nominatim (free OSM geocoding) - bounded to New England area
-                const response = await fetch(
-                    `https://nominatim.openstreetmap.org/search?` +
-                    `q=${encodeURIComponent(query)}&` +
-                    `format=json&` +
-                    `addressdetails=1&` +
-                    `limit=5&` +
-                    `countrycodes=us&` +
-                    `viewbox=-73.5,47,-66.9,40.5&` + // New England bounding box
-                    `bounded=0`, // Prefer but don't require results in viewbox
-                    {
-                        headers: {
-                            'User-Agent': 'NE-EBike-Route-Planner/1.0'
-                        }
-                    }
-                );
+                // Try ORS geocoding first (better for POIs/businesses)
+                let results = await searchWithORS(query);
                 
-                if (!response.ok) {
-                    throw new Error(`Search failed: ${response.status}`);
+                // If no results, fall back to Nominatim
+                if (results.length === 0) {
+                    results = await searchWithNominatim(query);
                 }
                 
-                const results = await response.json();
                 displaySearchResults(results);
                 
             } catch (error) {
@@ -1891,12 +1996,70 @@
             showLoading(false);
         }
         
+        async function searchWithORS(query) {
+            try {
+                const response = await fetch(
+                    `https://api.openrouteservice.org/geocode/search?` +
+                    `api_key=${ORS_API_KEY}&` +
+                    `text=${encodeURIComponent(query)}&` +
+                    `boundary.rect.min_lon=-73.5&` +
+                    `boundary.rect.min_lat=40.5&` +
+                    `boundary.rect.max_lon=-66.9&` +
+                    `boundary.rect.max_lat=47&` +
+                    `size=5`
+                );
+                
+                if (!response.ok) return [];
+                
+                const data = await response.json();
+                
+                // Convert ORS format to our standard format
+                return (data.features || []).map(f => ({
+                    lat: f.geometry.coordinates[1],
+                    lon: f.geometry.coordinates[0],
+                    display_name: f.properties.label,
+                    name: f.properties.name || f.properties.label.split(',')[0]
+                }));
+            } catch (e) {
+                console.log('ORS geocoding failed, trying Nominatim');
+                return [];
+            }
+        }
+        
+        async function searchWithNominatim(query) {
+            const response = await fetch(
+                `https://nominatim.openstreetmap.org/search?` +
+                `q=${encodeURIComponent(query)}&` +
+                `format=json&` +
+                `addressdetails=1&` +
+                `limit=5&` +
+                `countrycodes=us&` +
+                `viewbox=-73.5,47,-66.9,40.5&` +
+                `bounded=0`,
+                {
+                    headers: {
+                        'User-Agent': 'NE-EBike-Route-Planner/1.0'
+                    }
+                }
+            );
+            
+            if (!response.ok) return [];
+            
+            const data = await response.json();
+            return data.map(r => ({
+                lat: r.lat,
+                lon: r.lon,
+                display_name: r.display_name,
+                name: r.display_name.split(',')[0]
+            }));
+        }
+        
         function displaySearchResults(results) {
             const container = document.getElementById('search-results');
             container.innerHTML = '';
             
             if (results.length === 0) {
-                container.innerHTML = '<div class="search-result-item"><span class="result-name">No results found</span></div>';
+                container.innerHTML = '<div class="search-result-item"><span class="result-name">No results found</span><div class="result-address">Try a more specific address or city name</div></div>';
                 return;
             }
             
@@ -1905,8 +2068,8 @@
                 item.className = 'search-result-item';
                 
                 // Parse the display name for cleaner output
+                const name = result.name || result.display_name.split(',')[0];
                 const parts = result.display_name.split(',');
-                const name = parts[0];
                 const address = parts.slice(1, 4).join(',').trim();
                 
                 item.innerHTML = `
