@@ -1,0 +1,50 @@
+name: Update Rail Trails Database
+
+on:
+  # Run weekly on Sunday at 6 AM UTC (2 AM EST)
+  schedule:
+    - cron: '0 6 * * 0'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  update-trails:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Run trail updater
+        run: node scripts/update-trails.js
+        continue-on-error: true
+        id: scrape
+      
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet data/rail_trails.json || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/rail_trails.json
+          
+          # Get trail count for commit message
+          TRAIL_COUNT=$(jq '.metadata.total_trails' data/rail_trails.json)
+          TOTAL_MILES=$(jq '.metadata.total_miles' data/rail_trails.json)
+          
+          git commit -m "🛤️ Auto-update trail database: ${TRAIL_COUNT} trails (${TOTAL_MILES} mi)"
+          git push
+      
+      - name: No changes
+        if: steps.changes.outputs.changed != 'true'
+        run: echo "No changes to trail database"
