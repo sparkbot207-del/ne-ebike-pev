@@ -1046,22 +1046,22 @@
         // RAIL TRAILS DATA & LOADING
         // ============================================
         const railTrails = [
-            { name: "Island Line Trail", state: "VT", gpx: "gpx/island-line-trail.gpx", color: "#2ecc71" },
-            { name: "Montpelier & Wells River Trail", state: "VT", gpx: "gpx/montpelier-wells-river-trail.gpx", color: "#2ecc71" },
-            { name: "Northern Rail Trail", state: "NH", gpx: "gpx/northern-rail-trail.gpx", color: "#9b59b6" },
-            { name: "Presidential Rail Trail", state: "NH", gpx: "gpx/presidential-rail-trail.gpx", color: "#9b59b6" },
-            { name: "Cotton Valley Trail", state: "NH", gpx: "gpx/cotton-valley-trail.gpx", color: "#9b59b6" },
-            { name: "Eastern Trail", state: "ME", gpx: "gpx/eastern-trail.gpx", color: "#e74c3c" },
-            { name: "Kennebec River Rail Trail", state: "ME", gpx: "gpx/kennebec-river-rail-trail.gpx", color: "#e74c3c" },
-            { name: "Eastern Promenade Trail", state: "ME", gpx: "gpx/eastern-promenade-trail.gpx", color: "#e74c3c" },
-            { name: "Cape Cod Rail Trail", state: "MA", gpx: "gpx/cape-cod-rail-trail.gpx", color: "#3498db" },
-            { name: "Shining Sea Bikeway", state: "MA", gpx: "gpx/shining-sea-bikeway.gpx", color: "#3498db" },
-            { name: "Ashuwillticook Rail Trail", state: "MA", gpx: "gpx/ashuwillticook-rail-trail.gpx", color: "#3498db" },
-            { name: "Nashua River Rail Trail", state: "MA", gpx: "gpx/nashua-river-rail-trail.gpx", color: "#3498db" },
-            { name: "Air Line State Park Trail", state: "CT", gpx: "gpx/air-line-state-park-trail.gpx", color: "#f39c12" },
-            { name: "Farmington Canal Heritage Trail", state: "CT", gpx: "gpx/farmington-canal-heritage-trail.gpx", color: "#f39c12" },
-            { name: "East Bay Bike Path", state: "RI", gpx: "gpx/east-bay-bike-path.gpx", color: "#1abc9c" },
-            { name: "Blackstone River Bikeway", state: "RI", gpx: "gpx/blackstone-river-bikeway.gpx", color: "#1abc9c" }
+            { name: "Island Line Trail", state: "VT", gpx: "gpx/island-line-trail.gpx", color: "#2ecc71", length: "14 miles", surface: "Asphalt, crushed stone", info: "https://www.traillink.com/trail/island-line-rail-trail/" },
+            { name: "Montpelier & Wells River Trail", state: "VT", gpx: "gpx/montpelier-wells-river-trail.gpx", color: "#2ecc71", length: "14 miles", surface: "Crushed stone", info: "https://www.traillink.com/trail/cross-vermont-trail/" },
+            { name: "Northern Rail Trail", state: "NH", gpx: "gpx/northern-rail-trail.gpx", color: "#9b59b6", length: "59 miles", surface: "Crushed stone", info: "https://www.traillink.com/trail/northern-rail-trail/" },
+            { name: "Presidential Rail Trail", state: "NH", gpx: "gpx/presidential-rail-trail.gpx", color: "#9b59b6", length: "18 miles", surface: "Crushed stone", info: "https://www.traillink.com/trail/presidential-rail-trail/" },
+            { name: "Cotton Valley Trail", state: "NH", gpx: "gpx/cotton-valley-trail.gpx", color: "#9b59b6", length: "12 miles", surface: "Crushed stone", info: "https://www.traillink.com/trail/cotton-valley-rail-trail/" },
+            { name: "Eastern Trail", state: "ME", gpx: "gpx/eastern-trail.gpx", color: "#e74c3c", length: "65 miles", surface: "Asphalt, crushed stone", info: "https://www.traillink.com/trail/eastern-trail-(me)/" },
+            { name: "Kennebec River Rail Trail", state: "ME", gpx: "gpx/kennebec-river-rail-trail.gpx", color: "#e74c3c", length: "6.5 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/kennebec-river-rail-trail/" },
+            { name: "Eastern Promenade Trail", state: "ME", gpx: "gpx/eastern-promenade-trail.gpx", color: "#e74c3c", length: "2.1 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/eastern-promenade-trail/" },
+            { name: "Cape Cod Rail Trail", state: "MA", gpx: "gpx/cape-cod-rail-trail.gpx", color: "#3498db", length: "25 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/cape-cod-rail-trail/" },
+            { name: "Shining Sea Bikeway", state: "MA", gpx: "gpx/shining-sea-bikeway.gpx", color: "#3498db", length: "10.7 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/shining-sea-bikeway/" },
+            { name: "Ashuwillticook Rail Trail", state: "MA", gpx: "gpx/ashuwillticook-rail-trail.gpx", color: "#3498db", length: "12.7 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/ashuwillticook-rail-trail/" },
+            { name: "Nashua River Rail Trail", state: "MA", gpx: "gpx/nashua-river-rail-trail.gpx", color: "#3498db", length: "12.5 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/nashua-river-rail-trail/" },
+            { name: "Air Line State Park Trail", state: "CT", gpx: "gpx/air-line-state-park-trail.gpx", color: "#f39c12", length: "55 miles", surface: "Crushed stone", info: "https://www.traillink.com/trail/airline-state-park-trail/" },
+            { name: "Farmington Canal Heritage Trail", state: "CT", gpx: "gpx/farmington-canal-heritage-trail.gpx", color: "#f39c12", length: "84 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/farmington-canal-heritage-trail/" },
+            { name: "East Bay Bike Path", state: "RI", gpx: "gpx/east-bay-bike-path.gpx", color: "#1abc9c", length: "14.5 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/east-bay-bike-path/" },
+            { name: "Blackstone River Bikeway", state: "RI", gpx: "gpx/blackstone-river-bikeway.gpx", color: "#1abc9c", length: "17.7 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/blackstone-river-bikeway/" }
         ];
         
         async function loadRailTrails() {
@@ -1084,9 +1084,12 @@
                         onEachFeature: (feature, layer) => {
                             layer.bindPopup(`
                                 <h3>🛤️ ${trail.name}</h3>
-                                <p>State: ${trail.state}</p>
-                                <div style="margin-top: 0.5rem;">
-                                    <a href="${trail.gpx}" download class="popup-btn popup-btn-nav" style="text-decoration:none;">📥 Download GPX</a>
+                                <p><strong>State:</strong> ${trail.state}</p>
+                                ${trail.length ? `<p><strong>Length:</strong> ${trail.length}</p>` : ''}
+                                ${trail.surface ? `<p><strong>Surface:</strong> ${trail.surface}</p>` : ''}
+                                <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem;">
+                                    ${trail.info ? `<a href="${trail.info}" target="_blank" class="popup-btn popup-btn-nav" style="text-decoration:none;">ℹ️ Trail Info</a>` : ''}
+                                    <a href="https://www.google.com/maps/search/${encodeURIComponent(trail.name + ' trail ' + trail.state)}" target="_blank" class="popup-btn popup-btn-nav" style="text-decoration:none;">🧭 Navigate</a>
                                 </div>
                             `);
                         }
