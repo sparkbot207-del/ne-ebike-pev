@@ -1206,8 +1206,8 @@
                         return;
                     }
                     
-                    if (!data.routes || !data.routes[0]) {
-                        callback.call(context, { status: -1, message: 'No route found' });
+                    if (!data.routes || data.routes.length === 0) {
+                        callback.call(context, { status: -1, message: 'No route found - try waypoints closer to roads' });
                         return;
                     }
                     
@@ -1351,9 +1351,13 @@
                 routingControl.on('routingerror', function(e) {
                     console.error('Routing error:', e);
                     showLoading(false);
-                    // Show more detailed error
+                    // Show more helpful error
                     const msg = e.error?.message || 'Unknown error';
-                    alert(`Routing error: ${msg}\n\nTip: Make sure waypoints are on or near roads.`);
+                    if (msg.includes('No route found') || msg.includes('closer to roads')) {
+                        alert('Could not find a bike route between these points.\n\nTry placing waypoints closer to roads or streets.');
+                    } else {
+                        alert(`Routing error: ${msg}`);
+                    }
                 });
             }
         }
@@ -2054,43 +2058,63 @@
         // ============================================
         // Google Places Autocomplete
         let googlePlacesAutocomplete = null;
+        let googlePlacesReady = false;
         
         // Initialize Google Places when API loads
         function initGooglePlaces() {
-            const input = document.getElementById('location-input');
-            
-            // Create autocomplete with bias to New England
-            googlePlacesAutocomplete = new google.maps.places.Autocomplete(input, {
-                types: ['establishment', 'geocode'],
-                componentRestrictions: { country: 'us' },
-                bounds: new google.maps.LatLngBounds(
-                    new google.maps.LatLng(40.5, -73.5), // SW
-                    new google.maps.LatLng(47, -66.9)    // NE
-                ),
-                strictBounds: false
-            });
-            
-            // Handle place selection
-            googlePlacesAutocomplete.addListener('place_changed', function() {
-                const place = googlePlacesAutocomplete.getPlace();
+            try {
+                const input = document.getElementById('location-input');
                 
-                if (!place.geometry || !place.geometry.location) {
-                    // User pressed enter without selecting - do manual search
-                    searchLocation();
+                if (!input) {
+                    console.error('Location input not found');
                     return;
                 }
                 
-                const lat = place.geometry.location.lat();
-                const lng = place.geometry.location.lng();
-                const name = place.name || place.formatted_address.split(',')[0];
+                // Create autocomplete with bias to New England
+                googlePlacesAutocomplete = new google.maps.places.Autocomplete(input, {
+                    types: ['establishment', 'geocode'],
+                    componentRestrictions: { country: 'us' },
+                    bounds: new google.maps.LatLngBounds(
+                        new google.maps.LatLng(40.5, -73.5), // SW
+                        new google.maps.LatLng(47, -66.9)    // NE
+                    ),
+                    strictBounds: false,
+                    fields: ['name', 'geometry', 'formatted_address', 'place_id']
+                });
                 
-                addWaypoint(lat, lng, name);
-                document.getElementById('location-input').value = '';
-                document.getElementById('search-results').innerHTML = '';
-                map.setView([lat, lng], 14);
-            });
-            
-            console.log('✅ Google Places Autocomplete initialized');
+                // Handle place selection
+                googlePlacesAutocomplete.addListener('place_changed', function() {
+                    const place = googlePlacesAutocomplete.getPlace();
+                    console.log('Place selected:', place);
+                    
+                    if (!place || !place.geometry || !place.geometry.location) {
+                        console.log('No geometry, doing manual search');
+                        searchLocation();
+                        return;
+                    }
+                    
+                    const lat = place.geometry.location.lat();
+                    const lng = place.geometry.location.lng();
+                    const name = place.name || (place.formatted_address ? place.formatted_address.split(',')[0] : 'Selected Location');
+                    
+                    console.log('Adding waypoint:', name, lat, lng);
+                    addWaypoint(lat, lng, name);
+                    
+                    // Clear input after adding
+                    setTimeout(() => {
+                        document.getElementById('location-input').value = '';
+                        document.getElementById('search-results').innerHTML = '';
+                    }, 100);
+                    
+                    map.setView([lat, lng], 14);
+                });
+                
+                googlePlacesReady = true;
+                console.log('✅ Google Places Autocomplete initialized');
+                
+            } catch (e) {
+                console.error('Error initializing Google Places:', e);
+            }
         }
         
         // Make it global for the callback
