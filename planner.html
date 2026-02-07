@@ -1121,6 +1121,7 @@
         // ============================================
         // ROUTING (OpenRouteService)
         // ============================================
+        // ORS API Key (use the original base64 token)
         const ORS_API_KEY = '5b3ce3597851110001cf6248cad345517d794802a1f55f89b7d1adb0';
         
         // Custom OpenRouteService Router for Leaflet Routing Machine
@@ -1151,7 +1152,14 @@
                         elevation: true
                     })
                 })
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(err => {
+                            throw new Error(err.error?.message || `HTTP ${response.status}`);
+                        });
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     if (data.error) {
                         callback.call(context, { status: -1, message: data.error.message });
@@ -1254,9 +1262,13 @@
             if (routingControl) {
                 routingControl.setWaypoints(waypointLatLngs);
             } else {
+                // Use OSRM (reliable, no API key needed)
                 routingControl = L.Routing.control({
                     waypoints: waypointLatLngs,
-                    router: new OpenRouteServiceRouter(ORS_API_KEY),
+                    router: L.Routing.osrmv1({
+                        serviceUrl: 'https://router.project-osrm.org/route/v1',
+                        profile: 'bike'
+                    }),
                     lineOptions: {
                         styles: [
                             { color: '#3b82f6', weight: 6, opacity: 0.8 },
@@ -1279,7 +1291,9 @@
                 routingControl.on('routingerror', function(e) {
                     console.error('Routing error:', e);
                     showLoading(false);
-                    alert('Could not calculate route. Try different waypoints.');
+                    // Show more detailed error
+                    const msg = e.error?.message || 'Unknown error';
+                    alert(`Routing error: ${msg}\n\nTip: Make sure waypoints are on or near roads.`);
                 });
             }
         }
@@ -1855,9 +1869,19 @@
                     `format=json&` +
                     `addressdetails=1&` +
                     `limit=5&` +
+                    `countrycodes=us&` +
                     `viewbox=-73.5,47,-66.9,40.5&` + // New England bounding box
-                    `bounded=0` // Prefer but don't require results in viewbox
+                    `bounded=0`, // Prefer but don't require results in viewbox
+                    {
+                        headers: {
+                            'User-Agent': 'NE-EBike-Route-Planner/1.0'
+                        }
+                    }
                 );
+                
+                if (!response.ok) {
+                    throw new Error(`Search failed: ${response.status}`);
+                }
                 
                 const results = await response.json();
                 displaySearchResults(results);
