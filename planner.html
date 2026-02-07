@@ -130,7 +130,7 @@
             background: rgba(0,0,0,0.3);
             padding: 2px 8px;
             border-radius: 10px;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.85);
         }
         
         /* Route info */
@@ -214,7 +214,7 @@
         .waypoint-remove {
             background: none;
             border: none;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.7);
             cursor: pointer;
             padding: 0.25rem;
             font-size: 1rem;
@@ -508,7 +508,7 @@
         
         .range-speed {
             font-size: 0.7rem;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.8);
         }
         
         .range-value {
@@ -527,7 +527,7 @@
         
         .range-note {
             font-size: 0.7rem;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.75);
             margin-top: 0.5rem;
             text-align: center;
         }
@@ -557,7 +557,7 @@
         
         .elevation-label {
             font-size: 0.7rem;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.75);
         }
         
         /* Charging recommendation */
@@ -615,7 +615,7 @@
         }
         
         .charger-along-route .charger-distance {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.8);
         }
         
         /* Location Search */
@@ -641,7 +641,7 @@
         }
         
         .location-search input::placeholder {
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.75);
         }
         
         .search-btn {
@@ -685,7 +685,7 @@
         
         .search-result-item .result-address {
             font-size: 0.75rem;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.8);
             margin-top: 0.15rem;
         }
         
@@ -850,7 +850,7 @@
                             <input type="checkbox" id="toggle-rail-trails">
                             <span class="toggle-icon">🛤️</span>
                             <span class="toggle-label">Rail Trails</span>
-                            <span class="toggle-count" id="trail-count">16</span>
+                            <span class="toggle-count" id="trail-count">...</span>
                         </label>
                         <label class="layer-toggle" id="charging-toggle">
                             <input type="checkbox" id="toggle-charging">
@@ -1045,60 +1045,60 @@
         // ============================================
         // RAIL TRAILS DATA & LOADING
         // ============================================
-        const railTrails = [
-            { name: "Island Line Trail", state: "VT", gpx: "gpx/island-line-trail.gpx", color: "#2ecc71", length: "14 miles", surface: "Asphalt, crushed stone", info: "https://www.traillink.com/trail/island-line-rail-trail/" },
-            { name: "Montpelier & Wells River Trail", state: "VT", gpx: "gpx/montpelier-wells-river-trail.gpx", color: "#2ecc71", length: "14 miles", surface: "Crushed stone", info: "https://www.traillink.com/trail/cross-vermont-trail/" },
-            { name: "Northern Rail Trail", state: "NH", gpx: "gpx/northern-rail-trail.gpx", color: "#9b59b6", length: "59 miles", surface: "Crushed stone", info: "https://www.traillink.com/trail/northern-rail-trail/" },
-            { name: "Presidential Rail Trail", state: "NH", gpx: "gpx/presidential-rail-trail.gpx", color: "#9b59b6", length: "18 miles", surface: "Crushed stone", info: "https://www.traillink.com/trail/presidential-rail-trail/" },
-            { name: "Cotton Valley Trail", state: "NH", gpx: "gpx/cotton-valley-trail.gpx", color: "#9b59b6", length: "12 miles", surface: "Crushed stone", info: "https://www.traillink.com/trail/cotton-valley-rail-trail/" },
-            { name: "Eastern Trail", state: "ME", gpx: "gpx/eastern-trail.gpx", color: "#e74c3c", length: "65 miles", surface: "Asphalt, crushed stone", info: "https://www.traillink.com/trail/eastern-trail-(me)/" },
-            { name: "Kennebec River Rail Trail", state: "ME", gpx: "gpx/kennebec-river-rail-trail.gpx", color: "#e74c3c", length: "6.5 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/kennebec-river-rail-trail/" },
-            { name: "Eastern Promenade Trail", state: "ME", gpx: "gpx/eastern-promenade-trail.gpx", color: "#e74c3c", length: "2.1 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/eastern-promenade-trail/" },
-            { name: "Cape Cod Rail Trail", state: "MA", gpx: "gpx/cape-cod-rail-trail.gpx", color: "#3498db", length: "25 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/cape-cod-rail-trail/" },
-            { name: "Shining Sea Bikeway", state: "MA", gpx: "gpx/shining-sea-bikeway.gpx", color: "#3498db", length: "10.7 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/shining-sea-bikeway/" },
-            { name: "Ashuwillticook Rail Trail", state: "MA", gpx: "gpx/ashuwillticook-rail-trail.gpx", color: "#3498db", length: "12.7 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/ashuwillticook-rail-trail/" },
-            { name: "Nashua River Rail Trail", state: "MA", gpx: "gpx/nashua-river-rail-trail.gpx", color: "#3498db", length: "12.5 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/nashua-river-rail-trail/" },
-            { name: "Air Line State Park Trail", state: "CT", gpx: "gpx/air-line-state-park-trail.gpx", color: "#f39c12", length: "55 miles", surface: "Crushed stone", info: "https://www.traillink.com/trail/airline-state-park-trail/" },
-            { name: "Farmington Canal Heritage Trail", state: "CT", gpx: "gpx/farmington-canal-heritage-trail.gpx", color: "#f39c12", length: "84 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/farmington-canal-heritage-trail/" },
-            { name: "East Bay Bike Path", state: "RI", gpx: "gpx/east-bay-bike-path.gpx", color: "#1abc9c", length: "14.5 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/east-bay-bike-path/" },
-            { name: "Blackstone River Bikeway", state: "RI", gpx: "gpx/blackstone-river-bikeway.gpx", color: "#1abc9c", length: "17.7 miles", surface: "Asphalt", info: "https://www.traillink.com/trail/blackstone-river-bikeway/" }
-        ];
+        let railTrailsData = [];
+        
+        function createTrailIcon() {
+            return L.divIcon({
+                className: 'trail-marker',
+                html: `<div style="background:#10b981;width:22px;height:22px;border-radius:50%;border:2px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;font-size:11px;">🛤️</div>`,
+                iconSize: [22, 22],
+                iconAnchor: [11, 11],
+                popupAnchor: [0, -11]
+            });
+        }
         
         async function loadRailTrails() {
-            for (const trail of railTrails) {
-                try {
-                    const response = await fetch(trail.gpx);
-                    if (!response.ok) continue;
+            try {
+                const response = await fetch('data/rail_trails.json');
+                if (!response.ok) throw new Error('Failed to load trails');
+                
+                const data = await response.json();
+                railTrailsData = data.trails;
+                
+                // Update the count in sidebar
+                const countEl = document.getElementById('trail-count');
+                if (countEl) countEl.textContent = railTrailsData.length;
+                
+                // Add markers for all trails
+                for (const trail of railTrailsData) {
+                    if (!trail.lat || !trail.lng) continue;
                     
-                    const gpxText = await response.text();
-                    const parser = new DOMParser();
-                    const gpxDoc = parser.parseFromString(gpxText, 'text/xml');
-                    const geoJson = toGeoJSON.gpx(gpxDoc);
-                    
-                    const layer = L.geoJSON(geoJson, {
-                        style: {
-                            color: trail.color,
-                            weight: 5,
-                            opacity: 0.8
-                        },
-                        onEachFeature: (feature, layer) => {
-                            layer.bindPopup(`
-                                <h3>🛤️ ${trail.name}</h3>
-                                <p><strong>State:</strong> ${trail.state}</p>
-                                ${trail.length ? `<p><strong>Length:</strong> ${trail.length}</p>` : ''}
-                                ${trail.surface ? `<p><strong>Surface:</strong> ${trail.surface}</p>` : ''}
-                                <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem;">
-                                    ${trail.info ? `<a href="${trail.info}" target="_blank" class="popup-btn popup-btn-nav" style="text-decoration:none;">ℹ️ Trail Info</a>` : ''}
-                                    <a href="https://www.google.com/maps/search/${encodeURIComponent(trail.name + ' trail ' + trail.state)}" target="_blank" class="popup-btn popup-btn-nav" style="text-decoration:none;">🧭 Navigate</a>
-                                </div>
-                            `);
-                        }
+                    const marker = L.marker([trail.lat, trail.lng], {
+                        icon: createTrailIcon()
                     });
                     
-                    railTrailsLayer.addLayer(layer);
-                } catch (e) {
-                    console.log(`Could not load trail: ${trail.name}`);
+                    const ratingStars = trail.rating ? '⭐'.repeat(Math.round(trail.rating)) : '';
+                    
+                    marker.bindPopup(`
+                        <h3 style="margin:0 0 0.5rem 0;">🛤️ ${trail.name}</h3>
+                        <p style="margin:0.25rem 0;"><strong>State:</strong> ${trail.state}</p>
+                        <p style="margin:0.25rem 0;"><strong>Length:</strong> ${trail.length} miles</p>
+                        <p style="margin:0.25rem 0;"><strong>Surface:</strong> ${trail.surface || 'Varies'}</p>
+                        ${trail.cities ? `<p style="margin:0.25rem 0;"><strong>Route:</strong> ${trail.cities}</p>` : ''}
+                        ${ratingStars ? `<p style="margin:0.25rem 0;">${ratingStars} (${trail.rating})</p>` : ''}
+                        ${trail.description ? `<p style="margin:0.5rem 0;font-size:0.85rem;color:rgba(255,255,255,0.9);">${trail.description.substring(0, 150)}${trail.description.length > 150 ? '...' : ''}</p>` : ''}
+                        <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            ${trail.url ? `<a href="${trail.url}" target="_blank" class="popup-btn popup-btn-nav" style="text-decoration:none;">ℹ️ Trail Info</a>` : ''}
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=${trail.lat},${trail.lng}" target="_blank" class="popup-btn popup-btn-nav" style="text-decoration:none;">🧭 Navigate</a>
+                        </div>
+                    `);
+                    
+                    railTrailsLayer.addLayer(marker);
                 }
+                
+                console.log(`Loaded ${railTrailsData.length} rail trails`);
+            } catch (e) {
+                console.error('Error loading rail trails:', e);
             }
         }
         
@@ -1649,13 +1649,13 @@
             if (!currentRoute || !currentRoute.coordinates) return;
             
             // Make sure rail trails are loaded
-            if (railTrailsLayer.getLayers().length === 0) {
+            if (railTrailsData.length === 0) {
                 await loadRailTrails();
             }
             
             const routeCoords = currentRoute.coordinates;
             const nearbyTrails = [];
-            const searchRadius = 1609.34; // 1 mile in meters
+            const searchRadius = 3218.69; // 2 miles in meters
             
             // Sample route points (every 20th point for performance)
             const samplePoints = [];
@@ -1663,40 +1663,24 @@
                 samplePoints.push(routeCoords[i]);
             }
             
-            // Check each trail
-            railTrails.forEach(trail => {
-                railTrailsLayer.eachLayer(layer => {
-                    if (layer.feature && layer.toGeoJSON) {
-                        const geojson = layer.toGeoJSON();
-                        if (geojson.geometry && geojson.geometry.coordinates) {
-                            // Get trail coordinates
-                            let trailCoords = geojson.geometry.coordinates;
-                            if (geojson.geometry.type === 'MultiLineString') {
-                                trailCoords = trailCoords.flat();
-                            }
-                            
-                            // Check if any route point is near this trail
-                            for (const routePoint of samplePoints) {
-                                for (let i = 0; i < trailCoords.length; i += 10) {
-                                    const tc = trailCoords[i];
-                                    if (Array.isArray(tc) && tc.length >= 2) {
-                                        const dist = getDistanceMeters(
-                                            routePoint.lat, routePoint.lng,
-                                            tc[1], tc[0]
-                                        );
-                                        if (dist < searchRadius) {
-                                            if (!nearbyTrails.find(t => t.name === trail.name)) {
-                                                nearbyTrails.push(trail);
-                                            }
-                                            return;
-                                        }
-                                    }
-                                }
-                            }
+            // Check each trail against route
+            for (const trail of railTrailsData) {
+                if (!trail.lat || !trail.lng) continue;
+                
+                // Check if trail is near any point on the route
+                for (const routePoint of samplePoints) {
+                    const dist = getDistanceMeters(
+                        routePoint.lat, routePoint.lng,
+                        trail.lat, trail.lng
+                    );
+                    if (dist < searchRadius) {
+                        if (!nearbyTrails.find(t => t.name === trail.name)) {
+                            nearbyTrails.push(trail);
                         }
+                        break;
                     }
-                });
-            });
+                }
+            }
             
             // Show notification if trails found
             if (nearbyTrails.length > 0) {
