@@ -1121,8 +1121,8 @@
         // ============================================
         // ROUTING (OpenRouteService)
         // ============================================
-        // ORS API Key (use the original base64 token)
-        const ORS_API_KEY = '5b3ce3597851110001cf6248cad345517d794802a1f55f89b7d1adb0';
+        // ORS API Key (base64 encoded token)
+        const ORS_API_KEY = 'eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImNhZDM0NTUxN2Q3OTQ4MDJhMWY1NWY4OWI3ZDFhZGIwIiwiaCI6Im11cm11cjY0In0=';
         
         // Custom OpenRouteService Router for Leaflet Routing Machine
         const OpenRouteServiceRouter = L.Class.extend({
@@ -1262,13 +1262,10 @@
             if (routingControl) {
                 routingControl.setWaypoints(waypointLatLngs);
             } else {
-                // Use OSRM (reliable, no API key needed)
+                // Use OpenRouteService (has elevation data)
                 routingControl = L.Routing.control({
                     waypoints: waypointLatLngs,
-                    router: L.Routing.osrmv1({
-                        serviceUrl: 'https://router.project-osrm.org/route/v1',
-                        profile: 'bike'
-                    }),
+                    router: new OpenRouteServiceRouter(ORS_API_KEY),
                     lineOptions: {
                         styles: [
                             { color: '#3b82f6', weight: 6, opacity: 0.8 },
