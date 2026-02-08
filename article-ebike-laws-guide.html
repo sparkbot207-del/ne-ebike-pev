@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The complete 2026 guide to electric bike laws in New England. Class definitions, age requirements, helmet rules, and where you can legally ride in all six states.">
+    <title>Complete Guide to New England E-Bike Laws (2026 Update) | New England E-Bike Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #10b981;
+            --primary-dark: #059669;
+            --bg: #0f172a;
+            --bg-alt: #1e293b;
+            --card: #1e293b;
+            --text: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Article Header */
+        .article-header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .article-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border);
+        }
+
+        .toc h2 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* Article Content */
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 3rem 0 1.5rem;
+            padding-top: 1rem;
+            color: var(--text);
+        }
+
+        .article-content h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .article-content a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .article-content a:hover {
+            text-decoration: underline;
+        }
+
+        .article-content strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* State Cards */
+        .state-card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .state-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0;
+        }
+
+        .state-flag {
+            font-size: 1.5rem;
+        }
+
+        .state-card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .state-card th, .state-card td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        .state-card th {
+            color: var(--text);
+            font-weight: 600;
+            width: 40%;
+        }
+
+        .state-card td {
+            color: var(--text-secondary);
+        }
+
+        /* Info Boxes */
+        .info-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: var(--text);
+        }
+
+        .warning-box {
+            background: rgba(251, 191, 36, 0.1);
+            border-left: 4px solid #fbbf24;
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: var(--text);
+        }
+
+        /* Class Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--card);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .comparison-table th {
+            background: var(--bg-alt);
+            color: var(--text);
+            font-weight: 600;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin: 0 0 1rem;
+            font-size: 1.75rem;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-dark);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-item p {
+            margin: 0;
+        }
+
+        /* Footer */
+        .article-footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .article-footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px) {
+            .article-header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .article-content h2 {
+                font-size: 1.4rem;
+            }
+            
+            .state-card {
+                padding: 1.25rem;
+            }
+            
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+            
+            .comparison-table th, .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="article-container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a> / <a href="laws.html">Laws</a> / Complete Guide
+        </nav>
+
+        <!-- Article Header -->
+        <header class="article-header">
+            <h1>Complete Guide to New England E-Bike Laws (2026 Update)</h1>
+            <div class="article-meta">
+                <span>📅 Updated February 2026</span>
+                <span>⏱️ 12 min read</span>
+                <span>📍 6 States Covered</span>
+            </div>
+        </header>
+
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h2>📋 In This Guide</h2>
+            <ul>
+                <li><a href="#understanding">Understanding E-Bike Classifications</a></li>
+                <li><a href="#maine">Maine E-Bike Laws</a></li>
+                <li><a href="#new-hampshire">New Hampshire E-Bike Laws</a></li>
+                <li><a href="#vermont">Vermont E-Bike Laws</a></li>
+                <li><a href="#massachusetts">Massachusetts E-Bike Laws</a></li>
+                <li><a href="#rhode-island">Rhode Island E-Bike Laws</a></li>
+                <li><a href="#connecticut">Connecticut E-Bike Laws</a></li>
+                <li><a href="#comparison">State-by-State Comparison</a></li>
+                <li><a href="#trails">Trail Access Guide</a></li>
+                <li><a href="#faq">Frequently Asked Questions</a></li>
+            </ul>
+        </nav>
+
+        <!-- Article Content -->
+        <div class="article-content">
+            <p>Whether you're commuting through Boston, exploring Vermont's scenic byways, or cruising Maine's rail trails, understanding e-bike laws is essential for every electric rider in New England. This comprehensive guide breaks down the regulations in all six states so you can ride legally and confidently.</p>
+
+            <div class="info-box">
+                <p><strong>💡 Quick Tip:</strong> Most New England states follow the 3-class e-bike system. If your bike has a motor under 750W and doesn't exceed 28 mph on motor power alone, you're likely covered under standard e-bike laws—not motor vehicle regulations.</p>
+            </div>
+
+            <h2 id="understanding">Understanding E-Bike Classifications</h2>
+
+            <p>Before diving into state-specific laws, let's understand the three-class system that most New England states have adopted. This federal framework helps standardize e-bike regulations across the country.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Motor Assist</th>
+                        <th>Max Speed</th>
+                        <th>Throttle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Class 1</strong></td>
+                        <td>Pedal-assist only</td>
+                        <td>20 mph</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Class 2</strong></td>
+                        <td>Pedal-assist + throttle</td>
+                        <td>20 mph</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Class 3</strong></td>
+                        <td>Pedal-assist only</td>
+                        <td>28 mph</td>
+                        <td>No*</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><em>*Some states allow throttles on Class 3 bikes up to 20 mph. Always check your specific state's rules.</em></p>
+
+            <p>All classes are limited to motors of <strong>750 watts (1 horsepower)</strong> or less. Anything more powerful may be classified as a moped or motorcycle, requiring registration, insurance, and a license.</p>
+
+            <!-- MAINE -->
+            <h2 id="maine">🦞 Maine E-Bike Laws</h2>
+
+            <div class="state-card">
+                <h3><span class="state-flag">🌲</span> Maine</h3>
+                
+                <p>Maine adopted the three-class e-bike system in 2019, making it one of the more e-bike-friendly states in New England. E-bikes are treated similarly to traditional bicycles in most situations.</p>
+
+                <table>
+                    <tr>
+                        <th>Classification</th>
+                        <td>3-class system adopted</td>
+                    </tr>
+                    <tr>
+                        <th>Max Motor Power</th>
+                        <td>750W (1 hp)</td>
+                    </tr>
+                    <tr>
+                        <th>Helmet Required</th>
+                        <td>Under 16 years old</td>
+                    </tr>
+                    <tr>
+                        <th>Minimum Age</th>
+                        <td>None specified</td>
+                    </tr>
+                    <tr>
+                        <th>License/Registration</th>
+                        <td>Not required</td>
+                    </tr>
+                    <tr>
+                        <th>Where You Can Ride</th>
+                        <td>Roads, bike lanes, multi-use paths (unless posted)</td>
+                    </tr>
+                </table>
+
+                <p><strong>Trail Access:</strong> Many of Maine's rail trails allow e-bikes, including the popular Eastern Trail. However, motorized vehicles (including e-bikes) are generally prohibited on hiking trails in state parks unless specifically permitted. Always check trail-specific rules.</p>
+
+                <p><strong>Local Variations:</strong> Municipalities can set their own rules. Portland, for example, allows e-bikes on most city trails but may restrict them in certain parks.</p>
+            </div>
+
+            <!-- NEW HAMPSHIRE -->
+            <h2 id="new-hampshire">🏔️ New Hampshire E-Bike Laws</h2>
+
+            <div class="state-card">
+                <h3><span class="state-flag">⛰️</span> New Hampshire</h3>
+                
+                <p>New Hampshire's "Live Free or Die" attitude extends to e-bikes. The state has relatively relaxed regulations, though it hasn't formally adopted the three-class system at the state level.</p>
+
+                <table>
+                    <tr>
+                        <th>Classification</th>
+                        <td>Defined as "electric bicycle" (no class system)</td>
+                    </tr>
+                    <tr>
+                        <th>Max Motor Power</th>
+                        <td>750W</td>
+                    </tr>
+                    <tr>
+                        <th>Max Speed</th>
+                        <td>20 mph on motor power alone</td>
+                    </tr>
+                    <tr>
+                        <th>Helmet Required</th>
+                        <td>No state requirement</td>
+                    </tr>
+                    <tr>
+                        <th>Minimum Age</th>
+                        <td>None specified</td>
+                    </tr>
+                    <tr>
+                        <th>License/Registration</th>
+                        <td>Not required</td>
+                    </tr>
+                    <tr>
+                        <th>Where You Can Ride</th>
+                        <td>Roads, bike lanes; trail access varies</td>
+                    </tr>
+                </table>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ Note:</strong> E-bikes exceeding 20 mph on motor power alone may be classified as "motorized vehicles" and face different regulations. If you have a high-speed e-bike, verify your specific model's legal status.</p>
+                </div>
+
+                <p><strong>Trail Access:</strong> State parks generally prohibit motorized vehicles on hiking trails. Rail trails like the Rockingham Recreational Trail typically allow e-bikes. When in doubt, contact the trail manager.</p>
+            </div>
+
+            <!-- VERMONT -->
+            <h2 id="vermont">🍁 Vermont E-Bike Laws</h2>
+
+            <div class="state-card">
+                <h3><span class="state-flag">🌿</span> Vermont</h3>
+                
+                <p>Vermont updated its e-bike laws in 2020 to adopt the three-class system, giving riders clear guidelines and expanded access to bike infrastructure.</p>
+
+                <table>
+                    <tr>
+                        <th>Classification</th>
+                        <td>3-class system adopted</td>
+                    </tr>
+                    <tr>
+                        <th>Max Motor Power</th>
+                        <td>750W</td>
+                    </tr>
+                    <tr>
+                        <th>Helmet Required</th>
+                        <td>No state requirement</td>
+                    </tr>
+                    <tr>
+                        <th>Minimum Age</th>
+                        <td>None specified</td>
+                    </tr>
+                    <tr>
+                        <th>License/Registration</th>
+                        <td>Not required</td>
+                    </tr>
+                    <tr>
+                        <th>Where You Can Ride</th>
+                        <td>Anywhere bicycles are allowed (Class 1 & 2); Class 3 may be restricted on some paths</td>
+                    </tr>
+                </table>
+
+                <p><strong>Key Details:</strong></p>
+                <ul>
+                    <li>Class 1 and Class 2 e-bikes can ride anywhere traditional bikes are allowed</li>
+                    <li>Class 3 e-bikes may be restricted from certain multi-use paths</li>
+                    <li>Local municipalities can further regulate e-bike access</li>
+                </ul>
+
+                <p><strong>Trail Access:</strong> The popular Island Line Trail, Lamoille Valley Rail Trail, and other multi-use paths generally welcome Class 1 and 2 e-bikes. Mountain bike trails on state lands typically prohibit all motorized vehicles.</p>
+            </div>
+
+            <!-- MASSACHUSETTS -->
+            <h2 id="massachusetts">🏛️ Massachusetts E-Bike Laws</h2>
+
+            <div class="state-card">
+                <h3><span class="state-flag">🎓</span> Massachusetts</h3>
+                
+                <p>Massachusetts passed comprehensive e-bike legislation in 2022, adopting the three-class system and clarifying where e-bikes can operate. This was a major win for the state's cycling community.</p>
+
+                <table>
+                    <tr>
+                        <th>Classification</th>
+                        <td>3-class system adopted (2022)</td>
+                    </tr>
+                    <tr>
+                        <th>Max Motor Power</th>
+                        <td>750W</td>
+                    </tr>
+                    <tr>
+                        <th>Helmet Required</th>
+                        <td>Under 16 years old (all bikes)</td>
+                    </tr>
+                    <tr>
+                        <th>Minimum Age</th>
+                        <td>16 for Class 3</td>
+                    </tr>
+                    <tr>
+                        <th>License/Registration</th>
+                        <td>Not required</td>
+                    </tr>
+                    <tr>
+                        <th>Where You Can Ride</th>
+                        <td>Roads, bike lanes, multi-use paths (Class 1 & 2); restrictions may apply to Class 3</td>
+                    </tr>
+                </table>
+
+                <p><strong>Key Details:</strong></p>
+                <ul>
+                    <li>Class 3 e-bikes require riders to be at least 16 years old</li>
+                    <li>E-bikes must have operable pedals</li>
+                    <li>Municipalities can set their own rules for bike paths</li>
+                    <li>DCR (Department of Conservation and Recreation) manages many trails and may have specific e-bike policies</li>
+                </ul>
+
+                <p><strong>Boston Area:</strong> The city of Boston allows e-bikes on most bike lanes and paths. The Minuteman Bikeway, Charles River paths, and other popular routes welcome Class 1 and 2 e-bikes.</p>
+            </div>
+
+            <!-- RHODE ISLAND -->
+            <h2 id="rhode-island">⚓ Rhode Island E-Bike Laws</h2>
+
+            <div class="state-card">
+                <h3><span class="state-flag">🌊</span> Rhode Island</h3>
+                
+                <p>Rhode Island adopted the three-class e-bike system in 2018, becoming one of the first New England states to do so. The small state is very e-bike friendly.</p>
+
+                <table>
+                    <tr>
+                        <th>Classification</th>
+                        <td>3-class system adopted</td>
+                    </tr>
+                    <tr>
+                        <th>Max Motor Power</th>
+                        <td>750W</td>
+                    </tr>
+                    <tr>
+                        <th>Helmet Required</th>
+                        <td>Under 16 years old</td>
+                    </tr>
+                    <tr>
+                        <th>Minimum Age</th>
+                        <td>16 for Class 3</td>
+                    </tr>
+                    <tr>
+                        <th>License/Registration</th>
+                        <td>Not required</td>
+                    </tr>
+                    <tr>
+                        <th>Where You Can Ride</th>
+                        <td>Roads, bike lanes, bike paths (unless specifically prohibited)</td>
+                    </tr>
+                </table>
+
+                <p><strong>Key Details:</strong></p>
+                <ul>
+                    <li>E-bikes treated the same as bicycles in most circumstances</li>
+                    <li>Class 3 e-bikes require riders to be at least 16</li>
+                    <li>The East Bay Bike Path and other popular trails allow e-bikes</li>
+                </ul>
+            </div>
+
+            <!-- CONNECTICUT -->
+            <h2 id="connecticut">🌳 Connecticut E-Bike Laws</h2>
+
+            <div class="state-card">
+                <h3><span class="state-flag">🍂</span> Connecticut</h3>
+                
+                <p>Connecticut adopted the three-class e-bike system in 2019, providing clear definitions and expanding access for electric bicycle riders throughout the state.</p>
+
+                <table>
+                    <tr>
+                        <th>Classification</th>
+                        <td>3-class system adopted</td>
+                    </tr>
+                    <tr>
+                        <th>Max Motor Power</th>
+                        <td>750W</td>
+                    </tr>
+                    <tr>
+                        <th>Helmet Required</th>
+                        <td>Under 16 years old</td>
+                    </tr>
+                    <tr>
+                        <th>Minimum Age</th>
+                        <td>None specified (16 recommended for Class 3)</td>
+                    </tr>
+                    <tr>
+                        <th>License/Registration</th>
+                        <td>Not required</td>
+                    </tr>
+                    <tr>
+                        <th>Where You Can Ride</th>
+                        <td>Roads, bike lanes, multi-use paths; Class 3 may be restricted on some paths</td>
+                    </tr>
+                </table>
+
+                <p><strong>Trail Access:</strong> Popular trails like the Farmington Canal Heritage Trail and Air Line State Park Trail generally allow e-bikes. State forest and park trails may have varying rules—check with DEEP (Department of Energy and Environmental Protection) for specific locations.</p>
+            </div>
+
+            <!-- COMPARISON TABLE -->
+            <h2 id="comparison">📊 State-by-State Comparison</h2>
+
+            <p>Here's a quick reference comparing e-bike regulations across all six New England states:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>State</th>
+                        <th>3-Class System</th>
+                        <th>Helmet (Adults)</th>
+                        <th>Min Age (Class 3)</th>
+                        <th>License Needed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Maine</strong></td>
+                        <td>✅ Yes</td>
+                        <td>Not required</td>
+                        <td>None</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>New Hampshire</strong></td>
+                        <td>❌ No*</td>
+                        <td>Not required</td>
+                        <td>None</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vermont</strong></td>
+                        <td>✅ Yes</td>
+                        <td>Not required</td>
+                        <td>None</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Massachusetts</strong></td>
+                        <td>✅ Yes</td>
+                        <td>Not required</td>
+                        <td>16</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rhode Island</strong></td>
+                        <td>✅ Yes</td>
+                        <td>Not required</td>
+                        <td>16</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Connecticut</strong></td>
+                        <td>✅ Yes</td>
+                        <td>Not required</td>
+                        <td>None</td>
+                        <td>No</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><em>*New Hampshire has e-bike definitions but hasn't formally adopted the 3-class framework.</em></p>
+
+            <!-- TRAIL ACCESS -->
+            <h2 id="trails">🚴 Trail Access Guide</h2>
+
+            <p>One of the biggest questions e-bike riders have is: <strong>where can I actually ride?</strong> Here's a general guide:</p>
+
+            <h3>✅ Generally Allowed</h3>
+            <ul>
+                <li><strong>Public roads</strong> — All states allow e-bikes on public roads where bicycles are permitted</li>
+                <li><strong>Bike lanes</strong> — E-bikes can use bike lanes in all New England states</li>
+                <li><strong>Rail trails</strong> — Most converted rail trails allow Class 1 and 2 e-bikes</li>
+                <li><strong>Multi-use paths</strong> — Generally allowed, though Class 3 may be restricted in some areas</li>
+            </ul>
+
+            <h3>⚠️ Check Before You Ride</h3>
+            <ul>
+                <li><strong>State parks</strong> — Policies vary by park and state; many allow e-bikes on paved paths but not hiking trails</li>
+                <li><strong>Mountain bike trails</strong> — Often prohibit all motorized vehicles; some are opening to Class 1</li>
+                <li><strong>National forests</strong> — Generally follow state e-bike laws; check with the local ranger district</li>
+            </ul>
+
+            <h3>❌ Usually Prohibited</h3>
+            <ul>
+                <li><strong>Hiking-only trails</strong> — Most states prohibit motorized vehicles, including e-bikes</li>
+                <li><strong>Wilderness areas</strong> — Federal wilderness areas prohibit all motorized and mechanized vehicles</li>
+                <li><strong>Sidewalks</strong> — Many municipalities prohibit e-bikes on sidewalks (check local rules)</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>🗺️ Pro Tip:</strong> Use our <a href="routes.html">Routes page</a> to find e-bike-friendly trails across New England, complete with user reviews and access information.</p>
+            </div>
+
+            <!-- FAQ -->
+            <h2 id="faq">❓ Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>Do I need a license to ride an e-bike in New England?</h3>
+                <p>No. None of the six New England states require a driver's license, registration, or insurance for e-bikes that meet the standard definitions (750W motor or less, appropriate speed limits).</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I ride my e-bike on the sidewalk?</h3>
+                <p>This varies by municipality. Many cities prohibit bikes (including e-bikes) on sidewalks in business districts. When in doubt, use the road or bike lane.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What if my e-bike goes faster than 28 mph?</h3>
+                <p>E-bikes exceeding 28 mph on motor power alone may be classified as mopeds or motorcycles, which require registration, insurance, and potentially a motorcycle license. Check your state's specific regulations.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do I need to wear a helmet?</h3>
+                <p>Adults are not legally required to wear helmets in any New England state. However, riders under 16 must wear helmets in most states. We strongly recommend helmets for all riders regardless of age.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I ride my e-bike in the rain or snow?</h3>
+                <p>Yes, there are no laws against riding in inclement weather. However, use appropriate caution, ensure your e-bike is rated for wet conditions, and check that your battery and electrical components are properly sealed.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Are throttle e-bikes legal?</h3>
+                <p>Yes, Class 2 e-bikes with throttles are legal in all New England states, as long as the motor doesn't exceed 750W and the throttle doesn't propel the bike faster than 20 mph.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I convert my regular bike to an e-bike?</h3>
+                <p>Yes, conversion kits are legal as long as the resulting e-bike meets your state's requirements (typically 750W motor limit, appropriate speed cutoffs). The same rules apply to converted bikes as factory-built e-bikes.</p>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-section">
+                <h2>Ready to Explore New England?</h2>
+                <p>Now that you know the laws, discover the best e-bike routes across all six states.</p>
+                <a href="routes.html" class="cta-button">🗺️ Explore Routes & Trails</a>
+            </div>
+
+            <h2>Stay Informed</h2>
+
+            <p>E-bike laws are evolving as electric bicycles become more popular. States are continually updating their regulations, and local municipalities may have their own rules. Here are some tips for staying current:</p>
+
+            <ul>
+                <li><strong>Join our community</strong> — Members share updates about law changes and trail access</li>
+                <li><strong>Check before you ride</strong> — When visiting a new trail, look for posted signs or check the managing organization's website</li>
+                <li><strong>Be an ambassador</strong> — Ride responsibly, yield to pedestrians, and help give e-bikes a good reputation</li>
+                <li><strong>Advocate</strong> — Support organizations working to expand e-bike access and improve infrastructure</li>
+            </ul>
+
+            <p>Have questions about e-bike laws in your area? <a href="https://www.facebook.com/groups/573295111141320/" target="_blank">Join our Facebook group</a> and ask the community!</p>
+
+        </div>
+
+        <!-- Article Footer -->
+        <footer class="article-footer">
+            <p><em>Last updated: February 2026. This guide is for informational purposes only and does not constitute legal advice. Laws change—always verify current regulations with official state sources.</em></p>
+            <p style="margin-top: 1rem;">
+                <a href="index.html">← Back to Home</a> · 
+                <a href="laws.html">State Laws Overview</a> · 
+                <a href="routes.html">Explore Routes</a>
+            </p>
+            <p style="margin-top: 2rem;">&copy; 2026 NewEnglandEBike.org — The New England Electric Bike Resource</p>
+        </footer>
+    </article>
+</body>
+</html>
