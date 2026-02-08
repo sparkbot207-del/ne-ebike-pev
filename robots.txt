@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sparkbot207-del.github.io/ne-ebike-pev/sitemap.xml
+Sitemap: https://newenglandebike.org/sitemap.xml
