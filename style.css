@@ -760,9 +760,32 @@ a.resource-link:hover {
         margin-top: 10px;
     }
 
+    .nav-container {
+        position: relative;
+    }
+
     .nav-toggle {
         display: flex !important;
-        z-index: 1001;
+        flex-direction: column !important;
+        gap: 5px !important;
+        background: none !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 10px !important;
+        z-index: 1001 !important;
+        position: absolute !important;
+        right: 15px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+
+    .nav-toggle span {
+        width: 25px !important;
+        height: 3px !important;
+        background: white !important;
+        display: block !important;
+        border-radius: 2px !important;
+        transition: all 0.3s !important;
     }
 
     .nav-toggle.active span:nth-child(1) {
