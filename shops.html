@@ -300,6 +300,10 @@
             }
             
             /* Force hamburger menu visibility */
+            .nav-container {
+                position: relative;
+            }
+            
             .nav-toggle {
                 display: flex !important;
                 flex-direction: column;
@@ -307,15 +311,20 @@
                 background: none;
                 border: none;
                 cursor: pointer;
-                padding: 5px;
+                padding: 10px;
                 z-index: 1001;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
             }
             
             .nav-toggle span {
                 width: 25px;
-                height: 2px;
+                height: 3px;
                 background: white;
-                display: block;
+                display: block !important;
+                border-radius: 2px;
             }
         }
     </style>
