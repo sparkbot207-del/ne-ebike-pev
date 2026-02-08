@@ -878,3 +878,40 @@ a.resource-link:hover {
     .event-card:nth-child(3) { animation-delay: 0.3s; }
     .event-card:nth-child(4) { animation-delay: 0.4s; }
 }
+
+/* SEO Enhancements */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.intro-section {
+    padding: 2rem 0;
+    background: var(--bg);
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.intro-text a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.intro-text a:hover {
+    text-decoration: underline;
+}
