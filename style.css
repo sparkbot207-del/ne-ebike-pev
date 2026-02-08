@@ -1009,12 +1009,12 @@ a.resource-link:hover {
 }
 
 .banner-text strong {
-    color: var(--text);
+    color: #f1f5f9 !important;
     font-size: 1.1rem;
 }
 
 .banner-text span {
-    color: var(--text-secondary);
+    color: #cbd5e1 !important;
     font-size: 0.9rem;
 }
 
