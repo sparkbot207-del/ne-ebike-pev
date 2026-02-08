@@ -326,6 +326,32 @@
                 display: block !important;
                 border-radius: 2px;
             }
+            
+            /* Shop cards - stack on mobile */
+            .shop-card > div[style*="grid-template-columns"] {
+                display: block !important;
+            }
+            
+            .shop-card > div > div {
+                margin-bottom: 1.5rem;
+            }
+            
+            .shop-card > div > div:last-child {
+                margin-bottom: 0;
+            }
+            
+            .shop-card h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            .shop-card p {
+                font-size: 0.95rem !important;
+            }
+            
+            .service-badge {
+                font-size: 0.8rem !important;
+                padding: 6px 10px !important;
+            }
         }
     </style>
 </head>
