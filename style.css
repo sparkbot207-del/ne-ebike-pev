@@ -915,3 +915,123 @@ a.resource-link:hover {
 .intro-text a:hover {
     text-decoration: underline;
 }
+
+/* Featured Article Link */
+.featured-article {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.featured-article:hover {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(16, 185, 129, 0.1));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.2);
+}
+
+.featured-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.featured-title {
+    flex: 1;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.featured-arrow {
+    color: var(--primary);
+    font-size: 1.25rem;
+    transition: transform 0.2s;
+}
+
+.featured-article:hover .featured-arrow {
+    transform: translateX(4px);
+}
+
+@media (max-width: 640px) {
+    .featured-article {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .featured-arrow {
+        display: none;
+    }
+}
+
+/* Featured Banner (Laws page) */
+.featured-banner {
+    padding: 1.5rem 0;
+    background: var(--bg);
+}
+
+.banner-link {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.75rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.04));
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.banner-link:hover {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.08));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
+}
+
+.banner-icon {
+    font-size: 2rem;
+}
+
+.banner-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.banner-text strong {
+    color: var(--text);
+    font-size: 1.1rem;
+}
+
+.banner-text span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.banner-arrow {
+    color: var(--primary);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .banner-link {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .banner-arrow {
+        margin-top: 0.5rem;
+    }
+}
