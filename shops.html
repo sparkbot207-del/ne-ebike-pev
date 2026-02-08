@@ -298,6 +298,25 @@
             #shop-map {
                 height: 280px;
             }
+            
+            /* Force hamburger menu visibility */
+            .nav-toggle {
+                display: flex !important;
+                flex-direction: column;
+                gap: 5px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 5px;
+                z-index: 1001;
+            }
+            
+            .nav-toggle span {
+                width: 25px;
+                height: 2px;
+                background: white;
+                display: block;
+            }
         }
     </style>
 </head>
