@@ -1018,15 +1018,26 @@
         
         // Base map layers
         const streetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap | Routing: OSRM'
+            attribution: '© OpenStreetMap | Routing: OSRM',
+            maxZoom: 19,
+            maxNativeZoom: 19
         });
         
         const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-            attribution: '© Esri, Maxar, Earthstar Geographics'
+            attribution: '© Esri, Maxar, Earthstar Geographics',
+            maxZoom: 19,
+            maxNativeZoom: 18
         });
         
         const terrain = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenTopoMap contributors'
+            attribution: '© OpenTopoMap contributors',
+            maxZoom: 17,
+            maxNativeZoom: 17
+        });
+        
+        // Fix tile loading on map movement
+        map.on('moveend zoomend', function() {
+            map.invalidateSize({ pan: false });
         });
         
         // Add default layer
