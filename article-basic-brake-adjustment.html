@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic E-Bike Brake Adjustment | New England E-Bike</title>
+    <meta name="description" content="Keep your e-bike brakes responsive and safe. Covers rim brakes, mechanical disc, and hydraulic disc brake adjustment and maintenance.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Basic E-Bike Brake Adjustment | New England E-Bike">
+    <meta property="og:description" content="Keep your e-bike brakes responsive and safe. Covers rim brakes, mechanical disc, and hydraulic disc brake adjustment and maintenance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 4rem;
+        }
+        .article-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #374151;
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            font-weight: 400;
+        }
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 2.5rem 0 1rem;
+            padding-top: 1rem;
+        }
+        .article-content h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #e5e7eb;
+            margin: 2rem 0 0.75rem;
+        }
+        .article-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #d1d5db;
+            margin-bottom: 1.25rem;
+        }
+        .article-content ul, .article-content ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+            color: #d1d5db;
+        }
+        .article-content li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+        .tip-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
+            border-left: 4px solid #10b981;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            color: #d1d5db;
+        }
+        .tip-box strong {
+            color: #34d399;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(239, 68, 68, 0.1) 100%);
+            border-left: 4px solid #ef4444;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            color: #d1d5db;
+        }
+        .warning-box strong {
+            color: #f87171;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #10b981;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover {
+            color: #34d399;
+        }
+        .back-link svg {
+            margin-right: 0.5rem;
+        }
+        .related-guides {
+            background: linear-gradient(145deg, #1f2937 0%, #111827 100%);
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+        .related-guides h3 {
+            color: #ffffff;
+            margin: 0 0 1rem;
+            font-size: 1.1rem;
+        }
+        .related-guides a {
+            color: #10b981;
+            text-decoration: none;
+        }
+        .related-guides a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">⚡ New England E-Bike and PEV</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="laws.html">Laws</a>
+                <a href="routes.html">Routes</a>
+                <a href="planner.html">Ride Planner</a>
+                <a href="shops.html">Shops</a>
+                <a href="guides.html">Guides</a>
+                <a href="https://www.facebook.com/groups/573295111141320/" target="_blank" class="nav-cta">Join us on Facebook</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <a href="guides.html" class="back-link">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Back to Guides
+        </a>
+
+        <header class="article-header">
+            <h1 class="article-title">Basic Brake Adjustment</h1>
+            <p class="article-subtitle">Keep your brakes responsive and safe</p>
+        </header>
+
+        <div class="article-content">
+            <h2>Why This Matters on E-Bikes</h2>
+            <p>E-bikes are heavier and faster than regular bikes. Your brakes work harder and wear faster. Properly adjusted brakes aren't optional — they're critical safety equipment.</p>
+
+            <h2>Know Your Brake Type</h2>
+
+            <h3>Rim Brakes (V-brakes, Caliper)</h3>
+            <ul>
+                <li>Brake pads squeeze the wheel rim</li>
+                <li>Common on older/budget e-bikes</li>
+                <li>Easier to adjust and maintain</li>
+                <li>Less effective in wet conditions</li>
+            </ul>
+
+            <h3>Mechanical Disc Brakes</h3>
+            <ul>
+                <li>Cable-actuated, pads squeeze a rotor</li>
+                <li>Common on mid-range e-bikes</li>
+                <li>Better wet weather performance</li>
+                <li>Requires periodic adjustment as pads wear</li>
+            </ul>
+
+            <h3>Hydraulic Disc Brakes</h3>
+            <ul>
+                <li>Fluid-actuated, self-adjusting</li>
+                <li>Standard on quality e-bikes</li>
+                <li>Minimal adjustment needed</li>
+                <li>Require bleeding (fluid replacement) occasionally</li>
+            </ul>
+
+            <h2>Signs Your Brakes Need Attention</h2>
+            <ul>
+                <li><strong>Lever pulls too far</strong> before braking starts</li>
+                <li><strong>Squealing or grinding</strong> sounds</li>
+                <li><strong>Reduced stopping power</strong> compared to when new</li>
+                <li><strong>Pulsing or vibration</strong> when braking</li>
+                <li><strong>Lever feels spongy</strong> (hydraulic brakes)</li>
+            </ul>
+
+            <h2>Rim Brake Adjustment</h2>
+
+            <h3>Adjusting Pad Position</h3>
+            <ol>
+                <li>Loosen the pad mounting bolt (don't remove it)</li>
+                <li>Squeeze the brake lever to center the pad on the rim</li>
+                <li>Pad should hit flat on the rim, not the tire</li>
+                <li>Tighten the bolt while holding position</li>
+                <li>Release lever, check alignment</li>
+            </ol>
+
+            <h3>Tightening the Cable</h3>
+            <p>If the lever pulls too far before engaging:</p>
+            <ol>
+                <li>Find the barrel adjuster (where cable meets lever)</li>
+                <li>Turn it counterclockwise to take up slack</li>
+                <li>Test lever feel</li>
+                <li>If you run out of adjustment, you may need to re-clamp the cable</li>
+            </ol>
+
+            <h3>When to Replace Pads</h3>
+            <p>Look for wear indicator grooves. If grooves are gone, replace pads.</p>
+
+            <h2>Mechanical Disc Brake Adjustment</h2>
+
+            <h3>Centering the Caliper</h3>
+            <p>If you hear rubbing:</p>
+            <ol>
+                <li>Loosen the two caliper mounting bolts (don't remove)</li>
+                <li>Squeeze the brake lever firmly, hold it</li>
+                <li>While holding lever, tighten the bolts</li>
+                <li>Release lever, spin wheel — should be silent</li>
+            </ol>
+
+            <h3>Pad Adjustment</h3>
+            <p>Most mechanical disc brakes have adjustment for each pad:</p>
+            <ol>
+                <li><strong>Inner pad:</strong> Adjusted via lever cable tension</li>
+                <li><strong>Outer pad:</strong> Turn the adjustment knob on the caliper</li>
+                <li>Adjust outer pad close to rotor without rubbing</li>
+                <li>Tighten cable so lever engages at desired point</li>
+            </ol>
+
+            <h2>Hydraulic Disc Brake Adjustment</h2>
+            <p>Good news: these self-adjust as pads wear. Bad news: when something's wrong, it's more complex.</p>
+
+            <h3>What You Can Do</h3>
+            <ul>
+                <li><strong>Lever reach adjustment:</strong> Most have a dial or screw at the lever to adjust how far the lever sits from the bar</li>
+                <li><strong>Centering the caliper:</strong> Same process as mechanical — loosen bolts, squeeze lever, tighten bolts</li>
+            </ul>
+
+            <h3>What Needs a Shop</h3>
+            <ul>
+                <li>Spongy lever feel → needs bleeding (air in the lines)</li>
+                <li>Leaking fluid → seal replacement</li>
+                <li>Contaminated pads → pad replacement (don't touch brake surfaces with bare hands)</li>
+            </ul>
+
+            <h2>Rotor Care</h2>
+
+            <h3>Keep Them Clean</h3>
+            <ul>
+                <li>Don't touch rotors with bare hands (oils reduce braking)</li>
+                <li>Clean with isopropyl alcohol and clean rag</li>
+                <li>Never use WD-40 or lubricants near brakes</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Important:</strong> Minimum rotor thickness is stamped on the rotor (usually 1.5mm). If worn below this, replace immediately.
+            </div>
+
+            <h2>Bedding In New Pads</h2>
+            <p>New brake pads need to be "bedded in" for full performance:</p>
+            <ol>
+                <li>Find a safe area with room to brake</li>
+                <li>Accelerate to moderate speed (15 mph)</li>
+                <li>Brake firmly but not locked until nearly stopped</li>
+                <li>Repeat 10-20 times</li>
+                <li>Avoid dragging brakes during this process</li>
+            </ol>
+            <p>This transfers pad material evenly to the rotor surface.</p>
+
+            <h2>When to Go to a Shop</h2>
+            <ul>
+                <li>Hydraulic brake bleeding</li>
+                <li>Persistent squealing after cleaning/adjustment</li>
+                <li>Brake lever goes to bar even after adjustment</li>
+                <li>Any crash damage to brake components</li>
+                <li>You're not confident in your work</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>Safety first:</strong> E-bike brakes are safety-critical. There's no shame in getting professional help.
+            </div>
+
+            <div class="related-guides">
+                <h3>Related Guides</h3>
+                <ul>
+                    <li><a href="article-chain-care-101.html">Chain Care 101</a></li>
+                    <li><a href="article-tire-pressure-guide.html">Tire Pressure Guide</a></li>
+                    <li><a href="article-night-riding-essentials.html">Night Riding Essentials</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>New England E-Bike — Your resource for e-biking in Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, and Connecticut.</p>
+        </div>
+    </footer>
+
+    <script src="analytics.js"></script>
+</body>
+</html>
