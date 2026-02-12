@@ -947,7 +947,7 @@ a.resource-link:hover {
 .featured-title {
     flex: 1;
     font-weight: 500;
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .featured-arrow {
