@@ -1,5 +1,5 @@
 (function(){
-var E='http://100.118.254.92:5001/api/t';
+var E='https://moltbot.tail8fde55.ts.net/api/t';
 var s=sessionStorage.getItem('_sid')||(sessionStorage._sid='s'+Date.now(),sessionStorage._sid);
 function t(type,el){new Image().src=E+'?s='+s+'&t='+type+'&p='+encodeURIComponent(location.pathname)+(el?'&e='+encodeURIComponent(el):'')+'&_='+Date.now();}
 t('pageview');
