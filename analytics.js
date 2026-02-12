@@ -1,2 +1,9 @@
-/* Analytics */
-(function(){const E='https://adjustment-fundamentals-notification-copyrights.trycloudflare.com/api/track';function s(){let i=sessionStorage.getItem('_sid');if(!i){i='s_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);sessionStorage.setItem('_sid',i)}return i}function t(e,d={}){const p={session_id:s(),event_type:e,page:location.pathname,element:d.element||null,metadata:d.metadata||{}};if(navigator.sendBeacon){navigator.sendBeacon(E,new Blob([JSON.stringify(p)],{type:'application/json'}))}else{fetch(E,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p),keepalive:true}).catch(()=>{})}}function pv(){t('pageview',{metadata:{referrer:document.referrer,title:document.title}})}function cl(){document.addEventListener('click',function(e){const x=e.target.closest('a,button,[data-track]');if(!x)return;const el=x.getAttribute('data-track')||x.id||x.className||x.tagName.toLowerCase();t('click',{element:el,metadata:{text:(x.textContent||'').trim().substring(0,100),href:x.href||null}})},true)}document.readyState==='loading'?document.addEventListener('DOMContentLoaded',function(){pv();cl()}):function(){pv();cl()}();document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden'){t('exit',{metadata:{time:Math.round((Date.now()-performance.timing.navigationStart)/1000)}})}},{once:true})})();
+(function(){
+const E='https://adjustment-fundamentals-notification-copyrights.trycloudflare.com/api/track';
+function sid(){let i=sessionStorage.getItem('_sid');if(!i){i='s'+Date.now();sessionStorage.setItem('_sid',i)}return i}
+function send(type,data){
+  fetch(E,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_id:sid(),event_type:type,page:location.pathname,element:data?.el||null,metadata:data?.meta||{}}),mode:'cors'}).catch(function(){});
+}
+send('pageview',{meta:{ref:document.referrer,title:document.title}});
+document.addEventListener('click',function(e){var t=e.target.closest('a,button');if(t)send('click',{el:t.innerText?.slice(0,50)||t.tagName,meta:{href:t.href||''}});});
+})();
