@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bike Battery Charging Best Practices | New England E-Bike</title>
+    <meta name="description" content="Learn how to charge your e-bike battery safely and effectively. Fact-based tips on temperature, charger compatibility, and habits that extend battery life.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://newenglandebike.org/article-charging-best-practices.html">
+    <meta property="og:title" content="E-Bike Battery Charging Best Practices | New England E-Bike">
+    <meta property="og:description" content="Learn how to charge your e-bike battery safely and effectively. Fact-based tips on temperature, charger compatibility, and habits that extend battery life.">
+    <meta property="og:image" content="https://newenglandebike.org/images/hero-banner.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 4rem;
+        }
+        .article-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #374151;
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            font-weight: 400;
+        }
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 2.5rem 0 1rem;
+            padding-top: 1rem;
+        }
+        .article-content h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #e5e7eb;
+            margin: 2rem 0 0.75rem;
+        }
+        .article-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #d1d5db;
+            margin-bottom: 1.25rem;
+        }
+        .article-content ul, .article-content ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+            color: #d1d5db;
+        }
+        .article-content li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+        .tip-box {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.15) 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip-box strong {
+            color: #fbbf24;
+        }
+        .tip-box p {
+            margin: 0;
+            color: #d1d5db;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.15) 100%);
+            border-left: 4px solid #ef4444;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box strong {
+            color: #f87171;
+        }
+        .warning-box p {
+            margin: 0;
+            color: #d1d5db;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        .comparison-table th {
+            background: #1f2937;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #374151;
+            color: #e5e7eb;
+            background: #111827;
+        }
+        .comparison-table tr:nth-child(even) td {
+            background: #1f2937;
+        }
+        .avoid-list {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid #ef4444;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .avoid-list h4 {
+            color: #f87171;
+            margin: 0 0 1rem;
+            font-size: 1.1rem;
+        }
+        .avoid-list ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .avoid-list li {
+            padding: 0.5rem 0;
+            color: #d1d5db;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .cta-section h3 {
+            color: white;
+            margin: 0 0 0.5rem;
+        }
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1.5rem;
+        }
+        .cta-section .btn {
+            background: white;
+            color: #1d4ed8;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-section .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .signature {
+            margin-top: 3rem;
+            color: #d1d5db;
+        }
+        .signature strong {
+            color: #ffffff;
+        }
+        @media (max-width: 640px) {
+            .article-title {
+                font-size: 1.875rem;
+            }
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">⚡ New England E-Bike and PEV</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="laws.html">Laws</a>
+                <a href="routes.html">Routes</a>
+                <a href="planner.html">Ride Planner</a>
+                <a href="shops.html">Shops</a>
+                <a href="guides.html">Guides</a>
+                <a href="https://www.facebook.com/groups/573295111141320/" target="_blank" class="nav-cta">Join us on Facebook</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="article-container">
+        <article>
+            <header class="article-header">
+                <h1 class="article-title">E-Bike Battery Charging Best Practices</h1>
+                <p class="article-subtitle">A beginner's guide to charging your e-bike battery safely and effectively</p>
+            </header>
+
+            <div class="article-content">
+                <h2>Why Charging Habits Matter</h2>
+                <p>How you charge your battery affects its long-term health. Good habits help maintain capacity over time, while poor habits can shorten lifespan.</p>
+
+                <h2>The Basics</h2>
+
+                <h3>1. Avoid Fully Depleting Your Battery</h3>
+                <p>Running your battery to 0% regularly puts stress on the cells.</p>
+                <ul>
+                    <li><strong>Recharge before the battery gets very low</strong> — Most manufacturers recommend recharging before dropping below 20%</li>
+                    <li><strong>Occasional deep discharges are fine</strong> — Just avoid making it a habit</li>
+                </ul>
+                <div class="tip-box">
+                    <p><strong>Simple rule:</strong> Charge when convenient, don't wait until empty.</p>
+                </div>
+
+                <h3>2. You Don't Always Need 100%</h3>
+                <p>Charging to 100% is fine for riding, but storing at full charge for extended periods can reduce battery lifespan over time.</p>
+                <ul>
+                    <li><strong>For daily riding:</strong> Charge to whatever level you need for your trip</li>
+                    <li><strong>For occasional riders:</strong> Consider charging to 80-90% if you won't ride for several days</li>
+                    <li><strong>Some batteries have built-in charge limiters</strong> — Check your owner's manual</li>
+                </ul>
+                <div class="tip-box">
+                    <p><strong>Simple rule:</strong> Full charges for full rides. Partial charges for partial needs.</p>
+                </div>
+
+                <h3>3. Temperature Matters</h3>
+                <p>Lithium-ion batteries are sensitive to temperature during charging.</p>
+                <p><strong>Avoid charging when:</strong></p>
+                <ul>
+                    <li>The battery is below freezing (32°F / 0°C)</li>
+                    <li>The battery is very hot (above 110°F / 45°C)</li>
+                </ul>
+                <p><strong>Best practice:</strong></p>
+                <ul>
+                    <li>Let a cold battery warm to room temperature before charging</li>
+                    <li>Don't charge immediately after a long, hot ride — let it cool down first</li>
+                    <li>Ideal charging temperature: 50–77°F (10–25°C)</li>
+                </ul>
+                <div class="warning-box">
+                    <p><strong>Why it matters:</strong> Charging outside safe temperature ranges can damage cells and reduce capacity permanently.</p>
+                </div>
+
+                <h3>4. Use the Right Charger</h3>
+                <p><strong>This is critical for safety.</strong></p>
+                <ul>
+                    <li><strong>Use the charger provided by your manufacturer</strong> or a replacement rated for your specific battery</li>
+                    <li><strong>Avoid cheap, unbranded chargers</strong> — They may lack proper safety circuits and voltage regulation</li>
+                </ul>
+                <p><strong>Verify charger compatibility before use:</strong></p>
+                <ul>
+                    <li><strong>Voltage must match exactly</strong> — A 48V battery requires a 48V charger. Using the wrong voltage can cause overcharging, cell damage, or fire</li>
+                    <li><strong>Amperage (A) determines charge speed</strong> — Using a higher amperage charger than your battery is rated for can generate excess heat and create fire risk</li>
+                    <li><strong>Check your battery's label</strong> for voltage (V) and maximum charge current (A)</li>
+                    <li><strong>Check your charger's output label</strong> to confirm it matches</li>
+                </ul>
+                <div class="warning-box">
+                    <p><strong>⚠️ Using an incompatible charger is one of the leading causes of e-bike battery fires.</strong> If you're unsure, contact your manufacturer before charging.</p>
+                </div>
+                <div class="tip-box">
+                    <p><strong>Simple rule:</strong> When in doubt, use the original charger. If replacing, match specs exactly.</p>
+                </div>
+
+                <h3>5. Don't Leave It Plugged In Indefinitely</h3>
+                <p>Most modern e-bike chargers stop charging when full, but it's still good practice to:</p>
+                <ul>
+                    <li><strong>Unplug once charging is complete</strong> — Reduces unnecessary stress on the battery</li>
+                    <li><strong>Avoid leaving plugged in for days or weeks</strong></li>
+                    <li><strong>Consider using an outlet timer</strong> — Set it to turn off after your typical charge time, so you don't have to remember to unplug</li>
+                </ul>
+                <p>Outlet timers are an inexpensive way to automate good charging habits. Set the timer for your battery's typical charge duration, and it handles the rest.</p>
+                <p>Some high-quality battery management systems (BMS) handle this automatically, but a timer adds an extra layer of convenience and safety.</p>
+
+                <h3>6. Charge in a Safe Location</h3>
+                <p>Standard safety practices for charging lithium batteries:</p>
+                <ul>
+                    <li><strong>Charge on a non-flammable surface</strong></li>
+                    <li><strong>Avoid charging unattended for extended periods</strong> (especially overnight in living spaces)</li>
+                    <li><strong>Keep away from flammable materials</strong></li>
+                    <li><strong>Ensure adequate ventilation</strong></li>
+                </ul>
+
+                <h2>Quick Reference</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Situation</th>
+                            <th>Recommendation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Daily rider</td>
+                            <td>Charge as needed, don't stress about hitting exactly 80% or 100%</td>
+                        </tr>
+                        <tr>
+                            <td>Battery is cold</td>
+                            <td>Let it warm to room temperature first</td>
+                        </tr>
+                        <tr>
+                            <td>Battery is hot</td>
+                            <td>Let it cool before charging</td>
+                        </tr>
+                        <tr>
+                            <td>Going on a long ride</td>
+                            <td>Charge fully the night before</td>
+                        </tr>
+                        <tr>
+                            <td>Not riding for a week+</td>
+                            <td>Store around 40–60%, check periodically</td>
+                        </tr>
+                        <tr>
+                            <td>Charger seems off</td>
+                            <td>Stop using it, contact manufacturer</td>
+                        </tr>
+                        <tr>
+                            <td>Want to automate?</td>
+                            <td>Use an outlet timer to stop charging automatically</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="avoid-list">
+                    <h4>What to Avoid</h4>
+                    <ul>
+                        <li>❌ Regularly running battery to 0%</li>
+                        <li>❌ Charging below freezing temperatures</li>
+                        <li>❌ Charging a hot battery immediately after riding</li>
+                        <li>❌ Using cheap, off-brand chargers</li>
+                        <li>❌ Using a charger with wrong voltage or amperage</li>
+                        <li>❌ Leaving plugged in for extended periods unnecessarily</li>
+                    </ul>
+                </div>
+
+                <h2>That's It!</h2>
+                <p>Good charging habits are simple: avoid extremes (too hot, too cold, too empty, too long on the charger), use quality equipment, and your battery will serve you well for years.</p>
+
+                <div class="cta-section">
+                    <h3>Have Questions?</h3>
+                    <p>Join our community on Facebook to connect with other New England e-bike riders.</p>
+                    <a href="https://www.facebook.com/groups/573295111141320/" target="_blank" class="btn">Join the Community</a>
+                </div>
+
+                <p class="signature">
+                    Ride safe,<br>
+                    <strong>Brett Halliday</strong><br>
+                    <em>New England E-Bike & PEV</em>
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>New England E-Bike — Your resource for e-biking in Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, and Connecticut.</p>
+        </div>
+    </footer>
+
+    <script src="analytics.js"></script>
+</body>
+</html>
