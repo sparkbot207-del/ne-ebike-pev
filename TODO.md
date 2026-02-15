@@ -26,6 +26,10 @@
 ## Done ✅
 
 - [x] Add canonical tags to all pages (2026-02-15)
+- [x] Remove duplicate meta tags from laws.html, routes.html (2026-02-15)
+- [x] Create .htaccess with redirect rules (2026-02-15)
+- [x] Discover and add calculator.html to sitemap (2026-02-15)
+- [x] Add calculator link to main navigation (2026-02-15)
 - [x] Fix sitemap URLs (added .html extensions)
 - [x] Add guides landing page
 - [x] Create charging best practices article

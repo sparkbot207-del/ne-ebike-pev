@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1] - 2026-02-15
+
+### Fixed (Continued)
+- **Discovered missing calculator.html in sitemap** - Page existed but wasn't indexed
+  - Added calculator.html to sitemap.xml with priority 0.8
+  - Added "Range Calculator" link to main navigation across all pages
+  - Now fully discoverable by Google
+
 ## [1.1.0] - 2026-02-15
 
 ### Fixed
