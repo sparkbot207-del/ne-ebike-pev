@@ -40,6 +40,11 @@ body {
     overflow-x: hidden;
 }
 
+/* All headers must be white for readability */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
