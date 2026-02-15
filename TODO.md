@@ -11,6 +11,8 @@
 
 ## Medium Priority (Content/Features)
 
+- [x] **Fix crowded navbar** - Reduced spacing and fonts (2026-02-15)
+- [x] **Fix button text alignment** - Centered "Join Facebook" button (2026-02-15)
 - [ ] **Add structured data (Schema.org)** - Some pages have JSON-LD, others don't (improve rich snippets)
 - [ ] **Optimize OG images** - Consider page-specific og:image instead of generic hero-banner.jpg
 - [ ] **Add lastmod to sitemap** - Update modification dates to trigger re-crawl

@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.2] - 2026-02-15
+
+### UI/UX Improvements
+- **Fixed crowded navbar** - Reduced spacing and font sizes for cleaner layout
+  - Gap between nav items: 30px → 12px
+  - Nav links font-size: 1rem → 0.95rem
+  - Logo font-size: 1rem → 0.9rem
+- **Fixed button text alignment** - "Join Facebook" button now properly centered
+  - Used flexbox (display: flex, align-items/justify-content: center)
+  - Added white-space: nowrap to prevent text wrapping
+- **Streamlined navigation labels** for compactness:
+  - Removed redundant "Home" link
+  - Shortened: "Ride Planner" → "Planner", "E-Bike & PEV Shops" → "Shops", etc.
+  - Applied consistently across all 9 pages
+
 ## [1.1.1] - 2026-02-15
 
 ### Fixed (Continued)
