@@ -49,9 +49,10 @@
         
         .form-group label {
             display: block;
-            color: #aaa;
+            color: #cbd5e1;
             margin-bottom: 6px;
             font-size: 0.9em;
+            font-weight: 500;
         }
         
         .form-group input,
@@ -73,7 +74,7 @@
         
         .form-group .hint {
             font-size: 0.8em;
-            color: #666;
+            color: #94a3b8;
             margin-top: 4px;
         }
         
@@ -84,8 +85,9 @@
         .slider-group label {
             display: flex;
             justify-content: space-between;
-            color: #aaa;
+            color: #cbd5e1;
             margin-bottom: 8px;
+            font-weight: 500;
         }
         
         .slider-group label .value {
@@ -123,7 +125,7 @@
             border-radius: 20px;
             border: 1px solid #444;
             background: transparent;
-            color: #aaa;
+            color: #cbd5e1;
             cursor: pointer;
             font-size: 0.85em;
             transition: all 0.2s;
@@ -279,23 +281,30 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">⚡ NE E-Bike</a>
-            <ul>
-                <li><a href="routes.html">Routes</a></li>
-                <li><a href="laws.html">Laws</a></li>
-                <li><a href="index.html#stations">Charging</a></li>
-                <li><a href="shops.html">Shops</a></li>
-                <li><a href="planner.html">Planner</a></li>
-                <li><a href="calculator.html" class="active">Calculator</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">⚡ New England E-Bike and PEV</a>
+            <div class="nav-links">
+                <a href="laws.html">Laws</a>
+                <a href="routes.html">Routes</a>
+                <a href="planner.html">Planner</a>
+                <a href="shops.html">Shops</a>
+                <a href="guides.html">Guides</a>
+                <a href="calculator.html" class="active">Calculator</a>
+                <a href="https://www.facebook.com/groups/573295111141320/" target="_blank" class="nav-cta">Join Facebook</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
     <main class="calculator-container">
         <h1>E-Bike Range Calculator</h1>
-        <p style="color: #aaa; margin-bottom: 30px;">
+        <p style="color: #d1d5db; margin-bottom: 30px;">
             Get an accurate estimate of your e-bike's range based on real-world factors.
             The more details you provide, the more accurate your estimate.
         </p>
@@ -794,6 +803,25 @@
         
         // Initial calculation
         updateBatteryWh();
+        
+        // Navigation toggle (mobile)
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
     </script>
     
     <!-- Analytics Tracker (DEMO) -->
