@@ -91,7 +91,7 @@ body {
 }
 
 .nav-logo {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 800;
     background: var(--gradient);
     -webkit-background-clip: text;
@@ -103,7 +103,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 12px;
     align-items: center;
 }
 
@@ -113,6 +113,7 @@ body {
     font-weight: 500;
     transition: all 0.3s;
     position: relative;
+    font-size: 0.95rem;
 }
 
 .nav-links a:not(.nav-cta)::after {
@@ -137,11 +138,16 @@ body {
 .nav-cta {
     background: var(--gradient);
     color: white !important;
-    padding: 12px 24px;
+    padding: 12px 20px;
     border-radius: 50px;
     transition: all 0.3s !important;
     box-shadow: 0 4px 15px var(--primary-glow);
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border: none;
 }
 
 .nav-cta:hover {
