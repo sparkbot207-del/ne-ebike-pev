@@ -2,8 +2,10 @@
 
 ## High Priority (SEO/Performance)
 
-- [ ] **Remove duplicate meta tags** - laws.html, routes.html, article pages have duplicated og:image and twitter:card tags
-- [ ] **Implement .htaccess redirects** - Normalize URLs (www→non-www, trailing slashes) to eliminate redirect chains
+- [x] **Remove duplicate meta tags** - laws.html, routes.html cleaned (2026-02-15)
+- [x] **Create .htaccess redirects** - Rules for www→non-www, http→https, trailing slashes (2026-02-15)
+  - ⚠️ **Note**: GitHub Pages doesn't use .htaccess (already handles https + www redirect automatically)
+  - This .htaccess is for future migration to Apache-based host
 - [ ] **Verify all pages indexing** - Check Google Search Console after 1-2 weeks for successful re-indexing
 - [ ] **Monitor redirect errors** - Ensure "redirect error" (1 page) is resolved
 
