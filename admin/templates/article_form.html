@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}{{ 'Edit' if article else 'Add' }} Article{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>{{ '✏️ Edit' if article else '➕ Add' }} Article</h2>
+    <a href="/articles" class="btn btn-secondary">← Back to Articles</a>
+</div>
+
+<div class="card">
+    <form method="POST">
+        <div class="form-group">
+            <label>Title *</label>
+            <input type="text" name="title" value="{{ article.title if article else '' }}" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>URL Slug</label>
+                <input type="text" name="slug" value="{{ article.slug if article else '' }}" placeholder="auto-generated-from-title">
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <select name="category">
+                    <option value="news" {% if article and article.category == 'news' %}selected{% endif %}>News</option>
+                    <option value="guides" {% if article and article.category == 'guides' %}selected{% endif %}>Guides</option>
+                    <option value="reviews" {% if article and article.category == 'reviews' %}selected{% endif %}>Reviews</option>
+                    <option value="community" {% if article and article.category == 'community' %}selected{% endif %}>Community</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Description *</label>
+            <textarea name="description" required placeholder="Brief description for search results and social sharing...">{{ article.description if article else '' }}</textarea>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Author</label>
+                <input type="text" name="author" value="{{ article.author if article else 'New England E-Bike Community' }}">
+            </div>
+            <div class="form-group">
+                <label>Publish Date</label>
+                <input type="date" name="publishDate" value="{{ article.publishDate if article else '' }}">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-check">
+                    <input type="checkbox" name="featured" {% if article and article.featured %}checked{% endif %}>
+                    Featured Article (shown on homepage)
+                </label>
+            </div>
+            {% if article %}
+            <div class="form-group">
+                <label class="form-check">
+                    <input type="checkbox" name="active" {% if article.active %}checked{% endif %}>
+                    Published (visible on site)
+                </label>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">{{ '💾 Save Changes' if article else '➕ Add Article' }}</button>
+            <a href="/articles" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<div class="card" style="margin-top: 1.5rem;">
+    <h3 style="margin-bottom: 1rem;">📄 Article Content</h3>
+    <p style="color: var(--text-muted);">
+        Article content (HTML) is stored as separate files. After creating the article metadata here, 
+        create/edit the HTML file at: <code style="background: var(--bg-input); padding: 0.25rem 0.5rem; border-radius: 4px;">article-{slug}.html</code>
+    </p>
+</div>
+{% endblock %}

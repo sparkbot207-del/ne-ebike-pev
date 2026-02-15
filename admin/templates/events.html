@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>📅 Events</h2>
+    <a href="/events/add" class="btn btn-primary">➕ Add Event</a>
+</div>
+
+{% if events %}
+<div class="card">
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date & Time</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                <tr>
+                    <td>
+                        <strong>{{ event.title }}</strong>
+                        <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.25rem;">{{ event.description[:50] }}...</div>
+                    </td>
+                    <td>
+                        {{ event.date }}<br>
+                        <span style="color: var(--text-muted);">{{ event.time }}</span>
+                    </td>
+                    <td>{{ event.location }}</td>
+                    <td>
+                        {% if event.active %}
+                        <span class="badge badge-success">Active</span>
+                        {% else %}
+                        <span class="badge badge-warning">Hidden</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="/events/edit/{{ event.id }}" class="btn btn-secondary btn-sm">Edit</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% else %}
+<div class="card">
+    <div class="empty-state">
+        <div class="icon">📅</div>
+        <h3>No events yet</h3>
+        <p>Add your first group ride or community event.</p>
+        <a href="/events/add" class="btn btn-primary" style="margin-top: 1rem;">➕ Add Event</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

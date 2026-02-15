@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Shops{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>🏪 Shops</h2>
+    <a href="/shops/add" class="btn btn-primary">➕ Add Shop</a>
+</div>
+
+{% if shops %}
+<div class="card">
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Services</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for shop in shops %}
+                <tr>
+                    <td>
+                        <strong>{{ shop.name }}</strong>
+                        {% if shop.featured %}<span class="badge badge-success">Featured</span>{% endif %}
+                    </td>
+                    <td>{{ shop.city }}, {{ shop.state }}</td>
+                    <td>
+                        {% for service in shop.services[:3] %}
+                        <span class="badge badge-muted">{{ service }}</span>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% if shop.active %}
+                        <span class="badge badge-success">Active</span>
+                        {% else %}
+                        <span class="badge badge-warning">Hidden</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="/shops/edit/{{ shop.id }}" class="btn btn-secondary btn-sm">Edit</a>
+                        <form action="/shops/delete/{{ shop.id }}" method="POST" style="display: inline;" onsubmit="return confirm('Delete this shop?')">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% else %}
+<div class="card">
+    <div class="empty-state">
+        <div class="icon">🏪</div>
+        <h3>No shops yet</h3>
+        <p>Add your first e-bike shop to get started.</p>
+        <a href="/shops/add" class="btn btn-primary" style="margin-top: 1rem;">➕ Add Shop</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

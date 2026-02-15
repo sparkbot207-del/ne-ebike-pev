@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}{{ 'Edit' if event else 'Add' }} Event{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>{{ '✏️ Edit' if event else '➕ Add' }} Event</h2>
+    <a href="/events" class="btn btn-secondary">← Back to Events</a>
+</div>
+
+<div class="card">
+    <form method="POST">
+        <div class="form-group">
+            <label>Event Title *</label>
+            <input type="text" name="title" value="{{ event.title if event else '' }}" required placeholder="Spring Group Ride">
+        </div>
+
+        <div class="form-group">
+            <label>Description *</label>
+            <textarea name="description" required placeholder="Describe the event, what to bring, skill level, etc.">{{ event.description if event else '' }}</textarea>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Date *</label>
+                <input type="date" name="date" value="{{ event.date if event else '' }}" required>
+            </div>
+            <div class="form-group">
+                <label>Time</label>
+                <input type="text" name="time" value="{{ event.time if event else '' }}" placeholder="10:00 AM">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Location *</label>
+            <input type="text" name="location" value="{{ event.location if event else '' }}" required placeholder="Back Cove Trail, Portland ME">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Distance</label>
+                <input type="text" name="distance" value="{{ event.distance if event else '' }}" placeholder="25 miles">
+            </div>
+            <div class="form-group">
+                <label>Difficulty</label>
+                <select name="difficulty">
+                    <option value="easy" {% if event and event.difficulty == 'easy' %}selected{% endif %}>Easy - Beginner friendly</option>
+                    <option value="moderate" {% if event and event.difficulty == 'moderate' %}selected{% endif %}>Moderate - Some experience</option>
+                    <option value="challenging" {% if event and event.difficulty == 'challenging' %}selected{% endif %}>Challenging - Experienced riders</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Contact Email</label>
+                <input type="email" name="contact" value="{{ event.contact if event else '' }}" placeholder="organizer@email.com">
+            </div>
+            <div class="form-group">
+                <label>Facebook Event URL</label>
+                <input type="url" name="facebookEvent" value="{{ event.facebookEvent if event else '' }}" placeholder="https://facebook.com/events/...">
+            </div>
+        </div>
+
+        {% if event %}
+        <div class="form-group">
+            <label class="form-check">
+                <input type="checkbox" name="active" {% if event.active %}checked{% endif %}>
+                Active (visible on site)
+            </label>
+        </div>
+        {% endif %}
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">{{ '💾 Save Changes' if event else '➕ Add Event' }}</button>
+            <a href="/events" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard | NE E-Bike</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0f;
+            color: #ddd;
+            padding: 15px;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #333;
+        }
+        
+        h1 {
+            color: #4af;
+            margin-bottom: 8px;
+            font-size: 1.4em;
+        }
+        
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-top: 12px;
+        }
+        
+        .filters select {
+            padding: 6px 10px;
+            background: #1a1a2e;
+            border: 1px solid #333;
+            color: #ddd;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        @media (min-width: 600px) {
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .stat-card {
+            background: #1a1a2e;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        
+        .stat-card .label {
+            color: #888;
+            font-size: 0.75em;
+            margin-bottom: 6px;
+        }
+        
+        .stat-card .value {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #4af;
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        @media (min-width: 600px) {
+            .two-col {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .chart-container {
+            background: #1a1a2e;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .chart-container h2 {
+            color: #4af;
+            font-size: 1em;
+            margin-bottom: 12px;
+        }
+        
+        .table-wrap {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 400px;
+            font-size: 0.85em;
+        }
+        
+        th, td {
+            text-align: left;
+            padding: 8px 6px;
+            border-bottom: 1px solid #222;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 120px;
+        }
+        
+        th {
+            color: #4af;
+            font-weight: 600;
+            font-size: 0.85em;
+        }
+        
+        tr:hover {
+            background: #15152a;
+        }
+        
+        .bar-chart {
+            margin-top: 10px;
+        }
+        
+        .bar-item {
+            margin-bottom: 10px;
+        }
+        
+        .bar-item .bar-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3px;
+            font-size: 0.85em;
+        }
+        
+        .bar-item .bar-label .name {
+            color: #ddd;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 80%;
+        }
+        
+        .bar-item .bar-label .count {
+            color: #4af;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-left: 8px;
+        }
+        
+        .bar-item .bar-fill {
+            height: 6px;
+            background: #222;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .bar-item .bar-fill .bar-inner {
+            height: 100%;
+            background: linear-gradient(90deg, #4af, #28f);
+            transition: width 0.3s;
+        }
+        
+        .refresh-btn {
+            padding: 6px 12px;
+            background: #4af;
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+        
+        .refresh-btn:hover {
+            background: #28f;
+        }
+        
+        .timestamp {
+            color: #666;
+            font-size: 0.8em;
+        }
+        
+        .event-type {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.75em;
+            font-weight: bold;
+        }
+        
+        .event-type.pageview { background: #1a3a5c; color: #4af; }
+        .event-type.click { background: #3a1a5c; color: #a4f; }
+        .event-type.exit { background: #5c3a1a; color: #fa4; }
+        .event-type.calculator_use { background: #1a5c3a; color: #4fa; }
+        
+        .truncate {
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Analytics Dashboard</h1>
+            <p style="color: #888; font-size: 0.85em;">NewEnglandEBike.org</p>
+            
+            <div class="filters">
+                <select id="timeRange">
+                    <option value="1">1 Hour</option>
+                    <option value="24" selected>24 Hours</option>
+                    <option value="168">7 Days</option>
+                    <option value="720">30 Days</option>
+                </select>
+                <button class="refresh-btn" onclick="loadStats()">Refresh</button>
+                <span id="lastUpdate" class="timestamp"></span>
+            </div>
+        </header>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="label">Page Views</div>
+                <div class="value" id="totalPageViews">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Clicks</div>
+                <div class="value" id="totalClicks">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Sessions</div>
+                <div class="value" id="uniqueSessions">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Pages</div>
+                <div class="value" id="uniquePages">-</div>
+            </div>
+        </div>
+        
+        <div class="two-col">
+            <div class="chart-container">
+                <h2>📊 Page Views</h2>
+                <div class="bar-chart" id="pageViewsChart"></div>
+            </div>
+            
+            <div class="chart-container">
+                <h2>🖱️ Clicks</h2>
+                <div class="bar-chart" id="clicksChart"></div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <h2>📈 Timeline</h2>
+            <div class="table-wrap" id="timelineChart">Loading...</div>
+        </div>
+        
+        <div class="chart-container">
+            <h2>🕒 Recent Events</h2>
+            <div class="table-wrap">
+                <table id="recentEventsTable">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Type</th>
+                            <th>Page</th>
+                            <th>Element</th>
+                            <th>Session</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentEventsBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let statsData = null;
+        
+        function formatTimestamp(iso) {
+            const date = new Date(iso);
+            const now = new Date();
+            const diffMs = now - date;
+            const diffMins = Math.floor(diffMs / 60000);
+            
+            if (diffMins < 1) return 'now';
+            if (diffMins < 60) return `${diffMins}m`;
+            if (diffMins < 1440) return `${Math.floor(diffMins / 60)}h`;
+            return date.toLocaleDateString();
+        }
+        
+        function renderBarChart(containerId, data, maxCount) {
+            const container = document.getElementById(containerId);
+            if (!data || data.length === 0) {
+                container.innerHTML = '<p style="color: #666;">No data yet</p>';
+                return;
+            }
+            
+            const max = maxCount || Math.max(...data.map(d => d.views || d.clicks));
+            
+            container.innerHTML = data.slice(0, 8).map(item => {
+                const count = item.views || item.clicks;
+                const pct = (count / max * 100).toFixed(1);
+                const label = item.page || item.element || 'Unknown';
+                
+                return `
+                    <div class="bar-item">
+                        <div class="bar-label">
+                            <span class="name" title="${label}">${label}</span>
+                            <span class="count">${count}</span>
+                        </div>
+                        <div class="bar-fill">
+                            <div class="bar-inner" style="width: ${pct}%"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function renderTimeline(timeline) {
+            const container = document.getElementById('timelineChart');
+            
+            if (!timeline || timeline.length === 0) {
+                container.innerHTML = '<p style="color: #666;">No data yet</p>';
+                return;
+            }
+            
+            const hours = {};
+            timeline.forEach(item => {
+                if (!hours[item.hour]) hours[item.hour] = {};
+                hours[item.hour][item.event_type] = item.count;
+            });
+            
+            const table = '<table>' +
+                '<thead><tr><th>Hour</th><th>Views</th><th>Clicks</th><th>Calc</th></tr></thead>' +
+                '<tbody>' +
+                Object.keys(hours).slice(-12).map(hour => {
+                    const data = hours[hour];
+                    const shortHour = hour.split(' ')[1] || hour;
+                    return `<tr>
+                        <td>${shortHour}</td>
+                        <td>${data.pageview || 0}</td>
+                        <td>${data.click || 0}</td>
+                        <td>${data.calculator_use || 0}</td>
+                    </tr>`;
+                }).join('') +
+                '</tbody></table>';
+            
+            container.innerHTML = table;
+        }
+        
+        function renderRecentEvents(events) {
+            const tbody = document.getElementById('recentEventsBody');
+            
+            if (!events || events.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="color: #666;">No events yet</td></tr>';
+                return;
+            }
+            
+            tbody.innerHTML = events.slice(0, 15).map(event => {
+                const shortSession = event.session_id.substring(0, 8);
+                return `<tr>
+                    <td class="timestamp">${formatTimestamp(event.timestamp)}</td>
+                    <td><span class="event-type ${event.event_type}">${event.event_type}</span></td>
+                    <td class="truncate" title="${event.page}">${event.page}</td>
+                    <td class="truncate" style="color: #888;">${event.element || '-'}</td>
+                    <td style="color: #666;">${shortSession}</td>
+                </tr>`;
+            }).join('');
+        }
+        
+        async function loadStats() {
+            const hours = document.getElementById('timeRange').value;
+            
+            try {
+                const response = await fetch(`/api/stats?hours=${hours}`);
+                statsData = await response.json();
+                
+                document.getElementById('totalPageViews').textContent = (statsData.totals.pageviews || 0).toLocaleString();
+                document.getElementById('totalClicks').textContent = (statsData.totals.clicks || 0).toLocaleString();
+                document.getElementById('uniqueSessions').textContent = statsData.totals.unique_sessions.toLocaleString();
+                document.getElementById('uniquePages').textContent = statsData.totals.unique_pages.toLocaleString();
+                
+                renderBarChart('pageViewsChart', statsData.page_views);
+                renderBarChart('clicksChart', statsData.clicks);
+                renderTimeline(statsData.timeline);
+                renderRecentEvents(statsData.recent);
+                
+                document.getElementById('lastUpdate').textContent = formatTimestamp(new Date().toISOString());
+                
+            } catch (error) {
+                console.error('Error loading stats:', error);
+            }
+        }
+        
+        loadStats();
+        setInterval(loadStats, 30000);
+        document.getElementById('timeRange').addEventListener('change', loadStats);
+    </script>
+</body>
+</html>

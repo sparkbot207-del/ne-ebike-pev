@@ -1,0 +1,17 @@
+{
+  "events": [
+    {
+      "id": "example-event-1",
+      "title": "Spring Group Ride",
+      "description": "Join us for our first group ride of the season!",
+      "date": "2026-04-15",
+      "time": "10:00 AM",
+      "location": "Back Cove Trail, Portland ME",
+      "distance": "25 miles",
+      "difficulty": "moderate",
+      "contact": "community@newenglandebike.org",
+      "facebookEvent": "",
+      "active": true
+    }
+  ]
+}

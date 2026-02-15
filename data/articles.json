@@ -1,0 +1,15 @@
+{
+  "articles": [
+    {
+      "id": "ebike-laws-guide-2026",
+      "title": "Complete Guide to New England E-Bike Laws (2026)",
+      "slug": "article-ebike-laws-guide",
+      "description": "In-depth coverage of all 6 states, class definitions, trail access, and FAQs",
+      "author": "New England E-Bike Community",
+      "publishDate": "2026-02-08",
+      "category": "guides",
+      "featured": true,
+      "active": true
+    }
+  ]
+}

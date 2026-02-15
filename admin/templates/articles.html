@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Articles{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>📝 Articles</h2>
+    <a href="/articles/add" class="btn btn-primary">➕ Add Article</a>
+</div>
+
+{% if articles %}
+<div class="card">
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                <tr>
+                    <td>
+                        <strong>{{ article.title }}</strong>
+                        {% if article.featured %}<span class="badge badge-success">Featured</span>{% endif %}
+                        <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.25rem;">{{ article.description[:60] }}...</div>
+                    </td>
+                    <td><span class="badge badge-muted">{{ article.category }}</span></td>
+                    <td>{{ article.publishDate }}</td>
+                    <td>
+                        {% if article.active %}
+                        <span class="badge badge-success">Published</span>
+                        {% else %}
+                        <span class="badge badge-warning">Draft</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="/articles/edit/{{ article.id }}" class="btn btn-secondary btn-sm">Edit</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% else %}
+<div class="card">
+    <div class="empty-state">
+        <div class="icon">📝</div>
+        <h3>No articles yet</h3>
+        <p>Create your first article or guide.</p>
+        <a href="/articles/add" class="btn btn-primary" style="margin-top: 1rem;">➕ Add Article</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

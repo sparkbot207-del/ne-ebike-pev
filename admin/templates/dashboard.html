@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>Dashboard</h2>
+    <span style="color: var(--text-muted);">Welcome to the NE E-Bike Admin Panel</span>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="icon">🏪</div>
+        <div class="value">{{ stats.shops }}</div>
+        <div class="label">Active Shops</div>
+    </div>
+    <div class="stat-card">
+        <div class="icon">📝</div>
+        <div class="value">{{ stats.articles }}</div>
+        <div class="label">Published Articles</div>
+    </div>
+    <div class="stat-card">
+        <div class="icon">📅</div>
+        <div class="value">{{ stats.events }}</div>
+        <div class="label">Upcoming Events</div>
+    </div>
+</div>
+
+<div class="card">
+    <h3 style="margin-bottom: 1rem;">Quick Actions</h3>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="/shops/add" class="btn btn-primary">➕ Add Shop</a>
+        <a href="/articles/add" class="btn btn-primary">➕ Add Article</a>
+        <a href="/events/add" class="btn btn-primary">➕ Add Event</a>
+    </div>
+</div>
+
+<div class="card" style="margin-top: 1.5rem;">
+    <h3 style="margin-bottom: 1rem;">How It Works</h3>
+    <ol style="color: var(--text-muted); padding-left: 1.5rem; line-height: 1.8;">
+        <li>Add or edit content using the forms</li>
+        <li>Changes are saved to JSON files locally</li>
+        <li>Preview your changes on the staging site</li>
+        <li>When ready, click <strong style="color: var(--primary);">Publish</strong> to push to GitHub</li>
+        <li>GitHub Pages will automatically update the live site</li>
+    </ol>
+</div>
+{% endblock %}

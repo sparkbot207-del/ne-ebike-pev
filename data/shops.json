@@ -1,0 +1,19 @@
+{
+  "shops": [
+    {
+      "id": "example-shop-1",
+      "name": "Example E-Bike Shop",
+      "address": "123 Main St",
+      "city": "Portland",
+      "state": "ME",
+      "zip": "04101",
+      "phone": "207-555-1234",
+      "website": "https://example.com",
+      "services": ["sales", "repairs", "rentals"],
+      "brands": ["Trek", "Specialized"],
+      "featured": true,
+      "active": true,
+      "addedDate": "2026-02-08"
+    }
+  ]
+}
