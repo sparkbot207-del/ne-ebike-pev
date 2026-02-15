@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.3] - 2026-02-15
+
+### Bug Fixes (Calculator Page)
+- **Fixed missing navigation bar** - Calculator had custom nav that didn't display
+  - Replaced with site-standard .nav structure
+  - Now matches other pages (brand logo + nav links + mobile toggle)
+- **Fixed unreadable text** - Calculator labels too dark (#aaa)
+  - Changed labels from #aaa → #cbd5e1 (readable on dark background)
+  - Updated hints from #666 → #94a3b8 (better contrast)
+  - Updated buttons to match (#cbd5e1)
+  - Added font-weight: 500 to labels
+- **Added mobile nav toggle** - Calculator now has responsive menu
+- **Browser permission notification** - Expected Chrome behavior (Web Bluetooth/WebUSB)
+  - Users can safely click "Block" - doesn't affect calculator
+
 ## [1.1.2] - 2026-02-15
 
 ### UI/UX Improvements

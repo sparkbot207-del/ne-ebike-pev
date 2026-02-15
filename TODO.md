@@ -32,6 +32,9 @@
 - [x] Create .htaccess with redirect rules (2026-02-15)
 - [x] Discover and add calculator.html to sitemap (2026-02-15)
 - [x] Add calculator link to main navigation (2026-02-15)
+- [x] Fix crowded navbar - reduce spacing and fonts (2026-02-15)
+- [x] Fix button text alignment - "Join Facebook" centered (2026-02-15)
+- [x] Fix calculator page - missing nav bar, dark text, mobile toggle (2026-02-15)
 - [x] Fix sitemap URLs (added .html extensions)
 - [x] Add guides landing page
 - [x] Create charging best practices article
