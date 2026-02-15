@@ -8,10 +8,19 @@
     <link rel="canonical" href="https://newenglandebike.org/calculator.html">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Fix header spacing for fixed nav */
+        .page-header {
+            padding-top: 100px;
+        }
+        
+        .calculator-header {
+            text-align: center;
+            padding: 1rem 0 2rem;
+        }
+        
         .calculator-container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
         }
         
         .calc-section {
@@ -302,12 +311,23 @@
         </div>
     </nav>
 
-    <main class="calculator-container">
-        <h1>E-Bike Range Calculator</h1>
-        <p style="color: #d1d5db; margin-bottom: 30px;">
-            Get an accurate estimate of your e-bike's range based on real-world factors.
-            The more details you provide, the more accurate your estimate.
-        </p>
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="calculator-header">
+                <h1 style="color: #fff; font-size: 2.5rem; margin-bottom: 0.5rem;">🔋 E-Bike Range Calculator</h1>
+                <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+                    Get an accurate estimate of your e-bike's range based on real-world factors.
+                    The more details you provide, the more accurate your estimate.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <div class="calculator-container">
 
         <!-- Battery Section -->
         <div class="calc-section">
@@ -592,7 +612,9 @@
                 We provide a conservative estimate (shown large) and an optimistic estimate 
                 for ideal conditions. Plan your rides using the conservative number.
             </p>
-        </div>
+            </div>  <!-- close .calc-section -->
+            </div>  <!-- close .calculator-container -->
+        </div>      <!-- close .container -->
     </main>
 
     <footer>
