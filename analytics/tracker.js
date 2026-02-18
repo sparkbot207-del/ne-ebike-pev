@@ -1,10 +1,14 @@
 /**
  * Simple Analytics Tracker
  * Lightweight (<2KB) tracker for page views and clicks
+ * 
+ * DISABLED: Local network tracking removed (was causing unnecessary permission prompts)
+ * The site has no business accessing local devices.
  */
 
 (function() {
-    const ANALYTICS_ENDPOINT = 'http://192.168.0.39:5001/api/track';
+    // Local analytics endpoint disabled
+    // const ANALYTICS_ENDPOINT = 'http://192.168.0.39:5001/api/track';
     
     // Generate or retrieve session ID
     function getSessionId() {
@@ -16,28 +20,11 @@
         return sessionId;
     }
     
-    // Send event to server
+    // Send event to server (DISABLED - local tracking removed)
     function trackEvent(eventType, data = {}) {
-        const payload = {
-            session_id: getSessionId(),
-            event_type: eventType,
-            page: window.location.pathname,
-            element: data.element || null,
-            metadata: data.metadata || {}
-        };
-        
-        // Use sendBeacon if available (non-blocking), fallback to fetch
-        if (navigator.sendBeacon) {
-            const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
-            navigator.sendBeacon(ANALYTICS_ENDPOINT, blob);
-        } else {
-            fetch(ANALYTICS_ENDPOINT, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-                keepalive: true
-            }).catch(() => {}); // Silent fail
-        }
+        // Analytics disabled - was trying to hit local network endpoint
+        // No tracking occurs
+        return;
     }
     
     // Track page view
