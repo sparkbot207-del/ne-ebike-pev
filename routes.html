@@ -594,14 +594,24 @@
                     ⚡ Charging Stations <span class="charging-count" id="charging-count">0</span>
                 </label>
                 <div class="mileage-filter">
-                    <span>📏 Min Length:</span>
-                    <select id="mileage-filter">
-                        <option value="0">All Trails</option>
-                        <option value="5">5+ miles</option>
-                        <option value="10">10+ miles</option>
-                        <option value="15">15+ miles</option>
-                        <option value="20">20+ miles</option>
-                        <option value="30">30+ miles</option>
+                    <span>📏 Length:</span>
+                    <select id="min-mileage-filter">
+                        <option value="0">Min</option>
+                        <option value="5">5 mi</option>
+                        <option value="10">10 mi</option>
+                        <option value="15">15 mi</option>
+                        <option value="20">20 mi</option>
+                        <option value="30">30 mi</option>
+                    </select>
+                    <span>to</span>
+                    <select id="max-mileage-filter">
+                        <option value="999">Max</option>
+                        <option value="5">5 mi</option>
+                        <option value="10">10 mi</option>
+                        <option value="15">15 mi</option>
+                        <option value="20">20 mi</option>
+                        <option value="30">30 mi</option>
+                        <option value="50">50 mi</option>
                     </select>
                 </div>
             </div>
@@ -880,7 +890,8 @@
         
         // Trail data loaded from JSON
         let trailsData = [];
-        let minMileage = 0;  // Mileage filter value
+        let minMileage = 0;   // Min mileage filter
+        let maxMileage = 999; // Max mileage filter
         let trailMarkers = [];  // Store trail markers for filtering
         
         // Create trail popup with navigation and info buttons
@@ -925,9 +936,13 @@
                     trailsLayer.addLayer(marker);
                 });
                 
-                // Set up mileage filter
-                document.getElementById('mileage-filter').addEventListener('change', function() {
+                // Set up mileage filters
+                document.getElementById('min-mileage-filter').addEventListener('change', function() {
                     minMileage = parseInt(this.value) || 0;
+                    applyMileageFilter();
+                });
+                document.getElementById('max-mileage-filter').addEventListener('change', function() {
+                    maxMileage = parseInt(this.value) || 999;
                     applyMileageFilter();
                 });
                 
@@ -944,7 +959,7 @@
             // Filter map markers
             trailMarkers.forEach(marker => {
                 const trail = marker.trailData;
-                if (trail.length >= minMileage) {
+                if (trail.length >= minMileage && trail.length <= maxMileage) {
                     if (!trailsLayer.hasLayer(marker)) {
                         trailsLayer.addLayer(marker);
                     }
@@ -954,7 +969,7 @@
             });
             
             // Update trail count to show filtered count
-            const filteredCount = trailsData.filter(t => t.length >= minMileage).length;
+            const filteredCount = trailsData.filter(t => t.length >= minMileage && t.length <= maxMileage).length;
             document.getElementById('trail-count').textContent = filteredCount;
             
             // Regenerate cards with filter
@@ -978,7 +993,7 @@
                 if (!stateInfo.container) return;
                 
                 const stateTrails = trailsData
-                    .filter(t => t.state === stateCode && t.length >= minMileage)
+                    .filter(t => t.state === stateCode && t.length >= minMileage && t.length <= maxMileage)
                     .sort((a, b) => {
                         // Sort by rating first, then by length
                         const ratingDiff = (b.rating || 0) - (a.rating || 0);
@@ -1030,8 +1045,12 @@
                 const sectionId = sectionIdMap[stateCode];
                 const titleEl = document.querySelector(`#${sectionId} .state-title`);
                 if (titleEl) {
-                    const totalInState = trailsData.filter(t => t.state === stateCode && t.length >= minMileage).length;
-                    const label = minMileage > 0 ? `${totalInState} trails (${minMileage}+ mi) →` : `${totalInState} trails →`;
+                    const totalInState = trailsData.filter(t => t.state === stateCode && t.length >= minMileage && t.length <= maxMileage).length;
+                    let label = `${totalInState} trails →`;
+                    if (minMileage > 0 || maxMileage < 999) {
+                        const range = maxMileage < 999 ? `${minMileage}-${maxMileage} mi` : `${minMileage}+ mi`;
+                        label = `${totalInState} trails (${range}) →`;
+                    }
                     titleEl.innerHTML = `${stateInfo.emoji} ${stateInfo.name} <span class="trail-count-badge" onclick="openTrailModal('${stateCode}', '${stateInfo.name}')">${label}</span>`;
                 }
             });
@@ -1045,14 +1064,17 @@
             
             // Get all trails for this state (respecting mileage filter)
             const stateTrails = trailsData
-                .filter(t => t.state === stateCode && t.length >= minMileage)
+                .filter(t => t.state === stateCode && t.length >= minMileage && t.length <= maxMileage)
                 .sort((a, b) => {
                     const ratingDiff = (b.rating || 0) - (a.rating || 0);
                     if (ratingDiff !== 0) return ratingDiff;
                     return (b.length || 0) - (a.length || 0);
                 });
             
-            const filterNote = minMileage > 0 ? ` (${minMileage}+ miles)` : '';
+            let filterNote = '';
+            if (minMileage > 0 || maxMileage < 999) {
+                filterNote = maxMileage < 999 ? ` (${minMileage}-${maxMileage} mi)` : ` (${minMileage}+ mi)`;
+            }
             title.textContent = `${stateName} Trails${filterNote} (${stateTrails.length})`;
             
             // Generate list items
