@@ -98,6 +98,39 @@
             display: none;
         }
         
+        /* Mileage Filter Dropdown */
+        .mileage-filter {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 25px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+        
+        .mileage-filter select {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+        
+        .mileage-filter select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .mileage-filter select option {
+            background: #1a1a2e;
+            color: white;
+        }
+        
         .charging-count {
             font-size: 0.75rem;
             background: rgba(0,0,0,0.3);
@@ -560,6 +593,17 @@
                     <input type="checkbox" id="toggle-charging">
                     ⚡ Charging Stations <span class="charging-count" id="charging-count">0</span>
                 </label>
+                <div class="mileage-filter">
+                    <span>📏 Min Length:</span>
+                    <select id="mileage-filter">
+                        <option value="0">All Trails</option>
+                        <option value="5">5+ miles</option>
+                        <option value="10">10+ miles</option>
+                        <option value="15">15+ miles</option>
+                        <option value="20">20+ miles</option>
+                        <option value="30">30+ miles</option>
+                    </select>
+                </div>
             </div>
             
             <!-- Trail Search Box -->
@@ -836,6 +880,8 @@
         
         // Trail data loaded from JSON
         let trailsData = [];
+        let minMileage = 0;  // Mileage filter value
+        let trailMarkers = [];  // Store trail markers for filtering
         
         // Create trail popup with navigation and info buttons
         function createTrailPopup(trail) {
@@ -867,14 +913,22 @@
                 console.log(`Loaded ${trailsData.length} trails`);
                 document.getElementById('trail-count').textContent = trailsData.length;
                 
-                // Add markers to map
+                // Add markers to map (store reference with trail data for filtering)
                 trailsData.forEach(trail => {
                     if (!trail.lat || !trail.lng) return;
                     
                     const icon = trailIcons[trail.state] || trailIcons['MA'];
                     const marker = L.marker([trail.lat, trail.lng], { icon })
                         .bindPopup(createTrailPopup(trail));
+                    marker.trailData = trail;  // Store trail data on marker
+                    trailMarkers.push(marker);
                     trailsLayer.addLayer(marker);
+                });
+                
+                // Set up mileage filter
+                document.getElementById('mileage-filter').addEventListener('change', function() {
+                    minMileage = parseInt(this.value) || 0;
+                    applyMileageFilter();
                 });
                 
                 // Generate trail cards
@@ -883,6 +937,28 @@
             } catch (error) {
                 console.error('Error loading trails:', error);
             }
+        }
+        
+        // Apply mileage filter to map markers and regenerate cards
+        function applyMileageFilter() {
+            // Filter map markers
+            trailMarkers.forEach(marker => {
+                const trail = marker.trailData;
+                if (trail.length >= minMileage) {
+                    if (!trailsLayer.hasLayer(marker)) {
+                        trailsLayer.addLayer(marker);
+                    }
+                } else {
+                    trailsLayer.removeLayer(marker);
+                }
+            });
+            
+            // Update trail count to show filtered count
+            const filteredCount = trailsData.filter(t => t.length >= minMileage).length;
+            document.getElementById('trail-count').textContent = filteredCount;
+            
+            // Regenerate cards with filter
+            generateTrailCards();
         }
         
         // Generate trail cards by state
@@ -896,13 +972,13 @@
                 'VT': { name: 'Vermont', emoji: '🏔️', container: document.querySelector('#vermont .trail-cards') }
             };
             
-            // Group trails by state and sort by rating/length
+            // Group trails by state, filter by mileage, and sort by rating/length
             Object.keys(states).forEach(stateCode => {
                 const stateInfo = states[stateCode];
                 if (!stateInfo.container) return;
                 
                 const stateTrails = trailsData
-                    .filter(t => t.state === stateCode)
+                    .filter(t => t.state === stateCode && t.length >= minMileage)
                     .sort((a, b) => {
                         // Sort by rating first, then by length
                         const ratingDiff = (b.rating || 0) - (a.rating || 0);
@@ -954,8 +1030,9 @@
                 const sectionId = sectionIdMap[stateCode];
                 const titleEl = document.querySelector(`#${sectionId} .state-title`);
                 if (titleEl) {
-                    const totalInState = trailsData.filter(t => t.state === stateCode).length;
-                    titleEl.innerHTML = `${stateInfo.emoji} ${stateInfo.name} <span class="trail-count-badge" onclick="openTrailModal('${stateCode}', '${stateInfo.name}')">${totalInState} trails →</span>`;
+                    const totalInState = trailsData.filter(t => t.state === stateCode && t.length >= minMileage).length;
+                    const label = minMileage > 0 ? `${totalInState} trails (${minMileage}+ mi) →` : `${totalInState} trails →`;
+                    titleEl.innerHTML = `${stateInfo.emoji} ${stateInfo.name} <span class="trail-count-badge" onclick="openTrailModal('${stateCode}', '${stateInfo.name}')">${label}</span>`;
                 }
             });
         }
@@ -966,16 +1043,17 @@
             const title = document.getElementById('modal-title');
             const list = document.getElementById('modal-trail-list');
             
-            // Get all trails for this state
+            // Get all trails for this state (respecting mileage filter)
             const stateTrails = trailsData
-                .filter(t => t.state === stateCode)
+                .filter(t => t.state === stateCode && t.length >= minMileage)
                 .sort((a, b) => {
                     const ratingDiff = (b.rating || 0) - (a.rating || 0);
                     if (ratingDiff !== 0) return ratingDiff;
                     return (b.length || 0) - (a.length || 0);
                 });
             
-            title.textContent = `All ${stateName} Trails (${stateTrails.length})`;
+            const filterNote = minMileage > 0 ? ` (${minMileage}+ miles)` : '';
+            title.textContent = `${stateName} Trails${filterNote} (${stateTrails.length})`;
             
             // Generate list items
             list.innerHTML = stateTrails.map(trail => {
