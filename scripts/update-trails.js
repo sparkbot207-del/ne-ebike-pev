@@ -83,10 +83,13 @@ function parseTrailPage(html, url, state) {
         trail.name = titleMatch[1].trim().replace(/\s+Trail$/i, ' Trail');
     }
     
-    // Extract length - look for patterns like "12.5 mi" or "Length: 12.5"
-    const lengthMatch = html.match(/(\d+\.?\d*)\s*mi(?:les?)?/i) || 
-                        html.match(/Length[:\s]+(\d+\.?\d*)/i);
-    if (lengthMatch) {
+    // Extract length - prefer the meta description "spans X.X" or explicit Length field
+    // Avoid matching promo text like "40,000 miles of trail maps"
+    const descForLength = html.match(/meta name="description" content="[^"]*?spans\s+(\d+\.?\d*)/i);
+    const lengthField = html.match(/Length[:\s]+(\d+\.?\d*)/i);
+    const lengthMatch = descForLength || lengthField || 
+                        html.match(/(?<![,\d])(\d+\.?\d*)\s*mi(?:les?)?/i);
+    if (lengthMatch && parseFloat(lengthMatch[1]) > 0) {
         trail.length = parseFloat(lengthMatch[1]);
     }
     
