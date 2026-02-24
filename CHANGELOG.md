@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.4] - 2026-02-24
+
+### Fixed
+- **Sitemap .html redirect errors** — Removed `.html` extensions from all sitemap URLs. Server 308-redirects `.html` → clean URLs, which Google Search Console flagged as 9 redirect errors.
+- **Footer nav links** — Removed `.html` extensions from footer links (laws, routes, home) to match clean URL pattern.
+
+### Added
+- **Last updated timestamp** in homepage footer.
+
+### Commits
+- 2e1c3dc: sitemap.xml fix
+- This commit: footer timestamp + nav link cleanup
+
 ## [1.1.3] - 2026-02-15
 
 ### Bug Fixes (Calculator Page)
