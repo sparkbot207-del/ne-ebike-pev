@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
     
     <!-- Google Maps Places API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEt2OQDTUrF39gN-BD9pdgOyKBeHusuww&libraries=places&loading=async&callback=initGooglePlaces" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEt2OQDTUrF39gN-BD9pdgOyKBeHusuww&libraries=places,geometry&loading=async&callback=initGooglePlaces" async defer></script>
     
     <style>
         /* Planner-specific styles */
@@ -1217,9 +1217,93 @@
         };
         
         // ============================================
-        // ROUTING (OpenRouteService)
+        // ROUTING (Google Directions API - BICYCLING mode)
         // ============================================
-        // Routing uses OSRM (free, no API key needed)
+        
+        // Google Directions API Router for Leaflet Routing Machine
+        const GoogleDirectionsRouter = L.Class.extend({
+            initialize: function(apiKey) {
+                this._apiKey = apiKey;
+            },
+            
+            route: function(waypoints, callback, context, options) {
+                const origin = waypoints[0].latLng;
+                const destination = waypoints[waypoints.length - 1].latLng;
+                
+                // Build waypoints param for intermediate stops
+                let waypointsParam = '';
+                if (waypoints.length > 2) {
+                    const intermediates = waypoints.slice(1, -1).map(wp => 
+                        `${wp.latLng.lat},${wp.latLng.lng}`
+                    ).join('|');
+                    waypointsParam = `&waypoints=${encodeURIComponent(intermediates)}`;
+                }
+                
+                const url = `https://maps.googleapis.com/maps/api/directions/json?` +
+                    `origin=${origin.lat},${origin.lng}` +
+                    `&destination=${destination.lat},${destination.lng}` +
+                    waypointsParam +
+                    `&mode=bicycling` +
+                    `&key=${this._apiKey}`;
+                
+                // Google Directions API doesn't support CORS from browser
+                // Use the Maps JS API DirectionsService instead
+                const directionsService = new google.maps.DirectionsService();
+                
+                const request = {
+                    origin: new google.maps.LatLng(origin.lat, origin.lng),
+                    destination: new google.maps.LatLng(destination.lat, destination.lng),
+                    travelMode: google.maps.TravelMode.BICYCLING,
+                    unitSystem: google.maps.UnitSystem.IMPERIAL
+                };
+                
+                // Add intermediate waypoints
+                if (waypoints.length > 2) {
+                    request.waypoints = waypoints.slice(1, -1).map(wp => ({
+                        location: new google.maps.LatLng(wp.latLng.lat, wp.latLng.lng),
+                        stopover: true
+                    }));
+                }
+                
+                directionsService.route(request, (result, status) => {
+                    if (status !== google.maps.DirectionsStatus.OK) {
+                        console.error('Google Directions error:', status);
+                        callback.call(context, { 
+                            status: -1, 
+                            message: status === 'ZERO_RESULTS' 
+                                ? 'No bike route found between these points' 
+                                : `Routing error: ${status}` 
+                        });
+                        return;
+                    }
+                    
+                    const route = result.routes[0];
+                    
+                    // Decode the overview polyline
+                    const path = google.maps.geometry.encoding.decodePath(route.overview_polyline);
+                    const coordinates = path.map(p => L.latLng(p.lat(), p.lng()));
+                    
+                    // Sum up distance and duration across all legs
+                    let totalDistance = 0;
+                    let totalTime = 0;
+                    route.legs.forEach(leg => {
+                        totalDistance += leg.distance.value; // meters
+                        totalTime += leg.duration.value; // seconds
+                    });
+                    
+                    callback.call(context, null, [{
+                        name: 'Bike Route',
+                        coordinates: coordinates,
+                        summary: {
+                            totalDistance: totalDistance,
+                            totalTime: totalTime
+                        },
+                        inputWaypoints: waypoints,
+                        waypoints: waypoints
+                    }]);
+                });
+            }
+        });
         
         function updateRoute() {
             if (waypoints.length < 2) {
@@ -1239,13 +1323,10 @@
             if (routingControl) {
                 routingControl.setWaypoints(waypointLatLngs);
             } else {
-                // Use OSRM (free public bike routing)
+                // Use Google Directions API (BICYCLING mode - bike lanes, paths, avoids highways)
                 routingControl = L.Routing.control({
                     waypoints: waypointLatLngs,
-                    router: L.Routing.osrmv1({
-                        serviceUrl: 'https://router.project-osrm.org/route/v1',
-                        profile: 'bike'
-                    }),
+                    router: new GoogleDirectionsRouter('AIzaSyDEt2OQDTUrF39gN-BD9pdgOyKBeHusuww'),
                     lineOptions: {
                         styles: [
                             { color: '#3b82f6', weight: 6, opacity: 0.8 },
