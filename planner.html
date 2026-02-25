@@ -1291,9 +1291,31 @@
                         totalTime += leg.duration.value; // seconds
                     });
                     
+                    // Build instructions array from steps (Leaflet Routing Machine requires this)
+                    const instructions = [];
+                    let coordIndex = 0;
+                    route.legs.forEach(leg => {
+                        leg.steps.forEach(step => {
+                            instructions.push({
+                                type: step.maneuver || 'Straight',
+                                text: step.instructions || '',
+                                distance: step.distance.value,
+                                time: step.duration.value,
+                                index: coordIndex
+                            });
+                            // Approximate coord index from step path length
+                            if (step.path) {
+                                coordIndex += google.maps.geometry.encoding.decodePath(step.polyline.points).length;
+                            } else {
+                                coordIndex += 1;
+                            }
+                        });
+                    });
+                    
                     callback.call(context, null, [{
                         name: 'Bike Route',
                         coordinates: coordinates,
+                        instructions: instructions,
                         summary: {
                             totalDistance: totalDistance,
                             totalTime: totalTime
