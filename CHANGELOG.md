@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.1.5] - 2026-02-25
+
+### Security
+- **Removed exposed API keys** — Replaced old Google Maps API key (public in git history) with new domain-restricted key
+- **Fixed referrer restrictions** — Updated API key website restrictions to use wildcards (`https://newenglandebike.org/*`, `https://www.newenglandebike.org/*`) instead of specific URLs
+- **Removed third-party keys** — Eliminated OpenRouteService API key entirely
+
+### Routing Improvements
+- **Switched to Google Directions API** with BICYCLING mode (prefers bike lanes, avoids highways)
+- **Added geometry library** for polyline encoding/decoding
+- **Fixed route visualization** — Routes now draw on map with proper turn-by-turn instructions
+
+### Bug Fixes
+- Fixed missing `</script>` tag blocking Leaflet load
+- Fixed Nominatim CORS error (removed forbidden User-Agent header)
+- Fixed route rendering by adding instructions array for Leaflet Routing Machine
+
+### Commits
+- eda6d99: Replace exposed API keys with domain-restricted key
+- c6a6b8c: Fix missing </script> tag
+- 6be092a: Revert to OSRM routing, fix Nominatim CORS (temporary)
+- 0ce5620: Switch to Google Directions API with BICYCLING mode
+- 6d41fcb: Fix route drawing - add instructions array
+
 ## [1.1.4] - 2026-02-24
 
 ### Fixed
