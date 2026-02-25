@@ -1219,141 +1219,7 @@
         // ============================================
         // ROUTING (OpenRouteService)
         // ============================================
-        // Google Routes API Key (restricted to newenglandebike.org)
-        const GOOGLE_ROUTES_API_KEY = 'AIzaSyDEt2OQDTUrF39gN-BD9pdgOyKBeHusuww';
-        
-        // Custom Google Routes API Router for Leaflet Routing Machine
-        const GoogleRoutesRouter = L.Class.extend({
-            options: {
-                serviceUrl: 'https://routes.googleapis.com/directions/v2:computeRoutes'
-            },
-            
-            initialize: function(apiKey, options) {
-                this._apiKey = apiKey;
-                L.setOptions(this, options);
-            },
-            
-            route: function(waypoints, callback, context, options) {
-                const origin = waypoints[0].latLng;
-                const destination = waypoints[waypoints.length - 1].latLng;
-                
-                // Build intermediates (waypoints between origin and destination)
-                const intermediates = waypoints.slice(1, -1).map(wp => ({
-                    location: {
-                        latLng: { latitude: wp.latLng.lat, longitude: wp.latLng.lng }
-                    }
-                }));
-                
-                const body = {
-                    origin: {
-                        location: {
-                            latLng: { latitude: origin.lat, longitude: origin.lng }
-                        }
-                    },
-                    destination: {
-                        location: {
-                            latLng: { latitude: destination.lat, longitude: destination.lng }
-                        }
-                    },
-                    travelMode: 'BICYCLE',
-                    routingPreference: 'TRAFFIC_AWARE',
-                    computeAlternativeRoutes: false,
-                    polylineEncoding: 'ENCODED_POLYLINE'
-                };
-                
-                if (intermediates.length > 0) {
-                    body.intermediates = intermediates;
-                }
-                
-                fetch(this.options.serviceUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-Goog-Api-Key': this._apiKey,
-                        'X-Goog-FieldMask': 'routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline,routes.legs'
-                    },
-                    body: JSON.stringify(body)
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        return response.json().then(err => {
-                            throw new Error(err.error?.message || `HTTP ${response.status}`);
-                        });
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (!data.routes || data.routes.length === 0) {
-                        callback.call(context, { status: -1, message: 'No route found - try waypoints closer to roads' });
-                        return;
-                    }
-                    
-                    const route = data.routes[0];
-                    const encoded = route.polyline?.encodedPolyline;
-                    
-                    if (!encoded) {
-                        callback.call(context, { status: -1, message: 'Invalid route data' });
-                        return;
-                    }
-                    
-                    let coordinates;
-                    try {
-                        coordinates = this._decodePolyline(encoded);
-                    } catch (e) {
-                        console.error('Polyline decode error:', e);
-                        callback.call(context, { status: -1, message: 'Error decoding route' });
-                        return;
-                    }
-                    
-                    // Parse duration (e.g. "1234s" → 1234)
-                    const durationSec = route.duration ? parseInt(route.duration.replace('s', '')) : 0;
-                    
-                    callback.call(context, null, [{
-                        name: 'Bike Route',
-                        coordinates: coordinates,
-                        summary: {
-                            totalDistance: route.distanceMeters || 0,
-                            totalTime: durationSec
-                        },
-                        inputWaypoints: waypoints,
-                        waypoints: waypoints
-                    }]);
-                })
-                .catch(error => {
-                    console.error('Google Routes error:', error);
-                    callback.call(context, { status: -1, message: error.message });
-                });
-            },
-            
-            // Decode standard Google encoded polyline (precision 5)
-            _decodePolyline: function(encoded) {
-                let points = [];
-                let index = 0, lat = 0, lng = 0;
-                
-                while (index < encoded.length) {
-                    let b, shift = 0, result = 0;
-                    do {
-                        b = encoded.charCodeAt(index++) - 63;
-                        result |= (b & 0x1f) << shift;
-                        shift += 5;
-                    } while (b >= 0x20);
-                    lat += ((result & 1) ? ~(result >> 1) : (result >> 1));
-                    
-                    shift = 0;
-                    result = 0;
-                    do {
-                        b = encoded.charCodeAt(index++) - 63;
-                        result |= (b & 0x1f) << shift;
-                        shift += 5;
-                    } while (b >= 0x20);
-                    lng += ((result & 1) ? ~(result >> 1) : (result >> 1));
-                    
-                    points.push(L.latLng(lat / 1e5, lng / 1e5));
-                }
-                
-                return points;
-            }
-        });
+        // Routing uses OSRM (free, no API key needed)
         
         function updateRoute() {
             if (waypoints.length < 2) {
@@ -1373,10 +1239,13 @@
             if (routingControl) {
                 routingControl.setWaypoints(waypointLatLngs);
             } else {
-                // Use Google Routes API (bicycle routing)
+                // Use OSRM (free public bike routing)
                 routingControl = L.Routing.control({
                     waypoints: waypointLatLngs,
-                    router: new GoogleRoutesRouter(GOOGLE_ROUTES_API_KEY),
+                    router: L.Routing.osrmv1({
+                        serviceUrl: 'https://router.project-osrm.org/route/v1',
+                        profile: 'bike'
+                    }),
                     lineOptions: {
                         styles: [
                             { color: '#3b82f6', weight: 6, opacity: 0.8 },
@@ -2187,7 +2056,7 @@
                 `bounded=0`,
                 {
                     headers: {
-                        'User-Agent': 'NE-EBike-Route-Planner/1.0'
+                        'Accept': 'application/json'
                     }
                 }
             );
