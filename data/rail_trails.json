@@ -3,7 +3,14 @@
     "generated": "2026-02-07",
     "source": "TrailLink.com",
     "region": "New England",
-    "states": ["CT", "ME", "MA", "NH", "RI", "VT"],
+    "states": [
+      "CT",
+      "ME",
+      "MA",
+      "NH",
+      "RI",
+      "VT"
+    ],
     "total_trails": 318,
     "total_miles": 2508.9,
     "note": "Includes cross-border trails (NY/VT, MA/NH, MA/RI)"
@@ -19,7 +26,11 @@
       "lng": -72.15,
       "cities": "East Hampton to Putnam",
       "url": "https://www.traillink.com/trail/air-line-state-park-trail/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 41.575515,
+      "startLng": -72.502439,
+      "endLat": 41.920921,
+      "endLng": -71.90213
     },
     {
       "name": "Farmington Canal Heritage Trail",
@@ -31,7 +42,11 @@
       "lng": -72.92,
       "cities": "New Haven to Suffield",
       "url": "https://www.traillink.com/trail/farmington-canal-heritage-trail/",
-      "rating": 4.7
+      "rating": 4.7,
+      "startLat": 41.308274,
+      "startLng": -72.927883,
+      "endLat": 41.991506,
+      "endLng": -72.701774
     },
     {
       "name": "Hop River State Park Trail",
@@ -43,7 +58,11 @@
       "lng": -72.35,
       "cities": "Manchester to Willimantic",
       "url": "https://www.traillink.com/trail/hop-river-state-park-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 41.77593,
+      "startLng": -72.521501,
+      "endLat": 41.710654,
+      "endLng": -72.208134
     },
     {
       "name": "Charter Oak Greenway",
@@ -55,7 +74,11 @@
       "lng": -72.58,
       "cities": "Hartford to Bolton",
       "url": "https://www.traillink.com/trail/charter-oak-greenway/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 41.765804,
+      "startLng": -72.673372,
+      "endLat": 41.768988,
+      "endLng": -72.433417
     },
     {
       "name": "Farmington River Trail",
@@ -67,7 +90,11 @@
       "lng": -72.82,
       "cities": "Farmington to Canton",
       "url": "https://www.traillink.com/trail/farmington-river-trail/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 41.73603,
+      "startLng": -72.795027,
+      "endLat": 41.824757,
+      "endLng": -72.895618
     },
     {
       "name": "Pequonnock River Trail",
@@ -79,7 +106,11 @@
       "lng": -73.21,
       "cities": "Bridgeport to Trumbull",
       "url": "https://www.traillink.com/trail/pequonnock-river-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 41.17989,
+      "startLng": -73.192329,
+      "endLat": 41.242856,
+      "endLng": -73.200664
     },
     {
       "name": "Norwalk River Valley Trail",
@@ -91,7 +122,11 @@
       "lng": -73.43,
       "cities": "Norwalk to Wilton",
       "url": "https://www.traillink.com/trail/norwalk-river-valley-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 41.113852,
+      "startLng": -73.407653,
+      "endLat": 41.195374,
+      "endLng": -73.437899
     },
     {
       "name": "Larkin State Park Trail",
@@ -103,7 +138,11 @@
       "lng": -73.05,
       "cities": "Naugatuck to Middlebury",
       "url": "https://www.traillink.com/trail/larkin-state-park-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.485921,
+      "startLng": -73.050697,
+      "endLat": 41.527874,
+      "endLng": -73.127611
     },
     {
       "name": "Naugatuck River Greenway",
@@ -115,7 +154,11 @@
       "lng": -73.05,
       "cities": "Naugatuck to Beacon Falls",
       "url": "https://www.traillink.com/trail/naugatuck-river-greenway/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 41.485921,
+      "startLng": -73.050697,
+      "endLat": 41.442645,
+      "endLng": -73.061761
     },
     {
       "name": "Moosup Valley State Park Trail",
@@ -127,7 +170,11 @@
       "lng": -71.88,
       "cities": "Moosup to Sterling",
       "url": "https://www.traillink.com/trail/moosup-valley-state-park-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 41.712877,
+      "startLng": -71.880905,
+      "endLat": 41.707374,
+      "endLng": -71.829011
     },
     {
       "name": "Windsor Locks Canal State Park Trail",
@@ -139,7 +186,11 @@
       "lng": -72.63,
       "cities": "Windsor Locks to Suffield",
       "url": "https://www.traillink.com/trail/windsor-locks-canal-state-park-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 41.924292,
+      "startLng": -72.645447,
+      "endLat": 41.991506,
+      "endLng": -72.701774
     },
     {
       "name": "New Milford River Trail",
@@ -151,7 +202,11 @@
       "lng": -73.41,
       "cities": "New Milford",
       "url": "https://www.traillink.com/trail/new-milford-river-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 41.58,
+      "startLng": -73.41,
+      "endLat": 41.58,
+      "endLng": -73.41
     },
     {
       "name": "Quinebaug River Trail",
@@ -163,7 +218,11 @@
       "lng": -71.87,
       "cities": "Putnam to Danielson",
       "url": "https://www.traillink.com/trail/quinebaug-river-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 41.920921,
+      "startLng": -71.90213,
+      "endLat": 41.802599,
+      "endLng": -71.885905
     },
     {
       "name": "Shoreline Greenway Trail",
@@ -175,7 +234,11 @@
       "lng": -72.53,
       "cities": "East Haven to Branford",
       "url": "https://www.traillink.com/trail/shoreline-greenway-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.277999,
+      "startLng": -72.87199,
+      "endLat": 41.282712,
+      "endLng": -72.810471
     },
     {
       "name": "Captain John Bissell Trail",
@@ -187,7 +250,11 @@
       "lng": -72.63,
       "cities": "Windsor to South Windsor",
       "url": "https://www.traillink.com/trail/captain-john-bissell-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 41.852598,
+      "startLng": -72.643702,
+      "endLat": 41.848987,
+      "endLng": -72.571755
     },
     {
       "name": "Middlebury Greenway",
@@ -199,7 +266,11 @@
       "lng": -73.13,
       "cities": "Middlebury",
       "url": "https://www.traillink.com/trail/middlebury-greenway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.53,
+      "startLng": -73.13,
+      "endLat": 41.53,
+      "endLng": -73.13
     },
     {
       "name": "CTfastrak Multi-Use Trail",
@@ -211,7 +282,11 @@
       "lng": -72.78,
       "cities": "New Britain to Hartford",
       "url": "https://www.traillink.com/trail/ctfastrak-multi-use-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 41.667768,
+      "startLng": -72.781875,
+      "endLat": 41.765804,
+      "endLng": -72.673372
     },
     {
       "name": "Vernon Rails-to-Trails",
@@ -223,7 +298,11 @@
       "lng": -72.45,
       "cities": "Vernon to Rockville",
       "url": "https://www.traillink.com/trail/vernon-rails-to-trails-(hop-river-state-park-rockville-spur)/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 41.81868,
+      "startLng": -72.479037,
+      "endLat": 41.866765,
+      "endLng": -72.449529
     },
     {
       "name": "Sue Grossman Still River Greenway",
@@ -231,11 +310,15 @@
       "length": 3.4,
       "surface": "Asphalt",
       "description": "Paved greenway in Torrington along the Still River.",
-      "lat": 41.80,
+      "lat": 41.8,
       "lng": -73.12,
       "cities": "Torrington",
       "url": "https://www.traillink.com/trail/sue-grossman-still-river-greenway/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 41.8,
+      "startLng": -73.12,
+      "endLat": 41.8,
+      "endLng": -73.12
     },
     {
       "name": "Billings Trail",
@@ -247,7 +330,11 @@
       "lng": -72.08,
       "cities": "Groton",
       "url": "https://www.traillink.com/trail/billings-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 41.35,
+      "startLng": -72.08,
+      "endLat": 41.35,
+      "endLng": -72.08
     },
     {
       "name": "Kress Family Trail",
@@ -256,10 +343,14 @@
       "surface": "Dirt",
       "description": "Natural trail through wooded areas.",
       "lat": 41.55,
-      "lng": -73.20,
+      "lng": -73.2,
       "cities": "Newtown",
       "url": "https://www.traillink.com/trail/kress-family-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 41.55,
+      "startLng": -73.2,
+      "endLat": 41.55,
+      "endLng": -73.2
     },
     {
       "name": "Mattabassett Trolley Trail",
@@ -271,7 +362,11 @@
       "lng": -72.65,
       "cities": "Middletown to Berlin",
       "url": "https://www.traillink.com/trail/mattabassett-trolley-trail-/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.562321,
+      "startLng": -72.650649,
+      "endLat": 41.621488,
+      "endLng": -72.745652
     },
     {
       "name": "Litchfield Community Greenway",
@@ -283,7 +378,11 @@
       "lng": -73.18,
       "cities": "Litchfield",
       "url": "https://www.traillink.com/trail/litchfield-community-greenway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.75,
+      "startLng": -73.18,
+      "endLat": 41.75,
+      "endLng": -73.18
     },
     {
       "name": "Ridgefield Rail Trail",
@@ -292,10 +391,14 @@
       "surface": "Gravel",
       "description": "Gravel trail through scenic Ridgefield.",
       "lat": 41.28,
-      "lng": -73.50,
+      "lng": -73.5,
       "cities": "Ridgefield",
       "url": "https://www.traillink.com/trail/ridgefield-rail-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 41.28,
+      "startLng": -73.5,
+      "endLat": 41.28,
+      "endLng": -73.5
     },
     {
       "name": "Middletown Westlake Area Bikeway",
@@ -307,7 +410,11 @@
       "lng": -72.68,
       "cities": "Middletown",
       "url": "https://www.traillink.com/trail/middletown-westlake-area-bikeway-/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 41.55,
+      "startLng": -72.68,
+      "endLat": 41.55,
+      "endLng": -72.68
     },
     {
       "name": "Fairfield Hills Campus Walking Trails",
@@ -315,11 +422,15 @@
       "length": 2.1,
       "surface": "Asphalt",
       "description": "Trail system on historic Fairfield Hills campus grounds.",
-      "lat": 41.40,
-      "lng": -73.30,
+      "lat": 41.4,
+      "lng": -73.3,
       "cities": "Newtown",
       "url": "https://www.traillink.com/trail/fairfield-hills-campus-walking-trails/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 41.4,
+      "startLng": -73.3,
+      "endLat": 41.4,
+      "endLng": -73.3
     },
     {
       "name": "Quinnipiac Linear Trail",
@@ -328,10 +439,14 @@
       "surface": "Asphalt, Gravel",
       "description": "Linear trail along the Quinnipiac River.",
       "lat": 41.53,
-      "lng": -72.80,
+      "lng": -72.8,
       "cities": "Southington to Cheshire",
       "url": "https://www.traillink.com/trail/quinnipiac-linear-trail-/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 41.596487,
+      "startLng": -72.877601,
+      "endLat": 41.508367,
+      "endLng": -72.91062
     },
     {
       "name": "Putnam River Trail",
@@ -343,7 +458,11 @@
       "lng": -71.91,
       "cities": "Putnam",
       "url": "https://www.traillink.com/trail/putnam-river-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.91,
+      "startLng": -71.91,
+      "endLat": 41.91,
+      "endLng": -71.91
     },
     {
       "name": "Derby Greenway",
@@ -355,7 +474,11 @@
       "lng": -73.09,
       "cities": "Derby",
       "url": "https://www.traillink.com/trail/derby-greenway/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 41.32,
+      "startLng": -73.09,
+      "endLat": 41.32,
+      "endLng": -73.09
     },
     {
       "name": "Bloomfield Greenway Multi-Use Trail",
@@ -367,7 +490,11 @@
       "lng": -72.73,
       "cities": "Bloomfield",
       "url": "https://www.traillink.com/trail/bloomfield-greenway-multi-use-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.82,
+      "startLng": -72.73,
+      "endLat": 41.82,
+      "endLng": -72.73
     },
     {
       "name": "Railroad Ramble",
@@ -379,7 +506,11 @@
       "lng": -73.35,
       "cities": "Salisbury",
       "url": "https://www.traillink.com/trail/railroad-ramble/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 41.95,
+      "startLng": -73.35,
+      "endLat": 41.95,
+      "endLng": -73.35
     },
     {
       "name": "Hartford Riverwalk",
@@ -391,7 +522,11 @@
       "lng": -72.67,
       "cities": "Hartford",
       "url": "https://www.traillink.com/trail/hartford-riverwalk/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 41.77,
+      "startLng": -72.67,
+      "endLat": 41.77,
+      "endLng": -72.67
     },
     {
       "name": "Cheney Rail Trail",
@@ -403,7 +538,11 @@
       "lng": -72.52,
       "cities": "Manchester",
       "url": "https://www.traillink.com/trail/cheney-rail-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 41.77,
+      "startLng": -72.52,
+      "endLat": 41.77,
+      "endLng": -72.52
     },
     {
       "name": "G & S Trolley Trail",
@@ -411,11 +550,15 @@
       "length": 1.6,
       "surface": "Asphalt, Crushed Stone",
       "description": "Historic trolley corridor trail.",
-      "lat": 41.40,
+      "lat": 41.4,
       "lng": -73.42,
       "cities": "Danbury",
       "url": "https://www.traillink.com/trail/g--s-trolley-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 41.4,
+      "startLng": -73.42,
+      "endLat": 41.4,
+      "endLng": -73.42
     },
     {
       "name": "Quinnipiac River Gorge Trail",
@@ -427,7 +570,11 @@
       "lng": -72.88,
       "cities": "Meriden",
       "url": "https://www.traillink.com/trail/quinnipiac-river-gorge-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 41.45,
+      "startLng": -72.88,
+      "endLat": 41.45,
+      "endLng": -72.88
     },
     {
       "name": "Stratton Brook State Park Trail",
@@ -439,7 +586,11 @@
       "lng": -72.82,
       "cities": "Simsbury",
       "url": "https://www.traillink.com/trail/stratton-brook-state-park-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.87,
+      "startLng": -72.82,
+      "endLat": 41.87,
+      "endLng": -72.82
     },
     {
       "name": "Savin Rock Trail",
@@ -451,7 +602,11 @@
       "lng": -72.96,
       "cities": "West Haven",
       "url": "https://www.traillink.com/trail/savin-rock-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 41.26,
+      "startLng": -72.96,
+      "endLat": 41.26,
+      "endLng": -72.96
     },
     {
       "name": "Niantic Bay Boardwalk",
@@ -460,10 +615,14 @@
       "surface": "Boardwalk, Concrete, Gravel",
       "description": "Scenic boardwalk along Niantic Bay with beach views.",
       "lat": 41.32,
-      "lng": -72.20,
+      "lng": -72.2,
       "cities": "Niantic",
       "url": "https://www.traillink.com/trail/niantic-bay-boardwalk/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 41.32,
+      "startLng": -72.2,
+      "endLat": 41.32,
+      "endLng": -72.2
     },
     {
       "name": "Hanover Pond Trail",
@@ -472,10 +631,14 @@
       "surface": "Asphalt",
       "description": "Paved trail around Hanover Pond.",
       "lat": 41.44,
-      "lng": -72.90,
+      "lng": -72.9,
       "cities": "Meriden",
       "url": "https://www.traillink.com/trail/hanover-pond-trail-/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 41.44,
+      "startLng": -72.9,
+      "endLat": 41.44,
+      "endLng": -72.9
     },
     {
       "name": "Windsor River Trail",
@@ -487,7 +650,11 @@
       "lng": -72.64,
       "cities": "Windsor",
       "url": "https://www.traillink.com/trail/windsor-river-trail-/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 41.85,
+      "startLng": -72.64,
+      "endLat": 41.85,
+      "endLng": -72.64
     },
     {
       "name": "Trolley Trail (CT)",
@@ -499,7 +666,11 @@
       "lng": -73.02,
       "cities": "Milford",
       "url": "https://www.traillink.com/trail/trolley-trail-(ct)/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 41.28,
+      "startLng": -73.02,
+      "endLat": 41.28,
+      "endLng": -73.02
     },
     {
       "name": "Branford Trolley Trail",
@@ -511,7 +682,11 @@
       "lng": -72.77,
       "cities": "Branford",
       "url": "https://www.traillink.com/trail/branford-trolley-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 41.28,
+      "startLng": -72.77,
+      "endLat": 41.28,
+      "endLng": -72.77
     },
     {
       "name": "Down East Sunrise Trail",
@@ -523,7 +698,11 @@
       "lng": -67.75,
       "cities": "Ellsworth to Ayers Junction",
       "url": "https://www.traillink.com/trail/down-east-sunrise-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 44.541139,
+      "startLng": -68.425035,
+      "endLat": 44.99073,
+      "endLng": -67.24849
     },
     {
       "name": "Bangor and Aroostook Trail",
@@ -535,7 +714,11 @@
       "lng": -68.55,
       "cities": "Van Buren to Stockholm",
       "url": "https://www.traillink.com/trail/bangor-and-aroostook-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 47.157296,
+      "startLng": -67.935304,
+      "endLat": 47.042264,
+      "endLng": -68.139476
     },
     {
       "name": "Acadia National Park Carriage Roads",
@@ -547,7 +730,11 @@
       "lng": -68.21,
       "cities": "Bar Harbor",
       "url": "https://www.traillink.com/trail/acadia-national-park-carriage-roads/",
-      "rating": 4.9
+      "rating": 4.9,
+      "startLat": 44.35,
+      "startLng": -68.21,
+      "endLat": 44.35,
+      "endLng": -68.21
     },
     {
       "name": "Kennebec Valley Trail",
@@ -559,7 +746,11 @@
       "lng": -69.77,
       "cities": "Bingham to Solon",
       "url": "https://www.traillink.com/trail/kennebec-valley-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 45.058679,
+      "startLng": -69.882306,
+      "endLat": 44.949502,
+      "endLng": -69.858391
     },
     {
       "name": "Southern Bangor and Aroostook Trail",
@@ -571,7 +762,11 @@
       "lng": -68.45,
       "cities": "Oakfield to Houlton",
       "url": "https://www.traillink.com/trail/southern-bangor-and-aroostook-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 46.100643,
+      "startLng": -68.158719,
+      "endLat": 46.125278,
+      "endLng": -67.841665
     },
     {
       "name": "Four Seasons Adventure Trail",
@@ -583,7 +778,11 @@
       "lng": -70.55,
       "cities": "Farmington to Jay",
       "url": "https://www.traillink.com/trail/four-seasons-adventure-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 44.6705,
+      "startLng": -70.151217,
+      "endLat": 44.503926,
+      "endLng": -70.216192
     },
     {
       "name": "Eastern Trail",
@@ -595,7 +794,11 @@
       "lng": -70.38,
       "cities": "Kennebunk to South Portland",
       "url": "https://www.traillink.com/trail/eastern-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 43.384549,
+      "startLng": -70.543646,
+      "endLat": 43.641472,
+      "endLng": -70.240881
     },
     {
       "name": "Aroostook Valley Trail",
@@ -607,7 +810,11 @@
       "lng": -67.88,
       "cities": "Caribou to Fort Fairfield",
       "url": "https://www.traillink.com/trail/aroostook-valley-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 46.863999,
+      "startLng": -67.998036,
+      "endLat": 46.77274,
+      "endLng": -67.835741
     },
     {
       "name": "Saint John Valley Heritage Trail",
@@ -619,7 +826,11 @@
       "lng": -68.35,
       "cities": "Fort Kent to St. Francis",
       "url": "https://www.traillink.com/trail/saint-john-valley-heritage-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 47.258671,
+      "startLng": -68.589466,
+      "endLat": 47.171147,
+      "endLng": -68.889764
     },
     {
       "name": "Whistle Stop Rail-Trail",
@@ -631,7 +842,11 @@
       "lng": -70.85,
       "cities": "Lewiston to Lisbon",
       "url": "https://www.traillink.com/trail/whistle-stop-rail-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 44.100351,
+      "startLng": -70.214776,
+      "endLat": 44.031601,
+      "endLng": -70.10437
     },
     {
       "name": "Lagrange to Medford Trail",
@@ -643,7 +858,11 @@
       "lng": -68.88,
       "cities": "Lagrange to Medford",
       "url": "https://www.traillink.com/trail/lagrange-to-medford-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 45.16683,
+      "startLng": -68.844778,
+      "endLat": 45.285331,
+      "endLng": -68.851701
     },
     {
       "name": "Mountain Division Trail",
@@ -655,7 +874,11 @@
       "lng": -70.48,
       "cities": "Windham to Standish",
       "url": "https://www.traillink.com/trail/mountain-division-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 43.789418,
+      "startLng": -70.408387,
+      "endLat": 43.735593,
+      "endLng": -70.550936
     },
     {
       "name": "Pittsfield Rail Trail",
@@ -667,7 +890,11 @@
       "lng": -69.38,
       "cities": "Pittsfield to Burnham",
       "url": "https://www.traillink.com/trail/pittsfield-rail-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 44.783103,
+      "startLng": -69.382097,
+      "endLat": 44.692772,
+      "endLng": -69.429231
     },
     {
       "name": "Kennebec River Rail Trail",
@@ -679,7 +906,11 @@
       "lng": -69.78,
       "cities": "Augusta to Gardiner",
       "url": "https://www.traillink.com/trail/kennebec-river-rail-trail/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 44.316496,
+      "startLng": -69.76811,
+      "endLat": 44.23007,
+      "endLng": -69.775322
     },
     {
       "name": "Sanford-Springvale Rail Trail",
@@ -691,7 +922,11 @@
       "lng": -70.78,
       "cities": "Sanford to Springvale",
       "url": "https://www.traillink.com/trail/sanford-springvale-rail-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 43.438809,
+      "startLng": -70.775058,
+      "endLat": 43.466748,
+      "endLng": -70.79367
     },
     {
       "name": "South Portland Greenbelt Walkway",
@@ -703,7 +938,11 @@
       "lng": -70.28,
       "cities": "South Portland",
       "url": "https://www.traillink.com/trail/south-portland-greenbelt-walkway/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 43.64,
+      "startLng": -70.28,
+      "endLat": 43.64,
+      "endLng": -70.28
     },
     {
       "name": "Narrow Gauge Pathway",
@@ -715,7 +954,11 @@
       "lng": -70.21,
       "cities": "Farmington",
       "url": "https://www.traillink.com/trail/narrow-gauge-pathway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.78,
+      "startLng": -70.21,
+      "endLat": 44.78,
+      "endLng": -70.21
     },
     {
       "name": "Sherman to Patten Trail",
@@ -727,7 +970,11 @@
       "lng": -68.42,
       "cities": "Sherman to Patten",
       "url": "https://www.traillink.com/trail/sherman-to-patten-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 45.871163,
+      "startLng": -68.417806,
+      "endLat": 45.996439,
+      "endLng": -68.446142
     },
     {
       "name": "Meduxnekeag River Trail",
@@ -739,7 +986,11 @@
       "lng": -67.84,
       "cities": "Houlton",
       "url": "https://www.traillink.com/trail/meduxnekeag-river-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 46.13,
+      "startLng": -67.84,
+      "endLat": 46.13,
+      "endLng": -67.84
     },
     {
       "name": "Presque Isle Bike Path",
@@ -751,7 +1002,11 @@
       "lng": -68.02,
       "cities": "Presque Isle",
       "url": "https://www.traillink.com/trail/presque-isle-bike-path/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 46.68,
+      "startLng": -68.02,
+      "endLat": 46.68,
+      "endLng": -68.02
     },
     {
       "name": "Papermill Trail",
@@ -763,7 +1018,11 @@
       "lng": -69.97,
       "cities": "Brunswick to Topsham",
       "url": "https://www.traillink.com/trail/papermill-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 43.914614,
+      "startLng": -69.964905,
+      "endLat": 43.937062,
+      "endLng": -69.966509
     },
     {
       "name": "Back Cove Trail",
@@ -775,7 +1034,11 @@
       "lng": -70.27,
       "cities": "Portland",
       "url": "https://www.traillink.com/trail/back-cove-trail/",
-      "rating": 4.6
+      "rating": 4.6,
+      "startLat": 43.67,
+      "startLng": -70.27,
+      "endLat": 43.67,
+      "endLng": -70.27
     },
     {
       "name": "Old Pond Railway Trail",
@@ -787,7 +1050,11 @@
       "lng": -70.42,
       "cities": "Freeport",
       "url": "https://www.traillink.com/trail/old-pond-railway-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 43.95,
+      "startLng": -70.42,
+      "endLat": 43.95,
+      "endLng": -70.42
     },
     {
       "name": "Androscoggin River Bicycle Path",
@@ -799,7 +1066,11 @@
       "lng": -69.97,
       "cities": "Brunswick",
       "url": "https://www.traillink.com/trail/androscoggin-river-bicycle-path/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 43.91,
+      "startLng": -69.97,
+      "endLat": 43.91,
+      "endLng": -69.97
     },
     {
       "name": "Fore River Parkway Trail",
@@ -808,10 +1079,14 @@
       "surface": "Asphalt",
       "description": "Paved trail along Fore River in Portland area.",
       "lat": 43.65,
-      "lng": -70.30,
+      "lng": -70.3,
       "cities": "Portland",
       "url": "https://www.traillink.com/trail/fore-river-parkway-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 43.65,
+      "startLng": -70.3,
+      "endLat": 43.65,
+      "endLng": -70.3
     },
     {
       "name": "University of Maine Bicycle Path",
@@ -819,11 +1094,15 @@
       "length": 2.5,
       "surface": "Asphalt",
       "description": "Campus trail at University of Maine.",
-      "lat": 44.90,
+      "lat": 44.9,
       "lng": -68.67,
       "cities": "Orono",
       "url": "https://www.traillink.com/trail/university-of-maine-bicycle-path/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.9,
+      "startLng": -68.67,
+      "endLat": 44.9,
+      "endLng": -68.67
     },
     {
       "name": "Belfast Rail Trail on the Passagassawaukeag",
@@ -835,7 +1114,11 @@
       "lng": -69.01,
       "cities": "Belfast",
       "url": "https://www.traillink.com/trail/belfast-rail-trail-on-the-passagassawaukeag/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 44.43,
+      "startLng": -69.01,
+      "endLat": 44.43,
+      "endLng": -69.01
     },
     {
       "name": "Eastern Promenade Trail",
@@ -847,7 +1130,11 @@
       "lng": -70.25,
       "cities": "Portland",
       "url": "https://www.traillink.com/trail/eastern-promenade-trail/",
-      "rating": 4.7
+      "rating": 4.7,
+      "startLat": 43.67,
+      "startLng": -70.25,
+      "endLat": 43.67,
+      "endLng": -70.25
     },
     {
       "name": "Whitman Spring Road Trail",
@@ -859,7 +1146,11 @@
       "lng": -70.62,
       "cities": "Bryant Pond",
       "url": "https://www.traillink.com/trail/whitman-spring-road-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 44.38,
+      "startLng": -70.62,
+      "endLat": 44.38,
+      "endLng": -70.62
     },
     {
       "name": "Sipayik Trail",
@@ -871,7 +1162,11 @@
       "lng": -67.05,
       "cities": "Pleasant Point",
       "url": "https://www.traillink.com/trail/sipayik-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 44.95,
+      "startLng": -67.05,
+      "endLat": 44.95,
+      "endLng": -67.05
     },
     {
       "name": "Beth Condon Memorial Pathway",
@@ -883,7 +1178,11 @@
       "lng": -70.26,
       "cities": "Portland",
       "url": "https://www.traillink.com/trail/beth-condon-memorial-pathway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 43.66,
+      "startLng": -70.26,
+      "endLat": 43.66,
+      "endLng": -70.26
     },
     {
       "name": "Stillwater River Trail",
@@ -892,10 +1191,14 @@
       "surface": "Dirt, Grass",
       "description": "Natural trail along Stillwater River.",
       "lat": 44.88,
-      "lng": -68.70,
+      "lng": -68.7,
       "cities": "Old Town",
       "url": "https://www.traillink.com/trail/stillwater-river-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 44.88,
+      "startLng": -68.7,
+      "endLat": 44.88,
+      "endLng": -68.7
     },
     {
       "name": "Bethel Pathway",
@@ -903,11 +1206,15 @@
       "length": 1.7,
       "surface": "Asphalt, Crushed Stone, Dirt, Grass",
       "description": "Trail through scenic Bethel in western Maine mountains.",
-      "lat": 44.40,
+      "lat": 44.4,
       "lng": -70.79,
       "cities": "Bethel",
       "url": "https://www.traillink.com/trail/bethel-pathway/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 44.4,
+      "startLng": -70.79,
+      "endLat": 44.4,
+      "endLng": -70.79
     },
     {
       "name": "Michael Michaud Walking and Biking Trail",
@@ -919,7 +1226,11 @@
       "lng": -70.22,
       "cities": "Lewiston",
       "url": "https://www.traillink.com/trail/michael-michaud-walking-and-biking-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.12,
+      "startLng": -70.22,
+      "endLat": 44.12,
+      "endLng": -70.22
     },
     {
       "name": "Auburn Riverwalk",
@@ -931,7 +1242,11 @@
       "lng": -70.24,
       "cities": "Auburn",
       "url": "https://www.traillink.com/trail/auburn-riverwalk/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 44.09,
+      "startLng": -70.24,
+      "endLat": 44.09,
+      "endLng": -70.24
     },
     {
       "name": "Ellsworth Trail",
@@ -943,7 +1258,11 @@
       "lng": -68.42,
       "cities": "Ellsworth",
       "url": "https://www.traillink.com/trail/ellsworth-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.54,
+      "startLng": -68.42,
+      "endLat": 44.54,
+      "endLng": -68.42
     },
     {
       "name": "Rotary Centennial Trail",
@@ -955,7 +1274,11 @@
       "lng": -69.78,
       "cities": "Augusta",
       "url": "https://www.traillink.com/trail/rotary-centennial-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 44.31,
+      "startLng": -69.78,
+      "endLat": 44.31,
+      "endLng": -69.78
     },
     {
       "name": "Calais Waterfront Walkway",
@@ -967,7 +1290,11 @@
       "lng": -67.28,
       "cities": "Calais",
       "url": "https://www.traillink.com/trail/calais-waterfront-walkway/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 45.19,
+      "startLng": -67.28,
+      "endLat": 45.19,
+      "endLng": -67.28
     },
     {
       "name": "Riverton Rail Trail",
@@ -979,7 +1306,11 @@
       "lng": -70.32,
       "cities": "Portland",
       "url": "https://www.traillink.com/trail/riverton-rail-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 43.69,
+      "startLng": -70.32,
+      "endLat": 43.69,
+      "endLng": -70.32
     },
     {
       "name": "Old Narrow Gauge Volunteer Trail",
@@ -991,7 +1322,11 @@
       "lng": -69.55,
       "cities": "Randolph",
       "url": "https://www.traillink.com/trail/old-narrow-gauge-volunteer-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 44.12,
+      "startLng": -69.55,
+      "endLat": 44.12,
+      "endLng": -69.55
     },
     {
       "name": "Bayside Trail",
@@ -1003,7 +1338,11 @@
       "lng": -70.26,
       "cities": "Portland",
       "url": "https://www.traillink.com/trail/bayside-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 43.66,
+      "startLng": -70.26,
+      "endLat": 43.66,
+      "endLng": -70.26
     },
     {
       "name": "Bucksport Waterfront Walkway",
@@ -1012,10 +1351,14 @@
       "surface": "Brick",
       "description": "Brick walkway along Bucksport waterfront.",
       "lat": 44.58,
-      "lng": -68.80,
+      "lng": -68.8,
       "cities": "Bucksport",
       "url": "https://www.traillink.com/trail/bucksport-waterfront-walkway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.58,
+      "startLng": -68.8,
+      "endLat": 44.58,
+      "endLng": -68.8
     },
     {
       "name": "Heart of Blue Hill Trails",
@@ -1027,7 +1370,11 @@
       "lng": -68.59,
       "cities": "Blue Hill",
       "url": "https://www.traillink.com/trail/heart-of-blue-hill-trails/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.41,
+      "startLng": -68.59,
+      "endLat": 44.41,
+      "endLng": -68.59
     },
     {
       "name": "WW&F Narrow Gauge Trail",
@@ -1039,7 +1386,11 @@
       "lng": -69.63,
       "cities": "Alna",
       "url": "https://www.traillink.com/trail/wwf-narrow-gauge-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 44.05,
+      "startLng": -69.63,
+      "endLat": 44.05,
+      "endLng": -69.63
     },
     {
       "name": "Norway Branch Rail Trail",
@@ -1051,7 +1402,11 @@
       "lng": -70.54,
       "cities": "Norway",
       "url": "https://www.traillink.com/trail/norway-branch-rail-trail-/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 44.22,
+      "startLng": -70.54,
+      "endLat": 44.22,
+      "endLng": -70.54
     },
     {
       "name": "Penobscot River Walkway",
@@ -1059,11 +1414,15 @@
       "length": 0.3,
       "surface": "Asphalt, Concrete",
       "description": "Short riverfront walkway in Bangor.",
-      "lat": 44.80,
+      "lat": 44.8,
       "lng": -68.77,
       "cities": "Bangor",
       "url": "https://www.traillink.com/trail/penobscot-river-walkway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.8,
+      "startLng": -68.77,
+      "endLat": 44.8,
+      "endLng": -68.77
     },
     {
       "name": "Mass Central Rail Trail",
@@ -1072,10 +1431,14 @@
       "surface": "Asphalt, Cinder, Crushed Stone, Dirt, Gravel",
       "description": "Major cross-state trail spanning central Massachusetts from Boston suburbs to western hills.",
       "lat": 42.35,
-      "lng": -71.80,
+      "lng": -71.8,
       "cities": "Boston to Northampton",
       "url": "https://www.traillink.com/trail/mass-central-rail-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.355508,
+      "startLng": -71.056536,
+      "endLat": 42.32509,
+      "endLng": -72.641201
     },
     {
       "name": "Border to Boston Trail",
@@ -1087,7 +1450,11 @@
       "lng": -71.05,
       "cities": "Salisbury to Everett",
       "url": "https://www.traillink.com/trail/border-to-boston-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.841764,
+      "startLng": -70.860376,
+      "endLat": 42.40843,
+      "endLng": -71.053663
     },
     {
       "name": "Nantucket Multi-Use Paths",
@@ -1096,10 +1463,14 @@
       "surface": "Asphalt",
       "description": "Extensive paved trail network on Nantucket Island connecting beaches and villages.",
       "lat": 41.28,
-      "lng": -70.10,
+      "lng": -70.1,
       "cities": "Nantucket",
       "url": "https://www.traillink.com/trail/nantucket-multi-use-paths/",
-      "rating": 4.6
+      "rating": 4.6,
+      "startLat": 41.28,
+      "startLng": -70.1,
+      "endLat": 41.28,
+      "endLng": -70.1
     },
     {
       "name": "Martha's Vineyard Bike Trails",
@@ -1107,11 +1478,15 @@
       "length": 32.3,
       "surface": "Asphalt",
       "description": "Beautiful paved trail network connecting Martha's Vineyard towns and beaches.",
-      "lat": 41.40,
-      "lng": -70.60,
+      "lat": 41.4,
+      "lng": -70.6,
       "cities": "Vineyard Haven to Edgartown",
       "url": "https://www.traillink.com/trail/marthas-vineyard-bike-trails/",
-      "rating": 4.7
+      "rating": 4.7,
+      "startLat": 41.454279,
+      "startLng": -70.603639,
+      "endLat": 41.391388,
+      "endLng": -70.519557
     },
     {
       "name": "Blackstone River Greenway",
@@ -1120,10 +1495,14 @@
       "surface": "Asphalt, Boardwalk, Crushed Stone, Dirt",
       "description": "Historic industrial corridor trail following the Blackstone River from Worcester to Providence.",
       "lat": 42.05,
-      "lng": -71.50,
+      "lng": -71.5,
       "cities": "Worcester MA to Providence RI",
       "url": "https://www.traillink.com/trail/blackstone-river-greenway/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.262811,
+      "startLng": -71.802493,
+      "endLat": 41.787099,
+      "endLng": -71.398091
     },
     {
       "name": "Cape Cod Rail Trail",
@@ -1135,7 +1514,11 @@
       "lng": -70.05,
       "cities": "Dennis to Wellfleet",
       "url": "https://www.traillink.com/trail/cape-cod-rail-trail/",
-      "rating": 4.6
+      "rating": 4.6,
+      "startLat": 41.736077,
+      "startLng": -70.194502,
+      "endLat": 41.942321,
+      "endLng": -70.02564
     },
     {
       "name": "Charles River Bike Path",
@@ -1144,10 +1527,14 @@
       "surface": "Asphalt",
       "description": "Iconic urban trail along the Charles River connecting Boston and Cambridge with scenic city views.",
       "lat": 42.36,
-      "lng": -71.10,
+      "lng": -71.1,
       "cities": "Boston to Waltham",
       "url": "https://www.traillink.com/trail/charles-river-bike-path/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 42.355508,
+      "startLng": -71.056536,
+      "endLat": 42.376436,
+      "endLng": -71.23575
     },
     {
       "name": "Southern New England Trunkline Trail",
@@ -1159,7 +1546,11 @@
       "lng": -71.65,
       "cities": "Franklin to Douglas",
       "url": "https://www.traillink.com/trail/southern-new-england-trunkline-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.530599,
+      "startLng": -72.615117,
+      "endLat": 42.054345,
+      "endLng": -71.739379
     },
     {
       "name": "Bruce Freeman Rail Trail",
@@ -1168,10 +1559,14 @@
       "surface": "Asphalt",
       "description": "Popular paved trail through Boston suburbs with good connectivity to other trails.",
       "lat": 42.48,
-      "lng": -71.40,
+      "lng": -71.4,
       "cities": "Lowell to Sudbury",
       "url": "https://www.traillink.com/trail/bruce-freeman-rail-trail/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 42.645891,
+      "startLng": -71.312709,
+      "endLat": 42.383428,
+      "endLng": -71.416173
     },
     {
       "name": "Ware River Rail-Trail",
@@ -1183,7 +1578,11 @@
       "lng": -72.25,
       "cities": "Ware to Gilbertville",
       "url": "https://www.traillink.com/trail/ware-river-rail-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 42.260621,
+      "startLng": -72.242609,
+      "endLat": 42.312556,
+      "endLng": -72.207859
     },
     {
       "name": "Upper Charles Trail",
@@ -1195,7 +1594,11 @@
       "lng": -71.45,
       "cities": "Milford to Holliston",
       "url": "https://www.traillink.com/trail/upper-charles-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.141578,
+      "startLng": -71.519186,
+      "endLat": 42.200097,
+      "endLng": -71.424505
     },
     {
       "name": "Cape Cod Canal Bikeway",
@@ -1207,7 +1610,11 @@
       "lng": -70.55,
       "cities": "Sandwich to Bourne",
       "url": "https://www.traillink.com/trail/cape-cod-canal-bikeway/",
-      "rating": 4.7
+      "rating": 4.7,
+      "startLat": 41.76428,
+      "startLng": -70.498658,
+      "endLat": 41.749585,
+      "endLng": -70.603426
     },
     {
       "name": "Ashuwillticook Rail Trail",
@@ -1219,7 +1626,11 @@
       "lng": -73.15,
       "cities": "Adams to Lanesborough",
       "url": "https://www.traillink.com/trail/ashuwillticook-rail-trail/",
-      "rating": 4.7
+      "rating": 4.7,
+      "startLat": 42.625118,
+      "startLng": -73.118977,
+      "endLat": 42.517306,
+      "endLng": -73.22816
     },
     {
       "name": "Taconic Skyline Trail",
@@ -1228,10 +1639,14 @@
       "surface": "Dirt, Gravel",
       "description": "Mountain trail along Taconic Range with panoramic views.",
       "lat": 42.48,
-      "lng": -73.30,
+      "lng": -73.3,
       "cities": "Pittsfield",
       "url": "https://www.traillink.com/trail/taconic-skyline-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.48,
+      "startLng": -73.3,
+      "endLat": 42.48,
+      "endLng": -73.3
     },
     {
       "name": "Nashua River Rail Trail",
@@ -1243,7 +1658,11 @@
       "lng": -71.58,
       "cities": "Ayer MA to Nashua NH",
       "url": "https://www.traillink.com/trail/nashua-river-rail-trail/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 42.560067,
+      "startLng": -71.590159,
+      "endLat": 42.757495,
+      "endLng": -71.465496
     },
     {
       "name": "North Central Pathway",
@@ -1255,7 +1674,11 @@
       "lng": -71.95,
       "cities": "Gardner to Winchendon",
       "url": "https://www.traillink.com/trail/north-central-pathway/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.575088,
+      "startLng": -71.998133,
+      "endLat": 42.687101,
+      "endLng": -72.043953
     },
     {
       "name": "Shining Sea Bikeway",
@@ -1267,7 +1690,11 @@
       "lng": -70.62,
       "cities": "Falmouth to Woods Hole",
       "url": "https://www.traillink.com/trail/shining-sea-bikeway/",
-      "rating": 4.8
+      "rating": 4.8,
+      "startLat": 41.552169,
+      "startLng": -70.612899,
+      "endLat": 41.526498,
+      "endLng": -70.673086
     },
     {
       "name": "Tri-Community Greenway",
@@ -1275,11 +1702,15 @@
       "length": 10.6,
       "surface": "Asphalt",
       "description": "Paved trail connecting three communities south of Boston.",
-      "lat": 42.10,
+      "lat": 42.1,
       "lng": -71.02,
       "cities": "Braintree to Weymouth",
       "url": "https://www.traillink.com/trail/tri-community-greenway/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 42.207902,
+      "startLng": -71.004001,
+      "endLat": 42.217566,
+      "endLng": -70.9369
     },
     {
       "name": "Assabet River Rail Trail",
@@ -1291,7 +1722,11 @@
       "lng": -71.52,
       "cities": "Marlborough to Acton",
       "url": "https://www.traillink.com/trail/assabet-river-rail-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 42.345927,
+      "startLng": -71.552287,
+      "endLat": 42.485093,
+      "endLng": -71.43284
     },
     {
       "name": "Minuteman Commuter Bikeway",
@@ -1303,7 +1738,11 @@
       "lng": -71.23,
       "cities": "Cambridge to Bedford",
       "url": "https://www.traillink.com/trail/minuteman-commuter-bikeway/",
-      "rating": 4.6
+      "rating": 4.6,
+      "startLat": 42.366604,
+      "startLng": -71.105692,
+      "endLat": 42.490623,
+      "endLng": -71.276009
     },
     {
       "name": "Northern Strand Community Trail",
@@ -1315,7 +1754,11 @@
       "lng": -71.02,
       "cities": "Everett to Lynn",
       "url": "https://www.traillink.com/trail/northern-strand-community-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.40843,
+      "startLng": -71.053663,
+      "endLat": 42.469781,
+      "endLng": -70.956902
     },
     {
       "name": "Manhan Rail Trail",
@@ -1323,11 +1766,15 @@
       "length": 9.5,
       "surface": "Asphalt",
       "description": "Paved trail in the Pioneer Valley of western Massachusetts.",
-      "lat": 42.20,
+      "lat": 42.2,
       "lng": -72.72,
       "cities": "Easthampton to Southampton",
       "url": "https://www.traillink.com/trail/manhan-rail-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.266757,
+      "startLng": -72.66898,
+      "endLat": 42.229257,
+      "endLng": -72.730093
     },
     {
       "name": "Neponset River Greenway",
@@ -1339,7 +1786,11 @@
       "lng": -71.07,
       "cities": "Dorchester to Milton",
       "url": "https://www.traillink.com/trail/neponset-river-greenway/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 42.299485,
+      "startLng": -71.064853,
+      "endLat": 42.249532,
+      "endLng": -71.066165
     },
     {
       "name": "Old Colony Rail Trail",
@@ -1348,10 +1799,14 @@
       "surface": "Asphalt",
       "description": "Paved Cape Cod trail connecting to Cape Cod Rail Trail.",
       "lat": 41.68,
-      "lng": -70.00,
+      "lng": -70.0,
       "cities": "Harwich to Chatham",
       "url": "https://www.traillink.com/trail/old-colony-rail-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 41.688092,
+      "startLng": -70.071346,
+      "endLat": 41.682727,
+      "endLng": -69.961554
     },
     {
       "name": "Connecticut Riverwalk and Bikeway",
@@ -1359,11 +1814,15 @@
       "length": 7.8,
       "surface": "Asphalt",
       "description": "Riverfront trail along Connecticut River in Springfield area.",
-      "lat": 42.10,
+      "lat": 42.1,
       "lng": -72.58,
       "cities": "Springfield to Agawam",
       "url": "https://www.traillink.com/trail/connecticut-riverwalk-and-bikeway/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.10131,
+      "startLng": -72.589274,
+      "endLat": 42.089468,
+      "endLng": -72.627061
     },
     {
       "name": "Province Lands Bike Trail",
@@ -1372,10 +1831,14 @@
       "surface": "Asphalt",
       "description": "Scenic loop trail in Provincetown through dunes and forest.",
       "lat": 42.07,
-      "lng": -70.20,
+      "lng": -70.2,
       "cities": "Provincetown",
       "url": "https://www.traillink.com/trail/province-lands-bike-trail/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 42.07,
+      "startLng": -70.2,
+      "endLat": 42.07,
+      "endLng": -70.2
     },
     {
       "name": "Grand Trunk Trail",
@@ -1387,7 +1850,11 @@
       "lng": -71.92,
       "cities": "Brimfield to Sturbridge",
       "url": "https://www.traillink.com/trail/grand-trunk-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.122548,
+      "startLng": -72.200506,
+      "endLat": 42.108324,
+      "endLng": -72.080789
     },
     {
       "name": "World War II Veterans Memorial Trail/Norton Rail-Trail",
@@ -1399,7 +1866,11 @@
       "lng": -71.18,
       "cities": "Attleboro to Norton",
       "url": "https://www.traillink.com/trail/world-war-ii-veterans-memorial-trailnorton-rail-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 41.944307,
+      "startLng": -71.281391,
+      "endLat": 41.969533,
+      "endLng": -71.182124
     },
     {
       "name": "Southwick Rail Trail",
@@ -1411,7 +1882,11 @@
       "lng": -72.78,
       "cities": "Southwick",
       "url": "https://www.traillink.com/trail/southwick-rail-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 42.05,
+      "startLng": -72.78,
+      "endLat": 42.05,
+      "endLng": -72.78
     },
     {
       "name": "Quinebaug Valley Rail Trail",
@@ -1423,7 +1898,11 @@
       "lng": -72.05,
       "cities": "Southbridge to Sturbridge",
       "url": "https://www.traillink.com/trail/quinebaug-valley-rail-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 42.074962,
+      "startLng": -72.033689,
+      "endLat": 42.108324,
+      "endLng": -72.080789
     },
     {
       "name": "Commonwealth Greenway",
@@ -1435,7 +1914,11 @@
       "lng": -71.08,
       "cities": "Boston",
       "url": "https://www.traillink.com/trail/commonwealth-greenway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.33,
+      "startLng": -71.08,
+      "endLat": 42.33,
+      "endLng": -71.08
     },
     {
       "name": "Topsfield Linear Common",
@@ -1447,7 +1930,11 @@
       "lng": -70.95,
       "cities": "Topsfield",
       "url": "https://www.traillink.com/trail/topsfield-linear-common/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.64,
+      "startLng": -70.95,
+      "endLat": 42.64,
+      "endLng": -70.95
     },
     {
       "name": "Independence Greenway",
@@ -1459,7 +1946,11 @@
       "lng": -70.98,
       "cities": "Peabody to Danvers",
       "url": "https://www.traillink.com/trail/independence-greenway/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.525948,
+      "startLng": -70.927244,
+      "endLat": 42.575001,
+      "endLng": -70.932122
     },
     {
       "name": "Danvers Rail Trail",
@@ -1471,7 +1962,11 @@
       "lng": -70.93,
       "cities": "Danvers",
       "url": "https://www.traillink.com/trail/danvers-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.57,
+      "startLng": -70.93,
+      "endLat": 42.57,
+      "endLng": -70.93
     },
     {
       "name": "Middleton Rail Trail",
@@ -1479,11 +1974,15 @@
       "length": 4.5,
       "surface": "Crushed Stone",
       "description": "Crushed stone trail in Middleton.",
-      "lat": 42.60,
+      "lat": 42.6,
       "lng": -71.02,
       "cities": "Middleton",
       "url": "https://www.traillink.com/trail/middleton-rail-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 42.6,
+      "startLng": -71.02,
+      "endLat": 42.6,
+      "endLng": -71.02
     },
     {
       "name": "Southwest Corridor Park",
@@ -1492,10 +1991,14 @@
       "surface": "Asphalt",
       "description": "Urban linear park trail in Boston connecting neighborhoods.",
       "lat": 42.32,
-      "lng": -71.10,
+      "lng": -71.1,
       "cities": "Boston",
       "url": "https://www.traillink.com/trail/southwest-corridor-park-(pierre-lallement-bike-path)/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.32,
+      "startLng": -71.1,
+      "endLat": 42.32,
+      "endLng": -71.1
     },
     {
       "name": "Phoenix Bike Trail",
@@ -1507,7 +2010,11 @@
       "lng": -72.52,
       "cities": "Amherst",
       "url": "https://www.traillink.com/trail/phoenix-bike-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 42.35,
+      "startLng": -72.52,
+      "endLat": 42.35,
+      "endLng": -72.52
     },
     {
       "name": "Mystic River Greenway",
@@ -1515,11 +2022,15 @@
       "length": 4.0,
       "surface": "Asphalt, Boardwalk",
       "description": "Greenway along Mystic River north of Boston.",
-      "lat": 42.40,
+      "lat": 42.4,
       "lng": -71.08,
       "cities": "Somerville to Medford",
       "url": "https://www.traillink.com/trail/mystic-river-greenway/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.387597,
+      "startLng": -71.099497,
+      "endLat": 42.41843,
+      "endLng": -71.106164
     },
     {
       "name": "Twin Cities Rail Trail",
@@ -1528,10 +2039,14 @@
       "surface": "Asphalt",
       "description": "Paved trail connecting Fitchburg and Leominster.",
       "lat": 42.58,
-      "lng": -71.80,
+      "lng": -71.8,
       "cities": "Fitchburg to Leominster",
       "url": "https://www.traillink.com/trail/twin-cities-rail-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 42.583423,
+      "startLng": -71.802295,
+      "endLat": 42.525091,
+      "endLng": -71.759794
     },
     {
       "name": "Clipper City Rail Trail",
@@ -1543,7 +2058,11 @@
       "lng": -70.88,
       "cities": "Newburyport",
       "url": "https://www.traillink.com/trail/clipper-city-rail-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 42.81,
+      "startLng": -70.88,
+      "endLat": 42.81,
+      "endLng": -70.88
     },
     {
       "name": "Reformatory Branch Trail",
@@ -1555,7 +2074,11 @@
       "lng": -71.33,
       "cities": "Bedford to Concord",
       "url": "https://www.traillink.com/trail/reformatory-branch-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.490623,
+      "startLng": -71.276009,
+      "endLat": 42.460372,
+      "endLng": -71.348948
     },
     {
       "name": "South Bay Harbor Trail",
@@ -1567,7 +2090,11 @@
       "lng": -71.05,
       "cities": "Boston",
       "url": "https://www.traillink.com/trail/south-bay-harbor-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.34,
+      "startLng": -71.05,
+      "endLat": 42.34,
+      "endLng": -71.05
     },
     {
       "name": "Old Eastern Marsh Trail",
@@ -1579,7 +2106,11 @@
       "lng": -70.88,
       "cities": "Newbury",
       "url": "https://www.traillink.com/trail/old-eastern-marsh-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 42.76,
+      "startLng": -70.88,
+      "endLat": 42.76,
+      "endLng": -70.88
     },
     {
       "name": "Squannacook River Rail Trail",
@@ -1591,7 +2122,11 @@
       "lng": -71.63,
       "cities": "Townsend to Groton",
       "url": "https://www.traillink.com/trail/squannacook-river-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.666931,
+      "startLng": -71.705804,
+      "endLat": 42.608872,
+      "endLng": -71.572116
     },
     {
       "name": "Canalside Rail Trail",
@@ -1599,11 +2134,15 @@
       "length": 3.6,
       "surface": "Asphalt",
       "description": "Paved trail along canal in western Massachusetts.",
-      "lat": 42.70,
-      "lng": -72.60,
+      "lat": 42.7,
+      "lng": -72.6,
       "cities": "Turners Falls",
       "url": "https://www.traillink.com/trail/canalside-rail-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.7,
+      "startLng": -72.6,
+      "endLat": 42.7,
+      "endLng": -72.6
     },
     {
       "name": "Spicket River Greenway",
@@ -1615,7 +2154,11 @@
       "lng": -71.15,
       "cities": "Lawrence to Methuen",
       "url": "https://www.traillink.com/trail/spicket-river-greenway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.707035,
+      "startLng": -71.163114,
+      "endLat": 42.726202,
+      "endLng": -71.190892
     },
     {
       "name": "Hanover Branch Rail Trail",
@@ -1627,7 +2170,11 @@
       "lng": -70.83,
       "cities": "Hanover to Rockland",
       "url": "https://www.traillink.com/trail/hanover-branch-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.116222,
+      "startLng": -70.847671,
+      "endLat": 42.130656,
+      "endLng": -70.916155
     },
     {
       "name": "Martin H. Burns Wildlife Management Area Trail",
@@ -1639,7 +2186,11 @@
       "lng": -71.05,
       "cities": "Newbury",
       "url": "https://www.traillink.com/trail/martin-h-burns-wildlife-management-area-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 42.08,
+      "startLng": -71.05,
+      "endLat": 42.08,
+      "endLng": -71.05
     },
     {
       "name": "Marblehead Rail-Trail",
@@ -1647,11 +2198,15 @@
       "length": 3.34,
       "surface": "Asphalt, Dirt, Gravel, Sand",
       "description": "Trail in historic Marblehead.",
-      "lat": 42.50,
+      "lat": 42.5,
       "lng": -70.87,
       "cities": "Marblehead to Swampscott",
       "url": "https://www.traillink.com/trail/marblehead-rail-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 42.499958,
+      "startLng": -70.857802,
+      "endLat": 42.470944,
+      "endLng": -70.917556
     },
     {
       "name": "Cochituate Rail Trail",
@@ -1659,11 +2214,15 @@
       "length": 3.3,
       "surface": "Asphalt, Boardwalk, Concrete",
       "description": "Paved trail connecting to larger trail network.",
-      "lat": 42.30,
+      "lat": 42.3,
       "lng": -71.38,
       "cities": "Framingham to Natick",
       "url": "https://www.traillink.com/trail/cochituate-rail-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.279286,
+      "startLng": -71.416156,
+      "endLat": 42.277528,
+      "endLng": -71.346809
     },
     {
       "name": "Groveland Community Trail",
@@ -1675,7 +2234,11 @@
       "lng": -71.03,
       "cities": "Groveland",
       "url": "https://www.traillink.com/trail/groveland-community-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.76,
+      "startLng": -71.03,
+      "endLat": 42.76,
+      "endLng": -71.03
     },
     {
       "name": "Somerville Community Path",
@@ -1683,11 +2246,15 @@
       "length": 3.2,
       "surface": "Asphalt",
       "description": "Urban path through Somerville connecting to Minuteman.",
-      "lat": 42.40,
+      "lat": 42.4,
       "lng": -71.12,
       "cities": "Somerville",
       "url": "https://www.traillink.com/trail/somerville-community-path/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.4,
+      "startLng": -71.12,
+      "endLat": 42.4,
+      "endLng": -71.12
     },
     {
       "name": "Columbia Greenway Rail Trail",
@@ -1699,7 +2266,11 @@
       "lng": -72.75,
       "cities": "Westfield",
       "url": "https://www.traillink.com/trail/columbia-greenway-rail-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 42.12,
+      "startLng": -72.75,
+      "endLat": 42.12,
+      "endLng": -72.75
     },
     {
       "name": "Norwell Pathway",
@@ -1708,10 +2279,14 @@
       "surface": "Asphalt, Boardwalk",
       "description": "Paved pathway in Norwell.",
       "lat": 42.16,
-      "lng": -70.80,
+      "lng": -70.8,
       "cities": "Norwell",
       "url": "https://www.traillink.com/trail/norwell-pathway/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 42.16,
+      "startLng": -70.8,
+      "endLat": 42.16,
+      "endLng": -70.8
     },
     {
       "name": "Bridle Trail",
@@ -1723,7 +2298,11 @@
       "lng": -70.95,
       "cities": "Wenham",
       "url": "https://www.traillink.com/trail/bridle-trail-/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 42.53,
+      "startLng": -70.95,
+      "endLat": 42.53,
+      "endLng": -70.95
     },
     {
       "name": "Narrow-Gauge Rail-Trail",
@@ -1735,7 +2314,11 @@
       "lng": -71.57,
       "cities": "Bellingham",
       "url": "https://www.traillink.com/trail/narrow-gauge-rail-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.09,
+      "startLng": -71.57,
+      "endLat": 42.09,
+      "endLng": -71.57
     },
     {
       "name": "Mary Ellen Welch Greenway",
@@ -1743,11 +2326,15 @@
       "length": 2.8,
       "surface": "Asphalt",
       "description": "Urban greenway in Chelsea.",
-      "lat": 42.40,
+      "lat": 42.4,
       "lng": -71.03,
       "cities": "Chelsea",
       "url": "https://www.traillink.com/trail/mary-ellen-welch-greenway/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 42.4,
+      "startLng": -71.03,
+      "endLat": 42.4,
+      "endLng": -71.03
     },
     {
       "name": "Deer Island Loop Trail",
@@ -1759,7 +2346,11 @@
       "lng": -70.95,
       "cities": "Winthrop",
       "url": "https://www.traillink.com/trail/deer-island-loop-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 42.35,
+      "startLng": -70.95,
+      "endLat": 42.35,
+      "endLng": -70.95
     },
     {
       "name": "Malden River Greenway",
@@ -1771,7 +2362,11 @@
       "lng": -71.08,
       "cities": "Malden to Everett",
       "url": "https://www.traillink.com/trail/malden-river-greenway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.425096,
+      "startLng": -71.066163,
+      "endLat": 42.40843,
+      "endLng": -71.053663
     },
     {
       "name": "Wellington Greenway",
@@ -1783,7 +2378,11 @@
       "lng": -71.08,
       "cities": "Medford",
       "url": "https://www.traillink.com/trail/wellington-greenway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.41,
+      "startLng": -71.08,
+      "endLat": 42.41,
+      "endLng": -71.08
     },
     {
       "name": "Methuen Rail Trail",
@@ -1795,7 +2394,11 @@
       "lng": -71.18,
       "cities": "Methuen",
       "url": "https://www.traillink.com/trail/methuen-rail-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 42.73,
+      "startLng": -71.18,
+      "endLat": 42.73,
+      "endLng": -71.18
     },
     {
       "name": "Alfred J. Lima Quequechan River Rail Trail",
@@ -1803,11 +2406,15 @@
       "length": 2.3,
       "surface": "Asphalt",
       "description": "Trail along Quequechan River in Fall River.",
-      "lat": 41.70,
+      "lat": 41.7,
       "lng": -71.15,
       "cities": "Fall River",
       "url": "https://www.traillink.com/trail/alfred-j-lima-quequechan-river-rail-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 41.7,
+      "startLng": -71.15,
+      "endLat": 41.7,
+      "endLng": -71.15
     },
     {
       "name": "Salisbury Point Ghost Trail",
@@ -1819,7 +2426,11 @@
       "lng": -70.85,
       "cities": "Salisbury",
       "url": "https://www.traillink.com/trail/salisbury-point-ghost-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.85,
+      "startLng": -70.85,
+      "endLat": 42.85,
+      "endLng": -70.85
     },
     {
       "name": "Boxford Rail Trail",
@@ -1828,10 +2439,14 @@
       "surface": "Dirt, Grass",
       "description": "Natural surface trail in Boxford.",
       "lat": 42.67,
-      "lng": -71.00,
+      "lng": -71.0,
       "cities": "Boxford",
       "url": "https://www.traillink.com/trail/boxford-rail-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 42.67,
+      "startLng": -71.0,
+      "endLat": 42.67,
+      "endLng": -71.0
     },
     {
       "name": "Watertown-Cambridge Greenway",
@@ -1843,7 +2458,11 @@
       "lng": -71.18,
       "cities": "Watertown to Cambridge",
       "url": "https://www.traillink.com/trail/watertown-cambridge-greenway/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.37093,
+      "startLng": -71.182832,
+      "endLat": 42.366604,
+      "endLng": -71.105692
     },
     {
       "name": "Pine Tree Brook Path",
@@ -1855,7 +2474,11 @@
       "lng": -71.17,
       "cities": "Milton",
       "url": "https://www.traillink.com/trail/pine-tree-brook-path/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.23,
+      "startLng": -71.17,
+      "endLat": 42.23,
+      "endLng": -71.17
     },
     {
       "name": "Haggetts Rail Trail",
@@ -1863,11 +2486,15 @@
       "length": 2.0,
       "surface": "Crushed Stone, Dirt, Grass",
       "description": "Trail in northern Massachusetts.",
-      "lat": 42.70,
-      "lng": -71.20,
+      "lat": 42.7,
+      "lng": -71.2,
       "cities": "Andover",
       "url": "https://www.traillink.com/trail/haggetts-rail-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 42.7,
+      "startLng": -71.2,
+      "endLat": 42.7,
+      "endLng": -71.2
     },
     {
       "name": "Head of the Meadow Trail",
@@ -1879,7 +2506,11 @@
       "lng": -70.08,
       "cities": "Truro",
       "url": "https://www.traillink.com/trail/head-of-the-meadow-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.05,
+      "startLng": -70.08,
+      "endLat": 42.05,
+      "endLng": -70.08
     },
     {
       "name": "Jay McLaren Memorial Trail",
@@ -1887,11 +2518,15 @@
       "length": 2.0,
       "surface": "Dirt, Grass, Gravel",
       "description": "Memorial trail with natural surface.",
-      "lat": 42.50,
+      "lat": 42.5,
       "lng": -72.08,
       "cities": "Orange",
       "url": "https://www.traillink.com/trail/jay-mclaren-memorial-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 42.5,
+      "startLng": -72.08,
+      "endLat": 42.5,
+      "endLng": -72.08
     },
     {
       "name": "Rose Fitzgerald Kennedy Greenway",
@@ -1903,7 +2538,11 @@
       "lng": -71.05,
       "cities": "Boston",
       "url": "https://www.traillink.com/trail/rose-fitzgerald-kennedy-greenway/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 42.36,
+      "startLng": -71.05,
+      "endLat": 42.36,
+      "endLng": -71.05
     },
     {
       "name": "Mattapoisett Rail Trail",
@@ -1915,7 +2554,11 @@
       "lng": -70.82,
       "cities": "Mattapoisett",
       "url": "https://www.traillink.com/trail/mattapoisett-rail-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 41.66,
+      "startLng": -70.82,
+      "endLat": 41.66,
+      "endLng": -70.82
     },
     {
       "name": "Lowell Canal System Trails",
@@ -1927,7 +2570,11 @@
       "lng": -71.32,
       "cities": "Lowell",
       "url": "https://www.traillink.com/trail/lowell-canal-system-trails/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.64,
+      "startLng": -71.32,
+      "endLat": 42.64,
+      "endLng": -71.32
     },
     {
       "name": "Garrison Trail",
@@ -1939,7 +2586,11 @@
       "lng": -71.28,
       "cities": "Dover",
       "url": "https://www.traillink.com/trail/garrison-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.25,
+      "startLng": -71.28,
+      "endLat": 42.25,
+      "endLng": -71.28
     },
     {
       "name": "Salem Bike Path",
@@ -1948,10 +2599,14 @@
       "surface": "Asphalt",
       "description": "Paved trail in historic Salem.",
       "lat": 42.52,
-      "lng": -70.90,
+      "lng": -70.9,
       "cities": "Salem",
       "url": "https://www.traillink.com/trail/salem-bike-path/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.52,
+      "startLng": -70.9,
+      "endLat": 42.52,
+      "endLng": -70.9
     },
     {
       "name": "Needham Rail Trail",
@@ -1963,7 +2618,11 @@
       "lng": -71.23,
       "cities": "Needham",
       "url": "https://www.traillink.com/trail/needham-rail-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 42.28,
+      "startLng": -71.23,
+      "endLat": 42.28,
+      "endLng": -71.23
     },
     {
       "name": "Potanipo Rail Trail (MA)",
@@ -1975,7 +2634,11 @@
       "lng": -71.63,
       "cities": "Brookline NH",
       "url": "https://www.traillink.com/trail/potanipo-rail-trail-(ma)/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.68,
+      "startLng": -71.63,
+      "endLat": 42.68,
+      "endLng": -71.63
     },
     {
       "name": "South Spencer Rail Trail",
@@ -1987,7 +2650,11 @@
       "lng": -72.05,
       "cities": "Spencer",
       "url": "https://www.traillink.com/trail/south-spencer-rail-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 42.22,
+      "startLng": -72.05,
+      "endLat": 42.22,
+      "endLng": -72.05
     },
     {
       "name": "Nauset Trail",
@@ -1999,7 +2666,11 @@
       "lng": -69.95,
       "cities": "Eastham",
       "url": "https://www.traillink.com/trail/nauset-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 41.83,
+      "startLng": -69.95,
+      "endLat": 41.83,
+      "endLng": -69.95
     },
     {
       "name": "Whitney Spur Rail Trail",
@@ -2011,7 +2682,11 @@
       "lng": -71.88,
       "cities": "Spencer",
       "url": "https://www.traillink.com/trail/whitney-spur-rail-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.22,
+      "startLng": -71.88,
+      "endLat": 42.22,
+      "endLng": -71.88
     },
     {
       "name": "Old Colony Nature Pathway",
@@ -2020,10 +2695,14 @@
       "surface": "Dirt, Sand",
       "description": "Natural pathway on Cape Cod.",
       "lat": 41.92,
-      "lng": -70.00,
+      "lng": -70.0,
       "cities": "Eastham",
       "url": "https://www.traillink.com/trail/old-colony-nature-pathway/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 41.92,
+      "startLng": -70.0,
+      "endLat": 41.92,
+      "endLng": -70.0
     },
     {
       "name": "Lake Williams Trail",
@@ -2032,10 +2711,14 @@
       "surface": "Asphalt, Boardwalk, Dirt",
       "description": "Trail around Lake Williams.",
       "lat": 42.17,
-      "lng": -72.50,
+      "lng": -72.5,
       "cities": "Northampton",
       "url": "https://www.traillink.com/trail/lake-williams-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.17,
+      "startLng": -72.5,
+      "endLat": 42.17,
+      "endLng": -72.5
     },
     {
       "name": "Redstone Rail Trail",
@@ -2044,10 +2727,14 @@
       "surface": "Asphalt",
       "description": "Short paved trail in Stoneham.",
       "lat": 42.47,
-      "lng": -71.10,
+      "lng": -71.1,
       "cities": "Stoneham",
       "url": "https://www.traillink.com/trail/redstone-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.47,
+      "startLng": -71.1,
+      "endLat": 42.47,
+      "endLng": -71.1
     },
     {
       "name": "Amesbury Riverwalk",
@@ -2059,7 +2746,11 @@
       "lng": -70.93,
       "cities": "Amesbury",
       "url": "https://www.traillink.com/trail/amesbury-riverwalk/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 42.86,
+      "startLng": -70.93,
+      "endLat": 42.86,
+      "endLng": -70.93
     },
     {
       "name": "Ashburnham Rail Trail",
@@ -2071,7 +2762,11 @@
       "lng": -71.93,
       "cities": "Ashburnham",
       "url": "https://www.traillink.com/trail/ashburnham-rail-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 42.63,
+      "startLng": -71.93,
+      "endLat": 42.63,
+      "endLng": -71.93
     },
     {
       "name": "Medfield Rail Trail",
@@ -2080,10 +2775,14 @@
       "surface": "Asphalt, Crushed Stone",
       "description": "Trail in Medfield.",
       "lat": 42.18,
-      "lng": -71.30,
+      "lng": -71.3,
       "cities": "Medfield",
       "url": "https://www.traillink.com/trail/medfield-rail-trail-/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 42.18,
+      "startLng": -71.3,
+      "endLat": 42.18,
+      "endLng": -71.3
     },
     {
       "name": "Gloria Braunhardt Bike Path",
@@ -2095,7 +2794,11 @@
       "lng": -72.67,
       "cities": "Northampton",
       "url": "https://www.traillink.com/trail/gloria-braunhardt-bike-path/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.35,
+      "startLng": -72.67,
+      "endLat": 42.35,
+      "endLng": -72.67
     },
     {
       "name": "New Bedford Harborwalk",
@@ -2107,7 +2810,11 @@
       "lng": -70.92,
       "cities": "New Bedford",
       "url": "https://www.traillink.com/trail/new-bedford-harborwalk-/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 41.64,
+      "startLng": -70.92,
+      "endLat": 41.64,
+      "endLng": -70.92
     },
     {
       "name": "Upper Falls Greenway",
@@ -2115,11 +2822,15 @@
       "length": 1.0,
       "surface": "Crushed Stone",
       "description": "Trail near Newton Upper Falls.",
-      "lat": 42.30,
+      "lat": 42.3,
       "lng": -71.22,
       "cities": "Newton",
       "url": "https://www.traillink.com/trail/upper-falls-greenway/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 42.3,
+      "startLng": -71.22,
+      "endLat": 42.3,
+      "endLng": -71.22
     },
     {
       "name": "Bridge Street Bike Trail",
@@ -2128,10 +2839,14 @@
       "surface": "Asphalt",
       "description": "Short connector trail.",
       "lat": 42.53,
-      "lng": -72.60,
+      "lng": -72.6,
       "cities": "Greenfield",
       "url": "https://www.traillink.com/trail/bridge-street-bike-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.53,
+      "startLng": -72.6,
+      "endLat": 42.53,
+      "endLng": -72.6
     },
     {
       "name": "New Bedford Covewalk",
@@ -2143,7 +2858,11 @@
       "lng": -70.91,
       "cities": "New Bedford",
       "url": "https://www.traillink.com/trail/new-bedford-covewalk/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.65,
+      "startLng": -70.91,
+      "endLat": 41.65,
+      "endLng": -70.91
     },
     {
       "name": "Quarries Foot Path",
@@ -2155,7 +2874,11 @@
       "lng": -71.17,
       "cities": "Quincy",
       "url": "https://www.traillink.com/trail/quarries-foot-path/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 42.47,
+      "startLng": -71.17,
+      "endLat": 42.47,
+      "endLng": -71.17
     },
     {
       "name": "Concord River Greenway",
@@ -2167,7 +2890,11 @@
       "lng": -71.33,
       "cities": "Lowell",
       "url": "https://www.traillink.com/trail/concord-river-greenway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.64,
+      "startLng": -71.33,
+      "endLat": 42.64,
+      "endLng": -71.33
     },
     {
       "name": "Mayor James J. Fiorentini Bradford Rail Trail",
@@ -2179,7 +2906,11 @@
       "lng": -71.08,
       "cities": "Haverhill",
       "url": "https://www.traillink.com/trail/mayor-james-j-fiorentini-bradford-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.77,
+      "startLng": -71.08,
+      "endLat": 42.77,
+      "endLng": -71.08
     },
     {
       "name": "Westville Lake Community Trail",
@@ -2191,7 +2922,11 @@
       "lng": -71.88,
       "cities": "Sturbridge",
       "url": "https://www.traillink.com/trail/westville-lake-community-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.08,
+      "startLng": -71.88,
+      "endLat": 42.08,
+      "endLng": -71.88
     },
     {
       "name": "Fresh Pond Bikeway",
@@ -2203,7 +2938,11 @@
       "lng": -71.15,
       "cities": "Cambridge",
       "url": "https://www.traillink.com/trail/fresh-pond-bikeway-/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.39,
+      "startLng": -71.15,
+      "endLat": 42.39,
+      "endLng": -71.15
     },
     {
       "name": "Chelsea Greenway",
@@ -2215,7 +2954,11 @@
       "lng": -71.04,
       "cities": "Chelsea",
       "url": "https://www.traillink.com/trail/chelsea-greenway-/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 42.39,
+      "startLng": -71.04,
+      "endLat": 42.39,
+      "endLng": -71.04
     },
     {
       "name": "Gillis Memorial Bridge Connector",
@@ -2227,7 +2970,11 @@
       "lng": -70.87,
       "cities": "Newburyport",
       "url": "https://www.traillink.com/trail/gillis-memorial-bridge-connector/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.81,
+      "startLng": -70.87,
+      "endLat": 42.81,
+      "endLng": -70.87
     },
     {
       "name": "Salisbury Beach State Reservation Trail",
@@ -2239,7 +2986,11 @@
       "lng": -70.82,
       "cities": "Salisbury",
       "url": "https://www.traillink.com/trail/salisbury-beach-state-reservation-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.87,
+      "startLng": -70.82,
+      "endLat": 42.87,
+      "endLng": -70.82
     },
     {
       "name": "Center Trail",
@@ -2251,7 +3002,11 @@
       "lng": -71.27,
       "cities": "Norfolk",
       "url": "https://www.traillink.com/trail/center-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 42.12,
+      "startLng": -71.27,
+      "endLat": 42.12,
+      "endLng": -71.27
     },
     {
       "name": "Watertown Community Bike Path",
@@ -2263,7 +3018,11 @@
       "lng": -71.18,
       "cities": "Watertown",
       "url": "https://www.traillink.com/trail/watertown-community-bike-path/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 42.37,
+      "startLng": -71.18,
+      "endLat": 42.37,
+      "endLng": -71.18
     },
     {
       "name": "North Bank Bridge",
@@ -2275,7 +3034,11 @@
       "lng": -71.05,
       "cities": "Boston",
       "url": "https://www.traillink.com/trail/north-bank-bridge/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.37,
+      "startLng": -71.05,
+      "endLat": 42.37,
+      "endLng": -71.05
     },
     {
       "name": "Swampscott Rail Trail",
@@ -2287,7 +3050,11 @@
       "lng": -70.92,
       "cities": "Swampscott",
       "url": "https://www.traillink.com/trail/swampscott-rail-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 42.47,
+      "startLng": -70.92,
+      "endLat": 42.47,
+      "endLng": -70.92
     },
     {
       "name": "Watertown Linear Park Trail",
@@ -2299,7 +3066,11 @@
       "lng": -71.18,
       "cities": "Watertown",
       "url": "https://www.traillink.com/trail/watertown-linear-park-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.37,
+      "startLng": -71.18,
+      "endLat": 42.37,
+      "endLng": -71.18
     },
     {
       "name": "Watertown Riverfront Park and Braille Trail",
@@ -2311,7 +3082,11 @@
       "lng": -71.19,
       "cities": "Watertown",
       "url": "https://www.traillink.com/trail/watertown-riverfront-park-and-braille-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.37,
+      "startLng": -71.19,
+      "endLat": 42.37,
+      "endLng": -71.19
     },
     {
       "name": "Chicopee River Canal Rail Trail",
@@ -2320,10 +3095,14 @@
       "surface": "Asphalt",
       "description": "Short canal trail.",
       "lat": 42.15,
-      "lng": -72.60,
+      "lng": -72.6,
       "cities": "Chicopee",
       "url": "https://www.traillink.com/trail/chicopee-river-canal-rail-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 42.15,
+      "startLng": -72.6,
+      "endLat": 42.15,
+      "endLng": -72.6
     },
     {
       "name": "Bridge of Flowers",
@@ -2331,11 +3110,15 @@
       "length": 0.1,
       "surface": "Concrete",
       "description": "Famous flower-covered bridge walkway in Shelburne Falls.",
-      "lat": 42.60,
+      "lat": 42.6,
       "lng": -72.74,
       "cities": "Shelburne Falls",
       "url": "https://www.traillink.com/trail/bridge-of-flowers/",
-      "rating": 4.8
+      "rating": 4.8,
+      "startLat": 42.6,
+      "startLng": -72.74,
+      "endLat": 42.6,
+      "endLng": -72.74
     },
     {
       "name": "Goose Pond Path",
@@ -2347,7 +3130,11 @@
       "lng": -73.25,
       "cities": "Lee",
       "url": "https://www.traillink.com/trail/goose-pond-path/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 42.25,
+      "startLng": -73.25,
+      "endLat": 42.25,
+      "endLng": -73.25
     },
     {
       "name": "Northern Rail Trail",
@@ -2356,10 +3143,14 @@
       "surface": "Cinder, Crushed Stone",
       "description": "The longest rail trail in New Hampshire, spanning from Lebanon to Boscawen through scenic lakes and covered bridges.",
       "lat": 43.55,
-      "lng": -71.90,
+      "lng": -71.9,
       "cities": "Lebanon to Boscawen",
       "url": "https://www.traillink.com/trail/northern-rail-trail/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 43.642293,
+      "startLng": -72.251757,
+      "endLat": 43.324393,
+      "endLng": -71.636864
     },
     {
       "name": "Cheshire Rail Trail",
@@ -2368,10 +3159,14 @@
       "surface": "Asphalt, Ballast, Cinder, Dirt, Gravel, Sand",
       "description": "Long trail through southwestern New Hampshire with varied surfaces and scenery.",
       "lat": 42.95,
-      "lng": -72.30,
+      "lng": -72.3,
       "cities": "Keene to Walpole",
       "url": "https://www.traillink.com/trail/cheshire-rail-trail-(cheshire-branch-rail-trail)/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.933692,
+      "startLng": -72.278141,
+      "endLat": 43.079494,
+      "endLng": -72.425823
     },
     {
       "name": "Rockingham Recreational Rail Trail (Portsmouth Branch)",
@@ -2383,7 +3178,11 @@
       "lng": -71.05,
       "cities": "Manchester to Epping",
       "url": "https://www.traillink.com/trail/rockingham-recreational-rail-trail-(portsmouth-branch)/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.99564,
+      "startLng": -71.454789,
+      "endLat": 43.053484,
+      "endLng": -71.073548
     },
     {
       "name": "Ammonoosuc Rail Trail",
@@ -2392,10 +3191,14 @@
       "surface": "Ballast, Dirt, Gravel, Sand",
       "description": "Trail through White Mountains region with mountain views.",
       "lat": 44.25,
-      "lng": -71.70,
+      "lng": -71.7,
       "cities": "Littleton to Woodsville",
       "url": "https://www.traillink.com/trail/ammonoosuc-rail-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 44.306097,
+      "startLng": -71.770301,
+      "endLat": 44.151287,
+      "endLng": -72.036719
     },
     {
       "name": "Ashuelot Recreational Rail Trail",
@@ -2407,7 +3210,11 @@
       "lng": -72.45,
       "cities": "Keene to Hinsdale",
       "url": "https://www.traillink.com/trail/ashuelot-recreational-rail-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 42.933692,
+      "startLng": -72.278141,
+      "endLat": 42.786481,
+      "endLng": -72.486677
     },
     {
       "name": "Conway Branch",
@@ -2419,7 +3226,11 @@
       "lng": -71.12,
       "cities": "Conway to Ossipee",
       "url": "https://www.traillink.com/trail/conway-branch/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 43.978773,
+      "startLng": -71.118458,
+      "endLat": 43.685352,
+      "endLng": -71.116656
     },
     {
       "name": "Presidential Rail Trail",
@@ -2431,7 +3242,11 @@
       "lng": -71.25,
       "cities": "Gorham to Whitefield",
       "url": "https://www.traillink.com/trail/presidential-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.38795,
+      "startLng": -71.172788,
+      "endLat": 44.373008,
+      "endLng": -71.611795
     },
     {
       "name": "Rockingham Recreational Rail Trail (Fremont Branch)",
@@ -2443,7 +3258,11 @@
       "lng": -71.13,
       "cities": "Fremont to Epping",
       "url": "https://www.traillink.com/trail/rockingham-recreational-rail-trail-(fremont-branch)/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 42.990919,
+      "startLng": -71.142561,
+      "endLat": 43.053484,
+      "endLng": -71.073548
     },
     {
       "name": "Wild River Trail",
@@ -2451,11 +3270,15 @@
       "length": 15.0,
       "surface": "Dirt, Gravel",
       "description": "Backcountry trail along Wild River in White Mountains.",
-      "lat": 44.30,
+      "lat": 44.3,
       "lng": -71.05,
       "cities": "Evans Notch",
       "url": "https://www.traillink.com/trail/wild-river-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 44.3,
+      "startLng": -71.05,
+      "endLat": 44.3,
+      "endLng": -71.05
     },
     {
       "name": "Nanamocomuck Trail",
@@ -2467,7 +3290,11 @@
       "lng": -71.28,
       "cities": "Albany",
       "url": "https://www.traillink.com/trail/nanamocomuck-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 43.98,
+      "startLng": -71.28,
+      "endLat": 43.98,
+      "endLng": -71.28
     },
     {
       "name": "Cotton Valley Rail Trail",
@@ -2479,7 +3306,11 @@
       "lng": -71.18,
       "cities": "Wolfeboro to Wakefield",
       "url": "https://www.traillink.com/trail/cotton-valley-rail-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 43.584497,
+      "startLng": -71.21055,
+      "endLat": 43.553852,
+      "endLng": -71.026294
     },
     {
       "name": "Guinea and Flat Mountain Pond Trails",
@@ -2491,7 +3322,11 @@
       "lng": -71.38,
       "cities": "Sandwich",
       "url": "https://www.traillink.com/trail/guinea-and-flat-mountain-pond-trails/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 43.95,
+      "startLng": -71.38,
+      "endLat": 43.95,
+      "endLng": -71.38
     },
     {
       "name": "Warren to East Haverhill Railroad Grade Trail",
@@ -2503,7 +3338,11 @@
       "lng": -71.92,
       "cities": "Warren to East Haverhill",
       "url": "https://www.traillink.com/trail/warren-to-east-haverhill-railroad-grade-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 43.923124,
+      "startLng": -71.892028,
+      "endLat": 44.026733,
+      "endLng": -71.971198
     },
     {
       "name": "Upper Coos Recreational Trail",
@@ -2512,10 +3351,14 @@
       "surface": "Ballast, Cinder",
       "description": "Trail in far northern New Hampshire.",
       "lat": 44.88,
-      "lng": -71.50,
+      "lng": -71.5,
       "cities": "Colebrook to Stewartstown",
       "url": "https://www.traillink.com/trail/upper-coos-recreational-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 44.894313,
+      "startLng": -71.496296,
+      "endLat": 45.00757,
+      "endLng": -71.50724
     },
     {
       "name": "Mine Falls Park Trails",
@@ -2527,7 +3370,11 @@
       "lng": -71.48,
       "cities": "Nashua",
       "url": "https://www.traillink.com/trail/mine-falls-park-trails/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 42.76,
+      "startLng": -71.48,
+      "endLat": 42.76,
+      "endLng": -71.48
     },
     {
       "name": "Sugar River Trail",
@@ -2539,7 +3386,11 @@
       "lng": -72.12,
       "cities": "Newport to Claremont",
       "url": "https://www.traillink.com/trail/sugar-river-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 43.364934,
+      "startLng": -72.173597,
+      "endLat": 43.372864,
+      "endLng": -72.337874
     },
     {
       "name": "Rocky Branch Trail (NH)",
@@ -2551,7 +3402,11 @@
       "lng": -71.25,
       "cities": "Jackson",
       "url": "https://www.traillink.com/trail/rocky-branch-trail-(nh)/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 44.18,
+      "startLng": -71.25,
+      "endLat": 44.18,
+      "endLng": -71.25
     },
     {
       "name": "Franconia Notch Recreation Path",
@@ -2563,7 +3418,11 @@
       "lng": -71.68,
       "cities": "Franconia Notch",
       "url": "https://www.traillink.com/trail/franconia-notch-recreation-path/",
-      "rating": 4.8
+      "rating": 4.8,
+      "startLat": 44.12,
+      "startLng": -71.68,
+      "endLat": 44.12,
+      "endLng": -71.68
     },
     {
       "name": "New Hampshire Seacoast Greenway",
@@ -2575,7 +3434,11 @@
       "lng": -70.85,
       "cities": "Hampton to Portsmouth",
       "url": "https://www.traillink.com/trail/new-hampshire-seacoast-greenway/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.937593,
+      "startLng": -70.838922,
+      "endLat": 43.070205,
+      "endLng": -70.754677
     },
     {
       "name": "Hillsborough Recreational Rail Trail",
@@ -2584,10 +3447,14 @@
       "surface": "Crushed Stone, Dirt",
       "description": "Trail through Hillsborough area.",
       "lat": 43.12,
-      "lng": -71.90,
+      "lng": -71.9,
       "cities": "Hillsborough",
       "url": "https://www.traillink.com/trail/hillsborough-recreational-rail-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 43.12,
+      "startLng": -71.9,
+      "endLat": 43.12,
+      "endLng": -71.9
     },
     {
       "name": "Monadnock Recreational Rail Trail",
@@ -2599,7 +3466,11 @@
       "lng": -72.05,
       "cities": "Jaffrey to Rindge",
       "url": "https://www.traillink.com/trail/monadnock-recreational-rail-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.814227,
+      "startLng": -72.022291,
+      "endLat": 42.751196,
+      "endLng": -72.009802
     },
     {
       "name": "Sawyer River Trail / Sawyer River Road",
@@ -2611,7 +3482,11 @@
       "lng": -71.38,
       "cities": "Bartlett",
       "url": "https://www.traillink.com/trail/sawyer-river-trail--sawyer-river-road/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 44.02,
+      "startLng": -71.38,
+      "endLat": 44.02,
+      "endLng": -71.38
     },
     {
       "name": "Franconia Brook Trail",
@@ -2619,11 +3494,15 @@
       "length": 7.2,
       "surface": "Ballast",
       "description": "Backcountry trail in Pemigewasset Wilderness.",
-      "lat": 44.10,
+      "lat": 44.1,
       "lng": -71.58,
       "cities": "Lincoln",
       "url": "https://www.traillink.com/trail/franconia-brook-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.1,
+      "startLng": -71.58,
+      "endLat": 44.1,
+      "endLng": -71.58
     },
     {
       "name": "Fort Hill Recreational Rail Trail",
@@ -2635,7 +3514,11 @@
       "lng": -72.48,
       "cities": "Hinsdale",
       "url": "https://www.traillink.com/trail/fort-hill-recreational-rail-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 42.78,
+      "startLng": -72.48,
+      "endLat": 42.78,
+      "endLng": -72.48
     },
     {
       "name": "Mason Railroad Trail",
@@ -2647,7 +3530,11 @@
       "lng": -71.77,
       "cities": "Mason",
       "url": "https://www.traillink.com/trail/mason-railroad-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 42.73,
+      "startLng": -71.77,
+      "endLat": 42.73,
+      "endLng": -71.77
     },
     {
       "name": "Henniker & Hopkinton Rail Trails",
@@ -2659,7 +3546,11 @@
       "lng": -71.82,
       "cities": "Henniker to Hopkinton",
       "url": "https://www.traillink.com/trail/henniker--hopkinton-rail-trails/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 43.179657,
+      "startLng": -71.822344,
+      "endLat": 43.194774,
+      "endLng": -71.691066
     },
     {
       "name": "York Pond Trail",
@@ -2671,7 +3562,11 @@
       "lng": -71.35,
       "cities": "Berlin",
       "url": "https://www.traillink.com/trail/york-pond-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 44.52,
+      "startLng": -71.35,
+      "endLat": 44.52,
+      "endLng": -71.35
     },
     {
       "name": "Harrisville and Hancock Rail Trails",
@@ -2680,10 +3575,14 @@
       "surface": "Dirt",
       "description": "Trail connecting two historic mill villages.",
       "lat": 42.95,
-      "lng": -72.00,
+      "lng": -72.0,
       "cities": "Harrisville to Hancock",
       "url": "https://www.traillink.com/trail/harrisville-and-hancock-rail-trails/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 42.945082,
+      "startLng": -72.096471,
+      "endLat": 42.973162,
+      "endLng": -71.980029
     },
     {
       "name": "Roland Bergeron Bike Path",
@@ -2691,11 +3590,15 @@
       "length": 6.0,
       "surface": "Asphalt",
       "description": "Paved path in Rochester area.",
-      "lat": 43.30,
+      "lat": 43.3,
       "lng": -70.98,
       "cities": "Rochester",
       "url": "https://www.traillink.com/trail/roland-bergeron-bike-path/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 43.3,
+      "startLng": -70.98,
+      "endLat": 43.3,
+      "endLng": -70.98
     },
     {
       "name": "Farmington Recreational Rail-Trail",
@@ -2707,7 +3610,11 @@
       "lng": -71.07,
       "cities": "Farmington",
       "url": "https://www.traillink.com/trail/farmington-recreational-rail-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 43.38,
+      "startLng": -71.07,
+      "endLat": 43.38,
+      "endLng": -71.07
     },
     {
       "name": "Concord-Lake Sunapee Rail Trail",
@@ -2716,10 +3623,14 @@
       "surface": "Asphalt, Boardwalk, Crushed Stone, Dirt, Gravel",
       "description": "Trail toward Lake Sunapee region.",
       "lat": 43.22,
-      "lng": -71.80,
+      "lng": -71.8,
       "cities": "Concord to Hopkinton",
       "url": "https://www.traillink.com/trail/concord-lake-sunapee-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 43.206221,
+      "startLng": -71.539816,
+      "endLat": 43.194774,
+      "endLng": -71.691066
     },
     {
       "name": "Goffstown Rail Trail",
@@ -2728,10 +3639,14 @@
       "surface": "Dirt, Grass, Gravel, Sand",
       "description": "Trail in Goffstown near Manchester.",
       "lat": 43.02,
-      "lng": -71.60,
+      "lng": -71.6,
       "cities": "Goffstown",
       "url": "https://www.traillink.com/trail/goffstown-rail-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 43.02,
+      "startLng": -71.6,
+      "endLat": 43.02,
+      "endLng": -71.6
     },
     {
       "name": "Common Pathway",
@@ -2743,7 +3658,11 @@
       "lng": -71.95,
       "cities": "Peterborough",
       "url": "https://www.traillink.com/trail/common-pathway/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 42.87,
+      "startLng": -71.95,
+      "endLat": 42.87,
+      "endLng": -71.95
     },
     {
       "name": "Blackmount Rail Trail",
@@ -2755,7 +3674,11 @@
       "lng": -72.02,
       "cities": "Haverhill",
       "url": "https://www.traillink.com/trail/blackmount-rail-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 44.02,
+      "startLng": -72.02,
+      "endLat": 44.02,
+      "endLng": -72.02
     },
     {
       "name": "Winnipesaukee River Trail",
@@ -2767,7 +3690,11 @@
       "lng": -71.47,
       "cities": "Franklin to Tilton",
       "url": "https://www.traillink.com/trail/winnipesaukee-river-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 43.444243,
+      "startLng": -71.647299,
+      "endLat": 43.442649,
+      "endLng": -71.589209
     },
     {
       "name": "Salem Bike-Ped Corridor",
@@ -2779,7 +3706,11 @@
       "lng": -71.22,
       "cities": "Salem",
       "url": "https://www.traillink.com/trail/salem-bike-ped-corridor/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.78,
+      "startLng": -71.22,
+      "endLat": 42.78,
+      "endLng": -71.22
     },
     {
       "name": "Londonderry Rail Trail",
@@ -2791,7 +3722,11 @@
       "lng": -71.38,
       "cities": "Londonderry",
       "url": "https://www.traillink.com/trail/londonderry-rail-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 42.87,
+      "startLng": -71.38,
+      "endLat": 42.87,
+      "endLng": -71.38
     },
     {
       "name": "West Milan Trail",
@@ -2803,7 +3738,11 @@
       "lng": -71.38,
       "cities": "Milan",
       "url": "https://www.traillink.com/trail/west-milan-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 44.55,
+      "startLng": -71.38,
+      "endLat": 44.55,
+      "endLng": -71.38
     },
     {
       "name": "Brookline Rail Trail",
@@ -2815,7 +3754,11 @@
       "lng": -71.65,
       "cities": "Brookline",
       "url": "https://www.traillink.com/trail/brookline-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.73,
+      "startLng": -71.65,
+      "endLat": 42.73,
+      "endLng": -71.65
     },
     {
       "name": "Windham Rail Trail",
@@ -2823,11 +3766,15 @@
       "length": 4.3,
       "surface": "Asphalt",
       "description": "Popular paved trail in Windham.",
-      "lat": 42.80,
-      "lng": -71.30,
+      "lat": 42.8,
+      "lng": -71.3,
       "cities": "Windham",
       "url": "https://www.traillink.com/trail/windham-rail-trail/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 42.8,
+      "startLng": -71.3,
+      "endLat": 42.8,
+      "endLng": -71.3
     },
     {
       "name": "Dover Community Trail",
@@ -2835,11 +3782,15 @@
       "length": 4.2,
       "surface": "Asphalt, Crushed Stone, Dirt",
       "description": "Community trail in Dover.",
-      "lat": 43.20,
+      "lat": 43.2,
       "lng": -70.88,
       "cities": "Dover",
       "url": "https://www.traillink.com/trail/dover-community-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 43.2,
+      "startLng": -70.88,
+      "endLat": 43.2,
+      "endLng": -70.88
     },
     {
       "name": "New Boston Rail Trail",
@@ -2851,7 +3802,11 @@
       "lng": -71.68,
       "cities": "New Boston",
       "url": "https://www.traillink.com/trail/new-boston-rail-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 42.98,
+      "startLng": -71.68,
+      "endLat": 42.98,
+      "endLng": -71.68
     },
     {
       "name": "Derry Rail Trail",
@@ -2863,7 +3818,11 @@
       "lng": -71.32,
       "cities": "Derry",
       "url": "https://www.traillink.com/trail/derry-rail-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 42.88,
+      "startLng": -71.32,
+      "endLat": 42.88,
+      "endLng": -71.32
     },
     {
       "name": "Oliverian Brook Trail",
@@ -2871,11 +3830,15 @@
       "length": 3.5,
       "surface": "Dirt",
       "description": "White Mountains hiking trail.",
-      "lat": 44.00,
+      "lat": 44.0,
       "lng": -71.88,
       "cities": "Benton",
       "url": "https://www.traillink.com/trail/oliverian-brook-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 44.0,
+      "startLng": -71.88,
+      "endLat": 44.0,
+      "endLng": -71.88
     },
     {
       "name": "Potanipo Rail Trail",
@@ -2883,11 +3846,15 @@
       "length": 3.4,
       "surface": "Crushed Stone, Gravel",
       "description": "Cross-border trail connecting Massachusetts and New Hampshire.",
-      "lat": 42.70,
+      "lat": 42.7,
       "lng": -71.65,
       "cities": "Brookline NH to Townsend MA",
       "url": "https://www.traillink.com/trail/potanipo-rail-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 42.73481,
+      "startLng": -71.658127,
+      "endLat": 42.666931,
+      "endLng": -71.705804
     },
     {
       "name": "Granite Town Rail-Trail",
@@ -2899,7 +3866,11 @@
       "lng": -71.65,
       "cities": "Milford",
       "url": "https://www.traillink.com/trail/granite-town-rail-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 42.83,
+      "startLng": -71.65,
+      "endLat": 42.83,
+      "endLng": -71.65
     },
     {
       "name": "North Conway Recreation Path",
@@ -2911,7 +3882,11 @@
       "lng": -71.12,
       "cities": "North Conway",
       "url": "https://www.traillink.com/trail/north-conway-recreation-path/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 44.05,
+      "startLng": -71.12,
+      "endLat": 44.05,
+      "endLng": -71.12
     },
     {
       "name": "Mascoma River Greenway",
@@ -2923,7 +3898,11 @@
       "lng": -72.25,
       "cities": "Lebanon",
       "url": "https://www.traillink.com/trail/mascoma-river-greenway/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 43.65,
+      "startLng": -72.25,
+      "endLat": 43.65,
+      "endLng": -72.25
     },
     {
       "name": "Lincoln Woods Trail",
@@ -2935,7 +3914,11 @@
       "lng": -71.58,
       "cities": "Lincoln",
       "url": "https://www.traillink.com/trail/lincoln-woods-trail/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 44.07,
+      "startLng": -71.58,
+      "endLat": 44.07,
+      "endLng": -71.58
     },
     {
       "name": "Old Railroad Trail",
@@ -2947,7 +3930,11 @@
       "lng": -71.25,
       "cities": "Pittsfield",
       "url": "https://www.traillink.com/trail/old-railroad-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 43.22,
+      "startLng": -71.25,
+      "endLat": 43.22,
+      "endLng": -71.25
     },
     {
       "name": "WOW Trail",
@@ -2959,7 +3946,11 @@
       "lng": -71.47,
       "cities": "Laconia",
       "url": "https://www.traillink.com/trail/wow-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 43.53,
+      "startLng": -71.47,
+      "endLat": 43.53,
+      "endLng": -71.47
     },
     {
       "name": "Potanipo Rail Trail (NH)",
@@ -2971,7 +3962,11 @@
       "lng": -71.65,
       "cities": "Brookline",
       "url": "https://www.traillink.com/trail/potanipo-rail-trail-(nh)/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.72,
+      "startLng": -71.65,
+      "endLat": 42.72,
+      "endLng": -71.65
     },
     {
       "name": "Profile Recreational Rail Trail",
@@ -2983,7 +3978,11 @@
       "lng": -71.68,
       "cities": "Franconia",
       "url": "https://www.traillink.com/trail/profile-recreational-rail-trail-/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 44.15,
+      "startLng": -71.68,
+      "endLat": 44.15,
+      "endLng": -71.68
     },
     {
       "name": "Village Spur Rail Trail",
@@ -2995,7 +3994,11 @@
       "lng": -71.45,
       "cities": "Hooksett",
       "url": "https://www.traillink.com/trail/village-spur-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 43.08,
+      "startLng": -71.45,
+      "endLat": 43.08,
+      "endLng": -71.45
     },
     {
       "name": "Piscataquog Trail",
@@ -3007,7 +4010,11 @@
       "lng": -71.47,
       "cities": "Manchester",
       "url": "https://www.traillink.com/trail/piscataquog-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 42.98,
+      "startLng": -71.47,
+      "endLat": 42.98,
+      "endLng": -71.47
     },
     {
       "name": "South Manchester Rail Trail",
@@ -3019,7 +4026,11 @@
       "lng": -71.45,
       "cities": "Manchester",
       "url": "https://www.traillink.com/trail/south-manchester-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.95,
+      "startLng": -71.45,
+      "endLat": 42.95,
+      "endLng": -71.45
     },
     {
       "name": "Head's Pond Trail",
@@ -3031,7 +4042,11 @@
       "lng": -71.47,
       "cities": "Hooksett",
       "url": "https://www.traillink.com/trail/heads-pond-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 43.08,
+      "startLng": -71.47,
+      "endLat": 43.08,
+      "endLng": -71.47
     },
     {
       "name": "Bobby Woodman Rail Trail",
@@ -3043,7 +4058,11 @@
       "lng": -71.62,
       "cities": "Boscawen",
       "url": "https://www.traillink.com/trail/bobby-woodman-rail-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 43.32,
+      "startLng": -71.62,
+      "endLat": 43.32,
+      "endLng": -71.62
     },
     {
       "name": "Stevens Rail Trail",
@@ -3055,7 +4074,11 @@
       "lng": -72.33,
       "cities": "Claremont",
       "url": "https://www.traillink.com/trail/stevens-rail-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 43.38,
+      "startLng": -72.33,
+      "endLat": 43.38,
+      "endLng": -72.33
     },
     {
       "name": "West Foss Farm Trail",
@@ -3067,7 +4090,11 @@
       "lng": -71.02,
       "cities": "Rochester",
       "url": "https://www.traillink.com/trail/west-foss-farm-trail/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 43.28,
+      "startLng": -71.02,
+      "endLat": 43.28,
+      "endLng": -71.02
     },
     {
       "name": "Lake Winnisquam Scenic Trail",
@@ -3076,10 +4103,14 @@
       "surface": "Asphalt",
       "description": "Scenic paved trail along Lake Winnisquam.",
       "lat": 43.47,
-      "lng": -71.50,
+      "lng": -71.5,
       "cities": "Sanbornton",
       "url": "https://www.traillink.com/trail/lake-winnisquam-scenic-trail/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 43.47,
+      "startLng": -71.5,
+      "endLat": 43.47,
+      "endLng": -71.5
     },
     {
       "name": "Peanut Trail",
@@ -3091,7 +4122,11 @@
       "lng": -71.62,
       "cities": "Amherst",
       "url": "https://www.traillink.com/trail/peanut-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.87,
+      "startLng": -71.62,
+      "endLat": 42.87,
+      "endLng": -71.62
     },
     {
       "name": "Hooksett Riverwalk Trail",
@@ -3103,7 +4138,11 @@
       "lng": -71.45,
       "cities": "Hooksett",
       "url": "https://www.traillink.com/trail/hooksett-riverwalk-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 43.07,
+      "startLng": -71.45,
+      "endLat": 43.07,
+      "endLng": -71.45
     },
     {
       "name": "Nashua Heritage Rail-Trail",
@@ -3115,7 +4154,11 @@
       "lng": -71.47,
       "cities": "Nashua",
       "url": "https://www.traillink.com/trail/nashua-heritage-rail-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 42.77,
+      "startLng": -71.47,
+      "endLat": 42.77,
+      "endLng": -71.47
     },
     {
       "name": "Appel Way Trail",
@@ -3123,11 +4166,15 @@
       "length": 1.3,
       "surface": "Asphalt",
       "description": "Paved trail in Hanover near Dartmouth.",
-      "lat": 43.70,
+      "lat": 43.7,
       "lng": -72.28,
       "cities": "Hanover",
       "url": "https://www.traillink.com/trail/appel-way-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 43.7,
+      "startLng": -72.28,
+      "endLat": 43.7,
+      "endLng": -72.28
     },
     {
       "name": "Keene Industrial Heritage Trail",
@@ -3139,7 +4186,11 @@
       "lng": -72.28,
       "cities": "Keene",
       "url": "https://www.traillink.com/trail/keene-industrial-heritage-trail-/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.93,
+      "startLng": -72.28,
+      "endLat": 42.93,
+      "endLng": -72.28
     },
     {
       "name": "Trestle Trail (NH)",
@@ -3151,7 +4202,11 @@
       "lng": -71.78,
       "cities": "Danbury",
       "url": "https://www.traillink.com/trail/trestle-trail-(nh)/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 43.55,
+      "startLng": -71.78,
+      "endLat": 43.55,
+      "endLng": -71.78
     },
     {
       "name": "Warner Rail Trail and Bagley Rail Trail",
@@ -3163,7 +4218,11 @@
       "lng": -71.83,
       "cities": "Warner",
       "url": "https://www.traillink.com/trail/warner-rail-trail-and-bagley-rail-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 43.28,
+      "startLng": -71.83,
+      "endLat": 43.28,
+      "endLng": -71.83
     },
     {
       "name": "Jonathan Daniels Trail",
@@ -3175,7 +4234,11 @@
       "lng": -72.28,
       "cities": "Keene",
       "url": "https://www.traillink.com/trail/jonathan-daniels-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.93,
+      "startLng": -72.28,
+      "endLat": 42.93,
+      "endLng": -72.28
     },
     {
       "name": "Heritage Trail (NH)",
@@ -3187,7 +4250,11 @@
       "lng": -71.47,
       "cities": "Laconia",
       "url": "https://www.traillink.com/trail/heritage-trail-(nh)/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 43.52,
+      "startLng": -71.47,
+      "endLat": 43.52,
+      "endLng": -71.47
     },
     {
       "name": "Black Pond Trail",
@@ -3195,11 +4262,15 @@
       "length": 0.8,
       "surface": "Dirt",
       "description": "Trail to Black Pond.",
-      "lat": 44.10,
+      "lat": 44.1,
       "lng": -71.45,
       "cities": "Lincoln",
       "url": "https://www.traillink.com/trail/black-pond-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 44.1,
+      "startLng": -71.45,
+      "endLat": 44.1,
+      "endLng": -71.45
     },
     {
       "name": "Allenstown Rail Trail",
@@ -3211,7 +4282,11 @@
       "lng": -71.42,
       "cities": "Allenstown",
       "url": "https://www.traillink.com/trail/allenstown-rail-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 43.13,
+      "startLng": -71.42,
+      "endLat": 43.13,
+      "endLng": -71.42
     },
     {
       "name": "Laverack Nature Trail at Hawkins Brook",
@@ -3223,7 +4298,11 @@
       "lng": -72.27,
       "cities": "Lebanon",
       "url": "https://www.traillink.com/trail/laverack-nature-trail-at-hawkins-brook/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 43.67,
+      "startLng": -72.27,
+      "endLat": 43.67,
+      "endLng": -72.27
     },
     {
       "name": "Littleton Riverwalk",
@@ -3231,11 +4310,15 @@
       "length": 0.5,
       "surface": "Asphalt",
       "description": "Riverwalk in downtown Littleton.",
-      "lat": 44.30,
+      "lat": 44.3,
       "lng": -71.77,
       "cities": "Littleton",
       "url": "https://www.traillink.com/trail/littleton-riverwalk/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 44.3,
+      "startLng": -71.77,
+      "endLat": 44.3,
+      "endLng": -71.77
     },
     {
       "name": "Merrimack River Greenway Trail",
@@ -3244,10 +4327,14 @@
       "surface": "Asphalt",
       "description": "Short greenway along Merrimack River.",
       "lat": 42.88,
-      "lng": -71.50,
+      "lng": -71.5,
       "cities": "Merrimack",
       "url": "https://www.traillink.com/trail/merrimack-river-greenway-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 42.88,
+      "startLng": -71.5,
+      "endLat": 42.88,
+      "endLng": -71.5
     },
     {
       "name": "East Bay Bike Path",
@@ -3259,7 +4346,11 @@
       "lng": -71.32,
       "cities": "Providence to Bristol",
       "url": "https://www.traillink.com/trail/east-bay-bike-path-(ri)/",
-      "rating": 4.7
+      "rating": 4.7,
+      "startLat": 41.824484,
+      "startLng": -71.412746,
+      "endLat": 41.67711,
+      "endLng": -71.266202
     },
     {
       "name": "Washington Secondary Bike Path",
@@ -3271,7 +4362,11 @@
       "lng": -71.58,
       "cities": "Cranston to Coventry",
       "url": "https://www.traillink.com/trail/washington-secondary-bike-path/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 41.779823,
+      "startLng": -71.43728,
+      "endLat": 41.688598,
+      "endLng": -71.564208
     },
     {
       "name": "Blackstone River Bikeway (RI)",
@@ -3283,7 +4378,11 @@
       "lng": -71.45,
       "cities": "Woonsocket to Lincoln",
       "url": "https://www.traillink.com/trail/blackstone-river-greenway/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 42.002876,
+      "startLng": -71.514784,
+      "endLat": 41.934536,
+      "endLng": -71.450654
     },
     {
       "name": "Ten Mile River Greenway",
@@ -3295,7 +4394,11 @@
       "lng": -71.35,
       "cities": "East Providence",
       "url": "https://www.traillink.com/trail/ten-mile-river-greenway/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 41.82,
+      "startLng": -71.35,
+      "endLat": 41.82,
+      "endLng": -71.35
     },
     {
       "name": "South County Bike Path",
@@ -3307,7 +4410,11 @@
       "lng": -71.52,
       "cities": "Kingston to Narragansett",
       "url": "https://www.traillink.com/trail/south-county-bike-path/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 41.480379,
+      "startLng": -71.52256,
+      "endLat": 41.450084,
+      "endLng": -71.449503
     },
     {
       "name": "Coventry Greenway",
@@ -3315,11 +4422,15 @@
       "length": 2.5,
       "surface": "Asphalt",
       "description": "Paved greenway in Coventry connecting to Washington Secondary.",
-      "lat": 41.70,
+      "lat": 41.7,
       "lng": -71.68,
       "cities": "Coventry",
       "url": "https://www.traillink.com/trail/coventry-greenway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.7,
+      "startLng": -71.68,
+      "endLat": 41.7,
+      "endLng": -71.68
     },
     {
       "name": "Fred Lippitt Woonasquatucket River Greenway",
@@ -3331,7 +4442,11 @@
       "lng": -71.43,
       "cities": "Providence",
       "url": "https://www.traillink.com/trail/fred-lippitt-woonasquatucket-river-greenway/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 41.83,
+      "startLng": -71.43,
+      "endLat": 41.83,
+      "endLng": -71.43
     },
     {
       "name": "Warwick Bike Path",
@@ -3343,7 +4458,11 @@
       "lng": -71.42,
       "cities": "Warwick",
       "url": "https://www.traillink.com/trail/warwick-bike-path/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 41.72,
+      "startLng": -71.42,
+      "endLat": 41.72,
+      "endLng": -71.42
     },
     {
       "name": "Newport Cliff Walk",
@@ -3352,10 +4471,14 @@
       "surface": "Concrete, Grass, Gravel",
       "description": "Famous scenic walk along Newport cliffs with ocean views and Gilded Age mansions.",
       "lat": 41.47,
-      "lng": -71.30,
+      "lng": -71.3,
       "cities": "Newport",
       "url": "https://www.traillink.com/trail/newport-cliff-walk/",
-      "rating": 4.8
+      "rating": 4.8,
+      "startLat": 41.47,
+      "startLng": -71.3,
+      "endLat": 41.47,
+      "endLng": -71.3
     },
     {
       "name": "Lamoille Valley Rail Trail",
@@ -3364,10 +4487,14 @@
       "surface": "Crushed Stone, Dirt, Gravel",
       "description": "Vermont's epic cross-state trail, the longest rail trail in New England, running from St. Johnsbury to Swanton.",
       "lat": 44.55,
-      "lng": -72.50,
+      "lng": -72.5,
       "cities": "St. Johnsbury to Swanton",
       "url": "https://www.traillink.com/trail/lamoille-valley-rail-trail/",
-      "rating": 4.6
+      "rating": 4.6,
+      "startLat": 44.419263,
+      "startLng": -72.015118,
+      "endLat": 44.918234,
+      "endLng": -73.124479
     },
     {
       "name": "Cross Vermont Trail",
@@ -3376,10 +4503,14 @@
       "surface": "Asphalt, Concrete, Crushed Stone, Dirt, Grass, Gravel",
       "description": "Epic trail spanning Vermont from Burlington area to Connecticut River.",
       "lat": 44.25,
-      "lng": -72.40,
+      "lng": -72.4,
       "cities": "Burlington to Wells River",
       "url": "https://www.traillink.com/trail/cross-vermont-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 44.475882,
+      "startLng": -73.212072,
+      "endLat": 44.15423,
+      "endLng": -72.047036
     },
     {
       "name": "Missisquoi Valley Rail Trail",
@@ -3387,11 +4518,15 @@
       "length": 26.3,
       "surface": "Asphalt, Crushed Stone",
       "description": "Long trail through northern Vermont farmland with mountain views.",
-      "lat": 44.90,
-      "lng": -72.80,
+      "lat": 44.9,
+      "lng": -72.8,
       "cities": "St. Albans to Richford",
       "url": "https://www.traillink.com/trail/missisquoi-valley-rail-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 44.810713,
+      "startLng": -73.083558,
+      "endLat": 44.996995,
+      "endLng": -72.671302
     },
     {
       "name": "South Burlington Recreation Path",
@@ -3403,7 +4538,11 @@
       "lng": -73.18,
       "cities": "South Burlington",
       "url": "https://www.traillink.com/trail/south-burlington-recreation-path/",
-      "rating": 4.5
+      "rating": 4.5,
+      "startLat": 44.45,
+      "startLng": -73.18,
+      "endLat": 44.45,
+      "endLng": -73.18
     },
     {
       "name": "Delaware and Hudson Rail-Trail",
@@ -3412,10 +4551,14 @@
       "surface": "Asphalt, Cinder, Dirt, Grass, Gravel",
       "description": "Cross-border trail between Vermont and New York.",
       "lat": 43.55,
-      "lng": -73.30,
+      "lng": -73.3,
       "cities": "Castleton VT to Granville NY",
       "url": "https://www.traillink.com/trail/delaware-and-hudson-rail-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 43.608439,
+      "startLng": -73.20845,
+      "endLat": 44.558803,
+      "endLng": -72.577841
     },
     {
       "name": "Cross Vermont Trail (Montpelier & Wells River Trail)",
@@ -3424,10 +4567,14 @@
       "surface": "Ballast, Dirt, Gravel, Sand",
       "description": "Section of Cross Vermont Trail from Montpelier to Wells River.",
       "lat": 44.25,
-      "lng": -72.20,
+      "lng": -72.2,
       "cities": "Montpelier to Wells River",
       "url": "https://www.traillink.com/trail/cross-vermont-trail-(montpelier--wells-river-trail)/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 44.260059,
+      "startLng": -72.575387,
+      "endLat": 44.15423,
+      "endLng": -72.047036
     },
     {
       "name": "Catamount Trail - Sections 1 and 2",
@@ -3436,10 +4583,14 @@
       "surface": "Dirt",
       "description": "Southern sections of Vermont's cross-country ski trail, also used for hiking.",
       "lat": 42.88,
-      "lng": -72.90,
+      "lng": -72.9,
       "cities": "Readsboro to Wilmington",
       "url": "https://www.traillink.com/trail/catamount-trail---sections-1-and-2/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.771876,
+      "startLng": -72.947043,
+      "endLat": 42.868389,
+      "endLng": -72.871447
     },
     {
       "name": "West River Trail (Windham County)",
@@ -3447,11 +4598,15 @@
       "length": 16.1,
       "surface": "Asphalt, Dirt, Gravel, Sand",
       "description": "Trail along West River in southern Vermont.",
-      "lat": 43.00,
-      "lng": -72.70,
+      "lat": 43.0,
+      "lng": -72.7,
       "cities": "Jamaica to South Londonderry",
       "url": "https://www.traillink.com/trail/west-river-trail-(windham-county)/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 43.100112,
+      "startLng": -72.778125,
+      "endLat": 43.192712,
+      "endLng": -72.814718
     },
     {
       "name": "Island Line Trail",
@@ -3463,7 +4618,11 @@
       "lng": -73.22,
       "cities": "Burlington to Colchester",
       "url": "https://www.traillink.com/trail/island-line-trail/",
-      "rating": 4.9
+      "rating": 4.9,
+      "startLat": 44.475882,
+      "startLng": -73.212072,
+      "endLat": 44.551621,
+      "endLng": -73.163693
     },
     {
       "name": "Valley Trail",
@@ -3471,11 +4630,15 @@
       "length": 9.1,
       "surface": "Asphalt, Dirt, Gravel",
       "description": "Trail in Mad River Valley ski country.",
-      "lat": 44.20,
+      "lat": 44.2,
       "lng": -72.85,
       "cities": "Waitsfield to Warren",
       "url": "https://www.traillink.com/trail/valley-trail/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 44.192639,
+      "startLng": -72.779848,
+      "endLat": 44.112005,
+      "endLng": -72.855947
     },
     {
       "name": "Williston Village Bike Paths",
@@ -3487,7 +4650,11 @@
       "lng": -73.08,
       "cities": "Williston",
       "url": "https://www.traillink.com/trail/williston-village-bike-paths/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.43,
+      "startLng": -73.08,
+      "endLat": 44.43,
+      "endLng": -73.08
     },
     {
       "name": "Stowe Recreation Path",
@@ -3496,10 +4663,14 @@
       "surface": "Asphalt",
       "description": "Popular paved path in scenic Stowe resort area with mountain views.",
       "lat": 44.47,
-      "lng": -72.70,
+      "lng": -72.7,
       "cities": "Stowe",
       "url": "https://www.traillink.com/trail/stowe-recreation-path/",
-      "rating": 4.7
+      "rating": 4.7,
+      "startLat": 44.47,
+      "startLng": -72.7,
+      "endLat": 44.47,
+      "endLng": -72.7
     },
     {
       "name": "Battell Woods Trail",
@@ -3511,7 +4682,11 @@
       "lng": -73.17,
       "cities": "Middlebury",
       "url": "https://www.traillink.com/trail/battell-woods-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.02,
+      "startLng": -73.17,
+      "endLat": 44.02,
+      "endLng": -73.17
     },
     {
       "name": "Essex Bike Paths",
@@ -3520,10 +4695,14 @@
       "surface": "Asphalt",
       "description": "Paved paths in Essex near Burlington.",
       "lat": 44.52,
-      "lng": -73.10,
+      "lng": -73.1,
       "cities": "Essex",
       "url": "https://www.traillink.com/trail/essex-bike-paths/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 44.52,
+      "startLng": -73.1,
+      "endLat": 44.52,
+      "endLng": -73.1
     },
     {
       "name": "Beebe Spur Rail Trail",
@@ -3535,7 +4714,11 @@
       "lng": -72.15,
       "cities": "Newport to Derby Line",
       "url": "https://www.traillink.com/trail/beebe-spur-rail-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 44.936436,
+      "startLng": -72.205102,
+      "endLat": 45.002228,
+      "endLng": -72.101166
     },
     {
       "name": "Ethan Allen Park Trails",
@@ -3543,11 +4726,15 @@
       "length": 4.0,
       "surface": "Asphalt, Dirt",
       "description": "Trail system in Burlington's Ethan Allen Park.",
-      "lat": 44.50,
+      "lat": 44.5,
       "lng": -73.22,
       "cities": "Burlington",
       "url": "https://www.traillink.com/trail/ethan-allen-park-trails/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 44.5,
+      "startLng": -73.22,
+      "endLat": 44.5,
+      "endLng": -73.22
     },
     {
       "name": "Wright Park Trail",
@@ -3559,7 +4746,11 @@
       "lng": -73.12,
       "cities": "Milton",
       "url": "https://www.traillink.com/trail/wright-park-trail/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 44.58,
+      "startLng": -73.12,
+      "endLat": 44.58,
+      "endLng": -73.12
     },
     {
       "name": "Colchester Bayside to Village Path",
@@ -3571,7 +4762,11 @@
       "lng": -73.18,
       "cities": "Colchester",
       "url": "https://www.traillink.com/trail/colchester-bayside-to-village-path/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.55,
+      "startLng": -73.18,
+      "endLat": 44.55,
+      "endLng": -73.18
     },
     {
       "name": "Alburgh Recreational Rail-Trail",
@@ -3583,7 +4778,11 @@
       "lng": -73.28,
       "cities": "Alburgh",
       "url": "https://www.traillink.com/trail/alburgh-recreational-rail-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 44.97,
+      "startLng": -73.28,
+      "endLat": 44.97,
+      "endLng": -73.28
     },
     {
       "name": "Toonerville Rail-Trail",
@@ -3591,11 +4790,15 @@
       "length": 3.2,
       "surface": "Asphalt",
       "description": "Paved trail in Springfield area.",
-      "lat": 43.30,
+      "lat": 43.3,
       "lng": -72.48,
       "cities": "Springfield",
       "url": "https://www.traillink.com/trail/toonerville-rail-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 43.3,
+      "startLng": -72.48,
+      "endLat": 43.3,
+      "endLng": -72.48
     },
     {
       "name": "Route 127 Path",
@@ -3607,7 +4810,11 @@
       "lng": -73.25,
       "cities": "Burlington",
       "url": "https://www.traillink.com/trail/route-127-path/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.48,
+      "startLng": -73.25,
+      "endLat": 44.48,
+      "endLng": -73.25
     },
     {
       "name": "Ti-Haul Trail & Shelburne Bay Park Rec Path",
@@ -3615,11 +4822,15 @@
       "length": 2.5,
       "surface": "Gravel",
       "description": "Trail at Shelburne Bay Park with lake views.",
-      "lat": 44.40,
+      "lat": 44.4,
       "lng": -73.23,
       "cities": "Shelburne",
       "url": "https://www.traillink.com/trail/ti-haul-trail--shelburne-bay-park-rec-path-/",
-      "rating": 4.2
+      "rating": 4.2,
+      "startLat": 44.4,
+      "startLng": -73.23,
+      "endLat": 44.4,
+      "endLng": -73.23
     },
     {
       "name": "Millstone Hill West Bike Path",
@@ -3631,7 +4842,11 @@
       "lng": -72.58,
       "cities": "Barre",
       "url": "https://www.traillink.com/trail/millstone-hill-west-bike-path/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.15,
+      "startLng": -72.58,
+      "endLat": 44.15,
+      "endLng": -72.58
     },
     {
       "name": "Hoot, Toot and Whistle Trail & Riverwalk",
@@ -3643,7 +4858,11 @@
       "lng": -72.45,
       "cities": "Bellows Falls",
       "url": "https://www.traillink.com/trail/hoot-toot-and-whistle-trail--riverwalk/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 43.13,
+      "startLng": -72.45,
+      "endLat": 43.13,
+      "endLng": -72.45
     },
     {
       "name": "Lye Brook Falls Trail",
@@ -3655,7 +4874,11 @@
       "lng": -73.08,
       "cities": "Manchester",
       "url": "https://www.traillink.com/trail/lye-brook-falls-trail/",
-      "rating": 4.4
+      "rating": 4.4,
+      "startLat": 43.17,
+      "startLng": -73.08,
+      "endLat": 43.17,
+      "endLng": -73.08
     },
     {
       "name": "Intervale Trail",
@@ -3664,10 +4887,14 @@
       "surface": "Dirt",
       "description": "Trail through Intervale agricultural area in Burlington.",
       "lat": 44.48,
-      "lng": -73.20,
+      "lng": -73.2,
       "cities": "Burlington",
       "url": "https://www.traillink.com/trail/intervale-trail/",
-      "rating": 4.1
+      "rating": 4.1,
+      "startLat": 44.48,
+      "startLng": -73.2,
+      "endLat": 44.48,
+      "endLng": -73.2
     },
     {
       "name": "Montpelier Recreation Path (Winooski Path)",
@@ -3679,7 +4906,11 @@
       "lng": -72.58,
       "cities": "Montpelier",
       "url": "https://www.traillink.com/trail/montpelier-recreation-path-(winooski-path)/",
-      "rating": 4.3
+      "rating": 4.3,
+      "startLat": 44.26,
+      "startLng": -72.58,
+      "endLat": 44.26,
+      "endLng": -72.58
     },
     {
       "name": "Bennington Rail Trail",
@@ -3688,10 +4919,14 @@
       "surface": "Asphalt, Crushed Stone, Gravel",
       "description": "Trail in historic Bennington.",
       "lat": 42.88,
-      "lng": -73.20,
+      "lng": -73.2,
       "cities": "Bennington",
       "url": "https://www.traillink.com/trail/bennington-rail-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 42.88,
+      "startLng": -73.2,
+      "endLat": 42.88,
+      "endLng": -73.2
     },
     {
       "name": "Airport Park Trail",
@@ -3703,7 +4938,11 @@
       "lng": -72.62,
       "cities": "Morrisville",
       "url": "https://www.traillink.com/trail/airport-park-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 44.53,
+      "startLng": -72.62,
+      "endLat": 44.53,
+      "endLng": -72.62
     },
     {
       "name": "Cambridge Greenway",
@@ -3715,7 +4954,11 @@
       "lng": -72.88,
       "cities": "Cambridge",
       "url": "https://www.traillink.com/trail/cambridge-greenway/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.63,
+      "startLng": -72.88,
+      "endLat": 44.63,
+      "endLng": -72.88
     },
     {
       "name": "Arms Park Trail",
@@ -3727,7 +4970,11 @@
       "lng": -72.97,
       "cities": "Manchester",
       "url": "https://www.traillink.com/trail/arms-park-trail/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 43.63,
+      "startLng": -72.97,
+      "endLat": 43.63,
+      "endLng": -72.97
     },
     {
       "name": "Marshall Avenue Recreation Path",
@@ -3739,7 +4986,11 @@
       "lng": -73.08,
       "cities": "Williston",
       "url": "https://www.traillink.com/trail/marshall-avenue-recreation-path/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 44.43,
+      "startLng": -73.08,
+      "endLat": 44.43,
+      "endLng": -73.08
     },
     {
       "name": "Riverside Avenue Bike Path",
@@ -3748,10 +4999,14 @@
       "surface": "Asphalt",
       "description": "Paved path in Burlington.",
       "lat": 44.48,
-      "lng": -73.20,
+      "lng": -73.2,
       "cities": "Burlington",
       "url": "https://www.traillink.com/trail/riverside-avenue-bike-path/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.48,
+      "startLng": -73.2,
+      "endLat": 44.48,
+      "endLng": -73.2
     },
     {
       "name": "Swanton Recreation Path",
@@ -3763,7 +5018,11 @@
       "lng": -73.12,
       "cities": "Swanton",
       "url": "https://www.traillink.com/trail/swanton-recreation-path/",
-      "rating": 3.8
+      "rating": 3.8,
+      "startLat": 44.92,
+      "startLng": -73.12,
+      "endLat": 44.92,
+      "endLng": -73.12
     },
     {
       "name": "South Barre Bike Path",
@@ -3772,10 +5031,14 @@
       "surface": "Asphalt",
       "description": "Paved path in South Barre.",
       "lat": 44.17,
-      "lng": -72.50,
+      "lng": -72.5,
       "cities": "Barre",
       "url": "https://www.traillink.com/trail/south-barre-bike-path/",
-      "rating": 3.9
+      "rating": 3.9,
+      "startLat": 44.17,
+      "startLng": -72.5,
+      "endLat": 44.17,
+      "endLng": -72.5
     },
     {
       "name": "Johnnie Brook Road Trail",
@@ -3787,7 +5050,11 @@
       "lng": -72.98,
       "cities": "Richmond",
       "url": "https://www.traillink.com/trail/johnnie-brook-road-trail/",
-      "rating": 3.6
+      "rating": 3.6,
+      "startLat": 44.42,
+      "startLng": -72.98,
+      "endLat": 44.42,
+      "endLng": -72.98
     },
     {
       "name": "Niquette Bay State Park - Allen Trail",
@@ -3799,7 +5066,11 @@
       "lng": -73.22,
       "cities": "Colchester",
       "url": "https://www.traillink.com/trail/niquette-bay-state-park---allen-trail/",
-      "rating": 4.0
+      "rating": 4.0,
+      "startLat": 44.55,
+      "startLng": -73.22,
+      "endLat": 44.55,
+      "endLng": -73.22
     },
     {
       "name": "Means Woods Trail",
@@ -3808,10 +5079,14 @@
       "surface": "Dirt, Gravel",
       "description": "Short woodland trail.",
       "lat": 43.95,
-      "lng": -72.80,
+      "lng": -72.8,
       "cities": "Randolph",
       "url": "https://www.traillink.com/trail/means-woods-trail/",
-      "rating": 3.7
+      "rating": 3.7,
+      "startLat": 43.95,
+      "startLng": -72.8,
+      "endLat": 43.95,
+      "endLng": -72.8
     },
     {
       "name": "East Branch Trail (VT)",
@@ -3823,7 +5098,11 @@
       "lng": -72.58,
       "cities": "Johnson",
       "url": "https://www.traillink.com/trail/east-branch-trail-(vt)/",
-      "rating": 3.5
+      "rating": 3.5,
+      "startLat": 44.62,
+      "startLng": -72.58,
+      "endLat": 44.62,
+      "endLng": -72.58
     }
   ]
 }

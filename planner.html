@@ -1138,6 +1138,7 @@
                         ${ratingStars ? `<p style="margin:0.25rem 0;">${ratingStars} (${trail.rating})</p>` : ''}
                         ${trail.description ? `<p style="margin:0.5rem 0;font-size:0.85rem;color:rgba(255,255,255,0.9);">${trail.description.substring(0, 150)}${trail.description.length > 150 ? '...' : ''}</p>` : ''}
                         <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <button class="popup-btn popup-btn-add" onclick="addTrailToRoute(${trail.startLat || trail.lat}, ${trail.startLng || trail.lng}, ${trail.endLat || trail.lat}, ${trail.endLng || trail.lng}, '${trail.name.replace(/'/g, "\\'")}')">➕ Add to Route</button>
                             ${trail.url ? `<a href="${trail.url}" target="_blank" class="popup-btn popup-btn-nav" style="text-decoration:none;">ℹ️ Trail Info</a>` : ''}
                             <a href="https://www.google.com/maps/dir/?api=1&destination=${trail.lat},${trail.lng}" target="_blank" class="popup-btn popup-btn-nav" style="text-decoration:none;">🧭 Navigate</a>
                         </div>
@@ -1213,6 +1214,19 @@
         // Add charging station as waypoint
         window.addChargingToRoute = function(lat, lng, name) {
             addWaypoint(lat, lng, name);
+            map.closePopup();
+        };
+        
+        // Add rail trail to route (start + end points)
+        window.addTrailToRoute = function(startLat, startLng, endLat, endLng, name) {
+            if (startLat === endLat && startLng === endLng) {
+                // Single-city trail — just add the one point
+                addWaypoint(startLat, startLng, name);
+            } else {
+                // Add both endpoints so route goes through the full trail
+                addWaypoint(startLat, startLng, name + ' (start)');
+                addWaypoint(endLat, endLng, name + ' (end)');
+            }
             map.closePopup();
         };
         
