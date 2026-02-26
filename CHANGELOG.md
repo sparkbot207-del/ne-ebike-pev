@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.6] - 2026-02-26
+
+### Trail Data Improvements
+- **Scraped TrailLink endpoints** — Re-scraped all 318 rail trails from TrailLink pages to extract true start/end coordinates
+- **Fixed bad endpoint data** — 214 trails had copied center points as endpoints; now 290/318 have real endpoint coordinates
+- **Improved route mapping** — Better route visualization with accurate trail endpoints for "Add to Route" feature
+- **Added incremental saves** — Rescrape script now saves progress every 10 trails to prevent loss on timeout
+
+### Technical
+- Modified `scripts/rescrape_traillink.py` to skip trails with already-good endpoint data
+- Added checkpoint saving during geocoding to protect against session kills
+- Total completion time: ~13 minutes for 318 trails (average 2.5 sec/trail including rate limiting)
+
 ## [1.1.5] - 2026-02-25
 
 ### Security
