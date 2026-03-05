@@ -1552,7 +1552,14 @@
                 const rect = navToggle.getBoundingClientRect();
                 const navCs = window.getComputedStyle(navEl);
                 const navRect = navEl.getBoundingClientRect();
-                logDebug('T+' + (checks*200) + 'ms: btn[d=' + cs.display + ' w=' + Math.round(rect.width) + ' h=' + Math.round(rect.height) + '] nav[d=' + navCs.display + ' z=' + navCs.zIndex + ' bg=' + navCs.background.substring(0,30) + ' h=' + Math.round(navRect.height) + ' top=' + Math.round(navRect.top) + ' opacity=' + navCs.opacity + ']');
+                // Check spans inside button
+                const spans = navToggle.querySelectorAll('span');
+                const spanInfo = Array.from(spans).map((s,i) => {
+                    const scs = window.getComputedStyle(s);
+                    const sr = s.getBoundingClientRect();
+                    return 'span'+i+'[d='+scs.display+' w='+Math.round(sr.width)+' h='+Math.round(sr.height)+' bg='+scs.backgroundColor+']';
+                }).join(' ');
+                logDebug('T+' + (checks*200) + 'ms: btn[d=' + cs.display + ' w=' + Math.round(rect.width) + ' h=' + Math.round(rect.height) + ' pos=' + cs.position + ' top=' + Math.round(rect.top) + ' left=' + Math.round(rect.left) + '] nav[d=' + navCs.display + ' z=' + navCs.zIndex + ' h=' + Math.round(navRect.height) + ' pos=' + navCs.position + '] ' + spanInfo);
                 checks++;
                 if (checks > 15) clearInterval(debugInterval);
             }, 200);
