@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.1.7] - 2026-03-04
+
+### SEO Fixes - Redirect Issue Resolution
+- **Fixed sitemap redirect errors** — Removed `.html` extensions from all sitemap URLs
+  - Google Search Console was reporting "Redirect error" and "Page with redirect" for routes like `/guides.html`
+  - GitHub Pages serves HTML files without extension and redirects `.html` requests with 308 status
+  - Sitemap now points to clean URLs: `/guides`, `/routes`, `/laws`, etc.
+- **Fixed canonical tags** — Updated canonical links in all 10 HTML pages to point to clean URLs
+  - Previously: `<link rel="canonical" href="https://newenglandebike.org/guides.html">`
+  - Now: `<link rel="canonical" href="https://newenglandebike.org/guides">`
+  - Eliminates redirect chain confusion for search engine crawlers
+- **Fixed internal navigation links** — Converted all internal href attributes from relative `.html` links to clean URLs
+  - Removes unnecessary 308 redirects and preserves link equity
+  - Example: `href="index.html"` → `href="/"`
+- **Resubmitted sitemap to Google Search Console** — API request to force immediate indexing crawl
+- **Expected outcome** — Redirect errors should clear within days; proper indexing should follow within 1-2 weeks
+
+### Technical
+- Modified: `sitemap.xml`, all `*.html` files
+- Commit: `3503dba` - Fix redirect issues: remove .html from sitemap, canonicals, and internal links
+- No database/functional changes; purely SEO configuration
+
 ## [1.1.6] - 2026-02-26
 
 ### Trail Data Improvements
