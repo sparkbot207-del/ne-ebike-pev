@@ -1546,10 +1546,13 @@
             observer.observe(navToggle.parentElement, { attributes: true, childList: true, subtree: true });
             
             let checks = 0;
+            const navEl = document.querySelector('.nav');
             const debugInterval = setInterval(() => {
                 const cs = window.getComputedStyle(navToggle);
                 const rect = navToggle.getBoundingClientRect();
-                logDebug('T+' + (checks*200) + 'ms: display=' + cs.display + ' w=' + Math.round(rect.width) + ' h=' + Math.round(rect.height) + ' top=' + Math.round(rect.top) + ' right=' + Math.round(rect.right));
+                const navCs = window.getComputedStyle(navEl);
+                const navRect = navEl.getBoundingClientRect();
+                logDebug('T+' + (checks*200) + 'ms: btn[d=' + cs.display + ' w=' + Math.round(rect.width) + ' h=' + Math.round(rect.height) + '] nav[d=' + navCs.display + ' z=' + navCs.zIndex + ' bg=' + navCs.background.substring(0,30) + ' h=' + Math.round(navRect.height) + ' top=' + Math.round(navRect.top) + ' opacity=' + navCs.opacity + ']');
                 checks++;
                 if (checks > 15) clearInterval(debugInterval);
             }, 200);
