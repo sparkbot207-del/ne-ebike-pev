@@ -661,7 +661,7 @@
                         <option value="RI" style="background: #1a1a2e; color: white;">Rhode Island</option>
                         <option value="VT" style="background: #1a1a2e; color: white;">Vermont</option>
                     </select>
-                    <input type="text" id="trail-search" placeholder="🔍 Search by trail name, city, or address..." 
+                    <input type="text" id="trail-search" placeholder="🔍 Search by trail name, city, zip, or address..." 
                            style="padding: 0.6rem 1rem; border-radius: 25px; border: 1px solid rgba(16,185,129,0.3); 
                                   background: rgba(16,185,129,0.1); color: white; width: 300px; font-size: 0.9rem;">
                     <button id="trail-search-btn" style="padding: 0.6rem 1.2rem; border-radius: 25px; border: none; 
@@ -1281,8 +1281,9 @@
         
         // Check if query looks like an address
         function looksLikeAddress(query) {
-            // Contains numbers + words, or contains common address terms
-            return /\d+\s+\w+/.test(query) || 
+            // Contains numbers + words, or contains common address terms, or is a zip code
+            return /^\d{5}(-\d{4})?$/.test(query.trim()) ||
+                   /\d+\s+\w+/.test(query) || 
                    /\b(street|st|avenue|ave|road|rd|drive|dr|lane|ln|boulevard|blvd|way|court|ct|place|pl)\b/i.test(query) ||
                    /\b(maine|me|massachusetts|ma|new hampshire|nh|vermont|vt|connecticut|ct|rhode island|ri)\b/i.test(query);
         }
