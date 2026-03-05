@@ -1525,6 +1525,32 @@
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
         
+        // DEBUG: Monitor hamburger visibility changes
+        if (navToggle && window.innerWidth <= 768) {
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((m) => {
+                    const cs = window.getComputedStyle(navToggle);
+                    console.log('[NAV-DEBUG] Mutation:', m.type, m.attributeName, 
+                        'display:', cs.display, 'visibility:', cs.visibility, 
+                        'opacity:', cs.opacity, 'offsetParent:', navToggle.offsetParent?.tagName);
+                });
+            });
+            observer.observe(navToggle, { attributes: true, attributeFilter: ['style', 'class'] });
+            observer.observe(navToggle.parentElement, { attributes: true, childList: true, subtree: true });
+            
+            // Log computed style every 200ms for first 3 seconds
+            let checks = 0;
+            const debugInterval = setInterval(() => {
+                const cs = window.getComputedStyle(navToggle);
+                const rect = navToggle.getBoundingClientRect();
+                console.log(`[NAV-DEBUG] Check ${checks}: display=${cs.display} vis=${cs.visibility} ` +
+                    `opacity=${cs.opacity} w=${rect.width} h=${rect.height} top=${rect.top} right=${rect.right} ` +
+                    `offsetParent=${navToggle.offsetParent?.tagName || 'NULL'}`);
+                checks++;
+                if (checks > 15) clearInterval(debugInterval);
+            }, 200);
+        }
+        
         navToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             navToggle.classList.toggle('active');
