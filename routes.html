@@ -618,7 +618,20 @@
             
             <!-- Trail Search Box -->
             <div id="trail-search-container" style="margin-bottom: 1rem;">
-                <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; align-items: center;">
+                    <select id="state-filter" style="padding: 0.6rem 0.8rem; border-radius: 25px; border: 1px solid rgba(16,185,129,0.3); 
+                                                     background: rgba(16,185,129,0.1); color: white; font-size: 0.9rem; cursor: pointer;
+                                                     appearance: none; -webkit-appearance: none; padding-right: 1.8rem;
+                                                     background-image: url('data:image/svg+xml;utf8,<svg fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><path d=\"M7 10l5 5 5-5z\"/></svg>');
+                                                     background-repeat: no-repeat; background-position: right 0.5rem center;">
+                        <option value="">All States</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="ME">Maine</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="VT">Vermont</option>
+                    </select>
                     <input type="text" id="trail-search" placeholder="🔍 Search by trail name, city, or address..." 
                            style="padding: 0.6rem 1rem; border-radius: 25px; border: 1px solid rgba(16,185,129,0.3); 
                                   background: rgba(16,185,129,0.1); color: white; width: 300px; font-size: 0.9rem;">
@@ -1356,11 +1369,15 @@
         
         async function searchTrails() {
             const query = document.getElementById('trail-search').value.trim();
-            if (!query || trailsData.length === 0) return;
+            const stateFilter = document.getElementById('state-filter').value;
+            if ((!query && !stateFilter) || trailsData.length === 0) return;
             
             // Clear previous search results
             trailSearchMarkers.clearLayers();
             map.removeLayer(trailSearchMarkers);
+            
+            // Pre-filter by state if selected
+            const stateFiltered = stateFilter ? trailsData.filter(t => t.state === stateFilter) : trailsData;
             
             let matches = [];
             let resultText = '';
@@ -1373,7 +1390,7 @@
                 if (location) {
                     // Find trails within 25 miles of the address
                     const radius = 25;
-                    matches = trailsData
+                    matches = stateFiltered
                         .filter(t => t.lat && t.lng)
                         .map(trail => ({
                             ...trail,
@@ -1399,14 +1416,22 @@
             }
             
             // If no location matches or not an address, search by text
-            if (matches.length === 0) {
-                matches = trailsData.filter(trail => {
+            if (matches.length === 0 && query) {
+                matches = stateFiltered.filter(trail => {
                     const searchText = `${trail.name} ${trail.cities || ''} ${trail.state} ${trail.description || ''}`.toLowerCase();
                     return searchText.includes(query.toLowerCase());
                 });
+                const stateLabel = stateFilter ? ` in ${document.getElementById('state-filter').selectedOptions[0].text}` : '';
                 resultText = matches.length > 0 
-                    ? `Found ${matches.length} trails matching "${query}"`
-                    : `No trails found for "${query}"`;
+                    ? `Found ${matches.length} trails matching "${query}"${stateLabel}`
+                    : `No trails found for "${query}"${stateLabel}`;
+            }
+            
+            // State-only filter (no search query)
+            if (matches.length === 0 && !query && stateFilter) {
+                matches = stateFiltered.filter(t => t.lat && t.lng);
+                const stateName = document.getElementById('state-filter').selectedOptions[0].text;
+                resultText = `Showing ${matches.length} trails in ${stateName}`;
             }
             
             // Show results
@@ -1445,6 +1470,7 @@
         
         function clearTrailSearch() {
             document.getElementById('trail-search').value = '';
+            document.getElementById('state-filter').value = '';
             document.getElementById('trail-search-results').textContent = '';
             document.getElementById('trail-clear-search').style.display = 'none';
             trailSearchMarkers.clearLayers();
@@ -1457,6 +1483,7 @@
             if (e.key === 'Enter') searchTrails();
         });
         document.getElementById('trail-clear-search').addEventListener('click', clearTrailSearch);
+        document.getElementById('state-filter').addEventListener('change', searchTrails);
         
         // Mobile nav toggle
         const navToggle = document.querySelector('.nav-toggle');
