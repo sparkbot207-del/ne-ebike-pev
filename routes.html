@@ -1380,9 +1380,15 @@
             let resultText = '';
             
             // Check if it looks like an address - try geocoding first
-            if (looksLikeAddress(query)) {
+            // When a state is selected, append state name to help geocoding (e.g., "springfield" + MA → "springfield Massachusetts")
+            const stateNames = {CT:'Connecticut',ME:'Maine',MA:'Massachusetts',NH:'New Hampshire',RI:'Rhode Island',VT:'Vermont'};
+            const geocodeQuery = stateFilter && query && !query.toLowerCase().includes(stateNames[stateFilter]?.toLowerCase() || '') 
+                ? `${query}, ${stateNames[stateFilter]}` : query;
+            const shouldGeocode = looksLikeAddress(query) || (stateFilter && query);
+            
+            if (shouldGeocode && query) {
                 document.getElementById('trail-search-results').textContent = 'Searching location...';
-                const location = await geocodeAddress(query);
+                const location = await geocodeAddress(geocodeQuery);
                 
                 if (location) {
                     // Find trails within 25 miles of the address
