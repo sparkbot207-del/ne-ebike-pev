@@ -1,51 +1,597 @@
 {
   "trails": [
     {
-      "id": "cape-cod-rail-trail",
-      "name": "Cape Cod Rail Trail",
-      "state": "MA",
-      "distance": "22 miles",
-      "distanceFull": "28 miles total",
-      "description": "Paved path with gentle hills and beach access to Cape Cod National Seashore. Bike rentals available along the trail. Pet friendly!",
-      "lat": 41.7563,
-      "lng": -70.0611,
-      "trailheadLat": 41.6777,
-      "trailheadLng": -70.1562,
-      "trailheadName": "South Dennis Trailhead",
+      "id": "air-line-state-park-trail",
+      "name": "Air Line State Park Trail",
+      "state": "CT",
+      "distance": "50 miles",
+      "description": "Historic \"Ghost Train\" route! Flat gravel trail over viaducts and bridges, through wetlands, farmlands, and forest preserves. Yankee Editors' Pick for \"Best Rail Trail.\"",
+      "lat": 41.7004,
+      "lng": -72.2273,
+      "trailheadLat": 41.5715,
+      "trailheadLng": -72.5098,
+      "trailheadName": "Portland Trailhead",
       "topPick": true,
-      "surface": "Paved",
+      "surface": "Gravel",
       "tags": [
-        "Paved",
-        "Beach Access",
-        "Pet Friendly",
-        "Rentals"
+        "Award Winner",
+        "Viaducts",
+        "Historic"
       ],
-      "gpxUrl": "https://www.alltrails.com/explore/map/cape-cod-rail-trail",
-      "websiteUrl": "https://www.mass.gov/locations/cape-cod-rail-trail",
-      "trailspottingUrl": "https://www.trailspotting.com/2023/06/cape-cod-rail-trail-ma.html",
-      "gpxFile": "gpx/cape-cod-rail-trail.gpx"
+      "gpxUrl": null,
+      "websiteUrl": "https://portal.ct.gov/DEEP/State-Parks/Parks/Air-Line-State-Park-Trail",
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/air-line-state-park-trail.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/air-line-state-park-trail/",
+      "traillinkRating": 5
     },
     {
-      "id": "shining-sea-bikeway",
-      "name": "Shining Sea Bikeway",
-      "state": "MA",
-      "distance": "11 miles",
-      "description": "Beautiful coastal ride through Falmouth with Buzzards Bay views. One of the Cape's most scenic paths.",
-      "lat": 41.5516,
-      "lng": -70.6162,
-      "trailheadLat": 41.5853,
-      "trailheadLng": -70.5489,
-      "trailheadName": "North Falmouth Trailhead",
+      "id": "billings-trail",
+      "name": "Billings Trail",
+      "state": "CT",
+      "distance": "3.3 miles",
+      "description": "",
+      "lat": 41.953799,
+      "lng": -73.174921,
+      "surface": "Dirt",
+      "tags": [
+        "Dirt"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/billings-trail/",
+      "topPick": false
+    },
+    {
+      "id": "bloomfield-greenway-multi-use-trail",
+      "name": "Bloomfield Greenway Multi-Use Trail",
+      "state": "CT",
+      "distance": "1.8 miles",
+      "description": "",
+      "lat": 41.900561,
+      "lng": -72.757355,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/bloomfield-greenway-multi-use-trail/",
+      "topPick": false
+    },
+    {
+      "id": "ctfastrak-multi-use-trail",
+      "name": "CTfastrak Multi-Use Trail",
+      "state": "CT",
+      "distance": "4.4 miles",
+      "description": "(New Britain) to West Hill Rd. (Newington).",
+      "lat": 41.66877,
+      "lng": -72.781579,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/ctfastrak-multi-use-trail/",
+      "topPick": false
+    },
+    {
+      "id": "captain-john-bissell-trail",
+      "name": "Captain John Bissell Trail",
+      "state": "CT",
+      "distance": "4.5 miles",
+      "description": "",
+      "lat": 41.772221,
+      "lng": -72.583134,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/captain-john-bissell-trail/",
+      "topPick": false
+    },
+    {
+      "id": "charter-oak-greenway",
+      "name": "Charter Oak Greenway",
+      "state": "CT",
+      "distance": "16.5 miles",
+      "description": "(Hartford) to Hop River State Park Trail (Bolton).",
+      "lat": 41.755261,
+      "lng": -72.652152,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/charter-oak-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "cheney-rail-trail",
+      "name": "Cheney Rail Trail",
+      "state": "CT",
+      "distance": "1.7 miles",
+      "description": "",
+      "lat": 41.772897,
+      "lng": -72.530479,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/cheney-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "derby-greenway",
+      "name": "Derby Greenway",
+      "state": "CT",
+      "distance": "1.97 miles",
+      "description": "(Derby) to Division St. (Derby).",
+      "lat": 41.319599,
+      "lng": -73.090313,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/derby-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "fairfield-hills-campus-walking-trails",
+      "name": "Fairfield Hills Campus Walking Trails",
+      "state": "CT",
+      "distance": "2.1 miles",
+      "description": "",
+      "lat": 41.402342,
+      "lng": -73.28665,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/fairfield-hills-campus-walking-trails/",
+      "topPick": false
+    },
+    {
+      "id": "farmington-canal-heritage-trail",
+      "name": "Farmington Canal Heritage Trail",
+      "state": "CT",
+      "distance": "80+ miles total",
+      "description": "Popular paved path following a historic canal route. Eventually will connect to Massachusetts trails.",
+      "lat": 41.4925,
+      "lng": -72.899,
+      "trailheadLat": 41.3082,
+      "trailheadLng": -72.9268,
+      "trailheadName": "New Haven Trailhead",
       "topPick": false,
       "surface": "Paved",
       "tags": [
-        "Coastal",
-        "Scenic"
+        "Paved",
+        "Canal History"
       ],
       "gpxUrl": null,
-      "websiteUrl": "https://www.mass.gov/locations/shining-sea-bikeway",
-      "trailspottingUrl": "https://www.trailspotting.com/2023/06/shining-sea-bikeway-cape-cod-ma.html",
-      "gpxFile": "gpx/shining-sea-bikeway.gpx"
+      "websiteUrl": "https://www.farmingtoncanal.org/",
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/farmington-canal-heritage-trail.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/farmington-canal-heritage-trail/",
+      "traillinkRating": 4.5
+    },
+    {
+      "id": "farmington-river-trail",
+      "name": "Farmington River Trail",
+      "state": "CT",
+      "distance": "16.5 miles",
+      "description": "(Simsbury) to Farmington Canal Heritage Trail, Red Oak Hill Rd. (Farmington).",
+      "lat": 41.728035,
+      "lng": -72.861988,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside",
+        "Canal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/farmington-river-trail/",
+      "topPick": false
+    },
+    {
+      "id": "g-amp-s-trolley-trail",
+      "name": "G &amp; S Trolley Trail",
+      "state": "CT",
+      "distance": "1.6 miles",
+      "description": "G &amp; S Trolley trail spans 1.6 from Knoxville Court to Neptune Drive.",
+      "lat": 41.340414,
+      "lng": -72.028249,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/g--s-trolley-trail/",
+      "topPick": false
+    },
+    {
+      "id": "hanover-pond-trail",
+      "name": "Hanover Pond Trail",
+      "state": "CT",
+      "distance": "1 miles",
+      "description": "Hanover Pond Trail spans 1 from Oregon Road to Behind Orville H. Platt High School .",
+      "lat": 41.522646,
+      "lng": -72.838585,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/hanover-pond-trail-/",
+      "topPick": false
+    },
+    {
+      "id": "hartford-riverwalk",
+      "name": "Hartford Riverwalk",
+      "state": "CT",
+      "distance": "1.7 miles",
+      "description": "",
+      "lat": 41.773973,
+      "lng": -72.667221,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/hartford-riverwalk/",
+      "topPick": false
+    },
+    {
+      "id": "hop-river-state-park-trail",
+      "name": "Hop River State Park Trail",
+      "state": "CT",
+      "distance": "20 miles",
+      "description": "(Manchester) to 249 Columbia Ave. (Willimantic).",
+      "lat": 41.801095,
+      "lng": -72.507413,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/hop-river-state-park-trail/",
+      "topPick": false
+    },
+    {
+      "id": "kress-family-trail",
+      "name": "Kress Family Trail",
+      "state": "CT",
+      "distance": "3.1 miles",
+      "description": "",
+      "lat": 41.547984,
+      "lng": -73.333137,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/kress-family-trail/",
+      "topPick": false
+    },
+    {
+      "id": "mattabassett-trolley-trail",
+      "name": "Mattabassett Trolley Trail",
+      "state": "CT",
+      "distance": "2.9 miles",
+      "description": "Mattabassett Trolley Trail spans 2.9 from Westlake Drive to Tuttle Place.",
+      "lat": 41.600255,
+      "lng": -72.690866,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Lakeside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/mattabassett-trolley-trail-/",
+      "topPick": false
+    },
+    {
+      "id": "middlebury-greenway",
+      "name": "Middlebury Greenway",
+      "state": "CT",
+      "distance": "4.5 miles",
+      "description": "(Middlebury) to Middlebury Rd. (Middlebury).",
+      "lat": 41.538417,
+      "lng": -73.088017,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/middlebury-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "middletown-westlake-area-bikeway",
+      "name": "Middletown Westlake Area Bikeway",
+      "state": "CT",
+      "distance": "2.2 miles",
+      "description": "Middletown Westlake Area Bikeway spans 2.2 from Middle St. at Bradley St. &amp; Aetna Dr. to West Lake Rd. near Grandview Dr. .",
+      "lat": 41.592839,
+      "lng": -72.72118,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Lakeside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/middletown-westlake-area-bikeway-/",
+      "topPick": false
+    },
+    {
+      "id": "naugatuck-river-greenway",
+      "name": "Naugatuck River Greenway",
+      "state": "CT",
+      "distance": "7.4 miles",
+      "description": "",
+      "lat": 41.44666,
+      "lng": -73.06648,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/naugatuck-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "new-milford-river-trail",
+      "name": "New Milford River Trail",
+      "state": "CT",
+      "distance": "5 miles",
+      "description": "",
+      "lat": 41.593648,
+      "lng": -73.449291,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/new-milford-river-trail/",
+      "topPick": false
+    },
+    {
+      "id": "norwalk-river-valley-trail",
+      "name": "Norwalk River Valley Trail",
+      "state": "CT",
+      "distance": "12.2 miles",
+      "description": "",
+      "lat": 41.086272,
+      "lng": -73.393207,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/norwalk-river-valley-trail/",
+      "topPick": false
+    },
+    {
+      "id": "pequonnock-river-trail",
+      "name": "Pequonnock River Trail",
+      "state": "CT",
+      "distance": "14.5 miles",
+      "description": "(Bridgeport) to Swamp Rd. (Newtown).",
+      "lat": 41.17916,
+      "lng": -73.187174,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside",
+        "Bridges"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/pequonnock-river-trail/",
+      "topPick": false
+    },
+    {
+      "id": "putnam-river-trail",
+      "name": "Putnam River Trail",
+      "state": "CT",
+      "distance": "2 miles",
+      "description": "",
+      "lat": 41.908325,
+      "lng": -71.908044,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/putnam-river-trail/",
+      "topPick": false
+    },
+    {
+      "id": "quinebaug-river-trail",
+      "name": "Quinebaug River Trail",
+      "state": "CT",
+      "distance": "4.8 miles",
+      "description": "to Park Rd. (Putnam) to Palmer St. to Gloria Ave. (Danielson).",
+      "lat": 41.806177,
+      "lng": -71.886493,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/quinebaug-river-trail/",
+      "topPick": false
+    },
+    {
+      "id": "quinnipiac-linear-trail",
+      "name": "Quinnipiac Linear Trail",
+      "state": "CT",
+      "distance": "2.1 miles",
+      "description": "Quinnipiac Linear Trail spans 2.1 from Fireworks Island Trailhead (380 Main Street). to Hall Ave (Lakeside Park)..",
+      "lat": 41.461411,
+      "lng": -72.833112,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Lakeside",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/quinnipiac-linear-trail-/",
+      "topPick": false
+    },
+    {
+      "id": "quinnipiac-river-gorge-trail",
+      "name": "Quinnipiac River Gorge Trail",
+      "state": "CT",
+      "distance": "1.3 miles",
+      "description": "",
+      "lat": 41.528149,
+      "lng": -72.857717,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/quinnipiac-river-gorge-trail/",
+      "topPick": false
+    },
+    {
+      "id": "railroad-ramble",
+      "name": "Railroad Ramble",
+      "state": "CT",
+      "distance": "1.7 miles",
+      "description": "",
+      "lat": 41.963901,
+      "lng": -73.439218,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/railroad-ramble/",
+      "topPick": false
+    },
+    {
+      "id": "savin-rock-trail",
+      "name": "Savin Rock Trail",
+      "state": "CT",
+      "distance": "1.2 miles",
+      "description": "to Captain Thomas Blvd..",
+      "lat": 41.252381,
+      "lng": -72.957626,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/savin-rock-trail/",
+      "topPick": false
+    },
+    {
+      "id": "shoreline-greenway-trail",
+      "name": "Shoreline Greenway Trail",
+      "state": "CT",
+      "distance": "4.6 miles",
+      "description": "(East Haven) to Boston Post Rd.(Madison).",
+      "lat": 41.254086,
+      "lng": -72.867671,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/shoreline-greenway-trail/",
+      "topPick": false
+    },
+    {
+      "id": "stratton-brook-state-park-trail",
+      "name": "Stratton Brook State Park Trail",
+      "state": "CT",
+      "distance": "1.2 miles",
+      "description": "(Simsbury) to Stratton Brook Rd. (Simsbury).",
+      "lat": 41.862665,
+      "lng": -72.840067,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/stratton-brook-state-park-trail/",
+      "topPick": false
+    },
+    {
+      "id": "sue-grossman-still-river-greenway",
+      "name": "Sue Grossman Still River Greenway",
+      "state": "CT",
+      "distance": "3.4 miles",
+      "description": "",
+      "lat": 41.898825,
+      "lng": -73.071875,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/sue-grossman-still-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "trolley-trail-ct",
+      "name": "Trolley Trail (CT)",
+      "state": "CT",
+      "distance": "0.75 miles",
+      "description": "",
+      "lat": 41.733281,
+      "lng": -71.917165,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/trolley-trail-(ct)/",
+      "topPick": false
+    },
+    {
+      "id": "windsor-locks-canal-state-park-trail",
+      "name": "Windsor Locks Canal State Park Trail",
+      "state": "CT",
+      "distance": "5.4 miles",
+      "description": "",
+      "lat": 41.93253,
+      "lng": -72.626712,
+      "surface": "Unknown",
+      "tags": [
+        "Park",
+        "Canal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/windsor-locks-canal-state-park-trail/",
+      "topPick": false
+    },
+    {
+      "id": "windsor-river-trail",
+      "name": "Windsor River Trail",
+      "state": "CT",
+      "distance": "0.8 miles",
+      "description": "Windsor River Trail spans 0.8 from E Barber St to Meadow Rd.",
+      "lat": 41.813146,
+      "lng": -72.647963,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/windsor-river-trail-/",
+      "topPick": false
+    },
+    {
+      "id": "alfred-j-lima-quequechan-river-rail-trail",
+      "name": "Alfred J. Lima Quequechan River Rail Trail",
+      "state": "MA",
+      "distance": "2.3 miles",
+      "description": "(Fall River) to 2 Grand Army of the Republic Hwy. .",
+      "lat": 41.679858,
+      "lng": -71.121311,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/alfred-j-lima-quequechan-river-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "amesbury-riverwalk",
+      "name": "Amesbury Riverwalk",
+      "state": "MA",
+      "distance": "1.3 miles",
+      "description": "",
+      "lat": 42.856225,
+      "lng": -70.926787,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/amesbury-riverwalk/",
+      "topPick": false
     },
     {
       "id": "ashuwillticook-rail-trail",
@@ -68,7 +614,739 @@
       "gpxUrl": null,
       "websiteUrl": "https://www.mass.gov/locations/ashuwillticook-rail-trail",
       "trailspottingUrl": null,
-      "gpxFile": "gpx/ashuwillticook-rail-trail.gpx"
+      "gpxFile": "gpx/ashuwillticook-rail-trail.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/ashuwillticook-rail-trail/",
+      "traillinkRating": 8
+    },
+    {
+      "id": "assabet-river-rail-trail",
+      "name": "Assabet River Rail Trail",
+      "state": "MA",
+      "distance": "10.4 miles",
+      "description": "(Stow) to Wilkins St (Hudson) to Highland St and Lincoln St (Marlborough).",
+      "lat": 42.348743,
+      "lng": -71.55325,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/assabet-river-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "blackstone-river-greenway",
+      "name": "Blackstone River Greenway",
+      "state": "MA",
+      "distance": "31.6 miles",
+      "description": "(South Worcester, MA) to Tockwotton Park (Providence, RI).",
+      "lat": 41.907761,
+      "lng": -71.401047,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/blackstone-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "border-to-boston-trail",
+      "name": "Border to Boston Trail",
+      "state": "MA",
+      "distance": "44.1 miles",
+      "description": "",
+      "lat": 42.365942,
+      "lng": -71.060504,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/border-to-boston-trail/",
+      "topPick": false
+    },
+    {
+      "id": "bridge-street-bike-trail",
+      "name": "Bridge Street Bike Trail",
+      "state": "MA",
+      "distance": "1 miles",
+      "description": "",
+      "lat": 42.532907,
+      "lng": -70.889579,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Bridges"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/bridge-street-bike-trail/",
+      "topPick": false
+    },
+    {
+      "id": "bruce-freeman-rail-trail",
+      "name": "Bruce Freeman Rail Trail",
+      "state": "MA",
+      "distance": "20.1 miles",
+      "description": "(Lowell) to Mass Central Raill Trail.",
+      "lat": 42.612601,
+      "lng": -71.327024,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/bruce-freeman-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "canalside-rail-trail",
+      "name": "Canalside Rail Trail",
+      "state": "MA",
+      "distance": "3.6 miles",
+      "description": "(Turner Falls) to McClelland Farm Rd. (Deerfield).",
+      "lat": 42.573056,
+      "lng": -72.575249,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Canal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/canalside-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "cape-cod-canal-bikeway",
+      "name": "Cape Cod Canal Bikeway",
+      "state": "MA",
+      "distance": "13.9 miles",
+      "description": "to Scusset Beach Rd. (North Canal) to Old Monument Neck Rd. to Freezer Rd. (South Canal).",
+      "lat": 41.740751,
+      "lng": -70.613118,
+      "surface": "Unknown",
+      "tags": [
+        "Canal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/cape-cod-canal-bikeway/",
+      "topPick": false
+    },
+    {
+      "id": "cape-cod-rail-trail",
+      "name": "Cape Cod Rail Trail",
+      "state": "MA",
+      "distance": "22 miles",
+      "distanceFull": "28 miles total",
+      "description": "Paved path with gentle hills and beach access to Cape Cod National Seashore. Bike rentals available along the trail. Pet friendly!",
+      "lat": 41.7563,
+      "lng": -70.0611,
+      "trailheadLat": 41.6777,
+      "trailheadLng": -70.1562,
+      "trailheadName": "South Dennis Trailhead",
+      "topPick": true,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Beach Access",
+        "Pet Friendly",
+        "Rentals"
+      ],
+      "gpxUrl": "https://www.alltrails.com/explore/map/cape-cod-rail-trail",
+      "websiteUrl": "https://www.mass.gov/locations/cape-cod-rail-trail",
+      "trailspottingUrl": "https://www.trailspotting.com/2023/06/cape-cod-rail-trail-ma.html",
+      "gpxFile": "gpx/cape-cod-rail-trail.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/cape-cod-rail-trail/",
+      "traillinkRating": 8
+    },
+    {
+      "id": "center-trail",
+      "name": "Center Trail",
+      "state": "MA",
+      "distance": "0.6 miles",
+      "description": "/SR 135 west of Pleasant St. to Loop Rd. behind Hopkinton High School.",
+      "lat": 41.8344,
+      "lng": -69.9642,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/center-trail/",
+      "topPick": false
+    },
+    {
+      "id": "charles-river-bike-path",
+      "name": "Charles River Bike Path",
+      "state": "MA",
+      "distance": "23.4 miles",
+      "description": "(Waltham) to Charles River Dam Rd. Bridge (Boston).",
+      "lat": 42.357241,
+      "lng": -71.074143,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside",
+        "Bridges"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/charles-river-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "chelsea-greenway",
+      "name": "Chelsea Greenway",
+      "state": "MA",
+      "distance": "0.65 miles",
+      "description": "Chelsea Greenway spans 0.65 from Eastern Avenue to Chestnut Street.",
+      "lat": 42.395009,
+      "lng": -71.032222,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/chelsea-greenway-/",
+      "topPick": false
+    },
+    {
+      "id": "chicopee-river-canal-rail-trail",
+      "name": "Chicopee River Canal Rail Trail",
+      "state": "MA",
+      "distance": "0.21 miles",
+      "description": "",
+      "lat": 42.14892,
+      "lng": -72.607173,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside",
+        "Canal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/chicopee-river-canal-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "clipper-city-rail-trail",
+      "name": "Clipper City Rail Trail",
+      "state": "MA",
+      "distance": "3.9 miles",
+      "description": "",
+      "lat": 42.796846,
+      "lng": -70.877472,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/clipper-city-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "cochituate-rail-trail",
+      "name": "Cochituate Rail Trail",
+      "state": "MA",
+      "distance": "3.3 miles",
+      "description": "(Framingham) to 41 Washington Ave. (Natick).",
+      "lat": 42.321047,
+      "lng": -71.396951,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/cochituate-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "columbia-greenway-rail-trail",
+      "name": "Columbia Greenway Rail Trail",
+      "state": "MA",
+      "distance": "3.1 miles",
+      "description": "",
+      "lat": 42.087175,
+      "lng": -72.745006,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/columbia-greenway-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "commonwealth-greenway",
+      "name": "Commonwealth Greenway",
+      "state": "MA",
+      "distance": "5.5 miles",
+      "description": "(Auburndale) to 27 Commonwealth Ave. (Chestnut Hill).",
+      "lat": 42.3469,
+      "lng": -71.255154,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/commonwealth-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "concord-river-greenway",
+      "name": "Concord River Greenway",
+      "state": "MA",
+      "distance": "0.88 miles",
+      "description": "",
+      "lat": 42.635811,
+      "lng": -71.302446,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/concord-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "connecticut-riverwalk-and-bikeway",
+      "name": "Connecticut Riverwalk and Bikeway",
+      "state": "MA",
+      "distance": "7.8 miles",
+      "description": "(Chicopee) to River Rd. (Agawam).",
+      "lat": 42.073541,
+      "lng": -72.590904,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/connecticut-riverwalk-and-bikeway/",
+      "topPick": false
+    },
+    {
+      "id": "danvers-rail-trail",
+      "name": "Danvers Rail Trail",
+      "state": "MA",
+      "distance": "5.1 miles",
+      "description": "",
+      "lat": 42.554011,
+      "lng": -70.971731,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/danvers-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "deer-island-loop-trail",
+      "name": "Deer Island Loop Trail",
+      "state": "MA",
+      "distance": "2.7 miles",
+      "description": "to Tafts Ave..",
+      "lat": 42.355272,
+      "lng": -70.967371,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/deer-island-loop-trail/",
+      "topPick": false
+    },
+    {
+      "id": "fresh-pond-bikeway",
+      "name": "Fresh Pond Bikeway",
+      "state": "MA",
+      "distance": "0.7 miles",
+      "description": "Fresh Pond Bikeway spans 0.7 from Fresh Pond Pkwy &amp; Huron Ave to Concord Ave &amp; Wheeler St.",
+      "lat": 42.390059,
+      "lng": -71.150735,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/fresh-pond-bikeway-/",
+      "topPick": false
+    },
+    {
+      "id": "garrison-trail",
+      "name": "Garrison Trail",
+      "state": "MA",
+      "distance": "1.8 miles",
+      "description": "",
+      "lat": 42.844222,
+      "lng": -70.899505,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/garrison-trail/",
+      "topPick": false
+    },
+    {
+      "id": "gillis-memorial-bridge-connector",
+      "name": "Gillis Memorial Bridge Connector",
+      "state": "MA",
+      "distance": "0.6 miles",
+      "description": "",
+      "lat": 42.81353,
+      "lng": -70.874379,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Bridges"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/gillis-memorial-bridge-connector/",
+      "topPick": false
+    },
+    {
+      "id": "gloria-braunhardt-bike-path",
+      "name": "Gloria Braunhardt Bike Path",
+      "state": "MA",
+      "distance": "1.2 miles",
+      "description": "",
+      "lat": 42.803047,
+      "lng": -70.912003,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/gloria-braunhardt-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "goose-pond-path",
+      "name": "Goose Pond Path",
+      "state": "MA",
+      "distance": "0.1 miles",
+      "description": "",
+      "lat": 41.277329,
+      "lng": -70.092653,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/goose-pond-path/",
+      "topPick": false
+    },
+    {
+      "id": "groveland-community-trail",
+      "name": "Groveland Community Trail",
+      "state": "MA",
+      "distance": "3.25 miles",
+      "description": "(Georgetown).",
+      "lat": 42.767402,
+      "lng": -71.024776,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/groveland-community-trail/",
+      "topPick": false
+    },
+    {
+      "id": "haggetts-rail-trail",
+      "name": "Haggetts Rail Trail",
+      "state": "MA",
+      "distance": "2 miles",
+      "description": "",
+      "lat": 42.658568,
+      "lng": -71.198463,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/haggetts-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "hanover-branch-rail-trail",
+      "name": "Hanover Branch Rail Trail",
+      "state": "MA",
+      "distance": "3.4 miles",
+      "description": "(Abington) to Ellis Field, 746 Circuit St. (Hanover).",
+      "lat": 42.116188,
+      "lng": -70.876831,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/hanover-branch-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "head-of-the-meadow-trail",
+      "name": "Head of the Meadow Trail",
+      "state": "MA",
+      "distance": "2 miles",
+      "description": "to Holden Rd.",
+      "lat": 42.058962,
+      "lng": -70.113983,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/head-of-the-meadow-trail/",
+      "topPick": false
+    },
+    {
+      "id": "independence-greenway",
+      "name": "Independence Greenway",
+      "state": "MA",
+      "distance": "5.25 miles",
+      "description": "",
+      "lat": 42.541373,
+      "lng": -70.979522,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/independence-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "lake-williams-trail",
+      "name": "Lake Williams Trail",
+      "state": "MA",
+      "distance": "1.5 miles",
+      "description": "",
+      "lat": 42.335415,
+      "lng": -71.569877,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Lakeside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/lake-williams-trail/",
+      "topPick": false
+    },
+    {
+      "id": "lowell-canal-system-trails",
+      "name": "Lowell Canal System Trails",
+      "state": "MA",
+      "distance": "1.9 miles",
+      "description": "",
+      "lat": 42.641566,
+      "lng": -71.316275,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Canal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/lowell-canal-system-trails/",
+      "topPick": false
+    },
+    {
+      "id": "malden-river-greenway",
+      "name": "Malden River Greenway",
+      "state": "MA",
+      "distance": "2.5 miles",
+      "description": "",
+      "lat": 42.405131,
+      "lng": -71.072794,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/malden-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "manhan-rail-trail",
+      "name": "Manhan Rail Trail",
+      "state": "MA",
+      "distance": "9.5 miles",
+      "description": "(South Hampton).",
+      "lat": 42.276745,
+      "lng": -72.656106,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/manhan-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "marblehead-rail-trail",
+      "name": "Marblehead Rail-Trail",
+      "state": "MA",
+      "distance": "3.34 miles",
+      "description": "",
+      "lat": 42.480808,
+      "lng": -70.884716,
+      "surface": "Gravel",
+      "tags": [
+        "Gravel"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/marblehead-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "martha39s-vineyard-bike-trails",
+      "name": "Martha&#39;s Vineyard Bike Trails",
+      "state": "MA",
+      "distance": "32.3 miles",
+      "description": "- Vineyard Haven to Katana Rd - South Beach.",
+      "lat": 41.349959,
+      "lng": -70.511545,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/marthas-vineyard-bike-trails/",
+      "topPick": false
+    },
+    {
+      "id": "mary-ellen-welch-greenway",
+      "name": "Mary Ellen Welch Greenway",
+      "state": "MA",
+      "distance": "2.8 miles",
+      "description": "and Bremen St. to Frankfort St. just south of Lovell St.; Barnes Ave. to Constitution Beach Park.",
+      "lat": 42.366728,
+      "lng": -71.039253,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/mary-ellen-welch-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "mass-central-rail-trail",
+      "name": "Mass Central Rail Trail",
+      "state": "MA",
+      "distance": "64 miles",
+      "description": "(Leeds).",
+      "lat": 42.248804,
+      "lng": -72.250732,
+      "surface": "Dirt",
+      "tags": [
+        "Dirt"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/mass-central-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "mattapoisett-rail-trail",
+      "name": "Mattapoisett Rail Trail",
+      "state": "MA",
+      "distance": "1.9 miles",
+      "description": "",
+      "lat": 41.645844,
+      "lng": -70.845664,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/mattapoisett-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "mayor-james-j-fiorentini-bradford-rail-trail",
+      "name": "Mayor James J. Fiorentini Bradford Rail Trail",
+      "state": "MA",
+      "distance": "0.77 miles",
+      "description": "",
+      "lat": 42.769615,
+      "lng": -71.085593,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/mayor-james-j-fiorentini-bradford-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "medfield-rail-trail",
+      "name": "Medfield Rail Trail",
+      "state": "MA",
+      "distance": "1.3 miles",
+      "description": "Medfield Rail Trail spans 1.3 from Ice House Road to Dover town line.",
+      "lat": 42.215409,
+      "lng": -71.311282,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/medfield-rail-trail-/",
+      "topPick": false
+    },
+    {
+      "id": "methuen-rail-trail",
+      "name": "Methuen Rail Trail",
+      "state": "MA",
+      "distance": "2.4 miles",
+      "description": "",
+      "lat": 42.742161,
+      "lng": -71.200778,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/methuen-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "middleton-rail-trail",
+      "name": "Middleton Rail Trail",
+      "state": "MA",
+      "distance": "4.5 miles",
+      "description": "(North Andover) to Maple St. &amp; Hathorne Ave. (Danvers).",
+      "lat": 42.633031,
+      "lng": -71.043033,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/middleton-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "minuteman-commuter-bikeway",
+      "name": "Minuteman Commuter Bikeway",
+      "state": "MA",
+      "distance": "10.1 miles",
+      "description": "",
+      "lat": 42.485996,
+      "lng": -71.277445,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/minuteman-commuter-bikeway/",
+      "topPick": false
+    },
+    {
+      "id": "mystic-river-greenway",
+      "name": "Mystic River Greenway",
+      "state": "MA",
+      "distance": "4 miles",
+      "description": "",
+      "lat": 42.420416,
+      "lng": -71.143139,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/mystic-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "nantucket-multi-use-paths",
+      "name": "Nantucket Multi-Use Paths",
+      "state": "MA",
+      "distance": "34.97 miles",
+      "description": "- Siasconset to Madaket Rd. - Madaket Beach.",
+      "lat": 41.270953,
+      "lng": -70.201726,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/nantucket-multi-use-paths/",
+      "topPick": false
+    },
+    {
+      "id": "narrow-gauge-rail-trail",
+      "name": "Narrow-Gauge Rail-Trail",
+      "state": "MA",
+      "distance": "3 miles",
+      "description": "",
+      "lat": 42.528254,
+      "lng": -71.283153,
+      "surface": "Gravel",
+      "tags": [
+        "Gravel"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/narrow-gauge-rail-trail/",
+      "topPick": false
     },
     {
       "id": "nashua-river-rail-trail",
@@ -90,7 +1368,1523 @@
       "gpxUrl": null,
       "websiteUrl": "https://www.mass.gov/locations/nashua-river-rail-trail",
       "trailspottingUrl": "https://www.trailspotting.com/2023/03/nashua-river-rail-trail-ma-nh.html",
-      "gpxFile": "gpx/nashua-river-rail-trail.gpx"
+      "gpxFile": "gpx/nashua-river-rail-trail.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/nashua-river-rail-trail/",
+      "traillinkRating": 7
+    },
+    {
+      "id": "nauset-trail",
+      "name": "Nauset Trail",
+      "state": "MA",
+      "distance": "1.6 miles",
+      "description": "and US 6 to Coast Guard Beach on Ocean View Dr..",
+      "lat": 41.837725,
+      "lng": -69.974964,
+      "surface": "Unknown",
+      "tags": [
+        "Coastal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/nauset-trail/",
+      "topPick": false
+    },
+    {
+      "id": "needham-rail-trail",
+      "name": "Needham Rail Trail",
+      "state": "MA",
+      "distance": "1.7 miles",
+      "description": "",
+      "lat": 42.260571,
+      "lng": -71.264883,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/needham-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "neponset-river-greenway",
+      "name": "Neponset River Greenway",
+      "state": "MA",
+      "distance": "8.2 miles",
+      "description": "",
+      "lat": 42.250118,
+      "lng": -71.122642,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/neponset-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "new-bedford-covewalk",
+      "name": "New Bedford Covewalk",
+      "state": "MA",
+      "distance": "1.04 miles",
+      "description": "",
+      "lat": 41.6127,
+      "lng": -70.930677,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/new-bedford-covewalk/",
+      "topPick": false
+    },
+    {
+      "id": "new-bedford-harborwalk",
+      "name": "New Bedford Harborwalk",
+      "state": "MA",
+      "distance": "1.2 miles",
+      "description": "New Bedford Harborwalk spans 1.2 from Gifford Street to East Rodney French Boulevard boat ramp.",
+      "lat": 41.619489,
+      "lng": -70.913894,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/new-bedford-harborwalk-/",
+      "topPick": false
+    },
+    {
+      "id": "north-bank-bridge",
+      "name": "North Bank Bridge",
+      "state": "MA",
+      "distance": "0.5 miles",
+      "description": "",
+      "lat": 42.369657,
+      "lng": -71.071335,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Bridges"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/north-bank-bridge/",
+      "topPick": false
+    },
+    {
+      "id": "north-central-pathway",
+      "name": "North Central Pathway",
+      "state": "MA",
+      "distance": "11.2 miles",
+      "description": "(Winchendon) to 45 Veterans Dr. (Gardner).",
+      "lat": 42.580768,
+      "lng": -71.990587,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/north-central-pathway/",
+      "topPick": false
+    },
+    {
+      "id": "northern-strand-community-trail",
+      "name": "Northern Strand Community Trail",
+      "state": "MA",
+      "distance": "9.9 miles",
+      "description": "",
+      "lat": 42.456394,
+      "lng": -70.963373,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/northern-strand-community-trail/",
+      "topPick": false
+    },
+    {
+      "id": "norwell-pathway",
+      "name": "Norwell Pathway",
+      "state": "MA",
+      "distance": "3.1 miles",
+      "description": "(Norwell).",
+      "lat": 42.156534,
+      "lng": -70.839701,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/norwell-pathway/",
+      "topPick": false
+    },
+    {
+      "id": "old-colony-rail-trail",
+      "name": "Old Colony Rail Trail",
+      "state": "MA",
+      "distance": "8 miles",
+      "description": "(Chatham).",
+      "lat": 41.688822,
+      "lng": -70.08882,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/old-colony-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "old-eastern-marsh-trail",
+      "name": "Old Eastern Marsh Trail",
+      "state": "MA",
+      "distance": "3.7 miles",
+      "description": "",
+      "lat": 42.817653,
+      "lng": -70.872286,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/old-eastern-marsh-trail/",
+      "topPick": false
+    },
+    {
+      "id": "phoenix-bike-trail",
+      "name": "Phoenix Bike Trail",
+      "state": "MA",
+      "distance": "4 miles",
+      "description": "",
+      "lat": 41.645844,
+      "lng": -70.845664,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/phoenix-bike-trail/",
+      "topPick": false
+    },
+    {
+      "id": "pine-tree-brook-path",
+      "name": "Pine Tree Brook Path",
+      "state": "MA",
+      "distance": "2 miles",
+      "description": "(Milton) to Thacher St. (Milton).",
+      "lat": 42.250772,
+      "lng": -71.097216,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/pine-tree-brook-path/",
+      "topPick": false
+    },
+    {
+      "id": "province-lands-bike-trail",
+      "name": "Province Lands Bike Trail",
+      "state": "MA",
+      "distance": "7.6 miles",
+      "description": "to Race Point Rd..",
+      "lat": 42.058405,
+      "lng": -70.203392,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/province-lands-bike-trail/",
+      "topPick": false
+    },
+    {
+      "id": "quinebaug-valley-rail-trail",
+      "name": "Quinebaug Valley Rail Trail",
+      "state": "MA",
+      "distance": "5.7 miles",
+      "description": "(Southbridge) to Mill Rd. (Dudley) to East of New Boston Rd. (CT State Line) to Hill St. (Webster).",
+      "lat": 42.066896,
+      "lng": -72.007892,
+      "surface": "Unknown",
+      "tags": [
+        "Bridges"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/quinebaug-valley-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "redstone-rail-trail",
+      "name": "Redstone Rail Trail",
+      "state": "MA",
+      "distance": "1.4 miles",
+      "description": "",
+      "lat": 42.063262,
+      "lng": -72.516672,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/redstone-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "rocky-hill-trail",
+      "name": "Rocky Hill Trail",
+      "state": "MA",
+      "distance": "0.9 miles",
+      "description": "Rocky Hill Trail spans 0.9 from Burts Pit Road to Sandy Hill Road.",
+      "lat": 42.320606,
+      "lng": -72.681308,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/rocky-hill-trail-/",
+      "topPick": false
+    },
+    {
+      "id": "salem-bike-path",
+      "name": "Salem Bike Path",
+      "state": "MA",
+      "distance": "1.7 miles",
+      "description": "",
+      "lat": 42.497405,
+      "lng": -70.887056,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/salem-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "salisbury-beach-state-reservation-trail",
+      "name": "Salisbury Beach State Reservation Trail",
+      "state": "MA",
+      "distance": "0.6 miles",
+      "description": "",
+      "lat": 42.826494,
+      "lng": -70.818171,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/salisbury-beach-state-reservation-trail/",
+      "topPick": false
+    },
+    {
+      "id": "salisbury-point-ghost-trail",
+      "name": "Salisbury Point Ghost Trail",
+      "state": "MA",
+      "distance": "2.2 miles",
+      "description": "",
+      "lat": 42.844712,
+      "lng": -70.865301,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/salisbury-point-ghost-trail/",
+      "topPick": false
+    },
+    {
+      "id": "shining-sea-bikeway",
+      "name": "Shining Sea Bikeway",
+      "state": "MA",
+      "distance": "11 miles",
+      "description": "Beautiful coastal ride through Falmouth with Buzzards Bay views. One of the Cape's most scenic paths.",
+      "lat": 41.5516,
+      "lng": -70.6162,
+      "trailheadLat": 41.5853,
+      "trailheadLng": -70.5489,
+      "trailheadName": "North Falmouth Trailhead",
+      "topPick": false,
+      "surface": "Paved",
+      "tags": [
+        "Coastal",
+        "Scenic"
+      ],
+      "gpxUrl": null,
+      "websiteUrl": "https://www.mass.gov/locations/shining-sea-bikeway",
+      "trailspottingUrl": "https://www.trailspotting.com/2023/06/shining-sea-bikeway-cape-cod-ma.html",
+      "gpxFile": "gpx/shining-sea-bikeway.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/shining-sea-bikeway/"
+    },
+    {
+      "id": "somerville-community-path",
+      "name": "Somerville Community Path",
+      "state": "MA",
+      "distance": "3.2 miles",
+      "description": "",
+      "lat": 42.392694,
+      "lng": -71.106194,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/somerville-community-path/",
+      "topPick": false
+    },
+    {
+      "id": "south-bay-harbor-trail",
+      "name": "South Bay Harbor Trail",
+      "state": "MA",
+      "distance": "3.8 miles",
+      "description": "and Melnea Cass Blvd. (adjacent to Ruggles Station).",
+      "lat": 42.352888,
+      "lng": -71.0424,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Coastal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/south-bay-harbor-trail/",
+      "topPick": false
+    },
+    {
+      "id": "south-spencer-rail-trail",
+      "name": "South Spencer Rail Trail",
+      "state": "MA",
+      "distance": "1.62 miles",
+      "description": "Spencer Rd. south of Depot Rd. to Chestnut St. east of Valley St..",
+      "lat": 42.240004,
+      "lng": -71.997517,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/south-spencer-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "southwest-corridor-park-pierre-lallement-bike-path",
+      "name": "Southwest Corridor Park (Pierre Lallement Bike Path)",
+      "state": "MA",
+      "distance": "4.1 miles",
+      "description": "(Boston) to New Washington St. (Jamaica Plain).",
+      "lat": 42.34715,
+      "lng": -71.076134,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/southwest-corridor-park-(pierre-lallement-bike-path)/",
+      "topPick": false
+    },
+    {
+      "id": "southwick-rail-trail",
+      "name": "Southwick Rail Trail",
+      "state": "MA",
+      "distance": "6.5 miles",
+      "description": "",
+      "lat": 42.002634,
+      "lng": -72.77063,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/southwick-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "spicket-river-greenway",
+      "name": "Spicket River Greenway",
+      "state": "MA",
+      "distance": "3.5 miles",
+      "description": "",
+      "lat": 42.713622,
+      "lng": -71.174144,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/spicket-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "squannacook-river-rail-trail",
+      "name": "Squannacook River Rail Trail",
+      "state": "MA",
+      "distance": "3.7 miles",
+      "description": "",
+      "lat": 42.664872,
+      "lng": -71.704769,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/squannacook-river-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "swampscott-rail-trail",
+      "name": "Swampscott Rail Trail",
+      "state": "MA",
+      "distance": "0.3 miles",
+      "description": "",
+      "lat": 42.478276,
+      "lng": -70.88834,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/swampscott-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "topsfield-linear-common",
+      "name": "Topsfield Linear Common",
+      "state": "MA",
+      "distance": "5.2 miles",
+      "description": "",
+      "lat": 42.608967,
+      "lng": -70.929427,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/topsfield-linear-common/",
+      "topPick": false
+    },
+    {
+      "id": "tri-community-greenway",
+      "name": "Tri-Community Greenway",
+      "state": "MA",
+      "distance": "10.6 miles",
+      "description": "",
+      "lat": 42.480434,
+      "lng": -71.0955,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/tri-community-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "twin-cities-rail-trail",
+      "name": "Twin Cities Rail Trail",
+      "state": "MA",
+      "distance": "4 miles",
+      "description": "",
+      "lat": 42.578947,
+      "lng": -71.791167,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/twin-cities-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "upper-charles-trail",
+      "name": "Upper Charles Trail",
+      "state": "MA",
+      "distance": "13.9 miles",
+      "description": "&amp; Mill Stone Dr. (Sherborn) to 480 Cedar St. (Milford).",
+      "lat": 42.147197,
+      "lng": -71.515717,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/upper-charles-trail/",
+      "topPick": false
+    },
+    {
+      "id": "upper-falls-greenway",
+      "name": "Upper Falls Greenway",
+      "state": "MA",
+      "distance": "1 miles",
+      "description": "west of Needham St. to Charles River south of Oak St..",
+      "lat": 42.317305,
+      "lng": -71.210622,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/upper-falls-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "watertown-community-bike-path",
+      "name": "Watertown Community Bike Path",
+      "state": "MA",
+      "distance": "0.6 miles",
+      "description": "",
+      "lat": 42.365127,
+      "lng": -71.182057,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/watertown-community-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "watertown-linear-park-trail",
+      "name": "Watertown Linear Park Trail",
+      "state": "MA",
+      "distance": "0.3 miles",
+      "description": "",
+      "lat": 42.370474,
+      "lng": -71.191103,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/watertown-linear-park-trail/",
+      "topPick": false
+    },
+    {
+      "id": "watertown-cambridge-greenway",
+      "name": "Watertown-Cambridge Greenway",
+      "state": "MA",
+      "distance": "2 miles",
+      "description": "",
+      "lat": 42.364099,
+      "lng": -71.166708,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Bridges"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/watertown-cambridge-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "wellington-greenway",
+      "name": "Wellington Greenway",
+      "state": "MA",
+      "distance": "2.5 miles",
+      "description": "",
+      "lat": 42.404683,
+      "lng": -71.092199,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/wellington-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "westville-lake-community-trail",
+      "name": "Westville Lake Community Trail",
+      "state": "MA",
+      "distance": "0.7 miles",
+      "description": "to Breakneck Rd..",
+      "lat": 42.071956,
+      "lng": -72.060083,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone",
+        "Lakeside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/westville-lake-community-trail/",
+      "topPick": false
+    },
+    {
+      "id": "whitney-spur-rail-trail",
+      "name": "Whitney Spur Rail Trail",
+      "state": "MA",
+      "distance": "1.6 miles",
+      "description": "(near MBTA Cohasset Station) to Wompatuck State Park.",
+      "lat": 42.244434,
+      "lng": -70.841093,
+      "surface": "Unknown",
+      "tags": [
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/whitney-spur-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "world-war-ii-veterans-memorial-trailnorton-rail-trail",
+      "name": "World War II Veterans Memorial Trail/Norton Rail-Trail",
+      "state": "MA",
+      "distance": "6.6 miles",
+      "description": "",
+      "lat": 42.024933,
+      "lng": -71.21446,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/world-war-ii-veterans-memorial-trailnorton-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "acadia-national-park-carriage-roads",
+      "name": "Acadia National Park Carriage Roads",
+      "state": "ME",
+      "distance": "45 miles",
+      "description": "",
+      "lat": 44.409021,
+      "lng": -68.24917,
+      "surface": "Gravel",
+      "tags": [
+        "Gravel",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/acadia-national-park-carriage-roads/",
+      "topPick": false
+    },
+    {
+      "id": "androscoggin-river-bicycle-path",
+      "name": "Androscoggin River Bicycle Path",
+      "state": "ME",
+      "distance": "2.6 miles",
+      "description": "(Brunswick) to Grover Ln. (Brunswick).",
+      "lat": 43.921838,
+      "lng": -69.955257,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/androscoggin-river-bicycle-path/",
+      "topPick": false
+    },
+    {
+      "id": "auburn-riverwalk",
+      "name": "Auburn Riverwalk",
+      "state": "ME",
+      "distance": "1.6 miles",
+      "description": "",
+      "lat": 44.090545,
+      "lng": -70.229626,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/auburn-riverwalk/",
+      "topPick": false
+    },
+    {
+      "id": "back-cove-trail",
+      "name": "Back Cove Trail",
+      "state": "ME",
+      "distance": "3.6 miles",
+      "description": "",
+      "lat": 43.663616,
+      "lng": -70.266133,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/back-cove-trail/",
+      "topPick": false
+    },
+    {
+      "id": "bayside-trail",
+      "name": "Bayside Trail",
+      "state": "ME",
+      "distance": "1 miles",
+      "description": "to Turkey Bridge.",
+      "lat": 43.661297,
+      "lng": -70.263518,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Coastal",
+        "Bridges"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/bayside-trail/",
+      "topPick": false
+    },
+    {
+      "id": "beth-condon-memorial-pathway",
+      "name": "Beth Condon Memorial Pathway",
+      "state": "ME",
+      "distance": "1.8 miles",
+      "description": "",
+      "lat": 43.791864,
+      "lng": -70.189782,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/beth-condon-memorial-pathway/",
+      "topPick": false
+    },
+    {
+      "id": "bucksport-waterfront-walkway",
+      "name": "Bucksport Waterfront Walkway",
+      "state": "ME",
+      "distance": "1 miles",
+      "description": "",
+      "lat": 44.573883,
+      "lng": -68.800181,
+      "surface": "Gravel",
+      "tags": [
+        "Gravel",
+        "Waterfront"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/bucksport-waterfront-walkway/",
+      "topPick": false
+    },
+    {
+      "id": "calais-waterfront-walkway",
+      "name": "Calais Waterfront Walkway",
+      "state": "ME",
+      "distance": "1.5 miles",
+      "description": "between the St. Croix River and Union St. to Barker St. and South St. (Calais) .",
+      "lat": 45.183796,
+      "lng": -67.289965,
+      "surface": "Gravel",
+      "tags": [
+        "Gravel",
+        "Riverside",
+        "Waterfront"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/calais-waterfront-walkway/",
+      "topPick": false
+    },
+    {
+      "id": "eastern-promenade-trail",
+      "name": "Eastern Promenade Trail",
+      "state": "ME",
+      "distance": "2+ miles",
+      "description": "Urban trail with stunning ocean views. Connects to Back Cove Trail for extended riding. Perfect for city exploration.",
+      "lat": 43.668,
+      "lng": -70.242,
+      "trailheadLat": 43.668,
+      "trailheadLng": -70.242,
+      "trailheadName": "East End Beach, Portland",
+      "topPick": false,
+      "surface": "Paved",
+      "tags": [
+        "Urban",
+        "Ocean Views",
+        "Connects Trails"
+      ],
+      "gpxUrl": null,
+      "websiteUrl": "https://trails.org/our-trails/eastern-promenade-trail/",
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/eastern-promenade-trail.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/eastern-promenade-trail/",
+      "traillinkRating": 22
+    },
+    {
+      "id": "eastern-trail",
+      "name": "Eastern Trail",
+      "state": "ME",
+      "distance": "22 miles (65 total)",
+      "description": "Flat, easy ride on asphalt and crushed stone. Features blueberry barrens, Rachel Carson Wildlife Refuge, Scarborough Marsh, and Bug Light Park.",
+      "lat": 43.551,
+      "lng": -70.3559,
+      "trailheadLat": 43.6501,
+      "trailheadLng": -70.2457,
+      "trailheadName": "Bug Light Park, South Portland",
+      "topPick": true,
+      "surface": "Paved/Crushed Stone",
+      "tags": [
+        "Paved",
+        "Blueberries",
+        "Wildlife Refuge"
+      ],
+      "gpxUrl": null,
+      "websiteUrl": "https://www.easterntrail.org/",
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/eastern-trail.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/eastern-trail/",
+      "traillinkRating": 5
+    },
+    {
+      "id": "ellsworth-trail",
+      "name": "Ellsworth Trail",
+      "state": "ME",
+      "distance": "1.6 miles",
+      "description": "",
+      "lat": 45.1878,
+      "lng": -70.4486,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/ellsworth-trail/",
+      "topPick": false
+    },
+    {
+      "id": "fore-river-parkway-trail",
+      "name": "Fore River Parkway Trail",
+      "state": "ME",
+      "distance": "2.6 miles",
+      "description": "to W. Commercial St..",
+      "lat": 43.643515,
+      "lng": -70.276002,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/fore-river-parkway-trail/",
+      "topPick": false
+    },
+    {
+      "id": "kennebec-river-rail-trail",
+      "name": "Kennebec River Rail Trail",
+      "state": "ME",
+      "distance": "6.5 miles",
+      "description": "Fully paved, flat riverside ride with four convenient access points. Great for beginners or casual rides.",
+      "lat": 44.3106,
+      "lng": -69.7795,
+      "trailheadLat": 44.3135,
+      "trailheadLng": -69.7746,
+      "trailheadName": "Augusta Waterfront",
+      "topPick": false,
+      "surface": "Paved",
+      "tags": [
+        "Fully Paved",
+        "Riverside",
+        "Beginner Friendly"
+      ],
+      "gpxUrl": null,
+      "websiteUrl": "https://www.krrt.org/",
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/kennebec-river-rail-trail.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/kennebec-river-rail-trail/"
+    },
+    {
+      "id": "michael-michaud-walking-and-biking-trail",
+      "name": "Michael Michaud Walking and Biking Trail",
+      "state": "ME",
+      "distance": "1.65 miles",
+      "description": "to Granite St..",
+      "lat": 45.660344,
+      "lng": -68.706334,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/michael-michaud-walking-and-biking-trail/",
+      "topPick": false
+    },
+    {
+      "id": "mountain-division-trail",
+      "name": "Mountain Division Trail",
+      "state": "ME",
+      "distance": "9.59 miles",
+      "description": "(Fryeburg) to Chadbourne Rd. (Standish) to Main St. (Windham).",
+      "lat": 43.739094,
+      "lng": -70.426237,
+      "surface": "Unknown",
+      "tags": [
+        "Mountain Views"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/mountain-division-trail/",
+      "topPick": false
+    },
+    {
+      "id": "norway-branch-rail-trail",
+      "name": "Norway Branch Rail Trail",
+      "state": "ME",
+      "distance": "0.5 miles",
+      "description": "Norway Branch Rail Trail spans 0.5 from Beal Street to Alpine Street.",
+      "lat": 44.214613,
+      "lng": -70.537909,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/norway-branch-rail-trail-/",
+      "topPick": false
+    },
+    {
+      "id": "old-narrow-gauge-volunteer-trail",
+      "name": "Old Narrow Gauge Volunteer Trail",
+      "state": "ME",
+      "distance": "1.25 miles",
+      "description": "",
+      "lat": 44.228441,
+      "lng": -69.764051,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/old-narrow-gauge-volunteer-trail/",
+      "topPick": false
+    },
+    {
+      "id": "papermill-trail",
+      "name": "Papermill Trail",
+      "state": "ME",
+      "distance": "3.97 miles",
+      "description": "(Lisbon) to Blethen St. (Lisbon Falls).",
+      "lat": 44.031618,
+      "lng": -70.104275,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/papermill-trail/",
+      "topPick": false
+    },
+    {
+      "id": "penobscot-river-walkway",
+      "name": "Penobscot River Walkway",
+      "state": "ME",
+      "distance": "0.3 miles",
+      "description": "",
+      "lat": 44.797243,
+      "lng": -68.769421,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/penobscot-river-walkway/",
+      "topPick": false
+    },
+    {
+      "id": "presque-isle-bike-path",
+      "name": "Presque Isle Bike Path",
+      "state": "ME",
+      "distance": "4.2 miles",
+      "description": "",
+      "lat": 46.676578,
+      "lng": -68.021596,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/presque-isle-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "riverton-rail-trail",
+      "name": "Riverton Rail Trail",
+      "state": "ME",
+      "distance": "1.5 miles",
+      "description": "to Goodridge Ave..",
+      "lat": 43.700096,
+      "lng": -70.29964,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/riverton-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "rotary-centennial-trail",
+      "name": "Rotary Centennial Trail",
+      "state": "ME",
+      "distance": "1.5 miles",
+      "description": "",
+      "lat": 44.586774,
+      "lng": -69.588243,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/rotary-centennial-trail/",
+      "topPick": false
+    },
+    {
+      "id": "sipayik-trail",
+      "name": "Sipayik Trail",
+      "state": "ME",
+      "distance": "1.9 miles",
+      "description": "intersection (Pleasant Point) to US 1/S. River Road between S. Meadow Road and Shore Road (Perry) .",
+      "lat": 44.960078,
+      "lng": -67.042526,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/sipayik-trail/",
+      "topPick": false
+    },
+    {
+      "id": "south-portland-greenbelt-walkway",
+      "name": "South Portland Greenbelt Walkway",
+      "state": "ME",
+      "distance": "5.6 miles",
+      "description": "",
+      "lat": 43.606844,
+      "lng": -70.290638,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/south-portland-greenbelt-walkway/",
+      "topPick": false
+    },
+    {
+      "id": "university-of-maine-bicycle-path",
+      "name": "University of Maine Bicycle Path",
+      "state": "ME",
+      "distance": "2.5 miles",
+      "description": "to Long Rd. at Student Hall Rec Ctr (Old Town).",
+      "lat": 44.90593,
+      "lng": -68.661201,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/university-of-maine-bicycle-path/",
+      "topPick": false
+    },
+    {
+      "id": "whitman-spring-road-trail",
+      "name": "Whitman Spring Road Trail",
+      "state": "ME",
+      "distance": "2 miles",
+      "description": "opp. Holbrook Rd. to Whitman Spring Rd. off W Auburn Rd. .",
+      "lat": 44.143613,
+      "lng": -70.267287,
+      "surface": "Gravel",
+      "tags": [
+        "Gravel"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/whitman-spring-road-trail/",
+      "topPick": false
+    },
+    {
+      "id": "allenstown-rail-trail",
+      "name": "Allenstown Rail Trail",
+      "state": "NH",
+      "distance": "0.7 miles",
+      "description": "(Allenstown) to Hooksett Riverwalk Trail (Hooksett).",
+      "lat": 43.118039,
+      "lng": -71.461261,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/allenstown-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "appel-way-trail",
+      "name": "Appel Way Trail",
+      "state": "NH",
+      "distance": "1.3 miles",
+      "description": "to Court St..",
+      "lat": 42.939226,
+      "lng": -72.305662,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/appel-way-trail/",
+      "topPick": false
+    },
+    {
+      "id": "ashuelot-recreational-rail-trail",
+      "name": "Ashuelot Recreational Rail Trail",
+      "state": "NH",
+      "distance": "21.4 miles",
+      "description": "(Keene) to Northfield Rd. (Hinsdale).",
+      "lat": 42.930388,
+      "lng": -72.28384,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/ashuelot-recreational-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "blackmount-rail-trail",
+      "name": "Blackmount Rail Trail",
+      "state": "NH",
+      "distance": "5 miles",
+      "description": "(Woodsville) to Clark Pond Rd. (North Haverhill).",
+      "lat": 44.097839,
+      "lng": -72.024793,
+      "surface": "Gravel",
+      "tags": [
+        "Gravel"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/blackmount-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "brookline-rail-trail",
+      "name": "Brookline Rail Trail",
+      "state": "NH",
+      "distance": "4.5 miles",
+      "description": "",
+      "lat": 42.793251,
+      "lng": -71.662624,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/brookline-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "common-pathway",
+      "name": "Common Pathway",
+      "state": "NH",
+      "distance": "5.5 miles",
+      "description": "",
+      "lat": 42.860434,
+      "lng": -71.961784,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/common-pathway/",
+      "topPick": false
+    },
+    {
+      "id": "concord-lake-sunapee-rail-trail",
+      "name": "Concord-Lake Sunapee Rail Trail",
+      "state": "NH",
+      "distance": "5.65 miles",
+      "description": "",
+      "lat": 43.244212,
+      "lng": -71.743956,
+      "surface": "Unknown",
+      "tags": [
+        "Lakeside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/concord-lake-sunapee-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "cotton-valley-rail-trail",
+      "name": "Cotton Valley Rail Trail",
+      "state": "NH",
+      "distance": "12 miles",
+      "description": "",
+      "lat": 43.554066,
+      "lng": -71.03119,
+      "surface": "Gravel",
+      "tags": [
+        "Gravel"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/cotton-valley-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "cotton-valley-trail",
+      "name": "Cotton Valley Trail",
+      "state": "NH",
+      "distance": "12 miles each way",
+      "description": "5-star rated trail through New Hampshire's beautiful Lakes Region. Great for out-and-back rides.",
+      "lat": 43.6106,
+      "lng": -71.2437,
+      "trailheadLat": 43.6054,
+      "trailheadLng": -71.2139,
+      "trailheadName": "Wolfeboro Trailhead",
+      "topPick": false,
+      "surface": "Crushed Stone",
+      "tags": [
+        "5-Star Rated",
+        "Lakes Region"
+      ],
+      "gpxUrl": null,
+      "websiteUrl": "https://www.nhstateparks.org/visit/recreational-rail-trails/cotton-valley-rail-trail",
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/cotton-valley-trail.gpx"
+    },
+    {
+      "id": "derry-rail-trail",
+      "name": "Derry Rail Trail",
+      "state": "NH",
+      "distance": "3.6 miles",
+      "description": "",
+      "lat": 42.843942,
+      "lng": -71.301009,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/derry-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "dover-community-trail",
+      "name": "Dover Community Trail",
+      "state": "NH",
+      "distance": "4.2 miles",
+      "description": "(Dover) to 171 Watson Rd (Dover).",
+      "lat": 43.181743,
+      "lng": -70.876827,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/dover-community-trail/",
+      "topPick": false
+    },
+    {
+      "id": "fort-hill-recreational-rail-trail",
+      "name": "Fort Hill Recreational Rail Trail",
+      "state": "NH",
+      "distance": "7 miles",
+      "description": "View amenities, descriptions, reviews, photos, itineraries,",
+      "lat": 42.758289,
+      "lng": -72.470872,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/fort-hill-recreational-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "franconia-notch-recreation-path",
+      "name": "Franconia Notch Recreation Path",
+      "state": "NH",
+      "distance": "8.7 miles",
+      "description": "",
+      "lat": 44.203064,
+      "lng": -71.681015,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/franconia-notch-recreation-path/",
+      "topPick": false
+    },
+    {
+      "id": "granite-town-rail-trail",
+      "name": "Granite Town Rail-Trail",
+      "state": "NH",
+      "distance": "3 miles",
+      "description": "13 (Milford) to Brookline Rail Trail (Brookline).",
+      "lat": 42.825482,
+      "lng": -71.648396,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/granite-town-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "harrisville-and-hancock-rail-trails",
+      "name": "Harrisville and Hancock Rail Trails",
+      "state": "NH",
+      "distance": "6.1 miles",
+      "description": "(Chesham) to Old Dublin Rd. (Hancock).",
+      "lat": 42.9369,
+      "lng": -72.062164,
+      "surface": "Dirt",
+      "tags": [
+        "Dirt"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/harrisville-and-hancock-rail-trails/",
+      "topPick": false
+    },
+    {
+      "id": "henniker-amp-hopkinton-rail-trails",
+      "name": "Henniker &amp; Hopkinton Rail Trails",
+      "state": "NH",
+      "distance": "6.7 miles",
+      "description": "",
+      "lat": 43.177016,
+      "lng": -71.834736,
+      "surface": "Dirt",
+      "tags": [
+        "Dirt"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/henniker--hopkinton-rail-trails/",
+      "topPick": false
+    },
+    {
+      "id": "heritage-trail-nh",
+      "name": "Heritage Trail (NH)",
+      "state": "NH",
+      "distance": "0.9 miles",
+      "description": "",
+      "lat": 42.970935,
+      "lng": -71.472794,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/heritage-trail-(nh)/",
+      "topPick": false
+    },
+    {
+      "id": "hooksett-riverwalk-trail",
+      "name": "Hooksett Riverwalk Trail",
+      "state": "NH",
+      "distance": "1.4 miles",
+      "description": "(Hooksett).",
+      "lat": 43.106349,
+      "lng": -71.463848,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/hooksett-riverwalk-trail/",
+      "topPick": false
+    },
+    {
+      "id": "jonathan-daniels-trail",
+      "name": "Jonathan Daniels Trail",
+      "state": "NH",
+      "distance": "0.9 miles",
+      "description": "",
+      "lat": 42.932666,
+      "lng": -72.288086,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/jonathan-daniels-trail/",
+      "topPick": false
+    },
+    {
+      "id": "keene-industrial-heritage-trail",
+      "name": "Keene Industrial Heritage Trail",
+      "state": "NH",
+      "distance": "1 miles",
+      "description": "Keene Industrial Heritage Trail spans 1 from Railroad Square on Main Street to Eastern Avenue (Keene).",
+      "lat": 42.932276,
+      "lng": -72.277644,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/keene-industrial-heritage-trail-/",
+      "topPick": false
+    },
+    {
+      "id": "lake-winnisquam-scenic-trail",
+      "name": "Lake Winnisquam Scenic Trail",
+      "state": "NH",
+      "distance": "1.58 miles",
+      "description": "",
+      "lat": 43.516832,
+      "lng": -71.488396,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Lakeside",
+        "Scenic"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/lake-winnisquam-scenic-trail/",
+      "topPick": false
+    },
+    {
+      "id": "littleton-riverwalk",
+      "name": "Littleton Riverwalk",
+      "state": "NH",
+      "distance": "0.5 miles",
+      "description": "",
+      "lat": 44.305654,
+      "lng": -71.77857,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/littleton-riverwalk/",
+      "topPick": false
+    },
+    {
+      "id": "londonderry-rail-trail",
+      "name": "Londonderry Rail Trail",
+      "state": "NH",
+      "distance": "4.6 miles",
+      "description": "",
+      "lat": 42.919379,
+      "lng": -71.422292,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/londonderry-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "mascoma-river-greenway",
+      "name": "Mascoma River Greenway",
+      "state": "NH",
+      "distance": "2.78 miles",
+      "description": "",
+      "lat": 43.644539,
+      "lng": -72.249623,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/mascoma-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "merrimack-river-greenway-trail",
+      "name": "Merrimack River Greenway Trail",
+      "state": "NH",
+      "distance": "0.33 miles",
+      "description": "",
+      "lat": 43.196334,
+      "lng": -71.519565,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/merrimack-river-greenway-trail/",
+      "topPick": false
+    },
+    {
+      "id": "mine-falls-park-trails",
+      "name": "Mine Falls Park Trails",
+      "state": "NH",
+      "distance": "9.7 miles",
+      "description": "(Nashua).",
+      "lat": 42.74839,
+      "lng": -71.505025,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/mine-falls-park-trails/",
+      "topPick": false
+    },
+    {
+      "id": "nashua-heritage-rail-trail",
+      "name": "Nashua Heritage Rail-Trail",
+      "state": "NH",
+      "distance": "1.3 miles",
+      "description": "east of Simon St. to Elm St. at SR 111 (Nashua).",
+      "lat": 42.757664,
+      "lng": -71.465589,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/nashua-heritage-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "new-hampshire-seacoast-greenway",
+      "name": "New Hampshire Seacoast Greenway",
+      "state": "NH",
+      "distance": "8 miles",
+      "description": "",
+      "lat": 43.065601,
+      "lng": -70.77868,
+      "surface": "Unknown",
+      "tags": [
+        "Coastal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/new-hampshire-seacoast-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "north-conway-recreation-path",
+      "name": "North Conway Recreation Path",
+      "state": "NH",
+      "distance": "2.9 miles",
+      "description": "",
+      "lat": 44.019557,
+      "lng": -71.10612,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/north-conway-recreation-path/",
+      "topPick": false
     },
     {
       "id": "northern-rail-trail",
@@ -113,7 +2907,70 @@
       "gpxUrl": null,
       "websiteUrl": "https://www.northernrailtrail.org/",
       "trailspottingUrl": null,
-      "gpxFile": "gpx/northern-rail-trail.gpx"
+      "gpxFile": "gpx/northern-rail-trail.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/northern-rail-trail/",
+      "traillinkRating": 2
+    },
+    {
+      "id": "old-railroad-trail-nh",
+      "name": "Old Railroad Trail (NH)",
+      "state": "NH",
+      "distance": "2.7 miles",
+      "description": "",
+      "lat": 42.927626,
+      "lng": -71.942989,
+      "surface": "Dirt",
+      "tags": [
+        "Dirt"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/old-railroad-trail-(nh)/",
+      "topPick": false
+    },
+    {
+      "id": "peanut-trail",
+      "name": "Peanut Trail",
+      "state": "NH",
+      "distance": "1.5 miles",
+      "description": "",
+      "lat": 42.863103,
+      "lng": -71.031484,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/peanut-trail/",
+      "topPick": false
+    },
+    {
+      "id": "piscataquog-trail",
+      "name": "Piscataquog Trail",
+      "state": "NH",
+      "distance": "2.1 miles",
+      "description": ", 0.3 mile northeast of Pinard St to junction with the Heritage Trail at Riverwalk Way (Manchester).",
+      "lat": 42.979154,
+      "lng": -71.467738,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/piscataquog-trail/",
+      "topPick": false
+    },
+    {
+      "id": "potanipo-rail-trail-nh",
+      "name": "Potanipo Rail Trail (NH)",
+      "state": "NH",
+      "distance": "2.7 miles",
+      "description": "",
+      "lat": 42.72506,
+      "lng": -71.662691,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/potanipo-rail-trail-(nh)/",
+      "topPick": false
     },
     {
       "id": "presidential-rail-trail",
@@ -139,187 +2996,207 @@
       "gpxFile": "gpx/presidential-rail-trail.gpx"
     },
     {
-      "id": "cotton-valley-trail",
-      "name": "Cotton Valley Trail",
+      "id": "roland-bergeron-bike-path",
+      "name": "Roland Bergeron Bike Path",
       "state": "NH",
-      "distance": "12 miles each way",
-      "description": "5-star rated trail through New Hampshire's beautiful Lakes Region. Great for out-and-back rides.",
-      "lat": 43.6106,
-      "lng": -71.2437,
-      "trailheadLat": 43.6054,
-      "trailheadLng": -71.2139,
-      "trailheadName": "Wolfeboro Trailhead",
-      "topPick": false,
+      "distance": "6 miles",
+      "description": "",
+      "lat": 42.885074,
+      "lng": -71.456907,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/roland-bergeron-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "salem-bike-ped-corridor",
+      "name": "Salem Bike-Ped Corridor",
+      "state": "NH",
+      "distance": "4.95 miles",
+      "description": "",
+      "lat": 42.805687,
+      "lng": -71.245303,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/salem-bike-ped-corridor/",
+      "topPick": false
+    },
+    {
+      "id": "south-manchester-rail-trail",
+      "name": "South Manchester Rail Trail",
+      "state": "NH",
+      "distance": "1.8 miles",
+      "description": "",
+      "lat": 42.944327,
+      "lng": -71.436317,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/south-manchester-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "stevens-rail-trail",
+      "name": "Stevens Rail Trail",
+      "state": "NH",
+      "distance": "1.65 miles",
+      "description": "",
+      "lat": 43.22667,
+      "lng": -71.726501,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/stevens-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "village-spur-rail-trail",
+      "name": "Village Spur Rail Trail",
+      "state": "NH",
+      "distance": "2.1 miles",
+      "description": "",
+      "lat": 43.442635,
+      "lng": -71.522087,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/village-spur-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "wow-trail",
+      "name": "WOW Trail",
+      "state": "NH",
+      "distance": "2.7 miles",
+      "description": "(Laconia) to 94 Daniel Webster Hwy (Belmont).",
+      "lat": 43.547517,
+      "lng": -71.463076,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/wow-trail/",
+      "topPick": false
+    },
+    {
+      "id": "warner-rail-trail-and-bagley-rail-trail",
+      "name": "Warner Rail Trail and Bagley Rail Trail",
+      "state": "NH",
+      "distance": "1 miles",
+      "description": "",
+      "lat": 43.268113,
+      "lng": -71.780394,
       "surface": "Crushed Stone",
       "tags": [
-        "5-Star Rated",
-        "Lakes Region"
+        "Crushed Stone"
       ],
-      "gpxUrl": null,
-      "websiteUrl": "https://www.nhstateparks.org/visit/recreational-rail-trails/cotton-valley-rail-trail",
-      "trailspottingUrl": null,
-      "gpxFile": "gpx/cotton-valley-trail.gpx"
+      "websiteUrl": "https://www.traillink.com/trail/warner-rail-trail-and-bagley-rail-trail/",
+      "topPick": false
     },
     {
-      "id": "eastern-trail",
-      "name": "Eastern Trail",
-      "state": "ME",
-      "distance": "22 miles (65 total)",
-      "description": "Flat, easy ride on asphalt and crushed stone. Features blueberry barrens, Rachel Carson Wildlife Refuge, Scarborough Marsh, and Bug Light Park.",
-      "lat": 43.551,
-      "lng": -70.3559,
-      "trailheadLat": 43.6501,
-      "trailheadLng": -70.2457,
-      "trailheadName": "Bug Light Park, South Portland",
-      "topPick": true,
-      "surface": "Paved/Crushed Stone",
+      "id": "west-foss-farm-trail",
+      "name": "West Foss Farm Trail",
+      "state": "NH",
+      "distance": "1.6 miles",
+      "description": "",
+      "lat": 43.111646,
+      "lng": -70.947778,
+      "surface": "Dirt",
       "tags": [
-        "Paved",
-        "Blueberries",
-        "Wildlife Refuge"
+        "Dirt"
       ],
-      "gpxUrl": null,
-      "websiteUrl": "https://www.easterntrail.org/",
-      "trailspottingUrl": null,
-      "gpxFile": "gpx/eastern-trail.gpx"
+      "websiteUrl": "https://www.traillink.com/trail/west-foss-farm-trail/",
+      "topPick": false
     },
     {
-      "id": "kennebec-river-rail-trail",
-      "name": "Kennebec River Rail Trail",
-      "state": "ME",
-      "distance": "6.5 miles",
-      "description": "Fully paved, flat riverside ride with four convenient access points. Great for beginners or casual rides.",
-      "lat": 44.3106,
-      "lng": -69.7795,
-      "trailheadLat": 44.3135,
-      "trailheadLng": -69.7746,
-      "trailheadName": "Augusta Waterfront",
+      "id": "windham-rail-trail",
+      "name": "Windham Rail Trail",
+      "state": "NH",
+      "distance": "4.3 miles",
+      "description": "",
+      "lat": 42.843942,
+      "lng": -71.301009,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/windham-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "winnipesaukee-river-trail",
+      "name": "Winnipesaukee River Trail",
+      "state": "NH",
+      "distance": "4.94 miles",
+      "description": "(Franklin) to Tilton Rd. (Tilton).",
+      "lat": 43.445446,
+      "lng": -71.642746,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/winnipesaukee-river-trail/",
+      "topPick": false
+    },
+    {
+      "id": "blackstone-river-bikeway",
+      "name": "Blackstone River Bikeway",
+      "state": "RI",
+      "distance": "18+ miles",
+      "description": "Follows the historic Blackstone River through industrial heritage sites. Still expanding!",
+      "lat": 41.8604,
+      "lng": -71.4128,
+      "trailheadLat": 41.8604,
+      "trailheadLng": -71.4128,
+      "trailheadName": "Lonsdale Trailhead",
       "topPick": false,
       "surface": "Paved",
       "tags": [
-        "Fully Paved",
+        "Historic",
+        "Riverside"
+      ],
+      "gpxUrl": null,
+      "websiteUrl": "https://www.blackstoneheritagecorridor.org/explore/bikeway/",
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/blackstone-river-bikeway.gpx"
+    },
+    {
+      "id": "blackstone-river-greenway",
+      "name": "Blackstone River Greenway",
+      "state": "RI",
+      "distance": "31.6 miles",
+      "description": "(South Worcester, MA) to Tockwotton Park (Providence, RI).",
+      "lat": 41.907761,
+      "lng": -71.401047,
+      "surface": "Unknown",
+      "tags": [
         "Riverside",
-        "Beginner Friendly"
+        "Park"
       ],
-      "gpxUrl": null,
-      "websiteUrl": "https://www.krrt.org/",
-      "trailspottingUrl": null,
-      "gpxFile": "gpx/kennebec-river-rail-trail.gpx"
+      "websiteUrl": "https://www.traillink.com/trail/blackstone-river-greenway/",
+      "topPick": false
     },
     {
-      "id": "eastern-promenade-trail",
-      "name": "Eastern Promenade Trail",
-      "state": "ME",
-      "distance": "2+ miles",
-      "description": "Urban trail with stunning ocean views. Connects to Back Cove Trail for extended riding. Perfect for city exploration.",
-      "lat": 43.668,
-      "lng": -70.242,
-      "trailheadLat": 43.668,
-      "trailheadLng": -70.242,
-      "trailheadName": "East End Beach, Portland",
-      "topPick": false,
+      "id": "burrillville-bike-path",
+      "name": "Burrillville Bike Path",
+      "state": "RI",
+      "distance": "1.2 miles",
+      "description": "",
+      "lat": 41.963751,
+      "lng": -71.6782,
       "surface": "Paved",
       "tags": [
-        "Urban",
-        "Ocean Views",
-        "Connects Trails"
+        "Paved"
       ],
-      "gpxUrl": null,
-      "websiteUrl": "https://trails.org/our-trails/eastern-promenade-trail/",
-      "trailspottingUrl": null,
-      "gpxFile": "gpx/eastern-promenade-trail.gpx"
-    },
-    {
-      "id": "island-line-trail",
-      "name": "Island Line Trail",
-      "state": "VT",
-      "distance": "14 miles",
-      "description": "Stunning Lake Champlain views with a unique 3-mile causeway extending over the water. Paved and packed gravel surface with Adirondack mountain vistas.",
-      "lat": 44.4759,
-      "lng": -73.2121,
-      "trailheadLat": 44.4801,
-      "trailheadLng": -73.221,
-      "trailheadName": "Burlington Waterfront",
-      "topPick": true,
-      "surface": "Paved/Gravel",
-      "tags": [
-        "Paved + Gravel",
-        "Lake Views",
-        "Scenic"
-      ],
-      "gpxUrl": null,
-      "websiteUrl": "https://localmotion.org/island-line-trail/",
-      "trailspottingUrl": null,
-      "note": "200ft gap requires seasonal ferry in summer months",
-      "gpxFile": "gpx/island-line-trail.gpx"
-    },
-    {
-      "id": "montpelier-wells-river-trail",
-      "name": "Montpelier & Wells River Rail Trail",
-      "state": "VT",
-      "distance": "19 miles",
-      "description": "Scenic dirt and cinder trail through untamed Vermont landscape. Lake Groton offers a refreshing swimming spot halfway through.",
-      "lat": 44.2628,
-      "lng": -72.2339,
-      "trailheadLat": 44.3252,
-      "trailheadLng": -72.2234,
-      "trailheadName": "Groton State Forest",
-      "topPick": false,
-      "surface": "Dirt/Cinder",
-      "tags": [
-        "Dirt/Cinder",
-        "Swimming",
-        "Forest"
-      ],
-      "gpxUrl": null,
-      "websiteUrl": "https://fpr.vermont.gov/montpelier-and-wells-river-rail-trail",
-      "trailspottingUrl": null,
-      "gpxFile": "gpx/montpelier-wells-river-trail.gpx"
-    },
-    {
-      "id": "air-line-state-park-trail",
-      "name": "Air Line State Park Trail",
-      "state": "CT",
-      "distance": "50 miles",
-      "description": "Historic \"Ghost Train\" route! Flat gravel trail over viaducts and bridges, through wetlands, farmlands, and forest preserves. Yankee Editors' Pick for \"Best Rail Trail.\"",
-      "lat": 41.7004,
-      "lng": -72.2273,
-      "trailheadLat": 41.5715,
-      "trailheadLng": -72.5098,
-      "trailheadName": "Portland Trailhead",
-      "topPick": true,
-      "surface": "Gravel",
-      "tags": [
-        "Award Winner",
-        "Viaducts",
-        "Historic"
-      ],
-      "gpxUrl": null,
-      "websiteUrl": "https://portal.ct.gov/DEEP/State-Parks/Parks/Air-Line-State-Park-Trail",
-      "trailspottingUrl": null,
-      "gpxFile": "gpx/air-line-state-park-trail.gpx"
-    },
-    {
-      "id": "farmington-canal-heritage-trail",
-      "name": "Farmington Canal Heritage Trail",
-      "state": "CT",
-      "distance": "80+ miles total",
-      "description": "Popular paved path following a historic canal route. Eventually will connect to Massachusetts trails.",
-      "lat": 41.4925,
-      "lng": -72.899,
-      "trailheadLat": 41.3082,
-      "trailheadLng": -72.9268,
-      "trailheadName": "New Haven Trailhead",
-      "topPick": false,
-      "surface": "Paved",
-      "tags": [
-        "Paved",
-        "Canal History"
-      ],
-      "gpxUrl": null,
-      "websiteUrl": "https://www.farmingtoncanal.org/",
-      "trailspottingUrl": null,
-      "gpxFile": "gpx/farmington-canal-heritage-trail.gpx"
+      "websiteUrl": "https://www.traillink.com/trail/burrillville-bike-path/",
+      "topPick": false
     },
     {
       "id": "east-bay-bike-path",
@@ -345,30 +3222,507 @@
       "gpxFile": "gpx/east-bay-bike-path.gpx"
     },
     {
-      "id": "blackstone-river-bikeway",
-      "name": "Blackstone River Bikeway",
+      "id": "east-bay-bike-path-ri",
+      "name": "East Bay Bike Path (RI)",
       "state": "RI",
-      "distance": "18+ miles",
-      "description": "Follows the historic Blackstone River through industrial heritage sites. Still expanding!",
-      "lat": 41.8604,
-      "lng": -71.4128,
-      "trailheadLat": 41.8604,
-      "trailheadLng": -71.4128,
-      "trailheadName": "Lonsdale Trailhead",
-      "topPick": false,
+      "distance": "14.3 miles",
+      "description": "",
+      "lat": 41.818104,
+      "lng": -71.390926,
       "surface": "Paved",
       "tags": [
-        "Historic",
+        "Paved",
+        "Coastal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/east-bay-bike-path-(ri)/",
+      "topPick": false
+    },
+    {
+      "id": "fred-lippitt-woonasquatucket-river-greenway",
+      "name": "Fred Lippitt Woonasquatucket River Greenway",
+      "state": "RI",
+      "distance": "6.8 miles",
+      "description": "(Providence) to Lyman Ave. (Johnston).",
+      "lat": 41.822567,
+      "lng": -71.452551,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
         "Riverside"
       ],
+      "websiteUrl": "https://www.traillink.com/trail/fred-lippitt-woonasquatucket-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "jaycee-arboretum-amp-senator-roch-riverwalk",
+      "name": "JAYCEE Arboretum &amp; Senator Roch Riverwalk",
+      "state": "RI",
+      "distance": "1.3 miles",
+      "description": "",
+      "lat": 41.717569,
+      "lng": -71.517918,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/jaycee-arboretum--senator-roch-riverwalk/",
+      "topPick": false
+    },
+    {
+      "id": "newport-bike-path",
+      "name": "Newport Bike Path",
+      "state": "RI",
+      "distance": "2.5 miles",
+      "description": "(Newport) to Gladys Carr Bolhouse Rd. (Newport).",
+      "lat": 41.492232,
+      "lng": -71.31748,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/newport-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "phenix-harris-riverwalk",
+      "name": "Phenix-Harris Riverwalk",
+      "state": "RI",
+      "distance": "0.3 miles",
+      "description": ", West Warwick to Lincoln Ave., Coventry.",
+      "lat": 41.720513,
+      "lng": -71.532769,
+      "surface": "Dirt",
+      "tags": [
+        "Dirt",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/phenix-harris-riverwalk/",
+      "topPick": false
+    },
+    {
+      "id": "quonset-point-bike-path",
+      "name": "Quonset Point Bike Path",
+      "state": "RI",
+      "distance": "2.5 miles",
+      "description": "and Pettee Ave..",
+      "lat": 41.607234,
+      "lng": -71.455219,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/quonset-point-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "stillwater-scenic-walkway",
+      "name": "Stillwater Scenic Walkway",
+      "state": "RI",
+      "distance": "1 miles",
+      "description": "",
+      "lat": 41.907211,
+      "lng": -71.539134,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone",
+        "Scenic"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/stillwater-scenic-walkway/",
+      "topPick": false
+    },
+    {
+      "id": "ten-mile-river-greenway",
+      "name": "Ten Mile River Greenway",
+      "state": "RI",
+      "distance": "3 miles",
+      "description": "(Pawtucket).",
+      "lat": 41.847847,
+      "lng": -71.345568,
+      "surface": "Unknown",
+      "tags": [
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/ten-mile-river-greenway/",
+      "topPick": false
+    },
+    {
+      "id": "uri-bike-path",
+      "name": "URI Bike Path",
+      "state": "RI",
+      "distance": "2 miles",
+      "description": "O&#39;Neill Bike Path.",
+      "lat": 41.472691,
+      "lng": -71.553087,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/uri-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "warren-bike-path",
+      "name": "Warren Bike Path",
+      "state": "RI",
+      "distance": "0.9 miles",
+      "description": "",
+      "lat": 41.729012,
+      "lng": -71.247258,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/warren-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "washington-secondary-bike-path",
+      "name": "Washington Secondary Bike Path",
+      "state": "RI",
+      "distance": "19.2 miles",
+      "description": "",
+      "lat": 41.801469,
+      "lng": -71.44338,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/washington-secondary-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "william-c-o39neill-bike-path",
+      "name": "William C. O&#39;Neill Bike Path",
+      "state": "RI",
+      "distance": "7.2 miles",
+      "description": "(Kingston) to 53 Mumford Rd. (Narragansett).",
+      "lat": 41.483043,
+      "lng": -71.562317,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/william-c-oneill-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "bennington-rail-trail",
+      "name": "Bennington Rail Trail",
+      "state": "VT",
+      "distance": "1.65 miles",
+      "description": "",
+      "lat": 42.902321,
+      "lng": -73.209825,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/bennington-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "colchester-bayside-to-village-path",
+      "name": "Colchester Bayside to Village Path",
+      "state": "VT",
+      "distance": "3.8 miles",
+      "description": "and Hollow Creek Creek Dr. to W. Lakeshore Dr. at E. Lakeshore Dr. (Colchester).",
+      "lat": 44.542727,
+      "lng": -73.202532,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Lakeside",
+        "Coastal"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/colchester-bayside-to-village-path/",
+      "topPick": false
+    },
+    {
+      "id": "essex-bike-paths",
+      "name": "Essex Bike Paths",
+      "state": "VT",
+      "distance": "4.7 miles",
+      "description": "to Beech St. and also Sidney Dr. to Main St. at Densmore Dr. to Hubbells Falls Dr. and also to Brickyard Rd..",
+      "lat": 44.492146,
+      "lng": -73.093497,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/essex-bike-paths/",
+      "topPick": false
+    },
+    {
+      "id": "ethan-allen-park-trails",
+      "name": "Ethan Allen Park Trails",
+      "state": "VT",
+      "distance": "4 miles",
+      "description": "and North Ave. to Ethan Allen Pkwy. and Sandy Lane to SR 127 Bike Path, 2 miles north of Manhattan Dr. (Burlington).",
+      "lat": 44.504648,
+      "lng": -73.239666,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/ethan-allen-park-trails/",
+      "topPick": false
+    },
+    {
+      "id": "island-line-trail",
+      "name": "Island Line Trail",
+      "state": "VT",
+      "distance": "14 miles",
+      "description": "Stunning Lake Champlain views with a unique 3-mile causeway extending over the water. Paved and packed gravel surface with Adirondack mountain vistas.",
+      "lat": 44.4759,
+      "lng": -73.2121,
+      "trailheadLat": 44.4801,
+      "trailheadLng": -73.221,
+      "trailheadName": "Burlington Waterfront",
+      "topPick": true,
+      "surface": "Paved/Gravel",
+      "tags": [
+        "Paved + Gravel",
+        "Lake Views",
+        "Scenic"
+      ],
       "gpxUrl": null,
-      "websiteUrl": "https://www.blackstoneheritagecorridor.org/explore/bikeway/",
+      "websiteUrl": "https://localmotion.org/island-line-trail/",
       "trailspottingUrl": null,
-      "gpxFile": "gpx/blackstone-river-bikeway.gpx"
+      "note": "200ft gap requires seasonal ferry in summer months",
+      "gpxFile": "gpx/island-line-trail.gpx",
+      "traillinkUrl": "https://www.traillink.com/trail/island-line-trail/",
+      "traillinkRating": 5
+    },
+    {
+      "id": "lamoille-valley-rail-trail",
+      "name": "Lamoille Valley Rail Trail",
+      "state": "VT",
+      "distance": "94.3 miles",
+      "description": "(Swanton) to 543 Main St (St. Johnsbury).",
+      "lat": 44.410594,
+      "lng": -72.017885,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/lamoille-valley-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "marshall-avenue-recreation-path",
+      "name": "Marshall Avenue Recreation Path",
+      "state": "VT",
+      "distance": "1.4 miles",
+      "description": "",
+      "lat": 44.443889,
+      "lng": -73.108407,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/marshall-avenue-recreation-path/",
+      "topPick": false
+    },
+    {
+      "id": "millstone-hill-west-bike-path",
+      "name": "Millstone Hill West Bike Path",
+      "state": "VT",
+      "distance": "2.4 miles",
+      "description": "",
+      "lat": 44.168007,
+      "lng": -72.477388,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/millstone-hill-west-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "montpelier-wells-river-trail",
+      "name": "Montpelier & Wells River Rail Trail",
+      "state": "VT",
+      "distance": "19 miles",
+      "description": "Scenic dirt and cinder trail through untamed Vermont landscape. Lake Groton offers a refreshing swimming spot halfway through.",
+      "lat": 44.2628,
+      "lng": -72.2339,
+      "trailheadLat": 44.3252,
+      "trailheadLng": -72.2234,
+      "trailheadName": "Groton State Forest",
+      "topPick": false,
+      "surface": "Dirt/Cinder",
+      "tags": [
+        "Dirt/Cinder",
+        "Swimming",
+        "Forest"
+      ],
+      "gpxUrl": null,
+      "websiteUrl": "https://fpr.vermont.gov/montpelier-and-wells-river-rail-trail",
+      "trailspottingUrl": null,
+      "gpxFile": "gpx/montpelier-wells-river-trail.gpx"
+    },
+    {
+      "id": "montpelier-recreation-path-winooski-path",
+      "name": "Montpelier Recreation Path (Winooski Path)",
+      "state": "VT",
+      "distance": "1.94 miles",
+      "description": "",
+      "lat": 44.255912,
+      "lng": -72.600588,
+      "surface": "Paved/Gravel",
+      "tags": [
+        "Paved/Gravel"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/montpelier-recreation-path-(winooski-path)/",
+      "topPick": false
+    },
+    {
+      "id": "niquette-bay-state-park-allen-trail",
+      "name": "Niquette Bay State Park - Allen Trail",
+      "state": "VT",
+      "distance": "0.6 miles",
+      "description": "",
+      "lat": 44.582255,
+      "lng": -73.191716,
+      "surface": "Crushed Stone",
+      "tags": [
+        "Crushed Stone",
+        "Coastal",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/niquette-bay-state-park---allen-trail/",
+      "topPick": false
+    },
+    {
+      "id": "riverside-avenue-bike-path",
+      "name": "Riverside Avenue Bike Path",
+      "state": "VT",
+      "distance": "1.1 miles",
+      "description": "to Colchester Ave. (Burlington).",
+      "lat": 44.48973,
+      "lng": -73.20575,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/riverside-avenue-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "route-127-path",
+      "name": "Route 127 Path",
+      "state": "VT",
+      "distance": "3.2 miles",
+      "description": "near SR 127 to Manhattan Dr. (Burlington&#39;s Old North End).",
+      "lat": 44.517061,
+      "lng": -73.24165,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/route-127-path/",
+      "topPick": false
+    },
+    {
+      "id": "south-barre-bike-path",
+      "name": "South Barre Bike Path",
+      "state": "VT",
+      "distance": "1 miles",
+      "description": "(Barre) to Fairview St. (Barre).",
+      "lat": 44.193548,
+      "lng": -72.503241,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/south-barre-bike-path/",
+      "topPick": false
+    },
+    {
+      "id": "south-burlington-recreation-path",
+      "name": "South Burlington Recreation Path",
+      "state": "VT",
+      "distance": "26 miles",
+      "description": "",
+      "lat": 44.417333,
+      "lng": -73.184081,
+      "surface": "Paved",
+      "tags": [
+        "Paved"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/south-burlington-recreation-path/",
+      "topPick": false
+    },
+    {
+      "id": "stowe-recreation-path",
+      "name": "Stowe Recreation Path",
+      "state": "VT",
+      "distance": "5.5 miles",
+      "description": "Branch Lane and Mountain Road/SR 108 to Main St./Maple St./SR 100 at Sunset St. in Lintilhac Park (Stowe).",
+      "lat": 44.466207,
+      "lng": -72.685045,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Mountain Views",
+        "Park"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/stowe-recreation-path/",
+      "topPick": false
+    },
+    {
+      "id": "toonerville-rail-trail",
+      "name": "Toonerville Rail-Trail",
+      "state": "VT",
+      "distance": "3.2 miles",
+      "description": "/SR 11 and Sioux Dr. to Charlestown Rd. at Connecticut River Rd. (Springfield).",
+      "lat": 43.284289,
+      "lng": -72.471229,
+      "surface": "Paved",
+      "tags": [
+        "Paved",
+        "Riverside"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/toonerville-rail-trail/",
+      "topPick": false
+    },
+    {
+      "id": "valley-trail",
+      "name": "Valley Trail",
+      "state": "VT",
+      "distance": "9.1 miles",
+      "description": "Access Rd. and Handle Rd. (Dover) to W. Main St./Route 9 (Wilmington).",
+      "lat": 42.870594,
+      "lng": -72.875313,
+      "surface": "Paved/Gravel",
+      "tags": [
+        "Paved/Gravel"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/valley-trail/",
+      "topPick": false
+    },
+    {
+      "id": "williston-village-bike-paths",
+      "name": "Williston Village Bike Paths",
+      "state": "VT",
+      "distance": "7.9 miles",
+      "description": "Williston Rd to Marshall Ave. at Trader Ln; Williston Rd at S. Brownell Rd to Dunmore Ln to Essex Rd between Cascade St. and Eastview Cir. to Beaudry Ln (Williston).",
+      "lat": 44.441237,
+      "lng": -73.069926,
+      "surface": "Unknown",
+      "tags": [
+        "Rail Trail"
+      ],
+      "websiteUrl": "https://www.traillink.com/trail/williston-village-bike-paths/",
+      "topPick": false
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-02-01T16:27:47.898711",
-    "gpxGenerated": true
+    "lastUpdated": "2026-03-05T09:13:00",
+    "source": "Curated + TrailLink import",
+    "totalTrails": 233
   }
 }
