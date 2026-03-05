@@ -619,18 +619,15 @@
             <!-- Trail Search Box -->
             <div id="trail-search-container" style="margin-bottom: 1rem;">
                 <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; align-items: center;">
-                    <select id="state-filter" style="padding: 0.6rem 0.8rem; border-radius: 25px; border: 1px solid rgba(16,185,129,0.3); 
-                                                     background: rgba(16,185,129,0.1); color: white; font-size: 0.9rem; cursor: pointer;
-                                                     appearance: none; -webkit-appearance: none; padding-right: 1.8rem;
-                                                     background-image: url('data:image/svg+xml;utf8,<svg fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><path d=\"M7 10l5 5 5-5z\"/></svg>');
-                                                     background-repeat: no-repeat; background-position: right 0.5rem center;">
-                        <option value="">All States</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="ME">Maine</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="VT">Vermont</option>
+                    <select id="state-filter" style="padding: 0.6rem 0.8rem; border-radius: 25px; border: 1px solid rgba(255,255,255,0.2); 
+                                                     background: rgba(0,0,0,0.3); color: white; font-size: 0.9rem; cursor: pointer;">
+                        <option value="" style="background: #1a1a2e; color: white;">All States</option>
+                        <option value="CT" style="background: #1a1a2e; color: white;">Connecticut</option>
+                        <option value="ME" style="background: #1a1a2e; color: white;">Maine</option>
+                        <option value="MA" style="background: #1a1a2e; color: white;">Massachusetts</option>
+                        <option value="NH" style="background: #1a1a2e; color: white;">New Hampshire</option>
+                        <option value="RI" style="background: #1a1a2e; color: white;">Rhode Island</option>
+                        <option value="VT" style="background: #1a1a2e; color: white;">Vermont</option>
                     </select>
                     <input type="text" id="trail-search" placeholder="🔍 Search by trail name, city, or address..." 
                            style="padding: 0.6rem 1rem; border-radius: 25px; border: 1px solid rgba(16,185,129,0.3); 
