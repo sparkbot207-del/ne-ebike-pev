@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.1.8] - 2026-03-05
+
+### Trail Search & Data Improvements
+- **Deduplicated trail data** — Reduced rail_trails.json from 458 entries to 229 unique trails
+  - Removed exact duplicate entries (e.g., Cape Cod Rail Trail appeared twice with identical data)
+  - Removed garbage `cities` field values like "Boston to New York", "Maine to Florida when"
+  - All city/location fields now properly empty and cleaned for future population
+- **Added zip code search support** — Trail search now accepts 5-digit zip codes (e.g., `04240` for Lewiston, ME)
+  - Enhanced `looksLikeAddress()` function to detect zip pattern `^\d{5}(-\d{4})?$`
+  - Geocodes zip codes via Nominatim, finds trails within 25-mile radius
+  - Updated search placeholder: "Search by trail name, city, zip, or address..."
+- **Geocoded all 233 trails** with accurate lat/lng from TrailLink metadata
+  - No login required — coordinates extracted from public `<meta>` tags
+  - 100% success rate for all New England trails (CT, MA, ME, NH, RI, VT)
+- **Fixed state filtering** — State dropdown appends state name to geocode queries for clarity
+  - Example: "springfield" + MA dropdown → geocodes as "springfield, Massachusetts"
+- **Sync status** — Both `trails.json` (curated) and `rail_trails.json` (live) now in sync with correct coordinates
+
+### Technical
+- Routes page placeholder updated
+- Commits: `d23fcdf` (dedupe), `8e339e3` (zip search), `abcff92` (version tag)
+- No breaking changes to map rendering or filtering logic
+
 ## [1.1.7] - 2026-03-04
 
 ### SEO Fixes - Redirect Issue Resolution
