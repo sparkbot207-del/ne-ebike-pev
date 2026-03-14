@@ -242,8 +242,21 @@ async function main() {
     const total = allTrails.length;
     console.log(`\nCoordinate quality: ${withReal}/${total} trails have coordinates`);
     
+    // Deduplicate by URL (TrailLink sometimes returns same trail from multiple pages)
+    const seen = new Map();
+    for (const trail of allTrails) {
+        const key = trail.url || trail.name;
+        if (!seen.has(key)) {
+            seen.set(key, trail);
+        }
+    }
+    const dedupedTrails = Array.from(seen.values());
+    if (dedupedTrails.length < allTrails.length) {
+        console.log(`Deduplication: ${allTrails.length} → ${dedupedTrails.length} trails`);
+    }
+    
     // Calculate totals
-    const totalMiles = allTrails.reduce((sum, t) => sum + (t.length || 0), 0);
+    const totalMiles = dedupedTrails.reduce((sum, t) => sum + (t.length || 0), 0);
     
     // Build output
     const output = {
@@ -252,23 +265,23 @@ async function main() {
             source: 'TrailLink.com',
             region: 'New England',
             states: ['CT', 'ME', 'MA', 'NH', 'RI', 'VT'],
-            total_trails: allTrails.length,
+            total_trails: dedupedTrails.length,
             total_miles: Math.round(totalMiles * 10) / 10,
             note: 'Auto-updated weekly via GitHub Actions'
         },
-        trails: allTrails.sort((a, b) => a.name.localeCompare(b.name))
+        trails: dedupedTrails.sort((a, b) => a.name.localeCompare(b.name))
     };
     
     // Write output
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
     
     console.log('\n' + '='.repeat(50));
-    console.log(`Done! ${allTrails.length} trails (${totalMiles.toFixed(1)} miles)`);
+    console.log(`Done! ${dedupedTrails.length} trails (${totalMiles.toFixed(1)} miles)`);
     console.log(`Output: ${OUTPUT_FILE}`);
     console.log('='.repeat(50));
     
     // Exit with error if we got very few trails (something probably broke)
-    if (allTrails.length < 50) {
+    if (dedupedTrails.length < 50) {
         console.error('\n⚠️  Warning: Very few trails found. Scraping may have failed.');
         process.exit(1);
     }
