@@ -198,19 +198,49 @@ async function main() {
     console.log('Rail Trail Database Updater');
     console.log('='.repeat(50));
     
+    // Load existing data to preserve good coordinates
+    let existingCoords = {};
+    if (fs.existsSync(OUTPUT_FILE)) {
+        try {
+            const existing = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
+            const existingTrails = existing.trails || [];
+            for (const t of existingTrails) {
+                if (t.url && t.lat && t.lng) {
+                    existingCoords[t.url] = { lat: t.lat, lng: t.lng };
+                }
+            }
+            console.log(`Loaded ${Object.keys(existingCoords).length} existing coordinates to preserve`);
+        } catch (e) {
+            console.log('Could not load existing data:', e.message);
+        }
+    }
+    
     const allTrails = [];
     
     for (const state of STATES) {
         const stateTrails = await scrapeState(state);
         
-        // Add coordinate fallbacks
+        // Preserve existing good coordinates before falling back to state centers
         for (const trail of stateTrails) {
+            if (!trail.lat || !trail.lng) {
+                const existing = existingCoords[trail.url];
+                if (existing) {
+                    trail.lat = existing.lat;
+                    trail.lng = existing.lng;
+                    continue; // Skip centroid fallback
+                }
+            }
             estimateCoordinates(trail);
         }
         
         allTrails.push(...stateTrails);
         await delay(1000); // Pause between states
     }
+    
+    // Report coordinate quality
+    const withReal = allTrails.filter(t => t.lat && t.lng).length;
+    const total = allTrails.length;
+    console.log(`\nCoordinate quality: ${withReal}/${total} trails have coordinates`);
     
     // Calculate totals
     const totalMiles = allTrails.reduce((sum, t) => sum + (t.length || 0), 0);
