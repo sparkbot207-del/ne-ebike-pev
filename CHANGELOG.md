@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.9] - 2026-03-14
+
+### Trail Coordinate Regression Fix
+- **Fixed map markers clustering at state centroids** — All routes now display at correct locations
+  - Root cause: Weekly trail scraper (GitHub Actions) failed to extract coordinates from TrailLink, fell back to state center fallbacks
+  - Restored good coordinate data from commit `d23fcdf` (229 trails with accurate lat/lng)
+  - **Updated scraper logic** to preserve existing good coordinates instead of overwriting with centroid fallbacks
+  - **Added deduplication** to scraper to prevent trail count doubling (458 → 229)
+- **Scraper improvements**
+  - Loads existing `rail_trails.json` before scrape
+  - If new scrape fails to get coordinates, uses existing data for that trail
+  - Only falls back to state center if trail is completely new AND has no coordinates
+  - Deduplicates by URL after scrape to prevent double entries
+- **Commits**: `2df91bc` (restore coords), `330d4c4` (preserve logic), `d03e217` (dedup)
+
 ## [1.1.8] - 2026-03-05
 
 ### Trail Search & Data Improvements
