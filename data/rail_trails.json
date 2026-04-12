@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-04-05",
+    "generated": "2026-04-12",
     "source": "TrailLink.com",
     "region": "New England",
     "states": [
@@ -12,7 +12,7 @@
       "VT"
     ],
     "total_trails": 454,
-    "total_miles": 2969.2,
+    "total_miles": 2971.6,
     "note": "Auto-updated weekly via GitHub Actions"
   },
   "trails": [
@@ -3907,9 +3907,9 @@
     {
       "name": "Quonset Point Bike Path",
       "state": "RI",
-      "length": 2.5,
+      "length": 3.7,
       "surface": "Asphalt",
-      "description": "Quonset Point Bike Path spans 2.5 from Post Road and Newcomb Road to Calf Pasture Point Beach, at the intersection of Narragansett St. and Pettee Ave.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
+      "description": "Quonset Point Bike Path spans 3.7 from Post Road and Newcomb Road to Calf Pasture Point Beach, at the intersection of Narragansett St. and Pettee Ave.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
       "lat": 41.607234,
       "lng": -71.455219,
       "cities": "Post Road to Newcomb Road",
@@ -3919,9 +3919,9 @@
     {
       "name": "Quonset Point Bike Path",
       "state": "RI",
-      "length": 2.5,
+      "length": 3.7,
       "surface": "Asphalt",
-      "description": "Quonset Point Bike Path spans 2.5 from Post Road and Newcomb Road to Calf Pasture Point Beach, at the intersection of Narragansett St. and Pettee Ave.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
+      "description": "Quonset Point Bike Path spans 3.7 from Post Road and Newcomb Road to Calf Pasture Point Beach, at the intersection of Narragansett St. and Pettee Ave.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
       "lat": 41.39941682248935,
       "lng": -71.62265271314634,
       "cities": "Post Road to Newcomb Road",
