@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-04-12",
+    "generated": "2026-04-19",
     "source": "TrailLink.com",
     "region": "New England",
     "states": [
@@ -11,35 +11,11 @@
       "RI",
       "VT"
     ],
-    "total_trails": 454,
-    "total_miles": 2971.6,
+    "total_trails": 316,
+    "total_miles": 2238.2,
     "note": "Auto-updated weekly via GitHub Actions"
   },
   "trails": [
-    {
-      "name": "Acadia National Park Carriage Roads",
-      "state": "ME",
-      "length": 45,
-      "surface": "conditions can range from hardpack to fairly deep gravel, so wider tires with some teeth are helpful.  Good brakes are also highly recommended.  The carriage roads provide a fantastic cycling experience but they do require hundreds of hours of upkeep so please be sure to purchase a park pass.  As a capstone to a stupendous carriage road adventure, Bar Harbor has plenty of restaurants where one can enjoy a traditional Maine post-ride pigout of chowdah, lobstah and beeah.  Enjoy!",
-      "description": "Acadia National Park Carriage Roads spans 45 from Hulls Cove Visitor Center, 25 Visitor Center Rd (Bar Harbor) to Jordan Pond Tea House. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.409021,
-      "lng": -68.24917,
-      "cities": "October to March",
-      "url": "https://www.traillink.com/trail/acadia-national-park-carriage-roads/",
-      "rating": null
-    },
-    {
-      "name": "Acadia National Park Carriage Roads",
-      "state": "ME",
-      "length": 45,
-      "surface": "conditions can range from hardpack to fairly deep gravel, so wider tires with some teeth are helpful.  Good brakes are also highly recommended.  The carriage roads provide a fantastic cycling experience but they do require hundreds of hours of upkeep so please be sure to purchase a park pass.  As a capstone to a stupendous carriage road adventure, Bar Harbor has plenty of restaurants where one can enjoy a traditional Maine post-ride pigout of chowdah, lobstah and beeah.  Enjoy!",
-      "description": "Acadia National Park Carriage Roads spans 45 from Hulls Cove Visitor Center, 25 Visitor Center Rd (Bar Harbor) to Jordan Pond Tea House. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.169284063866655,
-      "lng": -69.47579626853472,
-      "cities": "October to March",
-      "url": "https://www.traillink.com/trail/acadia-national-park-carriage-roads/#trail-detail-reviews",
-      "rating": null
-    },
     {
       "name": "Air Line State Park Trail",
       "state": "CT",
@@ -89,30 +65,6 @@
       "rating": null
     },
     {
-      "name": "Allenstown Rail Trail",
-      "state": "NH",
-      "length": 0.7,
-      "surface": "Crushed Stone",
-      "description": "Allenstown Rail Trail spans 0.7 from Ferry St. (Allenstown) to Hooksett Riverwalk Trail (Hooksett). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.118039,
-      "lng": -71.461261,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/allenstown-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Allenstown Rail Trail",
-      "state": "NH",
-      "length": 0.7,
-      "surface": "Crushed Stone",
-      "description": "Allenstown Rail Trail spans 0.7 from Ferry St. (Allenstown) to Hooksett Riverwalk Trail (Hooksett). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.148158096816495,
-      "lng": -71.72441655233213,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/allenstown-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Amesbury Riverwalk",
       "state": "MA",
       "length": 1.3,
@@ -137,82 +89,10 @@
       "rating": null
     },
     {
-      "name": "Androscoggin River Bicycle Path",
-      "state": "ME",
-      "length": 2.6,
-      "surface": "Asphalt",
-      "description": "Androscoggin River Bicycle Path spans 2.6 from Merrymeeting Dog Park, 92-98 Water St. (Brunswick) to Grover Ln. (Brunswick). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.921838,
-      "lng": -69.955257,
-      "cities": "the river to US Route",
-      "url": "https://www.traillink.com/trail/androscoggin-river-bicycle-path/",
-      "rating": null
-    },
-    {
-      "name": "Androscoggin River Bicycle Path",
-      "state": "ME",
-      "length": 2.6,
-      "surface": "Asphalt",
-      "description": "Androscoggin River Bicycle Path spans 2.6 from Merrymeeting Dog Park, 92-98 Water St. (Brunswick) to Grover Ln. (Brunswick). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.274779076678165,
-      "lng": -69.39146975051833,
-      "cities": "the river to US Route",
-      "url": "https://www.traillink.com/trail/androscoggin-river-bicycle-path/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Appel Way Trail",
-      "state": "NH",
-      "length": 1.3,
-      "surface": "Asphalt",
-      "description": "Appel Way Trail spans 1.3 from Park Ave. to Court St.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.939226,
-      "lng": -72.305662,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/appel-way-trail/",
-      "rating": null
-    },
-    {
-      "name": "Appel Way Trail",
-      "state": "NH",
-      "length": 1.3,
-      "surface": "Asphalt",
-      "description": "Appel Way Trail spans 1.3 from Park Ave. to Court St.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.15349642415143,
-      "lng": -71.49108013597534,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/appel-way-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Ashuelot Recreational Rail Trail",
-      "state": "NH",
-      "length": 21.4,
-      "surface": "to get through, the longest was probably 20-30 yards long.  I wasn&#39;t able to reach my goal of 10 miles before turning back due to a large mud puddle (mostly puddle) at mile 8.7- no way to bypass it due to the overgrown vegetation on each side and more mud than I was in the mood to handle.  But I enjoyed the ride, it was not crowded when out of Keene (between 9-11am on a Saturday morning).  My bike is a hybrid with road tires and did OK.",
-      "description": "Ashuelot Recreational Rail Trail spans 21.4 from Emerald St. (Keene) to Northfield Rd. (Hinsdale). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.930388,
-      "lng": -72.28384,
-      "cities": "Pine Street to Sawyer",
-      "url": "https://www.traillink.com/trail/ashuelot-recreational-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Ashuelot Recreational Rail Trail",
-      "state": "NH",
-      "length": 21.4,
-      "surface": "to get through, the longest was probably 20-30 yards long.  I wasn&#39;t able to reach my goal of 10 miles before turning back due to a large mud puddle (mostly puddle) at mile 8.7- no way to bypass it due to the overgrown vegetation on each side and more mud than I was in the mood to handle.  But I enjoyed the ride, it was not crowded when out of Keene (between 9-11am on a Saturday morning).  My bike is a hybrid with road tires and did OK.",
-      "description": "Ashuelot Recreational Rail Trail spans 21.4 from Emerald St. (Keene) to Northfield Rd. (Hinsdale). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.33811526544367,
-      "lng": -71.80340623712365,
-      "cities": "Pine Street to Sawyer",
-      "url": "https://www.traillink.com/trail/ashuelot-recreational-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Ashuwillticook Rail Trail",
       "state": "MA",
       "length": 13.9,
-      "surface": "and many places to stop and enjoy. The towns along the route looked inviting enough to divert us, but we had time constraints so we stayed on the route. The head winds on the way back were a challenge..",
+      "surface": "is paved, and in excellent condition.",
       "description": "Ashuwillticook Rail Trail spans 13.9 from Lime St. (Adams) to Merrill Rd. (Pittsfield). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
       "lat": 42.5551,
       "lng": -73.1568,
@@ -224,7 +104,7 @@
       "name": "Ashuwillticook Rail Trail",
       "state": "MA",
       "length": 13.9,
-      "surface": "and many places to stop and enjoy. The towns along the route looked inviting enough to divert us, but we had time constraints so we stayed on the route. The head winds on the way back were a challenge..",
+      "surface": "is paved, and in excellent condition.",
       "description": "Ashuwillticook Rail Trail spans 13.9 from Lime St. (Adams) to Merrill Rd. (Pittsfield). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
       "lat": 42.27163534219896,
       "lng": -71.19507048559205,
@@ -257,78 +137,6 @@
       "rating": null
     },
     {
-      "name": "Auburn Riverwalk",
-      "state": "ME",
-      "length": 1.6,
-      "surface": "Asphalt",
-      "description": "Auburn Riverwalk spans 1.6 from Moulton Park at Hutchins St &amp; High St, to Great Falls Plaza near Turner St (Auburn)  to Simard-Payne Memorial Park at Beech St &amp; Oxford St (Lewiston). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.090545,
-      "lng": -70.229626,
-      "cities": "Lewiston to Auburn Maine",
-      "url": "https://www.traillink.com/trail/auburn-riverwalk/",
-      "rating": null
-    },
-    {
-      "name": "Auburn Riverwalk",
-      "state": "ME",
-      "length": 1.6,
-      "surface": "Asphalt",
-      "description": "Auburn Riverwalk spans 1.6 from Moulton Park at Hutchins St &amp; High St, to Great Falls Plaza near Turner St (Auburn)  to Simard-Payne Memorial Park at Beech St &amp; Oxford St (Lewiston). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.24814419578568,
-      "lng": -69.44613541839051,
-      "cities": "Lewiston to Auburn Maine",
-      "url": "https://www.traillink.com/trail/auburn-riverwalk/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Back Cove Trail",
-      "state": "ME",
-      "length": 3.6,
-      "surface": "Asphalt",
-      "description": "Back Cove Trail spans 3.6 from Turkey Bridge/I-295 to Back Cove Park (Portland). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.663616,
-      "lng": -70.266133,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/back-cove-trail/",
-      "rating": null
-    },
-    {
-      "name": "Back Cove Trail",
-      "state": "ME",
-      "length": 3.6,
-      "surface": "Asphalt",
-      "description": "Back Cove Trail spans 3.6 from Turkey Bridge/I-295 to Back Cove Park (Portland). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.14013902544838,
-      "lng": -69.64331135747788,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/back-cove-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Bayside Trail",
-      "state": "ME",
-      "length": 1,
-      "surface": "Asphalt",
-      "description": "Bayside Trail spans 1 from Elm St. to Turkey Bridge. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.661297,
-      "lng": -70.263518,
-      "cities": "commercial to residential areas",
-      "url": "https://www.traillink.com/trail/bayside-trail/",
-      "rating": null
-    },
-    {
-      "name": "Bayside Trail",
-      "state": "ME",
-      "length": 1,
-      "surface": "Asphalt",
-      "description": "Bayside Trail spans 1 from Elm St. to Turkey Bridge. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.10909453700627,
-      "lng": -69.53368286858218,
-      "cities": "commercial to residential areas",
-      "url": "https://www.traillink.com/trail/bayside-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Bennington Rail Trail",
       "state": "VT",
       "length": 1.65,
@@ -353,30 +161,6 @@
       "rating": null
     },
     {
-      "name": "Beth Condon Memorial Pathway",
-      "state": "ME",
-      "length": 1.8,
-      "surface": "Asphalt",
-      "description": "Beth Condon Memorial Pathway spans 1.8 from Portland Way to US Highway 1. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.791864,
-      "lng": -70.189782,
-      "cities": "Portland Way to US Highway",
-      "url": "https://www.traillink.com/trail/beth-condon-memorial-pathway/",
-      "rating": null
-    },
-    {
-      "name": "Beth Condon Memorial Pathway",
-      "state": "ME",
-      "length": 1.8,
-      "surface": "Asphalt",
-      "description": "Beth Condon Memorial Pathway spans 1.8 from Portland Way to US Highway 1. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.34577472225779,
-      "lng": -69.44451112976739,
-      "cities": "Portland Way to US Highway",
-      "url": "https://www.traillink.com/trail/beth-condon-memorial-pathway/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Billings Trail",
       "state": "CT",
       "length": 3.3,
@@ -398,30 +182,6 @@
       "lng": -73.20498018600145,
       "cities": "bullfrogs to salamanders to",
       "url": "https://www.traillink.com/trail/billings-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Blackmount Rail Trail",
-      "state": "NH",
-      "length": 5,
-      "surface": "Gravel",
-      "description": "Blackmount Rail Trail spans 5 from Smith St. (Woodsville) to Clark Pond Rd. (North Haverhill). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.097839,
-      "lng": -72.024793,
-      "cities": "North Haverhill to Woodsville",
-      "url": "https://www.traillink.com/trail/blackmount-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Blackmount Rail Trail",
-      "state": "NH",
-      "length": 5,
-      "surface": "Gravel",
-      "description": "Blackmount Rail Trail spans 5 from Smith St. (Woodsville) to Clark Pond Rd. (North Haverhill). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.23017177024947,
-      "lng": -71.34875565920132,
-      "cities": "North Haverhill to Woodsville",
-      "url": "https://www.traillink.com/trail/blackmount-rail-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -521,30 +281,6 @@
       "rating": null
     },
     {
-      "name": "Brookline Rail Trail",
-      "state": "NH",
-      "length": 4.5,
-      "surface": "Crushed Stone",
-      "description": "Brookline Rail Trail spans 4.5 from Mason Road by the covered bridge (Brookline) to Granite Town Rail Trail. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.793251,
-      "lng": -71.662624,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/brookline-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Brookline Rail Trail",
-      "state": "NH",
-      "length": 4.5,
-      "surface": "Crushed Stone",
-      "description": "Brookline Rail Trail spans 4.5 from Mason Road by the covered bridge (Brookline) to Granite Town Rail Trail. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.40023715603459,
-      "lng": -71.66675150831229,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/brookline-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Bruce Freeman Rail Trail",
       "state": "MA",
       "length": 20.1,
@@ -569,30 +305,6 @@
       "rating": 5
     },
     {
-      "name": "Bucksport Waterfront Walkway",
-      "state": "ME",
-      "length": 1,
-      "surface": "gravel",
-      "description": "Bucksport Waterfront Walkway spans 1 from Steamboat Wharf Ln &amp; Main St to Acadia Hwy/42 US-1. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.573883,
-      "lng": -68.800181,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/bucksport-waterfront-walkway/",
-      "rating": null
-    },
-    {
-      "name": "Bucksport Waterfront Walkway",
-      "state": "ME",
-      "length": 1,
-      "surface": "gravel",
-      "description": "Bucksport Waterfront Walkway spans 1 from Steamboat Wharf Ln &amp; Main St to Acadia Hwy/42 US-1. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.22801802154972,
-      "lng": -69.37605481929818,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/bucksport-waterfront-walkway/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Burrillville Bike Path",
       "state": "RI",
       "length": 1.2,
@@ -614,30 +326,6 @@
       "lng": -71.57920987043245,
       "cities": "",
       "url": "https://www.traillink.com/trail/burrillville-bike-path/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Calais Waterfront Walkway",
-      "state": "ME",
-      "length": 1.5,
-      "surface": "Gravel",
-      "description": "Calais Waterfront Walkway spans 1.5 from Todd St. between the St. Croix River and Union St.  to Barker St. and South St. (Calais) . View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.183796,
-      "lng": -67.289965,
-      "cities": "Calais to Canada",
-      "url": "https://www.traillink.com/trail/calais-waterfront-walkway/",
-      "rating": null
-    },
-    {
-      "name": "Calais Waterfront Walkway",
-      "state": "ME",
-      "length": 1.5,
-      "surface": "Gravel",
-      "description": "Calais Waterfront Walkway spans 1.5 from Todd St. between the St. Croix River and Union St.  to Barker St. and South St. (Calais) . View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.28355960785822,
-      "lng": -69.22596310766716,
-      "cities": "Calais to Canada",
-      "url": "https://www.traillink.com/trail/calais-waterfront-walkway/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -977,30 +665,6 @@
       "rating": null
     },
     {
-      "name": "Common Pathway",
-      "state": "NH",
-      "length": 5.5,
-      "surface": "Asphalt",
-      "description": "Common Pathway spans 5.5 from Old Railroad Trail (Peterborough) to US 202 (Peterborough)  . View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.860434,
-      "lng": -71.961784,
-      "cities": "Southfield Lane to the trail",
-      "url": "https://www.traillink.com/trail/common-pathway/",
-      "rating": null
-    },
-    {
-      "name": "Common Pathway",
-      "state": "NH",
-      "length": 5.5,
-      "surface": "Asphalt",
-      "description": "Common Pathway spans 5.5 from Old Railroad Trail (Peterborough) to US 202 (Peterborough)  . View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.986875393607185,
-      "lng": -71.45967364754011,
-      "cities": "Southfield Lane to the trail",
-      "url": "https://www.traillink.com/trail/common-pathway/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Commonwealth Greenway",
       "state": "MA",
       "length": 5.5,
@@ -1049,30 +713,6 @@
       "rating": null
     },
     {
-      "name": "Concord-Lake Sunapee Rail Trail",
-      "state": "NH",
-      "length": 5.65,
-      "surface": "until the&nbsp;Barn at Bull Meadow driveway. The route continues as a natural surface trail to Carter Hill Road, but additional resurfacing with stone dust is planned for spring 2023--making a total of 1.25 miles. The final 1.25 miles to Carfter Hill Road will be resurfaced later in 2023. The entirety of the 2.5 miles is open for use, but hybrid bikes are recommended. There is a parking lot with seven spaces,&nbsp;a bicycle station with a pump, and an information kiosk for the trail at 25 Fisherville Road, Concord. It is possible to access the trail from Carter Hill Road, but no parking or amenities are available.&nbsp;",
-      "description": "Concord-Lake Sunapee Rail Trail spans 5.65 from 25 Fisherville Rd (Concord) to High S &amp; Rte 103 (Bradford). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.244212,
-      "lng": -71.743956,
-      "cities": "Concord to the southern",
-      "url": "https://www.traillink.com/trail/concord-lake-sunapee-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Concord-Lake Sunapee Rail Trail",
-      "state": "NH",
-      "length": 5.65,
-      "surface": "until the&nbsp;Barn at Bull Meadow driveway. The route continues as a natural surface trail to Carter Hill Road, but additional resurfacing with stone dust is planned for spring 2023--making a total of 1.25 miles. The final 1.25 miles to Carfter Hill Road will be resurfaced later in 2023. The entirety of the 2.5 miles is open for use, but hybrid bikes are recommended. There is a parking lot with seven spaces,&nbsp;a bicycle station with a pump, and an information kiosk for the trail at 25 Fisherville Road, Concord. It is possible to access the trail from Carter Hill Road, but no parking or amenities are available.&nbsp;",
-      "description": "Concord-Lake Sunapee Rail Trail spans 5.65 from 25 Fisherville Rd (Concord) to High S &amp; Rte 103 (Bradford). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.091011947944935,
-      "lng": -71.7867598145667,
-      "cities": "Concord to the southern",
-      "url": "https://www.traillink.com/trail/concord-lake-sunapee-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Connecticut Riverwalk and Bikeway",
       "state": "MA",
       "length": 7.8,
@@ -1094,30 +734,6 @@
       "lng": -71.23551917849247,
       "cities": "River Road to the Connecticut",
       "url": "https://www.traillink.com/trail/connecticut-riverwalk-and-bikeway/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Cotton Valley Rail Trail",
-      "state": "NH",
-      "length": 12,
-      "surface": "with packed gravel and stone dust. Watch yourself on the crossing when going over the rails so you don’t catch a wheel and go for a header. Good day of biking.",
-      "description": "Cotton Valley Rail Trail spans 12 from Railroad Ave (Wolfeboro) to Wakefield Parks &amp; Recreation Department (132 Meadow St, Wakefield). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.554066,
-      "lng": -71.03119,
-      "cities": "the rails to offers rolling",
-      "url": "https://www.traillink.com/trail/cotton-valley-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Cotton Valley Rail Trail",
-      "state": "NH",
-      "length": 12,
-      "surface": "with packed gravel and stone dust. Watch yourself on the crossing when going over the rails so you don’t catch a wheel and go for a header. Good day of biking.",
-      "description": "Cotton Valley Rail Trail spans 12 from Railroad Ave (Wolfeboro) to Wakefield Parks &amp; Recreation Department (132 Meadow St, Wakefield). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.18251878123347,
-      "lng": -71.65062641255037,
-      "cities": "the rails to offers rolling",
-      "url": "https://www.traillink.com/trail/cotton-valley-rail-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -1217,54 +833,6 @@
       "rating": null
     },
     {
-      "name": "Derry Rail Trail",
-      "state": "NH",
-      "length": 3.6,
-      "surface": "Asphalt",
-      "description": "Derry Rail Trail spans 3.6 from Windham Rail Trail at N Lowell Rd/Windham Rd &amp; Brown Rd to N High St between Madden Rd &amp; Ash St Ext (Derry). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.843942,
-      "lng": -71.301009,
-      "cities": "the Massachusetts to Vermont border",
-      "url": "https://www.traillink.com/trail/derry-rail-trail/",
-      "rating": 1
-    },
-    {
-      "name": "Derry Rail Trail",
-      "state": "NH",
-      "length": 3.6,
-      "surface": "Asphalt",
-      "description": "Derry Rail Trail spans 3.6 from Windham Rail Trail at N Lowell Rd/Windham Rd &amp; Brown Rd to N High St between Madden Rd &amp; Ash St Ext (Derry). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.18107422127145,
-      "lng": -71.46079757758994,
-      "cities": "the Massachusetts to Vermont border",
-      "url": "https://www.traillink.com/trail/derry-rail-trail/#trail-detail-reviews",
-      "rating": 1
-    },
-    {
-      "name": "Dover Community Trail",
-      "state": "NH",
-      "length": 4.2,
-      "surface": "types and activities for visitors.",
-      "description": "Dover Community Trail spans 4.2 from Rutland St. (Dover) to 171 Watson Rd (Dover). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.181743,
-      "lng": -70.876827,
-      "cities": "narrow to wide and",
-      "url": "https://www.traillink.com/trail/dover-community-trail/",
-      "rating": null
-    },
-    {
-      "name": "Dover Community Trail",
-      "state": "NH",
-      "length": 4.2,
-      "surface": "types and activities for visitors.",
-      "description": "Dover Community Trail spans 4.2 from Rutland St. (Dover) to 171 Watson Rd (Dover). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.241030925114366,
-      "lng": -71.66222887169744,
-      "cities": "narrow to wide and",
-      "url": "https://www.traillink.com/trail/dover-community-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "East Bay Bike Path (RI)",
       "state": "RI",
       "length": 14.3,
@@ -1286,78 +854,6 @@
       "lng": -71.55302397080185,
       "cities": "glistening waterfronts to dense forest",
       "url": "https://www.traillink.com/trail/east-bay-bike-path-(ri)/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Eastern Promenade Trail",
-      "state": "ME",
-      "length": 2.1,
-      "surface": "is excellent. All in all one of the best trails out there and although it is short you can combine it with the Back Cove Trail or Bayside Trail for a decent length bike ride or even with the South Portland Greenbelt after going on road or sidewalk through the Old Port and then bike lane or sidewalk over the Casco Bay bridge.",
-      "description": "Eastern Promenade Trail spans 2.1 from Sewage Plant Road near I-295/Bayside Trail  to Maine State Pier at Franklin St./US 1A and Commercial St. (Portland). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.668,
-      "lng": -70.242,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/eastern-promenade-trail/",
-      "rating": 22
-    },
-    {
-      "name": "Eastern Promenade Trail",
-      "state": "ME",
-      "length": 2.1,
-      "surface": "is excellent. All in all one of the best trails out there and although it is short you can combine it with the Back Cove Trail or Bayside Trail for a decent length bike ride or even with the South Portland Greenbelt after going on road or sidewalk through the Old Port and then bike lane or sidewalk over the Casco Bay bridge.",
-      "description": "Eastern Promenade Trail spans 2.1 from Sewage Plant Road near I-295/Bayside Trail  to Maine State Pier at Franklin St./US 1A and Commercial St. (Portland). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.04286878348371,
-      "lng": -69.67322676148369,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/eastern-promenade-trail/#trail-detail-reviews",
-      "rating": 22
-    },
-    {
-      "name": "Eastern Trail",
-      "state": "ME",
-      "length": 28.8,
-      "surface": "covered in golden brown leaves in mid October.",
-      "description": "Eastern Trail spans 28.8 from Bug Light Park (South Portland)  to Warrens Way &amp; SR 35 (Kennebunk). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.551,
-      "lng": -70.3559,
-      "cities": "Florida to Maine",
-      "url": "https://www.traillink.com/trail/eastern-trail/",
-      "rating": 5
-    },
-    {
-      "name": "Eastern Trail",
-      "state": "ME",
-      "length": 28.8,
-      "surface": "covered in golden brown leaves in mid October.",
-      "description": "Eastern Trail spans 28.8 from Bug Light Park (South Portland)  to Warrens Way &amp; SR 35 (Kennebunk). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.15017531842713,
-      "lng": -69.6742862721619,
-      "cities": "Florida to Maine",
-      "url": "https://www.traillink.com/trail/eastern-trail/#trail-detail-reviews",
-      "rating": 5
-    },
-    {
-      "name": "Ellsworth Trail",
-      "state": "ME",
-      "length": 1.6,
-      "surface": "Asphalt",
-      "description": "Ellsworth Trail spans 1.6 from North Street to Birch Avenue. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.1878,
-      "lng": -70.4486,
-      "cities": "North Street to Birch Avenue",
-      "url": "https://www.traillink.com/trail/ellsworth-trail/",
-      "rating": null
-    },
-    {
-      "name": "Ellsworth Trail",
-      "state": "ME",
-      "length": 1.6,
-      "surface": "Asphalt",
-      "description": "Ellsworth Trail spans 1.6 from North Street to Birch Avenue. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.302986339838235,
-      "lng": -69.20121600001333,
-      "cities": "North Street to Birch Avenue",
-      "url": "https://www.traillink.com/trail/ellsworth-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -1479,78 +975,6 @@
       "cities": "Simsbury to Farmington on",
       "url": "https://www.traillink.com/trail/farmington-river-trail/#trail-detail-reviews",
       "rating": 4
-    },
-    {
-      "name": "Fore River Parkway Trail",
-      "state": "ME",
-      "length": 2.6,
-      "surface": "Asphalt",
-      "description": "Fore River Parkway Trail spans 2.6 from Thompsons Point Rd. to W. Commercial St.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.643515,
-      "lng": -70.276002,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/fore-river-parkway-trail/",
-      "rating": null
-    },
-    {
-      "name": "Fore River Parkway Trail",
-      "state": "ME",
-      "length": 2.6,
-      "surface": "Asphalt",
-      "description": "Fore River Parkway Trail spans 2.6 from Thompsons Point Rd. to W. Commercial St.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.25199697824333,
-      "lng": -69.4885284388327,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/fore-river-parkway-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Fort Hill Recreational Rail Trail",
-      "state": "NH",
-      "length": 7,
-      "surface": "&amp; overgrown vegetation will keep you engaged. I also wouldn&#39;t bring small children unless you don&#39;t mind walking long stretches where the grass gets so thick it makes for difficult pedaling. Don&#39;t bother going after a significant rain. This is a wet trail for sure. Make sure to bring your camera &amp; start at Dole&#39;s junction on the southern end of the trail.",
-      "description": "Fort Hill Recreational Rail Trail spans 7 from Northfield Rd across from the southern end of the Ashuelot Recreational Rail Trail at Dole Junction to Old railroad bridge over the Connecticut River at the NH-VT state line at Brattleboro Rd. View amenities, descriptions, reviews, photos, itineraries, ",
-      "lat": 42.758289,
-      "lng": -72.470872,
-      "cities": "weather to age",
-      "url": "https://www.traillink.com/trail/fort-hill-recreational-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Fort Hill Recreational Rail Trail",
-      "state": "NH",
-      "length": 7,
-      "surface": "&amp; overgrown vegetation will keep you engaged. I also wouldn&#39;t bring small children unless you don&#39;t mind walking long stretches where the grass gets so thick it makes for difficult pedaling. Don&#39;t bother going after a significant rain. This is a wet trail for sure. Make sure to bring your camera &amp; start at Dole&#39;s junction on the southern end of the trail.",
-      "description": "Fort Hill Recreational Rail Trail spans 7 from Northfield Rd across from the southern end of the Ashuelot Recreational Rail Trail at Dole Junction to Old railroad bridge over the Connecticut River at the NH-VT state line at Brattleboro Rd. View amenities, descriptions, reviews, photos, itineraries, ",
-      "lat": 42.99766653784272,
-      "lng": -71.59209055914606,
-      "cities": "weather to age",
-      "url": "https://www.traillink.com/trail/fort-hill-recreational-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Franconia Notch Recreation Path",
-      "state": "NH",
-      "length": 8.7,
-      "surface": "Asphalt",
-      "description": "Franconia Notch Recreation Path spans 8.7 from Daniel Webster Hwy (Franconia) to Flume Gorge Visitor Center (Lincoln).. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.203064,
-      "lng": -71.681015,
-      "cities": "the Kinsman to Franconia Ranges",
-      "url": "https://www.traillink.com/trail/franconia-notch-recreation-path/",
-      "rating": null
-    },
-    {
-      "name": "Franconia Notch Recreation Path",
-      "state": "NH",
-      "length": 8.7,
-      "surface": "Asphalt",
-      "description": "Franconia Notch Recreation Path spans 8.7 from Daniel Webster Hwy (Franconia) to Flume Gorge Visitor Center (Lincoln).. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.397069772467546,
-      "lng": -71.78238762423322,
-      "cities": "the Kinsman to Franconia Ranges",
-      "url": "https://www.traillink.com/trail/franconia-notch-recreation-path/#trail-detail-reviews",
-      "rating": null
     },
     {
       "name": "Fred Lippitt Woonasquatucket River Greenway",
@@ -1721,30 +1145,6 @@
       "rating": null
     },
     {
-      "name": "Granite Town Rail-Trail",
-      "state": "NH",
-      "length": 3,
-      "surface": "Ballast",
-      "description": "Granite Town Rail-Trail spans 3 from Rte. 13 (Milford) to Brookline Rail Trail (Brookline). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.825482,
-      "lng": -71.648396,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/granite-town-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Granite Town Rail-Trail",
-      "state": "NH",
-      "length": 3,
-      "surface": "Ballast",
-      "description": "Granite Town Rail-Trail spans 3 from Rte. 13 (Milford) to Brookline Rail Trail (Brookline). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.00042828645204,
-      "lng": -71.75967140528441,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/granite-town-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Groveland Community Trail",
       "state": "MA",
       "length": 3.25,
@@ -1841,30 +1241,6 @@
       "rating": null
     },
     {
-      "name": "Harrisville and Hancock Rail Trails",
-      "state": "NH",
-      "length": 6.1,
-      "surface": "Dirt",
-      "description": "Harrisville and Hancock Rail Trails spans 6.1 from Chesham Rd. (Chesham) to Old Dublin Rd. (Hancock). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.9369,
-      "lng": -72.062164,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/harrisville-and-hancock-rail-trails/",
-      "rating": null
-    },
-    {
-      "name": "Harrisville and Hancock Rail Trails",
-      "state": "NH",
-      "length": 6.1,
-      "surface": "Dirt",
-      "description": "Harrisville and Hancock Rail Trails spans 6.1 from Chesham Rd. (Chesham) to Old Dublin Rd. (Hancock). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.33077629867993,
-      "lng": -71.47652978001618,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/harrisville-and-hancock-rail-trails/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Hartford Riverwalk",
       "state": "CT",
       "length": 1.7,
@@ -1910,78 +1286,6 @@
       "lng": -71.61305760733076,
       "cities": "Truro to Wellfleet",
       "url": "https://www.traillink.com/trail/head-of-the-meadow-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Henniker &amp; Hopkinton Rail Trails",
-      "state": "NH",
-      "length": 6.7,
-      "surface": "Dirt",
-      "description": "Henniker &amp; Hopkinton Rail Trails spans 6.7 from Depot Hill Rd (Henniker) to former station of Henniker Junction by Bennett Rd. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.177016,
-      "lng": -71.834736,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/henniker--hopkinton-rail-trails/",
-      "rating": null
-    },
-    {
-      "name": "Henniker &amp; Hopkinton Rail Trails",
-      "state": "NH",
-      "length": 6.7,
-      "surface": "Dirt",
-      "description": "Henniker &amp; Hopkinton Rail Trails spans 6.7 from Depot Hill Rd (Henniker) to former station of Henniker Junction by Bennett Rd. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.35999277030185,
-      "lng": -71.40671417077284,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/henniker--hopkinton-rail-trails/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Heritage Trail (NH)",
-      "state": "NH",
-      "length": 0.9,
-      "surface": "Asphalt",
-      "description": "Heritage Trail (NH) spans 0.9 from Arms Park to Sundial Avenue. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.970935,
-      "lng": -71.472794,
-      "cities": "Arms Park to Sundial Avenue",
-      "url": "https://www.traillink.com/trail/heritage-trail-(nh)/",
-      "rating": null
-    },
-    {
-      "name": "Heritage Trail (NH)",
-      "state": "NH",
-      "length": 0.9,
-      "surface": "Asphalt",
-      "description": "Heritage Trail (NH) spans 0.9 from Arms Park to Sundial Avenue. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.245081312000224,
-      "lng": -71.74932547703736,
-      "cities": "Arms Park to Sundial Avenue",
-      "url": "https://www.traillink.com/trail/heritage-trail-(nh)/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Hooksett Riverwalk Trail",
-      "state": "NH",
-      "length": 1.4,
-      "surface": "Crushed Stone",
-      "description": "Hooksett Riverwalk Trail spans 1.4 from  Allenstown Rail Trail (Allenstown) to  Hooksett Dog Park, 101 Merrimack St. (Hooksett). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.106349,
-      "lng": -71.463848,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/hooksett-riverwalk-trail/",
-      "rating": null
-    },
-    {
-      "name": "Hooksett Riverwalk Trail",
-      "state": "NH",
-      "length": 1.4,
-      "surface": "Crushed Stone",
-      "description": "Hooksett Riverwalk Trail spans 1.4 from  Allenstown Rail Trail (Allenstown) to  Hooksett Dog Park, 101 Merrimack St. (Hooksett). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.97295428764546,
-      "lng": -71.42552485298378,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/hooksett-riverwalk-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -2081,78 +1385,6 @@
       "rating": null
     },
     {
-      "name": "Jonathan Daniels Trail",
-      "state": "NH",
-      "length": 0.9,
-      "surface": "Crushed Stone",
-      "description": "Jonathan Daniels Trail spans 0.9 from Appel Way Trail to West Street and Island Street. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.932666,
-      "lng": -72.288086,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/jonathan-daniels-trail/",
-      "rating": null
-    },
-    {
-      "name": "Jonathan Daniels Trail",
-      "state": "NH",
-      "length": 0.9,
-      "surface": "Crushed Stone",
-      "description": "Jonathan Daniels Trail spans 0.9 from Appel Way Trail to West Street and Island Street. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.31920043708951,
-      "lng": -71.65031204812476,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/jonathan-daniels-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Keene Industrial Heritage Trail",
-      "state": "NH",
-      "length": 1,
-      "surface": "Asphalt",
-      "description": "Keene Industrial Heritage Trail  spans 1 from Railroad Square on Main Street to Eastern Avenue (Keene). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.932276,
-      "lng": -72.277644,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/keene-industrial-heritage-trail-/",
-      "rating": null
-    },
-    {
-      "name": "Keene Industrial Heritage Trail",
-      "state": "NH",
-      "length": 1,
-      "surface": "Asphalt",
-      "description": "Keene Industrial Heritage Trail  spans 1 from Railroad Square on Main Street to Eastern Avenue (Keene). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.20735968964684,
-      "lng": -71.5065335596341,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/keene-industrial-heritage-trail-/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Kennebec River Rail Trail",
-      "state": "ME",
-      "length": 6.79,
-      "surface": "Asphalt",
-      "description": "Kennebec River Rail Trail spans 6.79 from Water St. (Augusta)  to Maine Ave. (Gardiner). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.3106,
-      "lng": -69.7795,
-      "cities": "Augusta to Gardner",
-      "url": "https://www.traillink.com/trail/kennebec-river-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Kennebec River Rail Trail",
-      "state": "ME",
-      "length": 6.79,
-      "surface": "Asphalt",
-      "description": "Kennebec River Rail Trail spans 6.79 from Water St. (Augusta)  to Maine Ave. (Gardiner). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.192336347060895,
-      "lng": -69.42753652616229,
-      "cities": "Augusta to Gardner",
-      "url": "https://www.traillink.com/trail/kennebec-river-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Kress Family Trail",
       "state": "CT",
       "length": 3.1,
@@ -2201,30 +1433,6 @@
       "rating": null
     },
     {
-      "name": "Lake Winnisquam Scenic Trail",
-      "state": "NH",
-      "length": 1.58,
-      "surface": "Asphalt",
-      "description": "Lake Winnisquam Scenic Trail spans 1.58 from 94 Daniel Webster Hwy (Belmont)  to Daniel Webster Hwy (Belmont). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.516832,
-      "lng": -71.488396,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/lake-winnisquam-scenic-trail/",
-      "rating": null
-    },
-    {
-      "name": "Lake Winnisquam Scenic Trail",
-      "state": "NH",
-      "length": 1.58,
-      "surface": "Asphalt",
-      "description": "Lake Winnisquam Scenic Trail spans 1.58 from 94 Daniel Webster Hwy (Belmont)  to Daniel Webster Hwy (Belmont). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.08037745981003,
-      "lng": -71.52582380796427,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/lake-winnisquam-scenic-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Lamoille Valley Rail Trail",
       "state": "VT",
       "length": 94.3,
@@ -2247,54 +1455,6 @@
       "cities": "Cambridge Junction to East Fairfield",
       "url": "https://www.traillink.com/trail/lamoille-valley-rail-trail/#trail-detail-reviews",
       "rating": 1
-    },
-    {
-      "name": "Littleton Riverwalk",
-      "state": "NH",
-      "length": 0.5,
-      "surface": "Asphalt",
-      "description": "Littleton Riverwalk spans 0.5 from Riverglen Lane to Riverside Drive. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.305654,
-      "lng": -71.77857,
-      "cities": "Riverglen Lane to Riverside Drive",
-      "url": "https://www.traillink.com/trail/littleton-riverwalk/",
-      "rating": null
-    },
-    {
-      "name": "Littleton Riverwalk",
-      "state": "NH",
-      "length": 0.5,
-      "surface": "Asphalt",
-      "description": "Littleton Riverwalk spans 0.5 from Riverglen Lane to Riverside Drive. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.16885899374661,
-      "lng": -71.49530840960234,
-      "cities": "Riverglen Lane to Riverside Drive",
-      "url": "https://www.traillink.com/trail/littleton-riverwalk/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Londonderry Rail Trail",
-      "state": "NH",
-      "length": 4.6,
-      "surface": "is well-maintained, and signage is good for the entire trail length.&nbsp;&nbsp;",
-      "description": "Londonderry Rail Trail spans 4.6 from Harvey Rd, between Planeview Dr &amp; Wester Rd to SR 28/Rockingham Rd &amp; Seasons Lane (Londonderry). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.919379,
-      "lng": -71.422292,
-      "cities": "Harvey to Rockingham Road",
-      "url": "https://www.traillink.com/trail/londonderry-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Londonderry Rail Trail",
-      "state": "NH",
-      "length": 4.6,
-      "surface": "is well-maintained, and signage is good for the entire trail length.&nbsp;&nbsp;",
-      "description": "Londonderry Rail Trail spans 4.6 from Harvey Rd, between Planeview Dr &amp; Wester Rd to SR 28/Rockingham Rd &amp; Seasons Lane (Londonderry). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.973722281345246,
-      "lng": -71.6890990444799,
-      "cities": "Harvey to Rockingham Road",
-      "url": "https://www.traillink.com/trail/londonderry-rail-trail/#trail-detail-reviews",
-      "rating": null
     },
     {
       "name": "Lowell Canal System Trails",
@@ -2465,30 +1625,6 @@
       "rating": null
     },
     {
-      "name": "Mascoma River Greenway",
-      "state": "NH",
-      "length": 2.78,
-      "surface": "Asphalt",
-      "description": "Mascoma River Greenway spans 2.78 from Spencer St in downtown Lebanon to Glen Rd in West Lebanon. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.644539,
-      "lng": -72.249623,
-      "cities": "schools to shopping to",
-      "url": "https://www.traillink.com/trail/mascoma-river-greenway/",
-      "rating": null
-    },
-    {
-      "name": "Mascoma River Greenway",
-      "state": "NH",
-      "length": 2.78,
-      "surface": "Asphalt",
-      "description": "Mascoma River Greenway spans 2.78 from Spencer St in downtown Lebanon to Glen Rd in West Lebanon. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.000225277272065,
-      "lng": -71.39678233460194,
-      "cities": "schools to shopping to",
-      "url": "https://www.traillink.com/trail/mascoma-river-greenway/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Mass Central Rail Trail",
       "state": "MA",
       "length": 64,
@@ -2609,30 +1745,6 @@
       "rating": null
     },
     {
-      "name": "Merrimack River Greenway Trail",
-      "state": "NH",
-      "length": 0.33,
-      "surface": "Asphalt",
-      "description": "Merrimack River Greenway Trail spans 0.33 from Terrill Park Dog Park at 7 Manchester St (Concord) to Concord-Pembroke Town Line. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.196334,
-      "lng": -71.519565,
-      "cities": "Salem to Lebanon",
-      "url": "https://www.traillink.com/trail/merrimack-river-greenway-trail/",
-      "rating": null
-    },
-    {
-      "name": "Merrimack River Greenway Trail",
-      "state": "NH",
-      "length": 0.33,
-      "surface": "Asphalt",
-      "description": "Merrimack River Greenway Trail spans 0.33 from Terrill Park Dog Park at 7 Manchester St (Concord) to Concord-Pembroke Town Line. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.261796271123615,
-      "lng": -71.6351761993217,
-      "cities": "Salem to Lebanon",
-      "url": "https://www.traillink.com/trail/merrimack-river-greenway-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Methuen Rail Trail",
       "state": "MA",
       "length": 2.4,
@@ -2654,30 +1766,6 @@
       "lng": -71.53034536847093,
       "cities": "Lawrence to Salem NH",
       "url": "https://www.traillink.com/trail/methuen-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Michael Michaud Walking and Biking Trail",
-      "state": "ME",
-      "length": 1.65,
-      "surface": "Asphalt",
-      "description": "Michael Michaud Walking and Biking Trail spans 1.65 from State St. to Granite St.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.660344,
-      "lng": -68.706334,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/michael-michaud-walking-and-biking-trail/",
-      "rating": null
-    },
-    {
-      "name": "Michael Michaud Walking and Biking Trail",
-      "state": "ME",
-      "length": 1.65,
-      "surface": "Asphalt",
-      "description": "Michael Michaud Walking and Biking Trail spans 1.65 from State St. to Granite St.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.0341462683775,
-      "lng": -69.40635029405354,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/michael-michaud-walking-and-biking-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -2777,30 +1865,6 @@
       "rating": null
     },
     {
-      "name": "Mine Falls Park Trails",
-      "state": "NH",
-      "length": 9.7,
-      "surface": "Asphalt",
-      "description": "Mine Falls Park Trails spans 9.7 from 5 Stadium Drive (Nashua)  to 59 Chestnut St. (Nashua). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.74839,
-      "lng": -71.505025,
-      "cities": "central mass to it really",
-      "url": "https://www.traillink.com/trail/mine-falls-park-trails/",
-      "rating": null
-    },
-    {
-      "name": "Mine Falls Park Trails",
-      "state": "NH",
-      "length": 9.7,
-      "surface": "Asphalt",
-      "description": "Mine Falls Park Trails spans 9.7 from 5 Stadium Drive (Nashua)  to 59 Chestnut St. (Nashua). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.18625323095971,
-      "lng": -71.8211580097689,
-      "cities": "central mass to it really",
-      "url": "https://www.traillink.com/trail/mine-falls-park-trails/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Minuteman Commuter Bikeway",
       "state": "MA",
       "length": 10.1,
@@ -2846,30 +1910,6 @@
       "lng": -72.50874794911924,
       "cities": "Granite Street to Dog River",
       "url": "https://www.traillink.com/trail/montpelier-recreation-path-(winooski-path)/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Mountain Division Trail",
-      "state": "ME",
-      "length": 9.59,
-      "surface": "is great, totally smooth pavement. There are a number of nice benches set up in various places but they did not seem very appealing because they are right on the trail. We only noticed one spot where we could spread out a bit for a stop and that was an auto body shop maybe a mile from the western end that has a drink machine, picnic table, awning, and grassy yard right next to the trail. (Also a port-a-potty around the back). We enjoyed a short stop there. The hills were not at all steep in my opinion and we did not find them challenging.",
-      "description": "Mountain Division Trail spans 9.59 from 97 Main St (Fryeburg) to Portland St. (Fryeburg) to Chadbourne Rd. (Standish) to Main St. (Windham). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.739094,
-      "lng": -70.426237,
-      "cities": "Fryeburg to Portland",
-      "url": "https://www.traillink.com/trail/mountain-division-trail/",
-      "rating": null
-    },
-    {
-      "name": "Mountain Division Trail",
-      "state": "ME",
-      "length": 9.59,
-      "surface": "is great, totally smooth pavement. There are a number of nice benches set up in various places but they did not seem very appealing because they are right on the trail. We only noticed one spot where we could spread out a bit for a stop and that was an auto body shop maybe a mile from the western end that has a drink machine, picnic table, awning, and grassy yard right next to the trail. (Also a port-a-potty around the back). We enjoyed a short stop there. The hills were not at all steep in my opinion and we did not find them challenging.",
-      "description": "Mountain Division Trail spans 9.59 from 97 Main St (Fryeburg) to Portland St. (Fryeburg) to Chadbourne Rd. (Standish) to Main St. (Windham). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.04247367103488,
-      "lng": -69.19961638754093,
-      "cities": "Fryeburg to Portland",
-      "url": "https://www.traillink.com/trail/mountain-division-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -2942,30 +1982,6 @@
       "lng": -71.61341604466647,
       "cities": "Boston to New York",
       "url": "https://www.traillink.com/trail/narrow-gauge-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Nashua Heritage Rail-Trail",
-      "state": "NH",
-      "length": 1.3,
-      "surface": "Asphalt",
-      "description": "Nashua Heritage Rail-Trail spans 1.3 from Will St. east of Simon St. to Elm St. at SR 111 (Nashua). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.757664,
-      "lng": -71.465589,
-      "cities": "Boston to Lake Erie",
-      "url": "https://www.traillink.com/trail/nashua-heritage-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Nashua Heritage Rail-Trail",
-      "state": "NH",
-      "length": 1.3,
-      "surface": "Asphalt",
-      "description": "Nashua Heritage Rail-Trail spans 1.3 from Will St. east of Simon St. to Elm St. at SR 111 (Nashua). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.01131244397352,
-      "lng": -71.81527550041483,
-      "cities": "Boston to Lake Erie",
-      "url": "https://www.traillink.com/trail/nashua-heritage-rail-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -3137,30 +2153,6 @@
       "rating": null
     },
     {
-      "name": "New Hampshire Seacoast Greenway",
-      "state": "NH",
-      "length": 8,
-      "surface": "from the Hampton parking lot to the Portsmouth parking lot.",
-      "description": "New Hampshire Seacoast Greenway spans 8 from Barberry Ln (Portsmouth) to North Hampton/Hampton border. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.065601,
-      "lng": -70.77868,
-      "cities": "Portsmouth to the North",
-      "url": "https://www.traillink.com/trail/new-hampshire-seacoast-greenway/",
-      "rating": null
-    },
-    {
-      "name": "New Hampshire Seacoast Greenway",
-      "state": "NH",
-      "length": 8,
-      "surface": "from the Hampton parking lot to the Portsmouth parking lot.",
-      "description": "New Hampshire Seacoast Greenway spans 8 from Barberry Ln (Portsmouth) to North Hampton/Hampton border. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.3188916390451,
-      "lng": -71.7878382532976,
-      "cities": "Portsmouth to the North",
-      "url": "https://www.traillink.com/trail/new-hampshire-seacoast-greenway/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "New Milford River Trail",
       "state": "CT",
       "length": 5,
@@ -3281,54 +2273,6 @@
       "rating": 5
     },
     {
-      "name": "North Conway Recreation Path",
-      "state": "NH",
-      "length": 2.9,
-      "surface": "is welcoming and checking out the turtles on the north end of the pond is fun. Enjoy!",
-      "description": "North Conway Recreation Path spans 2.9 from Cranmore Mountain Resort to Hemlock Lane (North Conway). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.019557,
-      "lng": -71.10612,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/north-conway-recreation-path/",
-      "rating": null
-    },
-    {
-      "name": "North Conway Recreation Path",
-      "state": "NH",
-      "length": 2.9,
-      "surface": "is welcoming and checking out the turtles on the north end of the pond is fun. Enjoy!",
-      "description": "North Conway Recreation Path spans 2.9 from Cranmore Mountain Resort to Hemlock Lane (North Conway). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.08295405474243,
-      "lng": -71.36819718456314,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/north-conway-recreation-path/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Northern Rail Trail",
-      "state": "NH",
-      "length": 59,
-      "surface": "varies and even becomes single-track in sections.",
-      "description": "Northern Rail Trail spans 59 from Spencer St. near Parkhurst St. (Lebanon)  to Commercial St. (Boscawen). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.4326,
-      "lng": -71.8657,
-      "cities": "Danbury to Canaan",
-      "url": "https://www.traillink.com/trail/northern-rail-trail/",
-      "rating": 2
-    },
-    {
-      "name": "Northern Rail Trail",
-      "state": "NH",
-      "length": 59,
-      "surface": "varies and even becomes single-track in sections.",
-      "description": "Northern Rail Trail spans 59 from Spencer St. near Parkhurst St. (Lebanon)  to Commercial St. (Boscawen). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.965522696117574,
-      "lng": -71.77644714623128,
-      "cities": "Danbury to Canaan",
-      "url": "https://www.traillink.com/trail/northern-rail-trail/#trail-detail-reviews",
-      "rating": 2
-    },
-    {
       "name": "Northern Strand Community Trail",
       "state": "MA",
       "length": 9.9,
@@ -3374,30 +2318,6 @@
       "lng": -72.8594818622182,
       "cities": "Danbury to Long Island",
       "url": "https://www.traillink.com/trail/norwalk-river-valley-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Norway Branch Rail Trail",
-      "state": "ME",
-      "length": 0.5,
-      "surface": "Crushed Stone",
-      "description": "Norway Branch Rail Trail  spans 0.5 from Beal Street to Alpine Street. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.214613,
-      "lng": -70.537909,
-      "cities": "Beal Street to Alpine Street",
-      "url": "https://www.traillink.com/trail/norway-branch-rail-trail-/",
-      "rating": null
-    },
-    {
-      "name": "Norway Branch Rail Trail",
-      "state": "ME",
-      "length": 0.5,
-      "surface": "Crushed Stone",
-      "description": "Norway Branch Rail Trail  spans 0.5 from Beal Street to Alpine Street. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.378376766481864,
-      "lng": -69.4576763805138,
-      "cities": "Beal Street to Alpine Street",
-      "url": "https://www.traillink.com/trail/norway-branch-rail-trail-/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -3470,126 +2390,6 @@
       "lng": -71.5932363877788,
       "cities": "Maine to Florida when",
       "url": "https://www.traillink.com/trail/old-eastern-marsh-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Old Narrow Gauge Volunteer Trail",
-      "state": "ME",
-      "length": 1.25,
-      "surface": "Ballast",
-      "description": "Old Narrow Gauge Volunteer Trail spans 1.25 from Goggins IGA on Water St (Randolph) to near Andres Way. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.228441,
-      "lng": -69.764051,
-      "cities": "Augusta to Gardner will",
-      "url": "https://www.traillink.com/trail/old-narrow-gauge-volunteer-trail/",
-      "rating": null
-    },
-    {
-      "name": "Old Narrow Gauge Volunteer Trail",
-      "state": "ME",
-      "length": 1.25,
-      "surface": "Ballast",
-      "description": "Old Narrow Gauge Volunteer Trail spans 1.25 from Goggins IGA on Water St (Randolph) to near Andres Way. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.29558955511186,
-      "lng": -69.41339574745444,
-      "cities": "Augusta to Gardner will",
-      "url": "https://www.traillink.com/trail/old-narrow-gauge-volunteer-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Old Railroad Trail (NH)",
-      "state": "NH",
-      "length": 2.7,
-      "surface": "Dirt",
-      "description": "Old Railroad Trail (NH) spans 2.7 from Trailhead near Peterborough Recycling Center (Peterborough) to Forest Road (Hancock). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.927626,
-      "lng": -71.942989,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/old-railroad-trail-(nh)/",
-      "rating": null
-    },
-    {
-      "name": "Old Railroad Trail (NH)",
-      "state": "NH",
-      "length": 2.7,
-      "surface": "Dirt",
-      "description": "Old Railroad Trail (NH) spans 2.7 from Trailhead near Peterborough Recycling Center (Peterborough) to Forest Road (Hancock). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.20059991527893,
-      "lng": -71.4616063912383,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/old-railroad-trail-(nh)/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Papermill Trail",
-      "state": "ME",
-      "length": 3.97,
-      "surface": "Asphalt",
-      "description": "Papermill Trail spans 3.97 from Village St. (Lisbon) to Blethen St. (Lisbon Falls). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.031618,
-      "lng": -70.104275,
-      "cities": "beginning to end and",
-      "url": "https://www.traillink.com/trail/papermill-trail/",
-      "rating": null
-    },
-    {
-      "name": "Papermill Trail",
-      "state": "ME",
-      "length": 3.97,
-      "surface": "Asphalt",
-      "description": "Papermill Trail spans 3.97 from Village St. (Lisbon) to Blethen St. (Lisbon Falls). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.190375210080404,
-      "lng": -69.58931491762539,
-      "cities": "beginning to end and",
-      "url": "https://www.traillink.com/trail/papermill-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Peanut Trail",
-      "state": "NH",
-      "length": 1.5,
-      "surface": "",
-      "description": "Peanut Trail spans 1.5 from Whittier St to Town Hall Rd. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.863103,
-      "lng": -71.031484,
-      "cities": "Whittier St to Town Hall",
-      "url": "https://www.traillink.com/trail/peanut-trail/",
-      "rating": null
-    },
-    {
-      "name": "Peanut Trail",
-      "state": "NH",
-      "length": 1.5,
-      "surface": "",
-      "description": "Peanut Trail spans 1.5 from Whittier St to Town Hall Rd. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.3141602761403,
-      "lng": -71.65080377143407,
-      "cities": "Whittier St to Town Hall",
-      "url": "https://www.traillink.com/trail/peanut-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Penobscot River Walkway",
-      "state": "ME",
-      "length": 0.3,
-      "surface": "Asphalt",
-      "description": "Penobscot River Walkway spans 0.3 from Union Street/US 1A to Front Street at Railroad Street (Bangor). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.797243,
-      "lng": -68.769421,
-      "cities": "Union Street to the intersection",
-      "url": "https://www.traillink.com/trail/penobscot-river-walkway/",
-      "rating": null
-    },
-    {
-      "name": "Penobscot River Walkway",
-      "state": "ME",
-      "length": 0.3,
-      "surface": "Asphalt",
-      "description": "Penobscot River Walkway spans 0.3 from Union Street/US 1A to Front Street at Railroad Street (Bangor). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.03178689139341,
-      "lng": -69.19607742505164,
-      "cities": "Union Street to the intersection",
-      "url": "https://www.traillink.com/trail/penobscot-river-walkway/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -3686,78 +2486,6 @@
       "lng": -71.31566326460117,
       "cities": "",
       "url": "https://www.traillink.com/trail/pine-tree-brook-path/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Piscataquog Trail",
-      "state": "NH",
-      "length": 2.1,
-      "surface": "Asphalt",
-      "description": "Piscataquog Trail spans 2.1 from Goffstown Rail Trail at Agnes St., 0.3 mile northeast of Pinard St to junction with the Heritage Trail at Riverwalk Way (Manchester). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.979154,
-      "lng": -71.467738,
-      "cities": "the dam to the Merrimack",
-      "url": "https://www.traillink.com/trail/piscataquog-trail/",
-      "rating": null
-    },
-    {
-      "name": "Piscataquog Trail",
-      "state": "NH",
-      "length": 2.1,
-      "surface": "Asphalt",
-      "description": "Piscataquog Trail spans 2.1 from Goffstown Rail Trail at Agnes St., 0.3 mile northeast of Pinard St to junction with the Heritage Trail at Riverwalk Way (Manchester). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.21975800910721,
-      "lng": -71.3235622818402,
-      "cities": "the dam to the Merrimack",
-      "url": "https://www.traillink.com/trail/piscataquog-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Potanipo Rail Trail (NH)",
-      "state": "NH",
-      "length": 2.7,
-      "surface": "and remains quite level throughout.&nbsp;",
-      "description": "Potanipo Rail Trail (NH) spans 2.7 from Route 13 to Bohanon Bridge Rd to Oak Hill Rd to Nissitissit River. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.72506,
-      "lng": -71.662691,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/potanipo-rail-trail-(nh)/",
-      "rating": null
-    },
-    {
-      "name": "Potanipo Rail Trail (NH)",
-      "state": "NH",
-      "length": 2.7,
-      "surface": "and remains quite level throughout.&nbsp;",
-      "description": "Potanipo Rail Trail (NH) spans 2.7 from Route 13 to Bohanon Bridge Rd to Oak Hill Rd to Nissitissit River. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.31659726512561,
-      "lng": -71.32383677155534,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/potanipo-rail-trail-(nh)/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Presque Isle Bike Path",
-      "state": "ME",
-      "length": 4.2,
-      "surface": "Asphalt",
-      "description": "Presque Isle Bike Path spans 4.2 from Bicentennial Park (Presque Isle) to Presque Isle. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 46.676578,
-      "lng": -68.021596,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/presque-isle-bike-path/",
-      "rating": null
-    },
-    {
-      "name": "Presque Isle Bike Path",
-      "state": "ME",
-      "length": 4.2,
-      "surface": "Asphalt",
-      "description": "Presque Isle Bike Path spans 4.2 from Bicentennial Park (Presque Isle) to Presque Isle. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.36540842697356,
-      "lng": -69.20082941948625,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/presque-isle-bike-path/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -4001,30 +2729,6 @@
       "rating": null
     },
     {
-      "name": "Riverton Rail Trail",
-      "state": "ME",
-      "length": 1.5,
-      "surface": "Concrete",
-      "description": "Riverton Rail Trail spans 1.5 from Milliken St. to Goodridge Ave.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.700096,
-      "lng": -70.29964,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/riverton-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Riverton Rail Trail",
-      "state": "ME",
-      "length": 1.5,
-      "surface": "Concrete",
-      "description": "Riverton Rail Trail spans 1.5 from Milliken St. to Goodridge Ave.. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.44677442098338,
-      "lng": -69.55239314505245,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/riverton-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Rocky Hill Trail",
       "state": "MA",
       "length": 0.9,
@@ -4046,54 +2750,6 @@
       "lng": -71.27650890021008,
       "cities": "",
       "url": "https://www.traillink.com/trail/rocky-hill-trail-/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Roland Bergeron Bike Path",
-      "state": "NH",
-      "length": 6,
-      "surface": "Asphalt",
-      "description": "Roland Bergeron Bike Path spans 6 from Albuquerque Avenue &amp; Charles Bancroft Highway to Albuquerque Avenue &amp; Cranberry Lane. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.885074,
-      "lng": -71.456907,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/roland-bergeron-bike-path/",
-      "rating": null
-    },
-    {
-      "name": "Roland Bergeron Bike Path",
-      "state": "NH",
-      "length": 6,
-      "surface": "Asphalt",
-      "description": "Roland Bergeron Bike Path spans 6 from Albuquerque Avenue &amp; Charles Bancroft Highway to Albuquerque Avenue &amp; Cranberry Lane. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.13558049480607,
-      "lng": -71.71831940304845,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/roland-bergeron-bike-path/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Rotary Centennial Trail",
-      "state": "ME",
-      "length": 1.5,
-      "surface": "is accessible to individuals in wheelchairs when it is not snow covered.",
-      "description": "Rotary Centennial Trail spans 1.5 from Crummett Street (Benton) to Kennebec River, just west of Dixon Terrace (Winslow). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.586774,
-      "lng": -69.588243,
-      "cities": "Maine to Florida",
-      "url": "https://www.traillink.com/trail/rotary-centennial-trail/",
-      "rating": null
-    },
-    {
-      "name": "Rotary Centennial Trail",
-      "state": "ME",
-      "length": 1.5,
-      "surface": "is accessible to individuals in wheelchairs when it is not snow covered.",
-      "description": "Rotary Centennial Trail spans 1.5 from Crummett Street (Benton) to Kennebec River, just west of Dixon Terrace (Winslow). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.36723855075761,
-      "lng": -69.53039527370585,
-      "cities": "Maine to Florida",
-      "url": "https://www.traillink.com/trail/rotary-centennial-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -4142,30 +2798,6 @@
       "lng": -71.53656543374349,
       "cities": "Maine to Florida when",
       "url": "https://www.traillink.com/trail/salem-bike-path/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Salem Bike-Ped Corridor",
-      "state": "NH",
-      "length": 4.95,
-      "surface": "Asphalt",
-      "description": "Salem Bike-Ped Corridor spans 4.95 from N Broadway &amp; Range St (Salem) to Hampshire Rd (Salem). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.805687,
-      "lng": -71.245303,
-      "cities": "Methuen to Salem",
-      "url": "https://www.traillink.com/trail/salem-bike-ped-corridor/",
-      "rating": null
-    },
-    {
-      "name": "Salem Bike-Ped Corridor",
-      "state": "NH",
-      "length": 4.95,
-      "surface": "Asphalt",
-      "description": "Salem Bike-Ped Corridor spans 4.95 from N Broadway &amp; Range St (Salem) to Hampshire Rd (Salem). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.96248182439371,
-      "lng": -71.36861731522782,
-      "cities": "Methuen to Salem",
-      "url": "https://www.traillink.com/trail/salem-bike-ped-corridor/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -4248,7 +2880,7 @@
       "description": "Shining Sea Bikeway spans 10.7 from CR 151 (Falmouth) to Steamship Authority, Crane St. (Woods Hole). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
       "lat": 41.5516,
       "lng": -70.6162,
-      "cities": "this soda to water dispenser",
+      "cities": "here to the end",
       "url": "https://www.traillink.com/trail/shining-sea-bikeway/",
       "rating": null
     },
@@ -4286,30 +2918,6 @@
       "lng": -73.02342853535723,
       "cities": "Lighthouse Point to Hammonasset Beach",
       "url": "https://www.traillink.com/trail/shoreline-greenway-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Sipayik Trail",
-      "state": "ME",
-      "length": 1.9,
-      "surface": "Asphalt",
-      "description": "Sipayik Trail spans 1.9 from Treatment Plant Road north of Side Road and Bayview Dr. intersection (Pleasant Point)  to US 1/S. River Road between S. Meadow Road and Shore Road (Perry) . View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.960078,
-      "lng": -67.042526,
-      "cities": "Ayers Junction to Eastport to",
-      "url": "https://www.traillink.com/trail/sipayik-trail/",
-      "rating": null
-    },
-    {
-      "name": "Sipayik Trail",
-      "state": "ME",
-      "length": 1.9,
-      "surface": "Asphalt",
-      "description": "Sipayik Trail spans 1.9 from Treatment Plant Road north of Side Road and Bayview Dr. intersection (Pleasant Point)  to US 1/S. River Road between S. Meadow Road and Shore Road (Perry) . View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.096758356248195,
-      "lng": -69.6802734670412,
-      "cities": "Ayers Junction to Eastport to",
-      "url": "https://www.traillink.com/trail/sipayik-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -4406,54 +3014,6 @@
       "lng": -72.77637906445425,
       "cities": "South Burlington to Shelburne Bay",
       "url": "https://www.traillink.com/trail/south-burlington-recreation-path/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "South Manchester Rail Trail",
-      "state": "NH",
-      "length": 1.8,
-      "surface": "Asphalt",
-      "description": "South Manchester Rail Trail spans 1.8 from South Beech St to Perimeter Rd (Manchester). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.944327,
-      "lng": -71.436317,
-      "cities": "start to finish",
-      "url": "https://www.traillink.com/trail/south-manchester-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "South Manchester Rail Trail",
-      "state": "NH",
-      "length": 1.8,
-      "surface": "Asphalt",
-      "description": "South Manchester Rail Trail spans 1.8 from South Beech St to Perimeter Rd (Manchester). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.168084547345074,
-      "lng": -71.80295055285346,
-      "cities": "start to finish",
-      "url": "https://www.traillink.com/trail/south-manchester-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "South Portland Greenbelt Walkway",
-      "state": "ME",
-      "length": 5.6,
-      "surface": "Asphalt",
-      "description": "South Portland Greenbelt Walkway spans 5.6 from Bug Light Park  to Wainwright Athletic Complex (125 Gary L Maietta Way). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.606844,
-      "lng": -70.290638,
-      "cities": "Maine to Key West",
-      "url": "https://www.traillink.com/trail/south-portland-greenbelt-walkway/",
-      "rating": null
-    },
-    {
-      "name": "South Portland Greenbelt Walkway",
-      "state": "ME",
-      "length": 5.6,
-      "surface": "Asphalt",
-      "description": "South Portland Greenbelt Walkway spans 5.6 from Bug Light Park  to Wainwright Athletic Complex (125 Gary L Maietta Way). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.34153383608115,
-      "lng": -69.64312458234612,
-      "cities": "Maine to Key West",
-      "url": "https://www.traillink.com/trail/south-portland-greenbelt-walkway/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -4574,30 +3134,6 @@
       "lng": -71.61329779854303,
       "cities": "",
       "url": "https://www.traillink.com/trail/squannacook-river-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Stevens Rail Trail",
-      "state": "NH",
-      "length": 1.65,
-      "surface": "is now granite dust",
-      "description": "Stevens Rail Trail spans 1.65 from Old Warner Rd (Davisville) to Spring St &amp; Krzyzaniak Ln (Hopkinton). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.22667,
-      "lng": -71.726501,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/stevens-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Stevens Rail Trail",
-      "state": "NH",
-      "length": 1.65,
-      "surface": "is now granite dust",
-      "description": "Stevens Rail Trail spans 1.65 from Old Warner Rd (Davisville) to Spring St &amp; Krzyzaniak Ln (Hopkinton). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.12589206285065,
-      "lng": -71.55764905291008,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/stevens-rail-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -4865,30 +3401,6 @@
       "rating": null
     },
     {
-      "name": "University of Maine Bicycle Path",
-      "state": "ME",
-      "length": 2.5,
-      "surface": "Asphalt",
-      "description": "University of Maine Bicycle Path spans 2.5 from Perkins Avenue to Stillwater Ave. to Long Rd. at Student Hall Rec Ctr (Old Town). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.90593,
-      "lng": -68.661201,
-      "cities": "Perkins Avenue to Stillwater Ave",
-      "url": "https://www.traillink.com/trail/university-of-maine-bicycle-path/",
-      "rating": null
-    },
-    {
-      "name": "University of Maine Bicycle Path",
-      "state": "ME",
-      "length": 2.5,
-      "surface": "Asphalt",
-      "description": "University of Maine Bicycle Path spans 2.5 from Perkins Avenue to Stillwater Ave. to Long Rd. at Student Hall Rec Ctr (Old Town). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.362050162084806,
-      "lng": -69.62284564681583,
-      "cities": "Perkins Avenue to Stillwater Ave",
-      "url": "https://www.traillink.com/trail/university-of-maine-bicycle-path/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Upper Charles Trail",
       "state": "MA",
       "length": 13.9,
@@ -4982,54 +3494,6 @@
       "lng": -72.8128427228594,
       "cities": "Handel Road to Country Club",
       "url": "https://www.traillink.com/trail/valley-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Village Spur Rail Trail",
-      "state": "NH",
-      "length": 2.1,
-      "surface": "Asphalt",
-      "description": "Village Spur Rail Trail spans 2.1 from Downtown Belmont  to Tioga River. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.442635,
-      "lng": -71.522087,
-      "cities": "Downtown Belmont to Tioga River",
-      "url": "https://www.traillink.com/trail/village-spur-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Village Spur Rail Trail",
-      "state": "NH",
-      "length": 2.1,
-      "surface": "Asphalt",
-      "description": "Village Spur Rail Trail spans 2.1 from Downtown Belmont  to Tioga River. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.158072559919596,
-      "lng": -71.35329722289235,
-      "cities": "Downtown Belmont to Tioga River",
-      "url": "https://www.traillink.com/trail/village-spur-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Warner Rail Trail and Bagley Rail Trail",
-      "state": "NH",
-      "length": 1,
-      "surface": "Crushed Stone",
-      "description": "Warner Rail Trail and Bagley Rail Trail spans 1 from Depot St in Downtown Warner to Dalton Covered Bridge (Warner). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.268113,
-      "lng": -71.780394,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/warner-rail-trail-and-bagley-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Warner Rail Trail and Bagley Rail Trail",
-      "state": "NH",
-      "length": 1,
-      "surface": "Crushed Stone",
-      "description": "Warner Rail Trail and Bagley Rail Trail spans 1 from Depot St in Downtown Warner to Dalton Covered Bridge (Warner). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.156904866816475,
-      "lng": -71.58888987417576,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/warner-rail-trail-and-bagley-rail-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -5177,30 +3641,6 @@
       "rating": null
     },
     {
-      "name": "West Foss Farm Trail",
-      "state": "NH",
-      "length": 1.6,
-      "surface": "Dirt",
-      "description": "West Foss Farm Trail spans 1.6 from Mill Road to West Foss Farm. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.111646,
-      "lng": -70.947778,
-      "cities": "Mill Road to West Foss",
-      "url": "https://www.traillink.com/trail/west-foss-farm-trail/",
-      "rating": null
-    },
-    {
-      "name": "West Foss Farm Trail",
-      "state": "NH",
-      "length": 1.6,
-      "surface": "Dirt",
-      "description": "West Foss Farm Trail spans 1.6 from Mill Road to West Foss Farm. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.06539351901533,
-      "lng": -71.7316821366257,
-      "cities": "Mill Road to West Foss",
-      "url": "https://www.traillink.com/trail/west-foss-farm-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Westville Lake Community Trail",
       "state": "MA",
       "length": 0.7,
@@ -5222,30 +3662,6 @@
       "lng": -71.5510236356817,
       "cities": "",
       "url": "https://www.traillink.com/trail/westville-lake-community-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Whitman Spring Road Trail",
-      "state": "ME",
-      "length": 2,
-      "surface": "Gravel",
-      "description": "Whitman Spring Road Trail spans 2 from N Auburn Rd. opp. Holbrook Rd.  to Whitman Spring Rd. off W Auburn Rd. . View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 44.143613,
-      "lng": -70.267287,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/whitman-spring-road-trail/",
-      "rating": null
-    },
-    {
-      "name": "Whitman Spring Road Trail",
-      "state": "ME",
-      "length": 2,
-      "surface": "Gravel",
-      "description": "Whitman Spring Road Trail spans 2 from N Auburn Rd. opp. Holbrook Rd.  to Whitman Spring Rd. off W Auburn Rd. . View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 45.09967553965021,
-      "lng": -69.57915947089495,
-      "cities": "",
-      "url": "https://www.traillink.com/trail/whitman-spring-road-trail/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -5321,30 +3737,6 @@
       "rating": null
     },
     {
-      "name": "Windham Rail Trail",
-      "state": "NH",
-      "length": 4.3,
-      "surface": "is in good shape. there are mile markers each half mile.It can get busy on weekends. It is used by all, fellow walkers, joggers, bikers, rollerbladers, and families just out for some fresh air. Most are courteous to others. unfortunately you do need to watch your step for those dog walkers who don't pick up after their pooches.",
-      "description": "Windham Rail Trail spans 4.3 from Derry Rail Trail at N Lowell Rd/Windham Rd at Brown Rd  to Salem Bike-Ped Corridor at Range Rd at SR 28/N Broadway (Windham). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.843942,
-      "lng": -71.301009,
-      "cities": "Massachusetts to Vermont that",
-      "url": "https://www.traillink.com/trail/windham-rail-trail/",
-      "rating": null
-    },
-    {
-      "name": "Windham Rail Trail",
-      "state": "NH",
-      "length": 4.3,
-      "surface": "is in good shape. there are mile markers each half mile.It can get busy on weekends. It is used by all, fellow walkers, joggers, bikers, rollerbladers, and families just out for some fresh air. Most are courteous to others. unfortunately you do need to watch your step for those dog walkers who don't pick up after their pooches.",
-      "description": "Windham Rail Trail spans 4.3 from Derry Rail Trail at N Lowell Rd/Windham Rd at Brown Rd  to Salem Bike-Ped Corridor at Range Rd at SR 28/N Broadway (Windham). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.36469445722224,
-      "lng": -71.46681762393946,
-      "cities": "Massachusetts to Vermont that",
-      "url": "https://www.traillink.com/trail/windham-rail-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "Windsor Locks Canal State Park Trail",
       "state": "CT",
       "length": 5.4,
@@ -5393,30 +3785,6 @@
       "rating": null
     },
     {
-      "name": "Winnipesaukee River Trail",
-      "state": "NH",
-      "length": 4.94,
-      "surface": "is nice for road tires (28) and only one small section of road.",
-      "description": "Winnipesaukee River Trail spans 4.94 from Trestle View Park, 460 Central St. (Franklin)  to Tilton Rd. (Tilton). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.445446,
-      "lng": -71.642746,
-      "cities": "Franklin to Tilton",
-      "url": "https://www.traillink.com/trail/winnipesaukee-river-trail/",
-      "rating": null
-    },
-    {
-      "name": "Winnipesaukee River Trail",
-      "state": "NH",
-      "length": 4.94,
-      "surface": "is nice for road tires (28) and only one small section of road.",
-      "description": "Winnipesaukee River Trail spans 4.94 from Trestle View Park, 460 Central St. (Franklin)  to Tilton Rd. (Tilton). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.99827769697073,
-      "lng": -71.33133907818788,
-      "cities": "Franklin to Tilton",
-      "url": "https://www.traillink.com/trail/winnipesaukee-river-trail/#trail-detail-reviews",
-      "rating": null
-    },
-    {
       "name": "World War II Veterans Memorial Trail/Norton Rail-Trail",
       "state": "MA",
       "length": 6.6,
@@ -5439,30 +3807,6 @@
       "cities": "the path to the road",
       "url": "https://www.traillink.com/trail/world-war-ii-veterans-memorial-trailnorton-rail-trail/#trail-detail-reviews",
       "rating": 4
-    },
-    {
-      "name": "WOW Trail",
-      "state": "NH",
-      "length": 2.7,
-      "surface": "Asphalt",
-      "description": "WOW Trail spans 2.7 from Elm St. (Laconia) to 94 Daniel Webster Hwy (Belmont). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.547517,
-      "lng": -71.463076,
-      "cities": "Meredith to Lakeport",
-      "url": "https://www.traillink.com/trail/wow-trail/",
-      "rating": null
-    },
-    {
-      "name": "WOW Trail",
-      "state": "NH",
-      "length": 2.7,
-      "surface": "Asphalt",
-      "description": "WOW Trail spans 2.7 from Elm St. (Laconia) to 94 Daniel Webster Hwy (Belmont). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 43.19966927334544,
-      "lng": -71.43325863358601,
-      "cities": "Meredith to Lakeport",
-      "url": "https://www.traillink.com/trail/wow-trail/#trail-detail-reviews",
-      "rating": null
     }
   ]
 }
