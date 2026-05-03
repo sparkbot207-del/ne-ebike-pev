@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-04-26",
+    "generated": "2026-05-03",
     "source": "TrailLink.com",
     "region": "New England",
     "states": [
@@ -12,7 +12,7 @@
       "VT"
     ],
     "total_trails": 456,
-    "total_miles": 2973.2,
+    "total_miles": 2975.8,
     "note": "Auto-updated weekly via GitHub Actions"
   },
   "trails": [
@@ -883,9 +883,9 @@
     {
       "name": "Clipper City Rail Trail",
       "state": "MA",
-      "length": 3.9,
+      "length": 3.5,
       "surface": "Asphalt",
-      "description": "Clipper City Rail Trail spans 3.9 from Merrimack River (Newburyport) to MBTA Commuter Rail Station (Newburyport). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
+      "description": "Clipper City Rail Trail spans 3.5 from Merrimack River (Newburyport) to MBTA Commuter Rail Station (Newburyport). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
       "lat": 42.796846,
       "lng": -70.877472,
       "cities": "figurative to abstract to",
@@ -895,9 +895,9 @@
     {
       "name": "Clipper City Rail Trail",
       "state": "MA",
-      "length": 3.9,
+      "length": 3.5,
       "surface": "Asphalt",
-      "description": "Clipper City Rail Trail spans 3.9 from Merrimack River (Newburyport) to MBTA Commuter Rail Station (Newburyport). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
+      "description": "Clipper City Rail Trail spans 3.5 from Merrimack River (Newburyport) to MBTA Commuter Rail Station (Newburyport). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
       "lat": 42.23484229132988,
       "lng": -71.60828104890886,
       "cities": "figurative to abstract to",
@@ -1891,9 +1891,9 @@
     {
       "name": "Hartford Riverwalk",
       "state": "CT",
-      "length": 1.7,
+      "length": 3.4,
       "surface": "Asphalt",
-      "description": "Hartford Riverwalk spans 1.7 from Riverside Park to Charter Oak Landing. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
+      "description": "Hartford Riverwalk spans 3.4 from Riverside Park to Charter Oak Landing. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
       "lat": 41.773973,
       "lng": -72.667221,
       "cities": "Riverside Park to Charter Oak",
@@ -1903,9 +1903,9 @@
     {
       "name": "Hartford Riverwalk",
       "state": "CT",
-      "length": 1.7,
+      "length": 3.4,
       "surface": "Asphalt",
-      "description": "Hartford Riverwalk spans 1.7 from Riverside Park to Charter Oak Landing. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
+      "description": "Hartford Riverwalk spans 3.4 from Riverside Park to Charter Oak Landing. View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
       "lat": 41.72944738326839,
       "lng": -72.90585345196854,
       "cities": "Riverside Park to Charter Oak",
@@ -2582,6 +2582,30 @@
       "lng": -71.6185262231825,
       "cities": "",
       "url": "https://www.traillink.com/trail/mattapoisett-rail-trail/#trail-detail-reviews",
+      "rating": null
+    },
+    {
+      "name": "Mayor Anthony V. Salvo Multiuse Path",
+      "state": "MA",
+      "length": 1.7,
+      "surface": "Asphalt",
+      "description": "Mayor Anthony V. Salvo Multiuse Path spans 1.7 from Mill St, between Margin St &amp; Washington St to Lafayette St, just north of Rosedale Rd (Salem). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
+      "lat": 42.29038414976891,
+      "lng": -71.14812770780969,
+      "cities": "Maine to Florida when",
+      "url": "https://www.traillink.com/trail/mayor-anthony-v-salvo-multiuse-path/",
+      "rating": null
+    },
+    {
+      "name": "Mayor Anthony V. Salvo Multiuse Path",
+      "state": "MA",
+      "length": 1.7,
+      "surface": "Asphalt",
+      "description": "Mayor Anthony V. Salvo Multiuse Path spans 1.7 from Mill St, between Margin St &amp; Washington St to Lafayette St, just north of Rosedale Rd (Salem). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
+      "lat": 42.270027988813425,
+      "lng": -71.4832754664977,
+      "cities": "Maine to Florida when",
+      "url": "https://www.traillink.com/trail/mayor-anthony-v-salvo-multiuse-path/#trail-detail-reviews",
       "rating": null
     },
     {
@@ -4142,30 +4166,6 @@
       "lng": -72.65377824953256,
       "cities": "",
       "url": "https://www.traillink.com/trail/route-127-path/#trail-detail-reviews",
-      "rating": null
-    },
-    {
-      "name": "Salem Bike Path",
-      "state": "MA",
-      "length": 1.7,
-      "surface": "Asphalt",
-      "description": "Salem Bike Path spans 1.7 from Mill St, between Margin St &amp; Washington St to Lafayette St, just north of Rosedale Rd (Salem). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.497405,
-      "lng": -70.887056,
-      "cities": "Maine to Florida when",
-      "url": "https://www.traillink.com/trail/salem-bike-path/",
-      "rating": null
-    },
-    {
-      "name": "Salem Bike Path",
-      "state": "MA",
-      "length": 1.7,
-      "surface": "Asphalt",
-      "description": "Salem Bike Path spans 1.7 from Mill St, between Margin St &amp; Washington St to Lafayette St, just north of Rosedale Rd (Salem). View amenities, descriptions, reviews, photos, itineraries, and directions on TrailLink.",
-      "lat": 42.16160985800097,
-      "lng": -71.53656543374349,
-      "cities": "Maine to Florida when",
-      "url": "https://www.traillink.com/trail/salem-bike-path/#trail-detail-reviews",
       "rating": null
     },
     {
