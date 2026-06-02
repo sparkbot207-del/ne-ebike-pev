@@ -54,7 +54,11 @@ function extractTrailLinks(html) {
     const seen = new Set();
     
     while ((match = regex.exec(html)) !== null) {
-        const trailPath = match[1];
+        let trailPath = match[1];
+        // Strip URL fragments (#section) so /trail/foo/ and /trail/foo/#reviews aren't treated as separate trails
+        trailPath = trailPath.split('#')[0];
+        // Normalize trailing slash
+        if (!trailPath.endsWith('/')) trailPath += '/';
         if (!seen.has(trailPath) && !trailPath.includes('/map') && !trailPath.includes('/photos')) {
             seen.add(trailPath);
             trails.push(BASE_URL + trailPath);
@@ -107,23 +111,48 @@ function parseTrailPage(html, url, state) {
         trail.description = descMatch[1].trim().substring(0, 300);
     }
     
-    // Extract coordinates from map data or schema
-    const latMatch = html.match(/latitude["\s:]+(-?\d+\.?\d*)/i) ||
-                     html.match(/lat["\s:]+(-?\d+\.?\d*)/i);
-    const lngMatch = html.match(/longitude["\s:]+(-?\d+\.?\d*)/i) ||
-                     html.match(/lng["\s:]+(-?\d+\.?\d*)/i) ||
-                     html.match(/lon["\s:]+(-?\d+\.?\d*)/i);
-    
-    if (latMatch && lngMatch) {
-        trail.lat = parseFloat(latMatch[1]);
-        trail.lng = parseFloat(lngMatch[1]);
+    // Extract coordinates - try multiple patterns TrailLink uses
+    // Schema.org GeoCoordinates (most reliable)
+    const schemaLatMatch = html.match(/"latitude"\s*:\s*"?(-?\d+\.\d+)"?/i);
+    const schemaLngMatch = html.match(/"longitude"\s*:\s*"?(-?\d+\.\d+)"?/i);
+    // Google Maps embed or data attributes
+    const gmapMatch = html.match(/maps\.google[^"]*[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)/) ||
+                      html.match(/center=(-?\d+\.\d+),(-?\d+\.\d+)/);
+    // Leaflet / JS map init
+    const leafletMatch = html.match(/setView\(\[(-?\d+\.\d+),\s*(-?\d+\.\d+)/);
+    // Generic lat/lng data attrs
+    const dataLatMatch = html.match(/data-lat["\s=]+["']?(-?\d+\.\d+)/i);
+    const dataLngMatch = html.match(/data-l(?:ng|on)["\s=]+["']?(-?\d+\.\d+)/i);
+
+    if (schemaLatMatch && schemaLngMatch) {
+        trail.lat = parseFloat(schemaLatMatch[1]);
+        trail.lng = parseFloat(schemaLngMatch[1]);
+    } else if (gmapMatch) {
+        trail.lat = parseFloat(gmapMatch[1]);
+        trail.lng = parseFloat(gmapMatch[2]);
+    } else if (leafletMatch) {
+        trail.lat = parseFloat(leafletMatch[1]);
+        trail.lng = parseFloat(leafletMatch[2]);
+    } else if (dataLatMatch && dataLngMatch) {
+        trail.lat = parseFloat(dataLatMatch[1]);
+        trail.lng = parseFloat(dataLngMatch[1]);
     }
-    
-    // Extract rating
-    const ratingMatch = html.match(/(\d\.?\d?)\s*(?:out of 5|\/5|stars)/i) ||
-                        html.match(/rating["\s:]+(\d\.?\d*)/i);
+
+    // Sanity-check coordinates — must be within continental US bounds
+    if (trail.lat !== null && (trail.lat < 24 || trail.lat > 50 || trail.lng > -60 || trail.lng < -130)) {
+        trail.lat = null;
+        trail.lng = null;
+    }
+
+    // Extract rating — TrailLink uses itemprop="ratingValue" and aggregate patterns
+    const ratingMatch = html.match(/itemprop="ratingValue"[^>]*>([\d.]+)/) ||
+                        html.match(/ratingValue["\s:]+"?([\d.]+)"?/i) ||
+                        html.match(/([\d.]+)\s*(?:out of 5|\/5)/i) ||
+                        html.match(/averageRating["\s:]+"?([\d.]+)"?/i);
     if (ratingMatch) {
-        trail.rating = parseFloat(ratingMatch[1]);
+        const r = parseFloat(ratingMatch[1]);
+        // Sanity check: rating must be 0-5
+        if (r >= 0 && r <= 5) trail.rating = r;
     }
     
     // Extract cities/endpoints
@@ -280,10 +309,20 @@ async function main() {
     console.log(`Output: ${OUTPUT_FILE}`);
     console.log('='.repeat(50));
     
-    // Exit with error if we got very few trails (something probably broke)
+    // Exit with error if we got very few trails or suspiciously many (something probably broke)
     if (dedupedTrails.length < 50) {
         console.error('\n⚠️  Warning: Very few trails found. Scraping may have failed.');
         process.exit(1);
+    }
+    // Load existing data to check for unexpected bloat (duplication guard)
+    if (fs.existsSync(OUTPUT_FILE)) {
+        try {
+            const existing = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
+            if (dedupedTrails.length > existing.trails.length * 1.5) {
+                console.error(`\n⚠️  Refusing to write: new count (${dedupedTrails.length}) is 50%+ more than existing (${existing.trails.length}). Possible duplication bug.`);
+                process.exit(1);
+            }
+        } catch (e) { /* first run, no existing file */ }
     }
 }
 

@@ -1,11 +1,11 @@
 name: Update Rail Trails Database
 
 on:
-  # Run weekly on Sunday at 6 AM UTC (2 AM EST)
-  schedule:
-    - cron: '0 6 * * 0'
+  # Schedule disabled until scraper dedup fix is validated
+  # schedule:
+  #   - cron: '0 6 * * 0'
   
-  # Allow manual trigger
+  # Allow manual trigger only
   workflow_dispatch:
 
 permissions:
